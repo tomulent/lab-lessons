@@ -9,16 +9,16 @@ This section will go through two different methods of site migration. One will b
 [one_third last="yes"]
 ### Resources
 <ul>
-	<li>Codex Entry: <a href="http://codex.wordpress.org/Moving_WordPress" target="_blank">Moving WordPress</a></li>
-	<li><a href="http://wordpress.org/plugins/duplicator/" target="_blank">Duplicator</a></li>
-	<li><a href="https://interconnectit.com/products/search-and-replace-for-wordpress-databases/" target="_blank">Search and Replace Database Script</a></li>
+	<li>Codex Entry: [Moving WordPress](http://codex.wordpress.org/Moving_WordPress)</li>
+	<li>[Duplicator](http://wordpress.org/plugins/duplicator/)</li>
+	<li>[Search and Replace Database Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/)</li>
 </ul>
 [/one_third]
 
 <hr />
 
 # Easy Mode: Duplicator
-This is an awesome plugin. Download <a href="http://wordpress.org/plugins/duplicator/" target="_blank">Duplicator</a> from the plugin repository and install it on your site. When you run Duplicator, it will create a single zip file containing your database, files, and a couple other things. It also generates a php file called 'installer.php'.
+This is an awesome plugin. Download [Duplicator](http://wordpress.org/plugins/duplicator/) from the plugin repository and install it on your site. When you run Duplicator, it will create a single zip file containing your database, files, and a couple other things. It also generates a php file called 'installer.php'.
 [toggle title="Duplicator Migration Walk Through"]
 ## Duplicator Migration Walk Through:
 After installing the Duplicator plugin, navigate to the Manage section of Duplicator (either via the Installed Plugins area or the link on your WordPress dashboard).
@@ -29,19 +29,19 @@ At the top left of the main Duplicator page, hit **Create New**.
 
 In the step 1, Setup, ensure that all **Requirements** pass.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/dup1.png"><img class="alignnone size-full wp-image-5737" src="http://labs.everettprogram.org/wp-content/uploads/dup1.png" alt="dup1" width="705" height="190" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/dup1.png)
 
 After, hit **Next**.
 
 Duplicator will then scan your website to ensure there are no issues. The most common issue Duplicator will find is **Large Files**, meaning that due to large files on that WordPress instance, the package Duplicator creates will be large. Here, you can decide whether to go to your WordPress instance using the CPanel Files Manager and delete those large files or you can just leave them there and the package created by Duplicator will just be larger.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/dup1_5.png"><img class="alignnone size-full wp-image-5738" src="http://labs.everettprogram.org/wp-content/uploads/dup1_5.png" alt="dup1_5" width="603" height="608" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/dup1_5.png)
 
 If everything else says good, hit **Build**.
 
 Once it has finished building both files, click on each file (the Installer and Package) to download them.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/dup2.png"><img class="alignnone size-full wp-image-5739" src="http://labs.everettprogram.org/wp-content/uploads/dup2.png" alt="dup2" width="801" height="268" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/dup2.png)
 
 Once you have download these files, move onto the next step.
 <h3 id="step-2-create-new-directory-and-add-package-and-installer"><a class="headeranchor-link" href="#step-2-create-new-directory-and-add-package-and-installer" name="user-content-step-2-create-new-directory-and-add-package-and-installer"></a>Step 2: Create New Directory and Add Package and Installer</h3>
@@ -69,7 +69,7 @@ For example, I would visit: *brendinnye.me/foldernames/installer.php*
 
 If you successfully navigated to the install script, you should see a similar screen:
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/dup3.png"><img class="alignnone size-full wp-image-5740" src="http://labs.everettprogram.org/wp-content/uploads/dup3.png" alt="dup3" width="803" height="601" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/dup3.png)
 
 Next, next to **Action** change the radio button to **Connect and Remove All Data** since we already created a database.
 
@@ -77,7 +77,7 @@ Now, next to **Name**, input the name of the database you just created. Next to 
 
 After everything is filled out, hit **Test Connection** and make sure the installer is able to connect to the server and find the database. If both pass, go to the bottom, accept the agreement, and hit **Run Deployment**.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/dup4.png"><img class="alignnone size-full wp-image-5741" src="http://labs.everettprogram.org/wp-content/uploads/dup4.png" alt="dup4" width="717" height="473" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/dup4.png)
 
 In the Update section, ensure the Old and New settings are correct. After, hit **Run Update**.
 
@@ -99,7 +99,7 @@ When I (Thomas) write these lessons I usually come up with an idea for an activi
 
 Imagine my annoyance when I went to run Duplicator and got this message:
 
-<img class="aligncenter size-full wp-image-2404" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Packages-‹-Youth-Empowerment-Institute-—-WordPress.jpg" alt="Packages ‹ Youth Empowerment Institute — WordPress" width="470" height="373" />Nuts. Well it turns out BlueHost doesn't allow file archiving on their free nonprofit accounts. So what now? This is why I always run through these things multiple times, because it reminds me that these fancy plugins don't always work. That's why you've (not being rhetorical here, **you** specifically) got to do it the hard way sometimes.
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Packages-‹-Youth-Empowerment-Institute-—-WordPress.jpg)Nuts. Well it turns out BlueHost doesn't allow file archiving on their free nonprofit accounts. So what now? This is why I always run through these things multiple times, because it reminds me that these fancy plugins don't always work. That's why you've (not being rhetorical here, **you** specifically) got to do it the hard way sometimes.
 # The Hard Way: Manual Migration with Find and Replace
 This is actually easier than I’ve made it out to be. The only part that gets a little tricky is making sure all the URLs are correct. Let’s work through what that means.
 
@@ -128,19 +128,19 @@ To do this, in CPanel, navigate to the phpMyAdmin tool (it’s next to the MySql
 
 Go to the **Databases** Tab.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_db1.png"><img class="alignnone size-full wp-image-5749" src="http://labs.everettprogram.org/wp-content/uploads/man_db1.png" alt="man_db1" width="716" height="406" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_db1.png)
 
 Select the database you created in Step 2.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_db2.png"><img class="alignnone size-full wp-image-5750" src="http://labs.everettprogram.org/wp-content/uploads/man_db2.png" alt="man_db2" width="204" height="401" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_db2.png)
 
 Select the **Import** tab.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_db3.png"><img class="alignnone size-full wp-image-5751" src="http://labs.everettprogram.org/wp-content/uploads/man_db3.png" alt="man_db3" width="960" height="37" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_db3.png)
 
 Upload the .sql database from your manual backup and hit **Go**. If everything went well, the import should be successful.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_db4.png"><img class="alignnone size-full wp-image-5752" src="http://labs.everettprogram.org/wp-content/uploads/man_db4.png" alt="man_db4" width="427" height="539" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_db4.png)
 [/toggle]
 [toggle title="Step 4: Link Database and WordPress files"]
 <h2 id="step-4-link-database-and-wordpress-files"><a class="headeranchor-link" href="#step-4-link-database-and-wordpress-files" name="user-content-step-4-link-database-and-wordpress-files"></a>Step 4: Link Database and WordPress files</h2>
@@ -150,21 +150,21 @@ Go back to your files and open up **wp-config.php** using the Code Editor. This 
 
 Lines 19, 22, and 25 are where you enter the db name, user, and password.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_config1.png"><img class="alignnone size-full wp-image-5747" src="http://labs.everettprogram.org/wp-content/uploads/man_config1.png" alt="man_config1" width="582" height="316" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_config1.png)
 
 Also, go ahead and paste in new keys and salts by following the instructions starting on 37. After you’ve completed this step we are almost in business.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/man_config2.png"><img class="alignnone size-full wp-image-5748" src="http://labs.everettprogram.org/wp-content/uploads/man_config2.png" alt="man_config2" width="950" height="293" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/man_config2.png)
 [/toggle]
 [toggle title="Step 5: Find and Replace Script"]
 <h2 id="step-5-find-and-replace-script"><a class="headeranchor-link" href="#step-5-find-and-replace-script" name="user-content-step-5-find-and-replace-script"></a>Step 5: Find and Replace Script</h2>
 Still one last thing to do. The database is just a copy of the one from your previous site. That means that anytime there is a reference to a URL on your site, it will be to the old site. Where might you find such references? Well for starters your site’s address in the Options will be the same. As will the URLs to every single post, page, and bit of media. So it’s kind of important we fix this.
 
-The WordPress Codex article for how to do this can be found <a href="http://codex.wordpress.org/Moving_WordPress#On_Your_Existing_Server">here</a>. It lays out several different scenarios and methods.
+The WordPress Codex article for how to do this can be found [here](http://codex.wordpress.org/Moving_WordPress#On_Your_Existing_Server). It lays out several different scenarios and methods.
 
 The method we’re using it says is “for developers” but I went through both methods and the 15 step process they give for laypeople is way more complicated and time consuming. We’re hardcore so we’re doing it like the devs!
 <h3 id="download-and-run-the-find-and-replace-script"><a class="headeranchor-link" href="#download-and-run-the-find-and-replace-script" name="user-content-download-and-run-the-find-and-replace-script"></a>Download and Run The Find And Replace Script</h3>
-Over there on the WP Codex page right above where the heading says ‘On Your Existing Server’, there’s a link to the <a href="https://interconnectit.com/products/search-and-replace-for-wordpress-databases/">Search and Replace for WordPress Databases Script</a>. Follow this link and find the download button. I recommend the 3.0.0 Beta version because it’s much easier to use than the older version.
+Over there on the WP Codex page right above where the heading says ‘On Your Existing Server’, there’s a link to the [Search and Replace for WordPress Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/). Follow this link and find the download button. I recommend the 3.0.0 Beta version because it’s much easier to use than the older version.
 
 This will download a zip file. Upload this into the directory of your migrated WordPress instance. Extract the find and replace zip file. Rename this folder to something else, such as *yourname*. It is very important that you rename this folder.
 
@@ -172,17 +172,17 @@ To run the find and replace script, visit the URL of the folder in your web brow
 
 <strong>I’ll say this now: as soon as you run the script **(after it is complete and your website is functioning),** you need to delete the find and replace directory. It’s a public file and can cause a trouble if someone came across it.</strong>
 
-Basically what this file does is search for all the instances of the old URL and replaces it with the new URL. It will find all instances of “<a href="http://yoursite.com/old-location">http://yoursite.com/old-location</a>” and replace them with “<a href="http://yoursite.com/new-location">http://yoursite.com/new-location</a>”. We just need to make sure it is the right info.
+Basically what this file does is search for all the instances of the old URL and replaces it with the new URL. It will find all instances of “[http://yoursite.com/old-location](http://yoursite.com/old-location)” and replace them with “[http://yoursite.com/new-location](http://yoursite.com/new-location)”. We just need to make sure it is the right info.
 
 If you are not sure what the old URL for you migrated website is, go into your database using phpMyAdmin. After selecting the database for you migrated website, click **wp_option**. The first row should be **siteurl**. Copy the URL in the option. This will be the “find” portion of the find and replace, next to **Replace**
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/db_check1.png"><img class="alignnone size-full wp-image-5735" src="http://labs.everettprogram.org/wp-content/uploads/db_check1.png" alt="db_check1" width="288" height="379" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/db_check1.png)
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/db_check2.png"><img class="alignnone size-full wp-image-5736" src="http://labs.everettprogram.org/wp-content/uploads/db_check2.png" alt="db_check2" width="851" height="132" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/db_check2.png)
 
 Next enter in the new URL that you want to replace it with, next to **with**.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/find_and_replace1.png"><img class="alignnone size-full wp-image-5742" src="http://labs.everettprogram.org/wp-content/uploads/find_and_replace1.png" alt="find_and_replace1" width="1349" height="640" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/find_and_replace1.png)
 
 Make sure both of these URLs are in the format *http://yourdomain/foldernames*.
 
@@ -197,7 +197,7 @@ A major benefit of WordPress is that it's free. As we've demonstrated, you can m
 
 A major drawback of WordPress is that you need an internet connection to use it. PHP is a server-side scripting language meaning that you need special software installed on an Apache server in order to make posts or view the site. Additionally, you're constrained by the speed of your internet connection when writing posts and testing changes to your site. This is far different from creating a website with HTML and CSS which you can do from your computer whether you're connected to the internet. Just like a man who wants to drink soda and eat from a large bowl of chips at once without putting either down, "There's got to be a better way!"
 
-[caption id="" align="aligncenter" width="390"]<img src="http://i.imgur.com/EDaoQ.gif" alt="" width="390" height="260" /> There's got to be a better way![/caption]
+[caption id="" align="aligncenter" width="390"]![image](http://i.imgur.com/EDaoQ.gif) There's got to be a better way![/caption]
 ## MAMP and MAMP for Windows
 Luckily there is a better way. All you need to do is use MAMP if you're a Mac user or WAMP if you're a Windows user. These stand for **M**ac/**W**indos **A**pache **M**ySQL **P**HP. They are applications available free for download that allow set up virtual servers locally on your computer. These servers have PHP and MySQL installed on them so you can use software that requires them...like WordPress.
 
@@ -214,7 +214,7 @@ There are big benefits to setting up a local development environment:
 
 <iframe src="//www.youtube.com/embed/00KrMpaOgPk" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 ## Installing
-Go to <a href="http://www.mamp.info/en/" target="_blank">http://www.mamp.info/en/</a> and download MAMP. The file is like 140MB so give it a minute. Annoyingly, the package includes a demo of MAMP Pro, but you can just uninstall it once you unpack the zip file. Once it finishes downloading, unpack it and run the installer. It will deposit MAMP and MAMP Pro into your Applications folder just like downloading any app.
+Go to [http://www.mamp.info/en/](http://www.mamp.info/en/) and download MAMP. The file is like 140MB so give it a minute. Annoyingly, the package includes a demo of MAMP Pro, but you can just uninstall it once you unpack the zip file. Once it finishes downloading, unpack it and run the installer. It will deposit MAMP and MAMP Pro into your Applications folder just like downloading any app.
 ## Using MAMP
 There are two main things you need to know about: **phpMyAdmin** and the **htdocs** folder.
 ## htdocs
@@ -222,7 +222,7 @@ This folder is found in the MAMP folder. Think of it as your domain public root.
 
 In the screen cap below, you can see that I've placed a file called 'index.php' into the '**htdocs**' directory. The file contains php code that just prints the words "Hello World". If you tried to open a php file using your browser under normal circumstances it wouldn't execute the code. It would just display the code as it's written, but since we accessed the php file through "**localhost:8888/**" it uses MAMP to execute the code and we are able to view it.
 
-<img class="aligncenter size-full wp-image-2386" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Applications.jpg" alt="Applications" width="516" height="440" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Applications.jpg)
 ## phpMyAdmin
 If you paid attention to the previous lessons, then you would know that phpMyAdmin is a an open source MySQL language client. It allows us to edit  MySQL databases using a Graphical User Interface (GUI). This is where you will create a database for a new WordPress installation. When you launch MAMP, it will start the servers and then open up the start page. There's a tab at the top that will let you access phpMyAdmin
 ## Creating a Database in a Local Development Environment
@@ -234,19 +234,19 @@ The interface to interact with the SQL databases on your local development envir
 
 To access phpMyAdmin, bring up the **MAMP Start Page**. You can do this by clicking **Open Start Page** via the MAMP program window.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/mamp1.png"><img class="alignnone size-full wp-image-5743" src="http://labs.everettprogram.org/wp-content/uploads/mamp1.png" alt="mamp1" width="483" height="323" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/mamp1.png)
 
 The link to phpMyAdmin is in the PHP section. Take note that the username and password is root and root.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/mamp2.png"><img class="alignnone size-full wp-image-5744" src="http://labs.everettprogram.org/wp-content/uploads/mamp2.png" alt="mamp2" width="574" height="453" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/mamp2.png)
 
 Go to **Databases**.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/mamp3.png"><img class="alignnone size-full wp-image-5745" src="http://labs.everettprogram.org/wp-content/uploads/mamp3.png" alt="mamp3" width="552" height="134" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/mamp3.png)
 
 Input a name for the Database. Keep the dropdown option at Collation. Hit **Create**.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/mamp4.png"><img class="alignnone size-full wp-image-5746" src="http://labs.everettprogram.org/wp-content/uploads/mamp4.png" alt="mamp4" width="510" height="132" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/mamp4.png)
 
 You have now create a new database. *Hold up! I never got to input a username and password for the database!*. You are right, we didn’t create a database username and password. Why? **You don’t need to.** In a local development environment, at least in the case of MAMP, the username and password are both set to root. *Doesn’t this create a security issue?*. Not really. MAMP assumes this is only for a local development environment, meaning you will be the only one accessing it, therefore no security issue.
 
@@ -281,7 +281,7 @@ In Part 1, manually migrate (using the hard way) your WordPress instance at *you
 	<li>Export the Database through phpMyAdmin.</li>
 </ol>
 <h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
-Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+Email [wordpress@labs.everettprogram.org](mailto:wordpress@labs.everettprogram.org) the following:
 <ul>
 	<li>Email subject line in the following format: *HW #6 Firstname Lastname*</li>
 	<li>The web address of your WordPress instance *yourdomain/frustration*.</li>

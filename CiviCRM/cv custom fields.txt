@@ -5,7 +5,7 @@ Everett is interdisciplinary so we like to maintain relationships with the vario
 
 Thinking deeper, there are other important things to consider about UCSC people. Wouldn't it be nice to be able to look for people by department? Or by Division? These aspects aren't neatly reflected by the existing contact fields. Let's explore how we used custom fields for the Everett databse and how we set them up.
 ## How Do?
-You start by reading the <a href="http://book.civicrm.org/user/current/organising-your-data/custom-fields/">CiviBook Entry on Custom Fields</a>. Yes read it. Then mosey on over to <code>Administer &gt; Customize Data and Screens &gt; Custom Fields</code> to make your own custom fields.
+You start by reading the [CiviBook Entry on Custom Fields](http://book.civicrm.org/user/current/organising-your-data/custom-fields/). Yes read it. Then mosey on over to <code>Administer &gt; Customize Data and Screens &gt; Custom Fields</code> to make your own custom fields.
 ### Create a New Field Set
 This step is obvious because you read the CiviBook entry. Before creating a custom field, you need to create a set in which to put it. For the purposes of this example, we'll go with <code>UCSC Info</code>. It's descriptive but not overly specific. As time goes on, and we better understand our own needs, we can add more fields that don't necessarily pertain to advisors.
 ### Set What It's Used for

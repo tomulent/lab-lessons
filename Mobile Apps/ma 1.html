@@ -34,20 +34,20 @@ There are six headings:<code> &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &l
 ## Unordered Lists
 Writing things in list form keeps things very neat and forces you to write things concisely. Let's go over how to use lists. The basic syntax goes like this:
 
-<code><img class="aligncenter size-full wp-image-3018" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.56.20-PM.png" alt="Screen Shot 2014-05-16 at 12.56.20 PM" width="214" height="105" />
+<code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.56.20-PM.png)
 </code>
 
 &lt;ul&gt; starts the unordered list. &lt;li&gt; stands for 'list item'. Everything in between '&lt;li&gt;' and '&lt;/li&gt; will be an item. By default it just shows up as normal text but list item can be anything. Even another list! Give this list a try in your tester page:
 
-<code><img class="aligncenter size-full wp-image-3019" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.57.28-PM.png" alt="Screen Shot 2014-05-16 at 12.57.28 PM" width="709" height="265" /> </code>
+<code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.57.28-PM.png) </code>
 
 As you can see, there is a lot you can do with a list. We had links, plain text, heading, and even other lists as items in our list! Lists come into play in mobile apps as well. The picture below is of an unordered list.
 
-<img class="aligncenter size-full wp-image-3021" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.59.07-PM.png" alt="Screen Shot 2014-05-16 at 12.59.07 PM" width="393" height="362" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.59.07-PM.png)
 
 That looks complicated doesn't it? Well not really actually. All you need to do is make an unordered list and add the attribute " data-role="list-view" " to the &lt;ul&gt; tag. Here's what the code looks like:
 <code>
-<img class="aligncenter size-full wp-image-3020" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png" alt="Screen Shot 2014-05-16 at 12.58.00 PM" width="488" height="185" /></code> That was easier than you thought it would be I bet.
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png)</code> That was easier than you thought it would be I bet.
 ## Attributes
 This is a tremendously important concept to grasp. Attributes are little pieces of information placed inside an opening tag that define information about the element. An attribute you're probably familiar with is 'href'. You're used to putting that in an &lt;a&gt;, or 'anchor', tag to define the destination. There is also a 'title' attribute for the anchor tag which floats a little tooltip when you mouse over the link. What other attributes can you think of? Here's some examples:
  &lt;a href="http://google.com" title="Google"&gt;Link to Google&lt;/a&gt;</pre>
@@ -62,13 +62,13 @@ This concept overlaps with CSS, but we'll be using it in a slightly different wa
 
 Class and Id are both attributes which, as you recall, are pieces of information placed into an opening tag to define something about that element. Consider the example below of how id and class are added to elements and how they are used for CSS. (note we are using internal CSS so that we can see everything on the same page)
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.19.19-PM.png"><img class="aligncenter size-full wp-image-3022" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.19.19-PM.png" alt="Screen Shot 2014-05-16 at 1.19.19 PM" width="724" height="448" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.19.19-PM.png)
 
 That's nothing new to you. But to one of the campers, that is a whole bunch of concepts to learn. Luckily, jQuery Mobile doesn't require us to mess with any style. It includes a massive stylesheet with everything we could need. Where id and class come in is as a way of identifying parts of the page.
 
 Mainly, you'll be using the id attribute. This is used to identify pages. Below is an example of a generic jQuery Mobile page. Don't worry that it's got attributes you won't recognize, just notice the use of attributes and especially where you see 'id'
 
-<img class="aligncenter size-full wp-image-3023" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.21.03-PM.png" alt="Screen Shot 2014-05-16 at 1.21.03 PM" width="353" height="314" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.21.03-PM.png)
 
 So how many attributes do you see there? There are 5 in total. 4 of them are the "data-role" attributes that are part of jQuery Mobile and 1 of them is id="page-1". We'll explain what all these divs are a little later and more fully in lesson 2. For now, just know that you'll be making a lot of those 'pages' you see above. Most importantly, note that the div with the data-role="page" also has the id="page-1". This is how navigations will happen throughout the app.
 ## &lt;a&gt;: Making Links
@@ -76,18 +76,18 @@ We've covered how to make links pretty thoroughly in the previous sections, so t
  &lt;a href="URL"&gt;Link Text&lt;/a&gt;</pre>
 What you may not know how to do is link to locations within a page rather than between pages. It's extremely simple. Typically, you would put an internet or file address as the href value. To link to a location on a page, you put an element id as the href value.
 
-Still confused? If you click <a href="#attributes">here</a>, you will jump to the attributes section of this page. This was accomplished with the code you see below.
+Still confused? If you click [here](#attributes), you will jump to the attributes section of this page. This was accomplished with the code you see below.
  &lt;p&gt;Still confused? If you click &lt;a href="#attributes"&gt;here&lt;/a&gt;,
  you will jump to the attributes section of this page. This was accomplished with the code you see below.&lt;/p&gt;
 
 </pre>
 I knew that that section had the id "attributes" because, well, I wrote this page, so I know what id I wrote.
 
-Look at your address bar after you clicked the link. See how it has #attributes at the end of it now? This isn't strictly related to this lesson, but if you know the id of something on a page, then you can add the #id directly to a link and send someone directly to that part of the page. Like when people link to Wikipedia, they sometimes link to a particular part, like <a href="https://en.wikipedia.org/wiki/Uc_santa_cruz#Mascot" target="_blank">this</a>.
+Look at your address bar after you clicked the link. See how it has #attributes at the end of it now? This isn't strictly related to this lesson, but if you know the id of something on a page, then you can add the #id directly to a link and send someone directly to that part of the page. Like when people link to Wikipedia, they sometimes link to a particular part, like [this](https://en.wikipedia.org/wiki/Uc_santa_cruz#Mascot).
 
 This is important to jQuery Mobile because it's the crux of how you get around the app. Again, we'll go more into it in the next lesson, but the way we write the apps is by putting all of our 'pages' as defined by &lt;div data-role="page"&gt; into one single HTML document and then linking to different parts of it using &lt;a href="#location"&gt;link&lt;/a&gt;. Look again at the list example from above.
 
-<img class="aligncenter size-full wp-image-3020" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png" alt="Screen Shot 2014-05-16 at 12.58.00 PM" width="488" height="185" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png)
 
 As you may have guessed, each item is a link to a different &lt;div data-role="page" id="meet-x"&gt;.
 ### &lt;div&gt;
@@ -132,7 +132,7 @@ You are going to create a  webpage with a series of &lt;div&gt;'s nested within
 <ul>
 	<li>Make the largest be 600px wide by 600px high. The second should bee 500x500 and so on so forth</li>
 	<li>Using CSS, give them each a different background color. I suggest red, orange, yellow, green, blue, purple, because that's the way the colors go. If you wanna be fancy you can add another dive between blue and purple that's indigo colored.</li>
-	<li>Refer to <a href="http://icanfafsa.com/mobileapps/divstravaganza.html" target="_blank">this page</a> (you can view the source code by right clicking on the page and hitting "view source".)</li>
+	<li>Refer to [this page](http://icanfafsa.com/mobileapps/divstravaganza.html) (you can view the source code by right clicking on the page and hitting "view source".)</li>
 </ul>
 ##  HTMLizing Your GIIP Proposal
 Make your Project Proposal into an HTML page. That's it.
@@ -152,4 +152,4 @@ Just take your project proposal from 30B and put it into HTML form.
 </ul>
 When you finish, upload it to your server and send me a link.
 
-Download "lesson-1" from the <a href="https://github.com/YouthEmpowermentInstitute" target="_blank">YEI GitHub page</a> to see an example of  completed HTMLized proposal
+Download "lesson-1" from the [YEI GitHub page](https://github.com/YouthEmpowermentInstitute) to see an example of  completed HTMLized proposal

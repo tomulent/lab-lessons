@@ -11,7 +11,7 @@ It is a structured planning method used to evaluate the **strengths, weaknesses
 
 **T**hreats (external): elements in the environment that could cause trouble for the business or project
 
-<img class="alignnone wp-image-4278 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/320px-SWOT_en.svg.png" alt="320px-SWOT_en.svg" width="320" height="360" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/320px-SWOT_en.svg.png)
 ### How do I use SWOT?
 A SWOT analysis can be carried out for a product, place, industry or person.
 
@@ -34,7 +34,7 @@ You can also use SWOT for personal improvement, group projects, evaluating progr
 	<li>Identifies qualities</li>
 	<li>Easy to understand</li>
 </ul>
-<img class="alignnone wp-image-4279 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/Walt-Disney-SWOT-Analysis.jpg" alt="Walt-Disney-SWOT-Analysis" width="642" height="348" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/Walt-Disney-SWOT-Analysis.jpg)
 ### Bad
 <ul>
 	<li>Lacks information</li>
@@ -44,6 +44,6 @@ You can also use SWOT for personal improvement, group projects, evaluating progr
 	<li>Not relevant to business/ company</li>
 	<li>Not presentable to others</li>
 </ul>
-<img class="alignnone wp-image-4280 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/Monocles.jpg" alt="Monocles" width="440" height="491" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/Monocles.jpg)
 
 [/toggle]

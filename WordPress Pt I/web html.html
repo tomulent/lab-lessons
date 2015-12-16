@@ -12,11 +12,11 @@ In this lesson you will learn to code with HTML. HTML stands for Hyper Text Mark
 [one_third last="yes"]
 ## Resources
 <ul>
-	<li><a href="http://www.codecademy.com/tracks/web" target="_blank">Codecademy</a></li>
-	<li><a title="Mozilla Developer Network" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></li>
-	<li><a href="http://www.w3schools.com/html/">W3 Schools: HTML</a></li>
-	<li><a href="http://www.codecademy.com/glossary/html">HTML Glossary 1</a></li>
-	<li><a href="http://www.w3schools.com/tags/">HTML Glossary 2</a></li>
+	<li>[Codecademy](http://www.codecademy.com/tracks/web)</li>
+	<li>[Mozilla Developer Network](https://developer.mozilla.org/en-US/)</li>
+	<li>[W3 Schools: HTML](http://www.w3schools.com/html/)</li>
+	<li>[HTML Glossary 1](http://www.codecademy.com/glossary/html)</li>
+	<li>[HTML Glossary 2](http://www.w3schools.com/tags/)</li>
 </ul>
 [/one_third]
 # Tools of the Trade
@@ -26,13 +26,13 @@ We write and save our code using a text editor. DO NOT use a program like Word f
 
 These are all **free** software:
 ### Windows:
-<a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>
-<a href="https://atom.io/" target="_blank">Atom</a>
+[Notepad++](http://notepad-plus-plus.org/)
+[Atom](https://atom.io/)
 
 ### Mac OSX:
-<a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler</a> (Mac lab computers have this loaded)
-<a href="https://atom.io/" target="_blank">Atom</a>
-Note: TextWrangler requires Mac OS 10.6.8 (Snow Leopard) or later. If your Mac is running anything before that, please contact the Tech Director (<a href="mailto:thomas@everettprogram.org" target="_blank">thomas@everettprogram.org</a>) for a free upgrade to Snow Leopard. Otherwise use, <a href="http://sourceforge.net/projects/smultron/" target="_blank">Smultron</a>.
+[TextWrangler](http://www.barebones.com/products/textwrangler/) (Mac lab computers have this loaded)
+[Atom](https://atom.io/)
+Note: TextWrangler requires Mac OS 10.6.8 (Snow Leopard) or later. If your Mac is running anything before that, please contact the Tech Director ([thomas@everettprogram.org](mailto:thomas@everettprogram.org)) for a free upgrade to Snow Leopard. Otherwise use, [Smultron](http://sourceforge.net/projects/smultron/).
 ## Web Browser
 Web browsers are what you view web pages with. You wouldn’t be seeing this lesson or reading Reddit in class without one. Some web browsers are Firefox, Google Chrome, Safari (if you have a Mac) and Internet Explorer (there are others as well).
 
@@ -195,7 +195,7 @@ Next, let’s create a link using the &lt;a&gt; tag. Surround the text “Google
 
 [html]&lt;p&gt;We can search the web using the &lt;a href=&quot;&quot;&gt;Google Search Engine&lt;/a&gt;&lt;/p&gt;.[/html]
 
-Now we have created a link, but it doesn’t work. The link doesn’t know where to go. That’s where the href attribute comes into play. In between the two double quotes we need to write the destination the link will take us to. For this link, let’s use <a href="http://www.google.com">http://www.google.com</a>. We should now have:
+Now we have created a link, but it doesn’t work. The link doesn’t know where to go. That’s where the href attribute comes into play. In between the two double quotes we need to write the destination the link will take us to. For this link, let’s use [http://www.google.com](http://www.google.com). We should now have:
 
 [html]&lt;p&gt;We can search the web using the &lt;a href=&quot;http://www.google.com&quot;&gt;Google Search Engine&lt;/a&gt;&lt;/p&gt;.[/html]
 
@@ -213,7 +213,7 @@ You’re a pro now so this should be easy. To add an image, you use the &lt;img 
 
 &lt;img&gt; is special in that you don’t have to use a closing tag, just a slash at the end. As I mentioned earlier, it is a self-closing tag. I know that this may be confusing after all the jive we’ve been talking about how HTML elements need to have an opening *and *a closing tag.  Think of it like this: the image tag doesn’t need an opening and closing because there’s nothing you would put in between them. With &lt;p&gt; it makes sense because you’re telling the browser that everything in between &lt;p&gt; and &lt;/p&gt; belongs in one paragraph, but with &lt;img&gt; the tag itself represents the whole element.
 
-<img class="alignnone size-full wp-image-2210" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/everett-icon-144px.png" alt="everett-icon-144px" width="144" height="144" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/everett-icon-144px.png)
 
 Anyway, download the Everett logo and save it with default name. Make sure you save it in the same folder as your index.html file. After our &lt;p&gt; tag, on a new line add:
 
@@ -223,9 +223,9 @@ Save, refresh and if you did this correctly, you should see the Everett logo und
 
 In this example, we saved our image on our computer and with the src attribute, told the browser where to find the image file (that was also on our computer). We can also give the src attribute a value of a URL (ex. http://somewebsite.com/someotherfilestructurestuff ).
 
-For example, we can look up an image on Google Images or even a random website, find a specific images URL, and use that image in our own web page. I did a quick Google Images search for the Everett Program, viewed an image, and found its URL (<a href="http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg">http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg</a>). *Don’t use this URL by the way*. If I used this URL for an image in my own web page, it would display the image I found. Cool right? I didn’t have to save the image on my computer and by using the image’s URL, I have an image for my page, it works, and it was easy! Well….this is NOT a good practice! Here is what happened:
+For example, we can look up an image on Google Images or even a random website, find a specific images URL, and use that image in our own web page. I did a quick Google Images search for the Everett Program, viewed an image, and found its URL ([http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg](http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg)). *Don’t use this URL by the way*. If I used this URL for an image in my own web page, it would display the image I found. Cool right? I didn’t have to save the image on my computer and by using the image’s URL, I have an image for my page, it works, and it was easy! Well….this is NOT a good practice! Here is what happened:
 
-**Scenario 1:** We downloaded the Everett image file and saved it on our computer. When we open our web page, the browser needs to download the image file to display it. This is why sometimes images don’t load on websites; they didn’t download properly. The act of the browser downloading the image file uses network bandwidth. For an explanation of network bandwidth, visit: <a href="http://its.ucsc.edu/security/bandwidth.html">http://its.ucsc.edu/security/bandwidth.html</a>. In this case it didn’t use any bandwidth because it just read the image file off of our computer. When we begin to host our websites on web servers (so anyone with an internet connection can view our page) and open our website in a browser, it will use network bandwidth. In this case, it will use bandwidth that WE pay for.
+**Scenario 1:** We downloaded the Everett image file and saved it on our computer. When we open our web page, the browser needs to download the image file to display it. This is why sometimes images don’t load on websites; they didn’t download properly. The act of the browser downloading the image file uses network bandwidth. For an explanation of network bandwidth, visit: [http://its.ucsc.edu/security/bandwidth.html](http://its.ucsc.edu/security/bandwidth.html). In this case it didn’t use any bandwidth because it just read the image file off of our computer. When we begin to host our websites on web servers (so anyone with an internet connection can view our page) and open our website in a browser, it will use network bandwidth. In this case, it will use bandwidth that WE pay for.
 
 **Scenario 2:** We didn’t download the image file and used the image’s source URL. The browser downloads the image file from **another server or computer** so that it can display the image on our page. This uses someone else’s network bandwidth, and in my second example, it would use the Everett Program’s network bandwidth. They pay for this bandwidth! We didn’t. This is a bad practice in the web development/design community.
 
@@ -253,17 +253,17 @@ Sign up for a Codecademy account at Codecademy.com  . It is free. This is where
 ### Attention: Sign up for a Codecademy account BEFORE you start doing the lessons. If you do the lessons without signing up and being logged in, Codecademy won't save your progress.
 After logging into your Codecademy account, go to the HTML/CSS section. Complete the sections:
 #### HTML Basics
-<img class="alignnone size-full wp-image-3474" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_1.png" alt="HW_Img_1" width="782" height="334" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_1.png)
 
 You do not need to complete the small project right after (But you can complete it for more practice).
 
 &nbsp;
 #### HTML Basics II
-<img class="alignnone size-full wp-image-3475" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_2.png" alt="HW_Img_2" width="685" height="342" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_2.png)
 
 Again, you do not need to complete the small project right after (It’s good practice though!).
 #### HTML Basics III
-<img class="alignnone size-full wp-image-3476" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_3.png" alt="HW_Img_3" width="645" height="332" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_3.png)
 
 Again, you do not need to complete the small project after.
 
@@ -271,12 +271,12 @@ After you have completed these three sections, you need to submit your HW.
 
 You will need your Codecademy profile URL for submitting this homework. To get this, while logged into your Codecademy account, navigate to Me in the top right corner. Click Me and it will show a dropdown menu. Click “View my profile”.
 
-<img class="alignnone size-full wp-image-3477" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_4.png" alt="HW_Img_4" width="1197" height="444" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_4.png)
 Now you are on your profile page. The link needed will be in your URL bar (this is a link that brings the viewer to your profile where they can see the badges you have earned).
 
-<img class="alignnone size-full wp-image-3478" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_5.png" alt="HW_Img_5" width="1140" height="223" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_5.png)
 # Submission
-Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+Email [wordpress@labs.everettprogram.org](mailto:wordpress@labs.everettprogram.org) the following:
 <ul>
 	<li>Email subject line in the following format: *HW #1 Firstname Lastname*</li>
 	<li>The web address of your Codecademy profile (put this in the body of the email)</li>

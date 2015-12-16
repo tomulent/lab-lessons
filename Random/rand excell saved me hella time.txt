@@ -52,9 +52,9 @@ a href="http://www.nigerianstat.gov.ng/pages/download/1"&gt;http://www.nigerians
 ## Now Drag!
 We've got a complete link! Highlight all 6 cells, grab the square at the bottom and pull down for 25o rows
 
-<img class="aligncenter size-full wp-image-4300" src="http://labs.everettprogram.org/wp-content/uploads/2014/12/Screenshot_12_1_14__4_29_PM.png" alt="Screenshot_12_1_14__4_29_PM" width="1051" height="379" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2014/12/Screenshot_12_1_14__4_29_PM.png)
 ## Copy Column F and Put Into an HTML Page
-You can see the finished product <a href="http://icanfafsa.com/bulk" target="_blank">here.</a>
+You can see the finished product [here.](http://icanfafsa.com/bulk)
 # Learn This Lesson Well
 The point of all this is that with just a little know how you can save yourself oodles of time. Here's a list of why it's better to figure out a solution rather than stick it out and do it manually:
 <ul>

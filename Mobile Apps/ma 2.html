@@ -22,7 +22,7 @@
 Traditionally, mobile apps were built to run on a particular phone OS like iOS for iPhones or Android for other devices. But developers are realizing that that takes way too much time and leaves open too much room for things to mess up. jQuery Mobile is one way that apps are being made easier.
 
 The basic thing you have to realize is that apps are turning into webpages that run on your phone. That's the gist of it anyway. Using HTML, CSS, and Javascript we can make apps that look and run great no matter what phone they're on.
-<h1><a href="http://jquerymobile.com">jquerymobile.com</a></h1>
+<h1>[jquerymobile.com](http://jquerymobile.com)</h1>
 This will be our base of operations. The website unfortunately has a rather peculiar layout. You should definitely explore the site, but the part that we'll be most concerned with is "Demos".
 ## Demos
 Click on the demo page for the latest stable build. At time of writing this lesson, that was version 1.4.2
@@ -33,7 +33,7 @@ The Demo page contains a reference for all the 'widgets' available to you. Think
 
 
 
-Take a few minutes and read through "<a href="http://view.jquerymobile.com/1.3.1/dist/demos/intro/">Introduction</a>". It will tell you the basics of what you need to know. I'll outline it right here, but you still have to read "Introduction".
+Take a few minutes and read through "[Introduction](http://view.jquerymobile.com/1.3.1/dist/demos/intro/)". It will tell you the basics of what you need to know. I'll outline it right here, but you still have to read "Introduction".
 <div id="homework">
 # The Basis of jQuery Mobile
 You have experience coding websites in straight HTML and CSS. For your midterm in Intro to Web Design, you create a full website using nothing but code. Recall how your site had multiple pages like, Home, About Me, and Contact. Each of those pages was contained in its own .html file like, 'index.html', 'about.html', and 'contact.html'. We're going to do something slightly different with jQuery Mobile. We're going to put all the pages into a single HTML document. jQuery Mobile will then take care of all the crafty stuff and allow it to display as if it's a collection of multiple pages instead of one big one.
@@ -44,7 +44,7 @@ Please refer to the jQuery Mobile article on Pages, as their documentation is 
 
 As stated before, jQuery Mobile allows us to put everything we want into one HTML file. Here is what allows it to work:
 
-<code><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/jQuery-Mobile-1.png"><img class="aligncenter size-full wp-image-3010" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/jQuery-Mobile-1.png" alt="jQuery Mobile 1" width="800" height="245" /></a>
+<code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/jQuery-Mobile-1.png)
 </code>
 All that stuff there in the head is the heart of the program. Let's go through line by line.
 <ul>
@@ -63,14 +63,14 @@ All that stuff there in the head is the heart of the program. Let's go through l
 </ul>
 TL;DR: You need to included the above &lt;head&gt; section in order for any of this stuff to work.
 
-On the jQuery Mobile site, you will see [version] instead of numbers a placeholder. jQuery Mobile, jQuery, and the CSS that style everything are constantly changing so instead of writing them into this walkthrough page every time they change, they just put [version] and expect you to check what the current versions are. To do that <a href="http://jquerymobile.com/download/" target="_blank">http://jquerymobile.com/download/</a> and look for the code snippet. It will contain the correct versions.
+On the jQuery Mobile site, you will see [version] instead of numbers a placeholder. jQuery Mobile, jQuery, and the CSS that style everything are constantly changing so instead of writing them into this walkthrough page every time they change, they just put [version] and expect you to check what the current versions are. To do that [http://jquerymobile.com/download/](http://jquerymobile.com/download/) and look for the code snippet. It will contain the correct versions.
 ### The Content
 Let's look at how things look when we actually start using jQuery Mobile. Go ahead and copy/paste the code from above into your text editor and save it to a file called index.html (of course). In body, enter the following code into the body of the page:
 <code>
-</code><img class="aligncenter size-full wp-image-3011" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.35.06-PM.png" alt="Screen Shot 2014-05-16 at 12.35.06 PM" width="384" height="72" />
+</code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.35.06-PM.png)
 Not too impressive of course. This is a 'page' as we'll be understanding it from now on. It is entirely self contained. We can add some bells and whistles to make it nicer. Let's add a header to it. If we're going to do that we'll have to add some structure though. Structure means &lt;div&gt;'s. Make your code look like this now:
 
-<code><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.41.27-PM.png"><img class="aligncenter size-full wp-image-3013" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.41.27-PM.png" alt="Screen Shot 2014-05-16 at 12.41.27 PM" width="455" height="149" /></a>
+<code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.41.27-PM.png)
 </code>
 
 There are two very important things that have changed:
@@ -87,7 +87,7 @@ You're starting to see how data-role is used. Just by adding that attribute, you
 
 Also, don't forget to link them together! How else will users navigate around? To make links, just enter the href as #id of the first page. Remember back to the last lesson how we talked about linking within a page? Well that's what you're doing here.
 <code>
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.46.21-PM.png"><img class="aligncenter size-full wp-image-3015" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.46.21-PM.png" alt="Screen Shot 2014-05-16 at 12.46.21 PM" width="524" height="352" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.46.21-PM.png)
 </code>
 
 It might not look impressive, but consider that you have a multipage website running out of a single document, and all you had to do was add some jQuery attributes. In the coming lessons we'll start adding more things to our pages and making things more complex.
@@ -98,9 +98,9 @@ Headers and footers are simply a differently colored rectangle at the top or bot
 
 Consider the following code for a page in my app:
 
-<img class="aligncenter size-full wp-image-3286" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/index_html.png" alt="index_html" width="683" height="290" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/index_html.png)
 
-<img class="aligncenter size-full wp-image-3288" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Proposal_App_and_Edit_Page_‹_Everett_Labs_—_WordPress.png" alt="Proposal_App_and_Edit_Page_‹_Everett_Labs_—_WordPress" width="540" height="222" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Proposal_App_and_Edit_Page_‹_Everett_Labs_—_WordPress.png)
 
 You may notice some things that have happened.
 ### Header
@@ -113,7 +113,7 @@ See that we just put a link into the footer and it turned into a button without 
 	<li>You define what things are using the **data-role** attribute </li>
 </ol>
 # Project - Proposal App
-We need to get you creating. Working through the examples in the lessons and on <a href="http://jquerymobile.com">jquerymobile.com</a> are important, but you need to dive in and get your hands dirty. To that end, you're going to create a simple app for yourself.
+We need to get you creating. Working through the examples in the lessons and on [jquerymobile.com](http://jquerymobile.com) are important, but you need to dive in and get your hands dirty. To that end, you're going to create a simple app for yourself.
 # Test App
 This won't be anything fancy. In fact, it will be quite crude. It will be more work than necessary, but you have to do that in order to get the language down.
 ## Parameters
@@ -125,12 +125,12 @@ Use your GIIP general proposal outline as text for this assignment. You're going
 	<li>Don't include the internal links from Project 1. They won't work.</li>
 </ul>
 ### Doing This Project
-This should be easy as long as you remember what you learned in Lesson 2. You can find the basic app template on this <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/pages/#Multi-pagetemplatestructure">page</a> of jQuery Mobile.
+This should be easy as long as you remember what you learned in Lesson 2. You can find the basic app template on this [page](http://view.jquerymobile.com/1.3.1/dist/demos/widgets/pages/#Multi-pagetemplatestructure) of jQuery Mobile.
 
 You can get rid of the footers if you want. It's purely an aesthetic choice. When you want to create a new page, just create another &lt;div data-role="page" id="page-x"&gt;...&lt;/div&gt; and put in your content.
 ## Put It Online
 You have access to a web server, so make use of it. You can upload the html file you create to your server. Just put it into a folder called "my-app" or something. This way you can try it out on your phone!
 
-As always, you can see how I did it by going to the Lesson 2 repo on the <a href="https://github.com/YouthEmpowermentInstitute" target="_blank">YEI GitHub</a>.
+As always, you can see how I did it by going to the Lesson 2 repo on the [YEI GitHub](https://github.com/YouthEmpowermentInstitute).
 
 </div>

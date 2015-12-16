@@ -52,9 +52,9 @@ One way of gaining understanding how something works is to smash it to bits and 
 
 Here is the main part
 
-<dl id="attachment_830"><dt><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png"><img class="alignnone size-full wp-image-2161" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png" alt="With-Style-1" width="668" height="425" /></a></dt></dl>And the sidebar
+<dl id="attachment_830"><dt>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png)</dt></dl>And the sidebar
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-2.png"><img class="alignnone size-full wp-image-2162" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-2.png" alt="With-Style-2" width="243" height="582" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-2.png)
 
 Very simple, very straight forward. It’s very easy to see what’s on the page. What happens when we mess with things? Go to your child theme directory for *yourdomain/wplesson4* and rename your functions.php file to functions1.php. This will basically unlink the parent stylesheet from the website. <strong>*Remember at the end of the lesson to change the name of the functions.php file back.*</strong> Refresh your page and see what’s up. It’s grotesque isn’t it? There are a couple things to note about this:
 
@@ -64,9 +64,9 @@ See the labels in these pictures:
 
 First half of the page
 
-<dl id="attachment_832"><dt><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-1.png"><img class="alignnone size-full wp-image-2164" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-1.png" alt="No-Style-1" width="549" height="393" /></a></dt><dd>First half of the page</dd></dl>and the sidebar portion
+<dl id="attachment_832"><dt>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-1.png)</dt><dd>First half of the page</dd></dl>and the sidebar portion
 
-<dl id="attachment_833"><dt><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-2.png"><img class="alignnone size-full wp-image-2165" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-2.png" alt="No-Style-2" width="356" height="525" /></a></dt></dl>What we can take away from this weird thing I’ve had you do? Not much at the moment, but it will come in handy later. Ok, one thing we can take away is that the page is built from the top down, just like you would when hard coding an HTML page. But as we found earlier, there are no HTML pages anywhere in our WP folder. Instead, the pages are built from individual parts every time you load a page. This happens thanks to PHP.
+<dl id="attachment_833"><dt>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-2.png)</dt></dl>What we can take away from this weird thing I’ve had you do? Not much at the moment, but it will come in handy later. Ok, one thing we can take away is that the page is built from the top down, just like you would when hard coding an HTML page. But as we found earlier, there are no HTML pages anywhere in our WP folder. Instead, the pages are built from individual parts every time you load a page. This happens thanks to PHP.
 [/toggle]
 [toggle title="PHP and Template Files"]
 ### What is PHP?
@@ -82,7 +82,7 @@ Don’t Panic! This will be confusing and you won’t understand most of it. Tha
 ### single.php
 Immediately, you’ll see some grey text. This is text that’s been commented out and is for your benefit.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/single-php-1-10.png"><img class="alignnone size-full wp-image-2166" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/single-php-1-10.png" alt="single-php-1-10" width="455" height="192" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/single-php-1-10.png)
 
 See how they give you a helpful little explanation of what this file does? That was nice of them. We see our first PHP function start on line one with “”. That is instructions to, well, get the header. The header, in the context of WP, is the area of the webpage that contains the &lt;head&gt; section, the site title and description, and the nav menu. So when the PHP function runs, it’s basically saying, “Get the &lt;head&gt; section, the site title, the site description, and the nav menu. Then we can make the rest of the page.”
 
@@ -91,7 +91,7 @@ You’re about to get mad at me. We shouldn’t be in single.php. We jumped the 
 Sorry for jerking you around. Anyway, now that you’ve got header.php open, you’ll see a whole bunch of incomprehensible code. What’s it all mean? We can’t go through every line but we can identify a few parts. Look on line 38. It starts with &lt;h1&gt;
 That’s straight forward enough. That’s something you could do. It’s the opening tag for a size one heading and they’ve given it the class “site-title”. If you inspect the site title using Firebug, then you’ll see it has the class “site-title”. Naturally, what should follow is the title of our site, in my case Donkey. What do you see after it?
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp1.png"><img class="alignnone size-full wp-image-2199" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp1.png" alt="temp1" width="657" height="114" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/temp1.png)
 
 Well that’s weird. What does it all mean? Let’s think about what the site title is and does. In another window, hold the mouse over your site title for a few seconds and you’ll see that a little tool tip comes up. Click on it, and it takes you back to the homepage. So it sounds like what we have is an h1 that is a link with the title that’s the same as the text it displays. Would it make more sense if we wrote it like this?
 &lt;h1&gt;&lt;a href="http://brendinye.me/wplesson4" title="Lesson4" rel="home"&gt;Lesson4&lt;/h1&gt;
@@ -113,14 +113,14 @@ We won’t go through every line here. You can download one of our marked up ver
 
 Starting on line 19 of content.php:
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp2.png"><img class="alignnone size-full wp-image-2200" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp2.png" alt="temp2" width="664" height="190" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/temp2.png)
 
 Starting from the top, it says 1) if we’re dealing with a single post then 2) just display the title of the post as an &lt;h1&gt;with the class “entry-title”. 3) If it’s not a single page, i.e. we’re dealing with the frontpage or an archive or search page, then display the entry title as a link. 5) That’s the end of this “if statement” on to the next thing.
 
 Translation: It checked if we were looking at a post on the front page or one on a single page. Since we were on a single page, it made the title of the post that was NOT a link. What’s next?
 
 On line 33, we have our next important block:
-<code><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png"><img class="alignnone size-full wp-image-2202" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png" alt="temp3" width="710" height="234" /></a></code></pre>
+<code>![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png)</code></pre>
 This block is saying, 1) Is this a search page? 2-4) if so, create a &lt;div&gt; called “entry-summary” and display the post excerpt. 5) Otherwise, 6) create a &lt;div&gt; called “entry-content” and 7) put in the post content.
 
 Translation:”If we’re on a search page, then display all the excerpts of posts. If it’s anything else, display the content of the post.” Then it calls some post metadata like tags, categories, and date. At any rate, it’s done. Back to single.php
@@ -131,7 +131,7 @@ There you have it! That wasn't so complicated was it?
 [/toggle]
 [toggle title="WordPress Databases"]
 # So That’s How it Was Built, But Where Does the Data Come From?
-Good question. We just described in painful detail how a page is put together, but it still doesn’t answer the question of where our posts and pages are actually stored. Search all through your root directory and you’ll never find the post “Hello World” (for more on this, check out the screencasts "How is WP Different from HTML Sites" Parts <a href="http://www.youtube.com/watch?v=Gr9G9lj290Q" target="_blank">1</a> and <a href="http://www.youtube.com/watch?v=PhYplaD4gGY" target="_blank">2</a>). Instead we had all these PHP functions build the post. The actual content of that post is found in your MySQL database. Remember when we created the database and user when we installed WordPress manually? No? If you want to know how, check out this <a href="http://www.youtube.com/watch?v=gsfzF0dGzB8" target="_blank">screencast</a>. When we did that, we were creating the place where all our data would go.
+Good question. We just described in painful detail how a page is put together, but it still doesn’t answer the question of where our posts and pages are actually stored. Search all through your root directory and you’ll never find the post “Hello World” (for more on this, check out the screencasts "How is WP Different from HTML Sites" Parts [1](http://www.youtube.com/watch?v=Gr9G9lj290Q) and [2](http://www.youtube.com/watch?v=PhYplaD4gGY)). Instead we had all these PHP functions build the post. The actual content of that post is found in your MySQL database. Remember when we created the database and user when we installed WordPress manually? No? If you want to know how, check out this [screencast](http://www.youtube.com/watch?v=gsfzF0dGzB8). When we did that, we were creating the place where all our data would go.
 
 This screencast will walk you through the relationship between the database and your WordPress site
 
@@ -143,18 +143,18 @@ Consider again our first post, “Hello World”.
 
 Here is the main part
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png"><img class="alignnone size-full wp-image-2161" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png" alt="With-Style-1" width="668" height="425" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-1.png)
 
 Forget about the header stuff (Site name, description, nav menu) for now. and just focus on the content (the title, and post content). We want to see exactly where they are. In your cPanel, go to the item “phpMyAdmin” it’s under the Databases section. phpMyAdmin is the tool included with cPanel to interact with your databases. Click on “Databases” in the toolbar and then select the database that you created for this instance of WordPress.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-databases.png"><img class="alignnone size-full wp-image-2167" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-databases.png" alt="phpmyadmin-databases" width="322" height="129" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-databases.png)
 
 You will be greeted by a list of tables.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-tabe.png"><img class="alignnone size-full wp-image-2168" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-tabe.png" alt="phpmyadmin-tabe" width="696" height="342" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/phpmyadmin-tabe.png)
 Think of these as interrelated spreadsheets. The table that we’re interested in is called “wp_posts”. This table contains all posts, pages, media attachements, custom menus, and more.
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/wp_posts-in-phpmyadmin.png"><img class="alignnone size-full wp-image-2169" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/wp_posts-in-phpmyadmin.png" alt="wp_posts-in-phpmyadmin" width="963" height="188" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/wp_posts-in-phpmyadmin.png)
 
 In here you will find a long spreadsheet (24 columns). Each of these columns tells us a particular thing about that post.
 
@@ -235,7 +235,7 @@ Change the site title to be right aligned and the site description to be center 
 
 It should end up looking something like this:
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/example-of-hw-.png"><img class="alignnone size-full wp-image-2172" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/example-of-hw-.png" alt="example of hw" width="1077" height="254" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/example-of-hw-.png)
 [/toggle]
 # Completeness Checklist
 <ul>
@@ -246,10 +246,10 @@ It should end up looking something like this:
 	<li>Move the navigation menu to be on top of the site header</li>
 	<li>Alter the spacing of the navigation menu and site header in the specified ways</li>
 	<li>Style the navigation menu and site header in the specified ways</li>
-	<li>You can check <a href="http://brendinnye.me/wordpresspart2/lesson3">brendinnye.me/wordpresspart2/lesson3</a> for an example</li>
+	<li>You can check [brendinnye.me/wordpresspart2/lesson3](http://brendinnye.me/wordpresspart2/lesson3) for an example</li>
 </ul>
 # Submission
-Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+Email [wordpress@labs.everettprogram.org](mailto:wordpress@labs.everettprogram.org) the following:
 <ul>
 	<li>Email subject line in the following format: *HW #4 Firstname Lastname*</li>
 	<li>The web address of your WordPress instance *yourdomain/wplesson4*</li>

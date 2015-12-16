@@ -5,17 +5,17 @@ This lesson will go through adding images in simple ways like as centered page h
 ### Finding Your Image
 Adding images to your app is simple. First you're going to need to find an image you want. I'm going to use the YEI logo in my app. Feel free to download it yourself:
 
-<a href="http://labs.everettprogram.org/wp-content/uploads/2013/06/YEI-Remake1.png"><img class="aligncenter size-full wp-image-3057" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/YEI-Remake1.png" alt="YEI Remake1" width="593" height="285" /></a>
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/YEI-Remake1.png)
 ## Put it in the Right Place
 Make a new directory and call it something like, "pics" or "images". Here's what my directory looks like. You won't have a file call 'README.md' of course. That's the file that holds the text that shows up beneath the file list when you look at these project example repositories on GitHub.
 
-<img class="aligncenter size-full wp-image-3059" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.39.22-AM.png" alt="Screen Shot 2014-05-19 at 11.39.22 AM" width="298" height="140" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.39.22-AM.png)
 ## Add it in Code
 Go to the place in your app's code where you want the image to show up. I'm going to put mine on the first page right above the navigation list. Here is the syntax for adding images in HTML:
 &lt;img id="image-id" src="image-folder/image-name.png" /&gt;</pre>
 It's important to give it an id. We'll talk about that soon.
 ## How Does That Look?
-<img class="aligncenter  wp-image-3060" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.44.11-AM.png" alt="Screen Shot 2014-05-19 at 11.44.11 AM" width="185" height="302" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.44.11-AM.png)
 
 &nbsp;
 
@@ -70,15 +70,15 @@ To alter the height of our image, we'll just follow the syntax as laid out above
 }</pre>
 According to that, the image I put in that was so big will now be 80% of the size of the window. We could have used a different unit of measurement other than percent like, pixels(px). We use percent so that it will change size depending on the size of the screen that our users are viewing it on. Take note that in the following two example images, the image takes up less space, but always the same proportion of space no matter how big the window is.
 
-<img class="aligncenter size-full wp-image-3061" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.53.06-AM.png" alt="Screen Shot 2014-05-19 at 11.53.06 AM" width="331" height="287" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.53.06-AM.png)
 
-<img class="aligncenter size-full wp-image-3062" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.53.13-AM.png" alt="Screen Shot 2014-05-19 at 11.53.13 AM" width="630" height="412" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.53.13-AM.png)
 
 It's kinda awkward to tell from the pictures, but the second image is of a much wider browser window. The window got wider, but the image always takes up the same proportion. Now we just need to keep it from hugging the left side.
 
 (side note: i'm changing the app navigation panel on the front page back to a list view. I think it looks dumb as a navbar. Just telling you this so you don't get confused by it changing looks.)
 ## Setting the Alignment: margin-left and margin-right
-As you've noticed, the image, while the size we want it, is jammed against the left side of the page. English uses a Roman alphabet, so we're used to reading things left to right. That's why everything in web design automatically justifies itself to the left of the page. If we were in a society based on a language that reads right to left, like Arabic or Hebrew, then the opposite would be true. Check out this <a href="http://www.aljazeera.net/portal">link</a> to see what I mean.
+As you've noticed, the image, while the size we want it, is jammed against the left side of the page. English uses a Roman alphabet, so we're used to reading things left to right. That's why everything in web design automatically justifies itself to the left of the page. If we were in a society based on a language that reads right to left, like Arabic or Hebrew, then the opposite would be true. Check out this [link](http://www.aljazeera.net/portal) to see what I mean.
 
 Earlier, we used "text-align: center; " as an example of how to center align a paragraph. You would naturally assume that there was some property like "image-align", but there isn't. Not sure why we can't have something like that, but oh well.
 
@@ -105,7 +105,7 @@ You don't need to learn this, so this will be brief. You can set the all the mar
 }</pre>
 In this case, "**0**" is just a placeholder. It means "leave as is". If you put "**0%**" it would be a different story. Either way, here is the final result
 
-<img class="aligncenter size-full wp-image-3063" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.58.58-AM.png" alt="Screen Shot 2014-05-19 at 11.58.58 AM" width="332" height="387" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.58.58-AM.png)
 
 Nice and pretty!
 # Mid Lesson Break
@@ -121,7 +121,7 @@ I added the id "logo-img2" and gave it the following style in my custom.css file
 }</pre>
 Here's how it looks
 
-<img class="aligncenter size-full wp-image-3064" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.03.58-PM.png" alt="Screen Shot 2014-05-19 at 12.03.58 PM" width="327" height="389" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.03.58-PM.png)
 
 That's sort of there, but not quite. The image just kinda jumps in there, shoving everything else out of the way. We want the text to wrap around the image. To do that we'll use the CSS property "**float**".
 ## Float
@@ -132,7 +132,7 @@ As I rambled about earlier, elements are automatically aligned left, and take up
 }</pre>
 After doing that, my app looks like this:
 
-<img class="aligncenter size-full wp-image-3065" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.05.16-PM.png" alt="Screen Shot 2014-05-19 at 12.05.16 PM" width="331" height="336" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.05.16-PM.png)
 
 Now that looks good.
 # You Said This Lesson Would Be Simple...
@@ -140,7 +140,7 @@ You should know by now not to trust me. There's just one last thing before this 
 ## Image Optimization
 We need to make sure that the images we're including in our app are not any bigger than they need to be. Big images mean big apps, and people don't like downloading those.
 
-Here's an <a href="https://developers.google.com/speed/articles/optimizing-images">article</a> from Google on the issue.
+Here's an [article](https://developers.google.com/speed/articles/optimizing-images) from Google on the issue.
 ## Tutorial Using Preview in Mac
 Here is a version of the YEI logo
 
@@ -165,6 +165,6 @@ Notice any difference? I don't. There is a difference in size though. When we st
 # Project
 Add some images to your proposal.
 
-<a href="https://github.com/YouthEmpowermentInstitute/lesson-7" target="_blank">GitHub</a>
+[GitHub](https://github.com/YouthEmpowermentInstitute/lesson-7)
 
 &nbsp;

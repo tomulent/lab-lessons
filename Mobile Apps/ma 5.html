@@ -13,17 +13,17 @@ You can put a navbar anywhere you want theoretically, but we want ours to be at 
 
 As with most things in this course, we'll be creating a div and giving it a jQuery attribute. The jQuery attribute we use to turn a div into a navbar is **data-role="navbar".** I know, I know. They like making it all cryptic and not straightforward. Just try and bear with it and follow along. Here is an example of the code that I used in mine.
 
-<img class="aligncenter size-full wp-image-3038" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.46.38-PM.png" alt="Screen Shot 2014-05-16 at 3.46.38 PM" width="396" height="148" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.46.38-PM.png)
 
 Super straightforward. You get two equal-sized butons at the top. You may notice that the first one links to **#back. **That won't work, but we can make it work later.
 ## Icons
 Would you like some icons? Add the attribute **data-icon="icon_name" **to the &lt;a&gt; tag. They're usually named pretty logically. In the case of 'back' and 'home' , the values of **data-icon** are **back** and **home.**
 
-<img class="aligncenter  wp-image-3040" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.52.11-PM.png" alt="Screen Shot 2014-05-16 at 3.52.11 PM" width="211" height="251" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.52.11-PM.png)
 
 That's pretty cool, but i don't like how tall it looks with the icons on top of the text. Let's change the position of those icons. In the navbar div, insert the attribute and value **data-iconpos="right" **or whatever position you want (left/right/top/bottom).
 
-<img class="aligncenter size-full wp-image-3041" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.54.00-PM.png" alt="Screen Shot 2014-05-16 at 3.54.00 PM" width="410" height="91" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.54.00-PM.png)
 
 That's better. Actually it's kinda janky. Try it without the text and move the icons to the center. Or get rid of the icons totally. Or remove the h3 title. It's up to you as this is your app.
 ## Making a Functioning "Back Button"
@@ -37,7 +37,7 @@ You could
 # Back to Navbars. Making Them Stick
 So we've got the two buttons that will make for nice navigation, but you're user needs to be at the top of the page to use them. Wouldn't it be nice if we coul-- You know where this is going. Put data-**position="fixed"** in the header div.
 
-<img class="aligncenter size-full wp-image-3043" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.37.30-AM.png" alt="Screen Shot 2014-05-17 at 7.37.30 AM" width="400" height="554" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.37.30-AM.png)
 ## It Still Doesn't Look How I Want It
 Having the header text *and* the top-fixed navbar sure does take up a lot of space. What's to be done?
 
@@ -50,11 +50,11 @@ So in doing this lesson I learned a few things. Namely, you can just jam a link 
   &lt;h3&gt;Executive Summary&lt;/h3&gt;
     &lt;a data-rel="back" data-icon="back"&gt;Back&lt;/a&gt;
 &lt;/div&gt;</pre>
-<img class="aligncenter  wp-image-3044" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.41.52-AM.png" alt="Screen Shot 2014-05-17 at 7.41.52 AM" width="223" height="197" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.41.52-AM.png)
 
 That looks a lot neater. Still want your home button? Just add the link right under the the back button link.
 
-<img class="aligncenter  wp-image-3045" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.42.26-AM.png" alt="Screen Shot 2014-05-17 at 7.42.26 AM" width="258" height="186" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.42.26-AM.png)
 
 Hot dog! That's slick, compact, and functional!
 ## Yet More Stuff to Invalidate This Whole Lesson
@@ -62,7 +62,7 @@ Now comes the thing that makes like half this lesson moot. There is an attribute
 ### This Could Be an Easier Method
 To use navbars, you would have to add the navbar code into the header of every page. With the **data-add-back-btn** attribute, you can just do a find replace. Here's a handy snippet
 
-<img class="aligncenter size-full wp-image-3047" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-11.50.12-AM.png" alt="Screen Shot 2014-05-17 at 11.50.12 AM" width="542" height="196" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-11.50.12-AM.png)
 
 There. Now all your headers have a back button (but you still have to add a home button manually if you want one). You can apply the same principle with the header div to make all headers fixed.
 ## So What Does All This Mean?

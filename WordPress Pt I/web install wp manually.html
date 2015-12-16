@@ -4,11 +4,11 @@ Doing it this way is not necessarily necessary, but it teaches you to be very s
 
 [youtube id="brOK5fi7_9Q" width="600" height="350" autoplay="no"]
 ## Step 1: Download WordPress
-We need to get an up to date copy of WP. Go to WordPress.org and follow the download links. It will download you a zip file that's about 5.5 MB in size. I like to keep this zip on my desktop or my WP development folder and give it a snazzy custom icon like <a href="http://s.wordpress.org/about/images/logos/wordpress-logo-32.png"><img class="alignnone" alt="" src="http://s.wordpress.org/about/images/logos/wordpress-logo-32.png" width="32" height="32" /></a>. That way when you want to create a new instance of WP, then you can just double click the WP icon and get a fresh copy! I'm a huge nerd BTW. Just leave it there for now.
+We need to get an up to date copy of WP. Go to WordPress.org and follow the download links. It will download you a zip file that's about 5.5 MB in size. I like to keep this zip on my desktop or my WP development folder and give it a snazzy custom icon like ![image](http://s.wordpress.org/about/images/logos/wordpress-logo-32.png). That way when you want to create a new instance of WP, then you can just double click the WP icon and get a fresh copy! I'm a huge nerd BTW. Just leave it there for now.
 ## Step 2: Create a New Database and User
 Login to your site's cPanel. If you forgot how to login, go to the email account with which you purchased your domain and search for the "New Account Information"  from Lithium Hosting. This has your Username and Password. You can't change your username (So far as we know. Figure out how to change it and get a prize.), but you can change your password easy enough. Refer to this post for instructions on how to do that.
 ### Step 2a: Click MySQL Database Wizard
-<img class="aligncenter size-full wp-image-2306" alt="db-setup-wizard" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/db-setup-wizard.png" width="754" height="327" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/db-setup-wizard.png)
 
 A database is like a bunch of spreadsheets. It's a carefully structured place for us to store large amounts of information, in this case, it will store settings and content for our WordPress site. MySQL (pronounced my sequel) is a language used to search through the database for information we want as well as making connections between points of data. SQL stands for Structured Query Language. And since I know you're worrying, the answer is no. No you won't be expected to know any MySQL.
 ### Step 2b: Create a Database
@@ -18,7 +18,7 @@ My New WordPress = BAD
 
 my_new_wordpress = Good
 
-<img class="aligncenter size-full wp-image-2305" alt="create-new-db" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/create-new-db.png" width="406" height="365" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/create-new-db.png)
 
 I titled mine "my_new_wordpress" but you might want something shorter. Less than 7 characters is ideal, that way you can make the database username the same thing.
 
@@ -30,13 +30,13 @@ The database user is like a login to access the database. If you want multiple p
 
 Go ahead and create a username. Yes it does look weird that your cPanel username is prepended to the database name and database username. That's just how it's done.
 
-<img class="aligncenter size-full wp-image-2304" alt="db-user" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/db-user.png" width="560" height="352" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/db-user.png)
 
 WRITE DOWN THE USERNAME AND PASSWORD!!!
 ### Step 2d: Give Yourself All Privileges
 This ties in with the whole "multipel users" thing. We need admin access to our database because we're admins. But you might want to limit the capabilities of other users. This is how you would do it.
 
-<img class="aligncenter size-full wp-image-2303" alt="privelages" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/privelages.png" width="624" height="469" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/privelages.png)
 ## Step 3: Configure WordPress
 ### Step 3a: Title the Directory
 Unpack the WP install file you got from wordpress.org. Title the folder whatever you want to the permalink to this new instance to be. By that we mean, what do you type after "mysite.com" to get to this new WP installation we've made? Developers like naming things random stuff, so how about "donkey"? So eventually, you will type "www.mysite.com/donkey" into the URL bar to get to this WP site
@@ -45,23 +45,23 @@ Open up the WP folder and you'll see a whole bunch of files ending in php. Don't
 
 We're going to be changing some values on lines 19, 22, and 25. Read the comments and you'll notice that they tell you exactly what to do.
 
-<img class="aligncenter size-full wp-image-2302" alt="Screen-shot-2013-04-01-at-4.43.20-PM" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-shot-2013-04-01-at-4.43.20-PM.png" width="617" height="322" /> 
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-shot-2013-04-01-at-4.43.20-PM.png) 
 
 You can probably figure out what to do on you own here. You take all the information for the database and user you just created and insert it right where it says.
 ### Step 3c: Authentification
-You need to do some security stuff now. Don't worry it's easy. On lines 45-52 it tells you to "put your unique phrase here". On line 40 it gives you a link to a key generator at <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">https://api.wordpress.org/secret-key/1.1/salt/</a>. Visit that and copy everything all at once.
+You need to do some security stuff now. Don't worry it's easy. On lines 45-52 it tells you to "put your unique phrase here". On line 40 it gives you a link to a key generator at [https://api.wordpress.org/secret-key/1.1/salt/](https://api.wordpress.org/secret-key/1.1/salt/). Visit that and copy everything all at once.
 
-<img class="aligncenter size-full wp-image-2301" alt="auth-keys" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/auth-keys.png" width="784" height="212" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/auth-keys.png)
 
-<img class="aligncenter size-full wp-image-2299" alt="select-dummy" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/select-dummy.png" width="657" height="214" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/select-dummy.png)
 
-<img class="aligncenter size-full wp-image-2300" alt="paste-in-keys" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/paste-in-keys.png" width="526" height="210" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/paste-in-keys.png)
 ## Step 4: Upload to Your Server via FTP
 Using Cyberduck or FileZilla, upload your entire WordPress directory to your server. We do mean entire directory. If your using Cyberduck, just drag the directory into "public_html" which is your root. This may take some time since the directory is about 11MB in size. If something goes wrong during installation just hit try again, or whatever and tell it to overwrite
 ## Step 5: Run the Install Script
 In your browser, go to "www.yoursite.com/donkey/wp-admin/install.php ". You will then be taken to the install page.
 
-<img class="aligncenter size-full wp-image-2298" alt="install-screen" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/install-screen.png" width="909" height="739" />
+![image](http://labs.everettprogram.org/wp-content/uploads/2013/04/install-screen.png)
 
 Go ahead and input all your information and you're done!
 

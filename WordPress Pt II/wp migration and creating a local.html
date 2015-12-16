@@ -1,0 +1,295 @@
+[two_third last="no"]
+<h2>Site Migration</h2>
+If you find yourself creating a website for yourself or your org, it's often best practice to work on it somewhere other than it's actual domain. In other words, you don't want anyone to see the site you're working on until it's completely finished. You've got to work on it elsewhere. But what about when it's all ready to go? You need to know how to get a site in one place over to another place.
+
+This section will go through two different methods of site migration. One will be super easy, one will be less so but you'll learn more.
+
+[/two_third]
+
+[one_third last="yes"]
+<h3>Resources</h3>
+<ul>
+	<li>Codex Entry: <a href="http://codex.wordpress.org/Moving_WordPress" target="_blank">Moving WordPress</a></li>
+	<li><a href="http://wordpress.org/plugins/duplicator/" target="_blank">Duplicator</a></li>
+	<li><a href="https://interconnectit.com/products/search-and-replace-for-wordpress-databases/" target="_blank">Search and Replace Database Script</a></li>
+</ul>
+[/one_third]
+
+<hr />
+
+<h1>Easy Mode: Duplicator</h1>
+This is an awesome plugin. Download <a href="http://wordpress.org/plugins/duplicator/" target="_blank">Duplicator</a> from the plugin repository and install it on your site. When you run Duplicator, it will create a single zip file containing your database, files, and a couple other things. It also generates a php file called 'installer.php'.
+[toggle title="Duplicator Migration Walk Through"]
+<h2 id="duplicator-migration-walk-through">Duplicator Migration Walk Through:</h2>
+After installing the Duplicator plugin, navigate to the Manage section of Duplicator (either via the Installed Plugins area or the link on your WordPress dashboard).
+<h3 id="step-1-create-and-download-duplicator-package-and-installer"><a class="headeranchor-link" href="#step-1-create-and-download-duplicator-package-and-installer" name="user-content-step-1-create-and-download-duplicator-package-and-installer"></a>Step 1: Create and Download Duplicator Package and Installer</h3>
+To successfully migrate a website to a new location, Duplicator creates two files: the website Package (houses all of your WordPress files, database, etc.) and the installer file (installer.php).
+
+At the top left of the main Duplicator page, hit <strong>Create New</strong>.
+
+In the step 1, Setup, ensure that all <strong>Requirements</strong> pass.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/dup1.png"><img class="alignnone size-full wp-image-5737" src="http://labs.everettprogram.org/wp-content/uploads/dup1.png" alt="dup1" width="705" height="190" /></a>
+
+After, hit <strong>Next</strong>.
+
+Duplicator will then scan your website to ensure there are no issues. The most common issue Duplicator will find is <strong>Large Files</strong>, meaning that due to large files on that WordPress instance, the package Duplicator creates will be large. Here, you can decide whether to go to your WordPress instance using the CPanel Files Manager and delete those large files or you can just leave them there and the package created by Duplicator will just be larger.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/dup1_5.png"><img class="alignnone size-full wp-image-5738" src="http://labs.everettprogram.org/wp-content/uploads/dup1_5.png" alt="dup1_5" width="603" height="608" /></a>
+
+If everything else says good, hit <strong>Build</strong>.
+
+Once it has finished building both files, click on each file (the Installer and Package) to download them.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/dup2.png"><img class="alignnone size-full wp-image-5739" src="http://labs.everettprogram.org/wp-content/uploads/dup2.png" alt="dup2" width="801" height="268" /></a>
+
+Once you have download these files, move onto the next step.
+<h3 id="step-2-create-new-directory-and-add-package-and-installer"><a class="headeranchor-link" href="#step-2-create-new-directory-and-add-package-and-installer" name="user-content-step-2-create-new-directory-and-add-package-and-installer"></a>Step 2: Create New Directory and Add Package and Installer</h3>
+Now that we have both files Duplicator needs to migrate a website, we need to create a new directory where we want to migrate our website to. For example, I may want to migrate my website off of my web hosting into a local development environment (more on this later). To do this, I will need to create a new folder in my local development environment to house my website. This could also be a different section on my web hosting account or a totally different web host altogether.
+
+Next, create a new folder where you want your migrated website to be located. The name for this folder can be different from the original location of the website.
+
+Now, upload <strong>both</strong> the package archive and installer.php file into the folder you just created.
+
+Once you can confirm both files have been uploaded successfully in the correct location, move to the next step.
+<h3 id="step-3-create-new-mysql-database"><a class="headeranchor-link" href="#step-3-create-new-mysql-database" name="user-content-step-3-create-new-mysql-database"></a>Step 3: Create New MySQL Database</h3>
+Our migrated WordPress website still needs its own database.
+
+Create a new database for this WordPress instance using the <strong>MySQL Database Wizard</strong> in CPanel. Make sure to save this information because it will be used in the next step.
+
+Once you have create the new database and have the corresponding information, move to the next step.
+<h3 id="step-3-run-the-installer"><a class="headeranchor-link" href="#step-3-run-the-installer" name="user-content-step-3-run-the-installer"></a>Step 4: Run the Installer</h3>
+Now that we have our files in place and a database for this WordPress instance, we need to run the Duplicator installer.
+
+To do so, in you web browser, visit the URL where the installer.php file is located.
+
+In generic terms, you would visit: <em>yourdomain/path-to-installer.php</em>
+
+For example, I would visit: <em>brendinnye.me/foldernames/installer.php</em>
+
+If you successfully navigated to the install script, you should see a similar screen:
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/dup3.png"><img class="alignnone size-full wp-image-5740" src="http://labs.everettprogram.org/wp-content/uploads/dup3.png" alt="dup3" width="803" height="601" /></a>
+
+Next, next to <strong>Action</strong> change the radio button to <strong>Connect and Remove All Data</strong> since we already created a database.
+
+Now, next to <strong>Name</strong>, input the name of the database you just created. Next to <strong>User</strong>, input the name of the database user. Next to <strong>Password</strong>, input the database password.
+
+After everything is filled out, hit <strong>Test Connection</strong> and make sure the installer is able to connect to the server and find the database. If both pass, go to the bottom, accept the agreement, and hit <strong>Run Deployment</strong>.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/dup4.png"><img class="alignnone size-full wp-image-5741" src="http://labs.everettprogram.org/wp-content/uploads/dup4.png" alt="dup4" width="717" height="473" /></a>
+
+In the Update section, ensure the Old and New settings are correct. After, hit <strong>Run Update</strong>.
+
+If everything went smoothly, you should be able to visit the WordPress instance’s URL and the migrated website should appear.
+
+If your migrated website appears to be fully functional, move to the next section.
+<h3 id="step-4-clean-up-files"><a class="headeranchor-link" href="#step-4-clean-up-files" name="user-content-step-4-clean-up-files"></a>Step 5: Clean Up Files</h3>
+We don’t want people to be able to run the Duplicator install package on our websites. We need to do some clean up to ensure that we do not create any security vulnerabilities for our website.
+
+Via CPanel File Manager, in your newly migrate WordPress instance:
+<ul>
+	<li>Delete the package archive from Duplicator that you uploaded.</li>
+	<li>Delete the installer.php file that Duplicator included.</li>
+</ul>
+This method ensures that you have all your data and files together. You don't need to worry about changing the URLs or re-uploading images or anything like that. Duplicator saves you the pain of having to run a find and replace script.
+[/toggle]
+<h3>Let Me Tell You a Tale: By Thomas</h3>
+When I (Thomas) write these lessons I usually come up with an idea for an activity and then run through it a few times to make sure that I can communicate the lesson behind it clearly as well as seeing what kinds of problems someone might encounter. For instance, I thought about making the Duplicator package for the summer camp website available to students so they could easily create their own local versions of the site. The grand idea was to have everyone tweak the summer camp site and see if we could come up with something together. I made that thing a long time ago and it needs an update.
+
+Imagine my annoyance when I went to run Duplicator and got this message:
+
+<img class="aligncenter size-full wp-image-2404" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Packages-‹-Youth-Empowerment-Institute-—-WordPress.jpg" alt="Packages ‹ Youth Empowerment Institute — WordPress" width="470" height="373" />Nuts. Well it turns out BlueHost doesn't allow file archiving on their free nonprofit accounts. So what now? This is why I always run through these things multiple times, because it reminds me that these fancy plugins don't always work. That's why you've (not being rhetorical here, <strong>you</strong> specifically) got to do it the hard way sometimes.
+<h1>The Hard Way: Manual Migration with Find and Replace</h1>
+This is actually easier than I’ve made it out to be. The only part that gets a little tricky is making sure all the URLs are correct. Let’s work through what that means.
+
+<strong>Before you start this section, you will need to do a Manual Backup of the WordPress instance you want to migrate as described in the Selective Manual Backup section in the Backup and Restoration lesson.</strong>
+
+<strong>Make sure that you have a copy of the WordPress files and the exported SQL database with .sql file extension.</strong>
+[toggle title=" Step 1: Create a New Directory"]
+<h2 id="step-1-create-a-new-directory"><a class="headeranchor-link" href="#step-1-create-a-new-directory" name="user-content-step-1-create-a-new-directory"></a>Step 1: Create a New Directory</h2>
+Let’s say that you’ve got a full backup (files and database) of your site and you want to migrate it to another location on your server or bring it onto your local server. What are the things WordPress needs to work? For one it needs files. It needs WP Core and it needs your files, like your themes, plugins, and images. We’ve got those from our backup.
+
+Create a new directory where you want your migrated website to be housed. This is just creating a new folder (that is empty for now), where you want to migrate your website to.
+
+Put your WP files into the new directory you want to migrate to. Let’s call it <em>yourdomain/newlocation.</em>
+[/toggle]
+[toggle title="Step 2: Create a MySQL Database"]
+<h2 id="step-2-create-a-new-mysql-database"><a class="headeranchor-link" href="#step-2-create-a-new-mysql-database" name="user-content-step-2-create-a-new-mysql-database"></a>Step 2: Create a new MySQL Database</h2>
+You need to create a new database to house all the data from your site.
+
+Create a new MySQL database using the <strong>MySQL Database Wizard</strong> in CPanel. Make sure to save the database name, database user, and password for use later.
+[/toggle]
+[toggle title="Step 3: Importing Old Database into the New Database"]
+<h2 id="step-3-importing-old-database-into-the-new-database"><a class="headeranchor-link" href="#step-3-importing-old-database-into-the-new-database" name="user-content-step-3-importing-old-database-into-the-new-database"></a>Step 3: Importing Old Database into the New Database</h2>
+Now that you have your new database go ahead and import the database file for your site. It’s the one that came in your backup with the file extension ‘.sql’.
+
+To do this, in CPanel, navigate to the phpMyAdmin tool (it’s next to the MySql database wizard).
+
+Go to the <strong>Databases</strong> Tab.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_db1.png"><img class="alignnone size-full wp-image-5749" src="http://labs.everettprogram.org/wp-content/uploads/man_db1.png" alt="man_db1" width="716" height="406" /></a>
+
+Select the database you created in Step 2.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_db2.png"><img class="alignnone size-full wp-image-5750" src="http://labs.everettprogram.org/wp-content/uploads/man_db2.png" alt="man_db2" width="204" height="401" /></a>
+
+Select the <strong>Import</strong> tab.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_db3.png"><img class="alignnone size-full wp-image-5751" src="http://labs.everettprogram.org/wp-content/uploads/man_db3.png" alt="man_db3" width="960" height="37" /></a>
+
+Upload the .sql database from your manual backup and hit <strong>Go</strong>. If everything went well, the import should be successful.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_db4.png"><img class="alignnone size-full wp-image-5752" src="http://labs.everettprogram.org/wp-content/uploads/man_db4.png" alt="man_db4" width="427" height="539" /></a>
+[/toggle]
+[toggle title="Step 4: Link Database and WordPress files"]
+<h2 id="step-4-link-database-and-wordpress-files"><a class="headeranchor-link" href="#step-4-link-database-and-wordpress-files" name="user-content-step-4-link-database-and-wordpress-files"></a>Step 4: Link Database and WordPress files</h2>
+OK. So we have the data for the website all loaded up. It’s got your posts, menus, comments, settings, and all that good stuff. We’ve also got the WordPress files that contain all the instructions on how to put pages and such together as well as the themes for telling the site how to look. What we don’t have is a way for the database and files to even know that the the other one exists.
+
+Go back to your files and open up <strong>wp-config.php</strong> using the Code Editor. This is the file that tells WordPress what database to look for, as well as the credentials to access it.
+
+Lines 19, 22, and 25 are where you enter the db name, user, and password.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_config1.png"><img class="alignnone size-full wp-image-5747" src="http://labs.everettprogram.org/wp-content/uploads/man_config1.png" alt="man_config1" width="582" height="316" /></a>
+
+Also, go ahead and paste in new keys and salts by following the instructions starting on 37. After you’ve completed this step we are almost in business.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/man_config2.png"><img class="alignnone size-full wp-image-5748" src="http://labs.everettprogram.org/wp-content/uploads/man_config2.png" alt="man_config2" width="950" height="293" /></a>
+[/toggle]
+[toggle title="Step 5: Find and Replace Script"]
+<h2 id="step-5-find-and-replace-script"><a class="headeranchor-link" href="#step-5-find-and-replace-script" name="user-content-step-5-find-and-replace-script"></a>Step 5: Find and Replace Script</h2>
+Still one last thing to do. The database is just a copy of the one from your previous site. That means that anytime there is a reference to a URL on your site, it will be to the old site. Where might you find such references? Well for starters your site’s address in the Options will be the same. As will the URLs to every single post, page, and bit of media. So it’s kind of important we fix this.
+
+The WordPress Codex article for how to do this can be found <a href="http://codex.wordpress.org/Moving_WordPress#On_Your_Existing_Server">here</a>. It lays out several different scenarios and methods.
+
+The method we’re using it says is “for developers” but I went through both methods and the 15 step process they give for laypeople is way more complicated and time consuming. We’re hardcore so we’re doing it like the devs!
+<h3 id="download-and-run-the-find-and-replace-script"><a class="headeranchor-link" href="#download-and-run-the-find-and-replace-script" name="user-content-download-and-run-the-find-and-replace-script"></a>Download and Run The Find And Replace Script</h3>
+Over there on the WP Codex page right above where the heading says ‘On Your Existing Server’, there’s a link to the <a href="https://interconnectit.com/products/search-and-replace-for-wordpress-databases/">Search and Replace for WordPress Databases Script</a>. Follow this link and find the download button. I recommend the 3.0.0 Beta version because it’s much easier to use than the older version.
+
+This will download a zip file. Upload this into the directory of your migrated WordPress instance. Extract the find and replace zip file. Rename this folder to something else, such as <em>yourname</em>. It is very important that you rename this folder.
+
+To run the find and replace script, visit the URL of the folder in your web browser. For example, you may visit: <em>yourdomain/foldernames/yourname</em>.
+
+<strong>I’ll say this now: as soon as you run the script <strong>(after it is complete and your website is functioning),</strong> you need to delete the find and replace directory. It’s a public file and can cause a trouble if someone came across it.</strong>
+
+Basically what this file does is search for all the instances of the old URL and replaces it with the new URL. It will find all instances of “<a href="http://yoursite.com/old-location">http://yoursite.com/old-location</a>” and replace them with “<a href="http://yoursite.com/new-location">http://yoursite.com/new-location</a>”. We just need to make sure it is the right info.
+
+If you are not sure what the old URL for you migrated website is, go into your database using phpMyAdmin. After selecting the database for you migrated website, click <strong>wp_option</strong>. The first row should be <strong>siteurl</strong>. Copy the URL in the option. This will be the “find” portion of the find and replace, next to <strong>Replace</strong>
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/db_check1.png"><img class="alignnone size-full wp-image-5735" src="http://labs.everettprogram.org/wp-content/uploads/db_check1.png" alt="db_check1" width="288" height="379" /></a>
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/db_check2.png"><img class="alignnone size-full wp-image-5736" src="http://labs.everettprogram.org/wp-content/uploads/db_check2.png" alt="db_check2" width="851" height="132" /></a>
+
+Next enter in the new URL that you want to replace it with, next to <strong>with</strong>.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/find_and_replace1.png"><img class="alignnone size-full wp-image-5742" src="http://labs.everettprogram.org/wp-content/uploads/find_and_replace1.png" alt="find_and_replace1" width="1349" height="640" /></a>
+
+Make sure both of these URLs are in the format <em>http://yourdomain/foldernames</em>.
+
+Click on “Dry Run” to make sure that things will go correctly. It will show you all the instances of a replacement. If everything looks right, then go ahead and do a “Live Run”. The script will run its course and then you’ll be left with a functioning site! Log in to your newly moved site. You may have to reset the permalink settings.
+
+If all of these steps were followed correctly, your WordPress website should be fully migrated over!
+
+<strong>I’ll say this again: as soon as you run the script (after it is complete and your website is functioning), you need to delete the find and replace directory. It’s a public file and can cause a trouble if someone came across it.</strong>
+[/toggle]
+<h1>Creating a Local Development Environment</h1>
+A major benefit of WordPress is that it's free. As we've demonstrated, you can make as many unique WordPress installations as you want. They can be the live site for your NGO, project, or personal resume, or they can serve as a test environment for your own learning or your sadistic lab instructor may force you to make a new WordPress for seemingly no reason. You can create and alter to your heart's content!
+
+A major drawback of WordPress is that you need an internet connection to use it. PHP is a server-side scripting language meaning that you need special software installed on an Apache server in order to make posts or view the site. Additionally, you're constrained by the speed of your internet connection when writing posts and testing changes to your site. This is far different from creating a website with HTML and CSS which you can do from your computer whether you're connected to the internet. Just like a man who wants to drink soda and eat from a large bowl of chips at once without putting either down, "There's got to be a better way!"
+
+[caption id="" align="aligncenter" width="390"]<img src="http://i.imgur.com/EDaoQ.gif" alt="" width="390" height="260" /> There's got to be a better way![/caption]
+<h2>MAMP and MAMP for Windows</h2>
+Luckily there is a better way. All you need to do is use MAMP if you're a Mac user or WAMP if you're a Windows user. These stand for <strong>M</strong>ac/<strong>W</strong>indos <strong>A</strong>pache <strong>M</strong>ySQL <strong>P</strong>HP. They are applications available free for download that allow set up virtual servers locally on your computer. These servers have PHP and MySQL installed on them so you can use software that requires them...like WordPress.
+
+There are big benefits to setting up a local development environment:
+<ul>
+	<li><strong>Storage</strong>: You have your entire hard drive's space at your disposal. You can install thousands (you're not hardcore unless you have 5k+ WordPress installs) and not worry about running out of space on your live server</li>
+	<li><strong>Develop at you own pace</strong>: It takes a while to build a website. If you work from your live web domain, then people might stumble upon it and say, "Well this is unfinished. How unprofessional". By working from a local environment you can make sure everything is working the way you like before debuting it to the public.</li>
+	<li><strong>Develop anywhere</strong>: With a local environment you can work on your site no matter where you are instead of where you can find WiFi. Want to work on a site while in the middle of the woods? No problem.</li>
+	<li><strong>Speed</strong>: Edit. Refresh. Wait. By building a site from a live server you are slave to the connection speed and the speed of the server that's executing your code. With a local environment your computer is the server making things much, much faster.</li>
+</ul>
+<iframe src="//www.youtube.com/embed/qW3ozX9jYjs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h2>Installing and Using MAMP or MAMP for Windows</h2>
+[toggle title="MAMP"]
+
+<iframe src="//www.youtube.com/embed/00KrMpaOgPk" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h2>Installing</h2>
+Go to <a href="http://www.mamp.info/en/" target="_blank">http://www.mamp.info/en/</a> and download MAMP. The file is like 140MB so give it a minute. Annoyingly, the package includes a demo of MAMP Pro, but you can just uninstall it once you unpack the zip file. Once it finishes downloading, unpack it and run the installer. It will deposit MAMP and MAMP Pro into your Applications folder just like downloading any app.
+<h2>Using MAMP</h2>
+There are two main things you need to know about: <strong>phpMyAdmin</strong> and the <strong>htdocs</strong> folder.
+<h2>htdocs</h2>
+This folder is found in the MAMP folder. Think of it as your domain public root. This is where you put files that you want to access through your browser. You access these files through your browser by typing "<strong>localhost:8888/</strong>"
+
+In the screen cap below, you can see that I've placed a file called 'index.php' into the '<strong>htdocs</strong>' directory. The file contains php code that just prints the words "Hello World". If you tried to open a php file using your browser under normal circumstances it wouldn't execute the code. It would just display the code as it's written, but since we accessed the php file through "<strong>localhost:8888/</strong>" it uses MAMP to execute the code and we are able to view it.
+
+<img class="aligncenter size-full wp-image-2386" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Applications.jpg" alt="Applications" width="516" height="440" />
+<h2>phpMyAdmin</h2>
+If you paid attention to the previous lessons, then you would know that phpMyAdmin is a an open source MySQL language client. It allows us to edit  MySQL databases using a Graphical User Interface (GUI). This is where you will create a database for a new WordPress installation. When you launch MAMP, it will start the servers and then open up the start page. There's a tab at the top that will let you access phpMyAdmin
+<h2 id="creating-a-database-in-a-local-development-environment">Creating a Database in a Local Development Environment</h2>
+Our local development environment (at least MAMP) doesn’t have CPanel installed. If you try and create a new MySQL database using the <em>MySQL Database Wizard</em>, you will find out it does not exist on MAMP. So how will we be able to create new databases for our local development environments?
+
+The answer: <strong>phpMyAdmin</strong>.
+
+The interface to interact with the SQL databases on your local development environment is <strong>phpMyAdmin</strong>. It is the same as the phpMyAdmin we used via CPanel. Let’s create a database using phpMyAdmin.
+
+To access phpMyAdmin, bring up the <strong>MAMP Start Page</strong>. You can do this by clicking <strong>Open Start Page</strong> via the MAMP program window.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/mamp1.png"><img class="alignnone size-full wp-image-5743" src="http://labs.everettprogram.org/wp-content/uploads/mamp1.png" alt="mamp1" width="483" height="323" /></a>
+
+The link to phpMyAdmin is in the PHP section. Take note that the username and password is root and root.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/mamp2.png"><img class="alignnone size-full wp-image-5744" src="http://labs.everettprogram.org/wp-content/uploads/mamp2.png" alt="mamp2" width="574" height="453" /></a>
+
+Go to <strong>Databases</strong>.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/mamp3.png"><img class="alignnone size-full wp-image-5745" src="http://labs.everettprogram.org/wp-content/uploads/mamp3.png" alt="mamp3" width="552" height="134" /></a>
+
+Input a name for the Database. Keep the dropdown option at Collation. Hit <strong>Create</strong>.
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/mamp4.png"><img class="alignnone size-full wp-image-5746" src="http://labs.everettprogram.org/wp-content/uploads/mamp4.png" alt="mamp4" width="510" height="132" /></a>
+
+You have now create a new database. <em>Hold up! I never got to input a username and password for the database!</em>. You are right, we didn’t create a database username and password. Why? <strong>You don’t need to.</strong> In a local development environment, at least in the case of MAMP, the username and password are both set to root. <em>Doesn’t this create a security issue?</em>. Not really. MAMP assumes this is only for a local development environment, meaning you will be the only one accessing it, therefore no security issue.
+
+Just remember: When you go to fill in the database username and password while migrating the website, make sure to use <strong>root</strong>.
+<h2>Creating a Local WP Instance</h2>
+Installing a new WordPress instance on your local development environment is the same as our regular method, the 5 minute install.  The only differences are that you put the WordPress files in your <strong>htdocs </strong>directory instead of "public_html" and you create a new database through phpMyAdmin.
+
+[/toggle]
+
+&nbsp;
+<h1>Migrating to a Local Host</h1>
+<iframe src="//www.youtube.com/embed/hqSvFSYoJKs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<iframe src="//www.youtube.com/embed/Py2ccCXhQFA" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h1 id="homework-assignment">Homework Assignment</h1>
+<h2 id="part-1-manually-migrate-your-entire-site-to-yourdomainfrustration"><a class="headeranchor-link" href="#part-1-manually-migrate-your-entire-site-to-yourdomainfrustration" name="user-content-part-1-manually-migrate-your-entire-site-to-yourdomainfrustration"></a>Part 1: Manually Migrate Your Entire Site To “yourdomain/frustration”</h2>
+In Part 1, manually migrate (using the hard way) your WordPress instance at <em>yourdomain/wplesson4</em> into a new directory called <strong>frustration</strong>.
+<ol>
+	<li>Using the Selective Backup Method outlined in the Backup and Restoration lesson, backup you WordPress files and export the SQL database.</li>
+	<li>Copy all of the WP files from you backup and put them into a new directory called <strong>frustration</strong>.</li>
+	<li>Create a new MySQL database for the migrated WordPress website.</li>
+	<li>Link the database to the WordPress instance by editing <strong>wp-config</strong>.</li>
+	<li>Run the Search and Replace for WordPress Databases Script.</li>
+	<li>Make sure the migrated WordPress website works.</li>
+	<li><strong>Delete the search and replace folder. If we are able to visit your migrated website when checking homework and somehow access the search and replace script, it will be an automatic zero on the assignment.</strong></li>
+	<li>Export the database for the newly migrated WP instance via phpMyAdmin</li>
+</ol>
+<h2 id="part-2-set-up-a-local-dev-environment-use-duplicator-to-migrate-your-site-to-it"><a class="headeranchor-link" href="#part-2-set-up-a-local-dev-environment-use-duplicator-to-migrate-your-site-to-it" name="user-content-part-2-set-up-a-local-dev-environment-use-duplicator-to-migrate-your-site-to-it"></a>Part 2: Set up a Local Dev Environment Use Duplicator to Migrate Your Site To It</h2>
+<ol>
+	<li>Refer to the lesson and screencasts and set up MAMP or MAMP for Windows</li>
+	<li>Use Duplicator to migrate <strong>yourdomain/frustration</strong> onto your local development environment.</li>
+	<li>Export the Database through phpMyAdmin.</li>
+</ol>
+<h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+<ul>
+	<li>Email subject line in the following format: <em>HW #6 Firstname Lastname</em></li>
+	<li>The web address of your WordPress instance <em>yourdomain/frustration</em>.</li>
+	<li>Attach the exported database in Part 1. Rename this database to part1db.sql . Make sure it ends with the .sql extentsion.</li>
+	<li>Attach the exported database in Part 2. Rename this database to part2db.sql . Make sure it ends with the .sql extension.</li>
+</ul>
+<h2 id="duplicator-migration-walk-through"><a class="headeranchor-link" href="#duplicator-migration-walk-through" name="user-content-duplicator-migration-walk-through"></a></h2>
+<h1 id="the-hard-way-manual-migration-with-find-and-replace"><a class="headeranchor-link" href="#the-hard-way-manual-migration-with-find-and-replace" name="user-content-the-hard-way-manual-migration-with-find-and-replace"></a></h1>
+&nbsp;
+<h1 id="creating-a-database-in-a-local-development-environment"><a class="headeranchor-link" href="#creating-a-database-in-a-local-development-environment" name="user-content-creating-a-database-in-a-local-development-environment"></a></h1>
+<h1 id="homework-assignment"><a class="headeranchor-link" href="#homework-assignment" name="user-content-homework-assignment"></a></h1>

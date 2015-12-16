@@ -1,0 +1,214 @@
+<h1 id="midterm">Midterm</h1>
+You will be using the _s (pronounced “Underscores”) theme framework as your parent theme and create a child theme for it. Usually, you wouldn’t use the _s theme framework as a parent theme. Normally, it is used as a foundation to build WordPress themes. For this midterm, go along with it.
+
+Make sure you don’t miss something by reading each section.
+<h1 id="midterm-preparation"><a class="headeranchor-link" href="#midterm-preparation" name="user-content-midterm-preparation"></a>Midterm Preparation</h1>
+Download the _s theme <a href="http://labs.everettprogram.org/wp-content/uploads/underscores.zip">here</a>. I took care of downloading it for you. To see where this theme framework came from, you can visit the underscores website <a href="http://underscores.me">here</a>.
+
+After downloading the _s theme, read these instructions:
+<h2 id="fonts-and-colors"><a class="headeranchor-link" href="#fonts-and-colors" name="user-content-fonts-and-colors"></a>Fonts and Colors</h2>
+Whenever you’re asked to change a color you MUST use a hex color. When you are asked to change a font, you MUST use a google font.
+<h2 id="no-superfluous-code"><a class="headeranchor-link" href="#no-superfluous-code" name="user-content-no-superfluous-code"></a>No Superfluous Code</h2>
+If you are using the method of copy pasting from Firebug, you may only include the CSS that you are actually changing.
+<h2 id="best-practice-for-doing-this"><a class="headeranchor-link" href="#best-practice-for-doing-this" name="user-content-best-practice-for-doing-this"></a>Best Practice for Doing This</h2>
+Use your searching skills for this. If you come across something you don’t know how to do, 1. Consult the Midterm assignment page in the “Things to Help You Do This” section 2. Google the phrase “css [thing you want to do]” and nine times out of ten, you’ll get your answer first try.
+
+Take a look at the mini help section:
+[toggle title="Help Section"]
+<h2 id="midterm-help-section"><a class="headeranchor-link" href="#midterm-help-section" name="user-content-midterm-help-section"></a>Midterm Help Section</h2>
+<h1>A Note on Clutter</h1>
+As we've mentioned before, you're child theme is only for changes. Everything in your stylesheet is there because it's altering something. Copypasting code from Firebug is a useful way to figure out what you need to change, but you need to delete all the superfluous code. You will be penalized for superfluous code.
+<h1></h1>
+<h1 id="help">Things To Help You in This</h1>
+Here's some general tips. Please, please, please, seek help for this. Utilize office hours, work together, whatever. You're not alone.
+<h2>Did I Do This Right?</h2>
+We get a lot of people asking if they’ve done this or that correctly, but the truth is you don’t typically need us to answer that. If the requirement is “Change the font of the site-title” then all you need to do is look at your site and ask yourself the question, “Is the site-title’s font different after I inserted that CSS?” If the answer is yes, then you did it right. You can check basically all your work in this manner. There is no ambiguity here.
+<h2>The Coding</h2>
+We highly recommend you revisit the Codecademy lesson “<a title="C is for Cascading" href="http://www.codecademy.com/courses/web-beginner-en-WF0CF/1/1#" target="_blank">C is for Cascading</a>“. It helps a lot in understanding how elements cascade into one another.
+
+Here are some basic things to remember about CSS:
+<h3>Syntax</h3>
+<code> selector {
+property: value;
+property: value;
+}
+</code>
+
+In other words, you start with the thing you want to change and then say how you want to change it.
+<h3>Selectors</h3>
+How do you know what the right selector is? In other words, how do you know the name of the thing you want to style? Just look at the source code or use Firebug to identify the thing you want to change. Let’s say you want to know what to use for the selector to change the font of the site title of your site. You look at the code and see.
+
+<code>
+&lt;h1 class="site-title"&gt;
+&lt;a rel="home" title="My Site" href="http://icanfafsa.com"&gt;
+&lt;/h1&gt;</code>
+
+There’s the thing to use right there. The heading that makes the site title has the class “site-title”. Imagine that. Now you know that you can use
+
+<code>&lt;h1 class="site-title"&gt;</code>
+
+as your selector. Always remember:<strong> Use a “.” to select for classes and a “#” to select for id.</strong>
+<h3>Cascading</h3>
+The first C in CSS stands for “Cascading”. That means you are able to make changes in things nested inside other things. Take the example of site title up there. The site title isn’t just an &lt;h1&gt;. It’s also a link to your homepage. That means that there’s an &lt;a&gt; nested within it. You’ve probably noticed by now that if you tried to change the color of the site title, then just selecting “.site-title” won’t do it. You have to be more specific, but how? The &lt;a&gt; doesn’t have an id or class for us to select. That’s where the cascading nature of CSS comes in. You would write:
+
+<code>
+.site-title a {
+color: pink;
+}
+</code>
+
+That’s basically saying “I want to change the color of the &lt;a&gt; that is nested under .site-title”. This is critically important to understand, as it will allow you to do things a lot easier. It’s basically required when you wanna change things inside lists (like your nav menu). If you wanted to change the color of a link in your nav menu, you would have to start at the name of the list. If you didn’t have one, then you would have to start at the &lt;div&gt; in which the list resides. Let’s say that the nav menu was in a &lt;div&gt; with the class “navigation-main”. You would start with that and then work your way down to the links. It would look like:
+
+<code>
+#site-navigation ul li a {
+color: Thistle;
+}
+</code>
+
+Your basically saying, “I want to go to the main navigation, into the unordered list you find there, into the list items that make up that list, and finally into the links that are printed on the screen and change their color.”
+<h2>The :hover Property</h2>
+You don’t need to know that much about :hover. Just know that it’s a thing called a “pseudo class” and that it makes the rules you write take effect when you hover your mouse over them. You’ve used :hover in conjunction with a before.
+
+<code>
+a:hover {
+color: lemonchiffon;
+}
+</code>
+<div id="hoverexample"><a>That would make it so you when you mouse over a link, it will turn a different color. You can actually use :hover on any element. If you feel like it, you can apply it to your paragraphs and make them turn a different color (or anything else) when you put your mouse on them. Mouseover this paragraph and see it in action</a></div>
+<h2>Finding the &lt;div&gt;’s in the Template Files</h2>
+Just search the document for the id or classes you’re looking for. No need to over think it.
+[/toggle]
+[toggle title="Part 1"]
+<h1 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h1>
+We need a new WordPress instance. Using the 5 minute install method, install a new WordPress instance at <em>yourdomain/wpmidterm</em>.
+
+After you have it installed:
+<ul>
+	<li>delete the sample page under Pages</li>
+	<li>delete the Hello World! post under Posts</li>
+	<li>install the _s theme you downloaded in the Midterm Preparation section</li>
+</ul>
+Next, create a new page:
+<ul>
+	<li>Title it <strong>Home</strong>.</li>
+	<li>For the body text, use the html provided in this <a href="http://labs.everettprogram.org/wp-content/uploads/testpage.txt">text file</a> Make sure the WordPress page editor is in <strong>text</strong> mode when copying and pasting this html.</li>
+</ul>
+Next, create a new page:
+<ul>
+	<li>Title it <strong>Blog</strong>.</li>
+	<li>Leave the body text blank.</li>
+</ul>
+Next, create a post:
+<ul>
+	<li>Title it <strong>Midterm Post</strong>.</li>
+	<li>For the body text, answer the following questions in your own words:</li>
+	<li>What is the purpose of creating a child theme?</li>
+	<li>What is the purpose of functions.php when creating a child theme?</li>
+	<li>How does WordPress serve up HTML to a web browser without having any HTML files in a theme?</li>
+</ul>
+<strong>Create a custom menu. Add both pages to the custom menu.</strong>
+
+<strong>Under Appearance, go to Customize and set the Home page as the Front page and set the Blog page as the Posts page.</strong>
+[/toggle]
+[toggle title="Part 2"]
+<h1 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h1>
+Make a child theme for the _s theme (the parent theme). Give the child theme folder the name, <strong>underscores-child</strong>.
+[/toggle]
+[toggle title="Part 3"]
+<h1 id="part-3"><a class="headeranchor-link" href="#part-3" name="user-content-part-3"></a>Part 3</h1>
+All CSS changes will be put inside your child theme stylesheet.
+
+You are responsible for making the following changes to the following things:
+<h2 id="specific-changes"><a class="headeranchor-link" href="#specific-changes" name="user-content-specific-changes"></a>Specific Changes</h2>
+<h3 id="basic-elements"><a class="headeranchor-link" href="#basic-elements" name="user-content-basic-elements"></a>Basic elements</h3>
+<h4 id="h1-h6"><a class="headeranchor-link" href="#h1-h6" name="user-content-h1-h6"></a>h1-h6</h4>
+<ul>
+	<li>Start big and then evenly decrease both the size and top/bottom margins of each successive heading. <strong>To clarify:</strong> You are giving each heading a new size and top/bottom margin</li>
+	<li>change font and color of each</li>
+</ul>
+<h4 id="p"><a class="headeranchor-link" href="#p" name="user-content-p"></a>p</h4>
+<ul>
+	<li>change font for all paragraphs</li>
+</ul>
+<h2 id="specifics"><a class="headeranchor-link" href="#specifics" name="user-content-specifics"></a>Specifics</h2>
+<h4 id="site-title-and-site-description"><a class="headeranchor-link" href="#site-title-and-site-description" name="user-content-site-title-and-site-description"></a>site-title and site-description</h4>
+<ul>
+	<li>Set the margins between them so that there is a total of exactly 63 pixels of space betweet them</li>
+</ul>
+<h4 id="entry-title"><a class="headeranchor-link" href="#entry-title" name="user-content-entry-title"></a>entry-title</h4>
+<ul>
+	<li>Change text-decoration or remove it</li>
+	<li>Reduce the top and bottom margins</li>
+</ul>
+<h4 id="menu"><a class="headeranchor-link" href="#menu" name="user-content-menu"></a>Menu</h4>
+<ul>
+	<li>Make the navigation menu visible through color or borders or however you feel</li>
+	<li>Add spacing between the menu items</li>
+	<li>Give the menu items colored backgrounds and/or borders</li>
+	<li>Change menu item font and color</li>
+</ul>
+[/toggle]
+[toggle title="Part 4"]
+<h1 id="part-4"><a class="headeranchor-link" href="#part-4" name="user-content-part-4"></a>Part 4</h1>
+<h3 id="modifying-templates"><a class="headeranchor-link" href="#modifying-templates" name="user-content-modifying-templates"></a>Modifying Templates</h3>
+Since we’re making a child theme, you need to copy the following template files from the parent theme to your child theme to edit them.
+<ul>
+	<li>header.php</li>
+	<li>index.php</li>
+	<li>content.php</li>
+	<li>single.php</li>
+	<li>sidebar.php</li>
+	<li>footer.php</li>
+</ul>
+This part of the midterm will have you go through various template files and add identifying notes to show that you are able to navigate through a theme.
+<h4 id="identify-where-major-divs-start-and-end"><a class="headeranchor-link" href="#identify-where-major-divs-start-and-end" name="user-content-identify-where-major-divs-start-and-end"></a>Identify Where Major Divs Start and End</h4>
+Search through the required template files and find where the major page containers are created and where they end. What are the major page containers? They’re very similar to the ones that you revealed back in HW 2 with one difference. What was “content” in twentytwelve is “entry-content” in our theme. They are as follows:
+<ul>
+	<li>body</li>
+	<li>page</li>
+	<li>masthead</li>
+	<li>site-navigation</li>
+	<li>main</li>
+	<li>primary</li>
+	<li>entry-content</li>
+	<li>post</li>
+	<li>secondary</li>
+	<li>colophon</li>
+</ul>
+<h4 id="do-what-with-them"><a class="headeranchor-link" href="#do-what-with-them" name="user-content-do-what-with-them"></a>Do What With Them?</h4>
+Each one of these is the id or class of a one of the major divs that make up any given page on your website. You are going to add a code note (like in HW 3) in two places:
+<ol>
+	<li>Below the opening tag, put “start of [div name]</li>
+	<li>Below the closing tag, put “End of [div name]</li>
+</ol>
+<h4 id="code-note-css-class"><a class="headeranchor-link" href="#code-note-css-class" name="user-content-code-note-css-class"></a>Code Note CSS Class</h4>
+You will need to create a special class for your notes so that they are unobtrusive but still legible. We are benevolent teachers and will give you the class to use.
+<pre><code>.code-note {
+  color:black;
+  font-family: Monaco, monospace;
+  font-size: 8px;
+  margin: 0px;
+}
+</code></pre>
+<h4 id="where-to-add-code-notes"><a class="headeranchor-link" href="#where-to-add-code-notes" name="user-content-where-to-add-code-notes"></a>Where To Add Code Notes</h4>
+You must add an explanatory note in the code directly below where major containers (i.e.
+<div>
+
+s like “page”.) are produced in the template files.
+
+Example:
+<pre><code>&lt;div class=”page”&gt;
+  &lt;h6 class=”code-note”&gt;This is the page div&lt;/h6&gt;</code></pre>
+[/toggle]
+[toggle title="Part 5"]
+<h5 id="screenshot"><a class="headeranchor-link" href="#screenshot" name="user-content-screenshot"></a>Screenshot</h5>
+This is a professional theme, make it look like it. We don’t want some blank rectangle showing up in the theme manager. Just take any rectangular image and title it “screenshot.png” and put it in your child theme folder.
+[/toggle]
+<h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+<ul>
+	<li>The email subject line in the following format: <em>Midterm Firstname Lastname</em>.</li>
+	<li>The web address of your WordPress instance <em>yourdomain/wpmidterm</em>.</li>
+	<li>Download a copy of your child theme, put it in a zip file, and attach it to the email. Inside the zip file, it should have all of your PHP template files and your child theme stylesheet.</li>
+</ul>
+</div>

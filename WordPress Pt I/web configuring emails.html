@@ -1,0 +1,101 @@
+Have you ever gotten a business card from someone and their email address was something like "theirname@theirorgwebsite.org"? How exactly do you get email that's not "@gmail.com" or something like that? Beyond that, why bother? The answers to those questions is, it's not hard and it's important.
+
+This post will explore why it's important for orgs to have branded email accounts, how to create and actually use them, and how to set up forwarders.
+<h1>Why Create Email Accounts?</h1>
+This is valid question. You've been using Gmail or Yahoo Mail or whatever for a long time. You know how to use it and you like the way it looks. You've come to be emotionally attached to that email. No one is telling you to get rid of it, just that when you're conducting business, there are some realities you need to appreciate.
+<h2>It's More Professional</h2>
+Having branded emails adds an air of legitimacy to people at your org. An org that has it's ducks in a line won't have its members running around using their personal email addresses.
+<h2>Your Org Needs To Be Master of Its Data</h2>
+Our good friend Gunner from <a href="https://aspirationtech.org/">Aspiration</a> explained the importance of this at CA Tech Fest. He said that one of the most important things that orgs mess up is not maintaining control of their data and identity. How do you tell people to find you online? Do you tell them to visit your Facebook page or your Twitter? No. You tell them your website. An org cannot allow some social media platform to be the gatekeepers of their identity. This is an important ethic to follow. Your org owns its identity.
+
+You should never allow your employees to conduct business on your behalf using their personal emails. If they were to leave, they'll probably leave with years of important correspondences, records, and information (some of which most likely needs to stay within your org due to its sensitive nature). He told us a story of a certain non-violent civil disobedience org who had a communications member who used their personal email to conduct business. Well one day this person went bananas and decided to start sending emails to their entire list serve advocating for everyone to begin assaulting police officers. The org had no way of stopping this person since they controlled the email! The org didn't even know who was getting the emails. If they had a managed email system then they could've immediately cut off this persons ability to send emails or access any accounts. This is an extreme case, but it demonstrates the need for an org to maintain control of it's identity.
+<h1>How Do We Create Email Accounts?</h1>
+The process is so simple I feel it's pointless to include screenshots, but I will. The process outlined below is specific to Lithium Hosting but the process is basically the same for any host. We need to create a new email account and then choose a way to use it.
+<h2>Create the Actual Account</h2>
+<h3>Login Through Your cPanel and Click "Email Accounts"</h3>
+<img class="aligncenter size-full wp-image-4608" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail1.png" alt="webmail1" width="557" height="453" />
+<h2>Choose an Address</h2>
+<img class="aligncenter size-full wp-image-4609" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail2.png" alt="webmail2" width="766" height="442" />
+<h2>Access Mail</h2>
+I told you that would be easy. Now's the part where you actually use it. If you read the weird drawn out metaphor explaining email from Tech Essentials, then you know that there are multiple ways to access the email data associated with a particular email address.
+
+[toggle title="Web Mail"]
+
+<img class="aligncenter size-full wp-image-4613" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail3.png" alt="webmail3" width="852" height="327" />
+
+You can use one of the free web mail clients that Lithium links to. Use any one of them you want. Play around and see which is for you. For this example we'll use SquirrelMail because squirrels are cute. Click on the "Access Webmail" option and you'll see this screen.<img class="aligncenter size-full wp-image-4614" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail4.png" alt="webmail4" width="769" height="428" />
+
+It's not necessary for your users to login to cPanel just to get to their mail. In fact that would be terrible policy because it would mean you have several people with access to the backend of your domain. Simply make a bookmark or copy the link for whichever service you want to use and give it to your users. That way they can get to their mail with a single click. <img class="aligncenter size-full wp-image-4615" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail5.png" alt="webmail5" width="454" height="441" />
+
+<img class="aligncenter size-full wp-image-4616" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail6.png" alt="webmail6" width="1040" height="818" />
+
+Let's test to see if it works.
+
+<img class="aligncenter size-full wp-image-4618" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail8.png" alt="webmail8" width="551" height="624" />
+
+Success!!!
+
+[/toggle]
+
+[toggle title="Desktop or Mobile Client"]
+
+If you don't like the experience of webmail and prefer using a mail client on your computer or phone, it's no problem to set up your new email. This example will show you how to set it up on Apple's Mail.app client, but the process is the same no matter what app you use.
+<h3>Find the "Configure Email Client" option</h3>
+<img class="aligncenter size-full wp-image-4619" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail9.png" alt="webmail9" width="829" height="310" />
+
+You're going to be faced with a bunch of automatic configuration options. Don't use them. I tried it out and it doesn't work very well and you probably won't have access to this stuff later anyway. It's more important to understand the steps.
+
+What you want is the dark grey box at the bottom under Manual Settings for "Secure SSL/TLS Settings". This contains all the information you need to get yourself set up.
+
+<img class="aligncenter size-full wp-image-4620" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/webmail10.png" alt="webmail10" width="393" height="313" />
+
+This box contains the name of the server responsible for incoming mail and the server responsible for outgoing mail. Armed with this info, we can mosey on over to our preferred email client and get started.
+
+<img class="aligncenter size-full wp-image-4621" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client1.png" alt="client1" width="550" height="566" />
+
+<img class="aligncenter size-full wp-image-4622" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client2.png" alt="client2" width="542" height="562" />
+
+<img class="aligncenter size-full wp-image-4623" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client3.png" alt="client3" width="408" height="418" /><img class="aligncenter size-full wp-image-4624" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client4.png" alt="client4" width="541" height="555" />
+<img class="aligncenter size-full wp-image-4625" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client5.png" alt="client5" width="507" height="524" />
+
+Alright, we're all set! We've established a connection between the client and the mail server, so let's send an email shall we?
+
+<img class="aligncenter size-full wp-image-4626" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client6.png" alt="client6" width="553" height="345" />
+
+Notice that "example@icanfafsa.com" is now one of my "Send From" options.
+
+<img class="aligncenter size-full wp-image-4627" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client7.png" alt="client7" width="488" height="255" />
+
+Sometimes it needs a few minutes to get itself together. Just reenter the password.
+
+<img class="aligncenter size-full wp-image-4628" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/client8.png" alt="client8" width="577" height="284" />
+
+Success! We're now up and running with a professional, branded email!
+
+Setting it up on a mobile client is basically the same thing. Plugin the address, password, and server info and you're ready.
+
+[/toggle]
+<h1>Specialized Addresses and Email Forwarders</h1>
+One of the big advantage of managing your own email systems is that you can create emails for individual situations. Look at the footer of this site and you'll see an email address for the tech director. Go on our <a href="http://www.everettprogram.org/contact-us/" target="_blank">Contact Us</a> page on the main site and you'll see an email address that goes to "info@everettprogram.org". We also have several more that perform automated system announcements for other subdomains on everettprogram.org. How do we keep track of all this? Why would we create so many addresses? It's actually more efficient when you think about it.
+
+Take the tech director email at the footer of this site. At time of writing, Thomas is the tech director, so why not just put his email address? Well what happens when Thomas leaves to accept a job at the <a href="http://www.slothsanctuary.com/" target="_blank">Sloth Sanctuary of Costa Rica</a>? You would have to change that. Same goes for the info email. It doesn't need to go to a particular person.
+
+To mention Aspiration Tech again, they set up an email address for every event they do so attendants can email that for info, or send in session notes. They also create a new email address for every online service they sign up for which is...overkill for some, but it definitely establishes a strong ethic. At any rate, the concept has great practical applications.
+
+You may be asking, wouldn't it get tiresome/complicated to manage so many email addresses? It would be, but we can just set the email address to automatically forward to the person who would care about it. Here's how to do it.
+<h2>Setting Up a Forwarder on Lithium</h2>
+Let's pretend that I want to set up a generic info address for my site. People could send messages to that with general inquiries. First of course you would create the account. Theh you would head over to your cPanel and go down to the mail tab and chose the item labeled "Forwarders".
+
+<img class="aligncenter size-full wp-image-4631" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/forward1.png" alt="forward1" width="542" height="274" />
+
+Click on "Add Forwarder"
+
+<img class="aligncenter size-full wp-image-4632" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/forward-2.png" alt="forward 2" width="773" height="373" />
+
+<img class="aligncenter size-full wp-image-4633" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/forward-3.png" alt="forward 3" width="529" height="371" />Ok it's all set up. Now to test it. I'll go ahead and send an email to info@icanfafsa.com and then check the mailbox for example@icanfafsa.com.
+
+<img class="aligncenter size-full wp-image-4634" src="http://labs.everettprogram.org/wp-content/uploads/2015/01/forward-4.png" alt="forward 4" width="501" height="285" />
+
+Success!
+
+&nbsp;

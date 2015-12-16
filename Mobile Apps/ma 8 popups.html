@@ -1,0 +1,73 @@
+These are extremely cool. I recommend just going to the documentation site because they're so simple to use. Seriously, click <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/popup/">here</a>. Of course there's a lesson here too,  but you should really consult the jQuery Mobile site itself.
+<h1>What Are Popups?</h1>
+Just what they sound like. You push something, and a little window pops up. What can be in the popup? Whatever you want. Images, listviews, paragraphs, buttons, accordions, anything. This lesson will briefly go over how to use them, and then talk about some possibilities regarding what we can creatively do with them.
+<h2>Creating a Popup</h2>
+The popup consists of two parts:
+<ol>
+	<li><span style="line-height: 14px;">A link to activate it </span>
+<ol>
+	<li>Must have href set to the id of the div</li>
+	<li>Must have <strong>data-rel="popup"</strong></li>
+</ol>
+</li>
+	<li>A &lt;div&gt;<strong> </strong>to contain the popup content
+<ol>
+	<li>Must have an id</li>
+	<li>Must have <strong>data-role="popup"</strong></li>
+</ol>
+</li>
+</ol>
+<pre>&lt;a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-transition="pop"&gt;Basic Popup&lt;/a&gt;&lt;/pre&gt;
+ &lt;div id="popupBasic" data-role="popup"&gt;
+ This is a completely basic popup, no options set.&lt;/div&gt;</pre>
+Try putting that code into your own app. You can appreciate how easy that was. Notice that the attributes <strong>data-role, data-inline, and data-transition</strong> are only there to make the link look like a small button. The popup will still work if you don't have them.
+<h2>What Goes in a Popup?</h2>
+Whatever you please. Seriously, put whatever you want inside the popup. You can copy paste your homepage navigation listview if you want. Like this:
+<pre>&lt;a href="#menu-popup" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="bars"&gt;Menu&lt;/a&gt;
+ &lt;div data-role="popup" id="menu-popup"&gt;
+   &lt;ul data-role="listview" data-inset="true" data-theme="c"&gt;
+     &lt;li&gt;&lt;a href="#page-1" data-transition="pop"&gt;Executive Summary&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-2"&gt;Need Statement&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-3"&gt;Goals&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-4"&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-5"&gt;Methodology&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-6"&gt;Assessment and Evaluation&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#page-7"&gt;Budget&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;</pre>
+Now you've got a little popup navigation menu.
+
+
+
+How bout an image?
+<pre>&lt;a href="#image-popup" data-rel="popup" data-role="button" data-inline="true" data-transition="flip"&gt;A picture&lt;/a&gt;
+ &lt;div data-role="popup" id="image-popup"&gt;
+ &lt;img src="yei-logo.gif" /&gt;
+ &lt;/div&gt;</pre>
+&nbsp;
+
+
+
+
+<h3>Something to Notice</h3>
+Do note that I changed the id of the &lt;div&gt;'s and href's of the link instead of copy pasting.
+<h1>What Can We Do With This?</h1>
+<h2>Quiz</h2>
+Have a question that popup the answer when you push it
+<h2>Navigation</h2>
+Replace the back button, with a mini-menu popup
+<h2>FAQs</h2>
+Have an FAQ section utilizing popups
+<h1>Project</h1>
+Create some popups. I can't tell you what kind, just try and be creative. You can see in mine that I have used a series of popups to replace the bullet points in my "Goals" section. Each goal is made into a paragraph with a button at the bottom to trigger a popup containing the objective associated with it. I used a different transition for each goal by the way.
+
+I also added a popup to all the headers that will bring up a little version of the main menu. To do this, I had to set <strong>data-add-back-btn="false" </strong>to stop the page from creating a back button automatically (use a find and replace). You can check my code to see the rest of how to do something like that.
+
+Just remember the two aspects of a popup
+<ol>
+	<li><span style="line-height: 14px;">A div containing things to be revealed</span></li>
+	<li>A link to trigger the reveal</li>
+</ol>
+You can have whatever you want in that div and you can make that link however you want (like a button or whatever)
+
+Visit my mobile projects directory to see what I did and check the source  code to see how I did it.

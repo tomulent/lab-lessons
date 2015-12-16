@@ -1,0 +1,78 @@
+<h2>Location, Location, Location</h2>
+This is your website so it's your choice where things go. Graphene comes with that  nifty topbar, but you're not someone to be constrained by theme defaults. So why not get rid of the top bar altogether and strike out on your own path?
+<h3>Disabling Top Bar</h3>
+You don't have to do this, but why not try it and see how you like it? Go to Appearance&gt;General&gt;Top Bar Options. Here you can change the address of your default RSS button. You can also add new social media icons and insert the appropriate URLs. Don't worry about dealing with finding images; Graphene has them all preloaded. You can use your own images by selecting "Custom" from the type menu.
+
+It's nice to have all this easy stuff, but it comes at the price of control. And, you must ask yourself if the very top of the page is the ideal spot for these links. People will scroll away from them immediately after the page loading, and sometimes before. Why not take control and move these buttons to where you think they'll be of better use. So go ahead and check the "Hide the top bar" option.
+<h2>Putting it in a Widget</h2>
+The most obvious thing to do is put your new link into a widget. Widgets will show up on every page, yet are unobtrusive. Really all you need to do is find yourself an image that you'de like to be your new RSS icon. I suggest a google image search for "RSS icon". You can even specify the size of the image you want by clicking "Search Tools"
+
+
+
+Download the image you like. It's a good idea to alter the image now to be the size you want. 32x32 is generally a good size for this type of thing.
+
+Now you just need to grab the URL for the image from its page in your media library. Drag a new "Text" widget into your sidebar and create an image tag to display your RSS icon. Then simply make that image a link to your RSS feed by putting the &lt;a&gt; tag around it.
+
+After everything. You should have something that looks like this:
+
+
+<div id="putting-it-in-posts"></div>
+<h2>Advanced: Putting it in your Posts</h2>
+You can have your RSS subscribe button in the top bar, or you can have it in the sidebar which is slightly more advanced. But let's say you want to be super professional and do something off the beaten path. What if you wanted to have your subscribe button inside a post? Like after the title, or after the content? Well, you're in luck because that's actually not too difficult
+
+First, you need to realize something. That button you created in the last example using code? You can put that anywhere. It's simple code.
+<pre> &lt;a href="FEED-URL"&gt; &lt;img src="IMAGE-URL" /&gt; &lt;/a&gt;</pre>
+is just a way of representing, "A button that, when pressed, will subscribe you to an RSS feed". If you copy and pasted it into a post, then you would have a button that, when pressed, will subscribe you to an RSS feed in the post. If you pasted it ten times, then you would have  ten buttons that, when pressed, will subscribe you to an RSS feed. Knowing this, all you really need to know is how to put the button where you want it.
+<h3>Special Widget Areas</h3>
+Graphene has a feature called "Action Hooks Widget Areas". You may find these under Appearance&gt;Graphene Options&gt;Advanced.  Essentially, these create new widget areas in various parts of the page. This can be tricky, as you're probably not very well acquainted with the WordPress page hierarchy or PHP in general. So, here is a pitifully small explanation:
+<h4>What Do All These .php Files Mean?</h4>
+WordPress is build upon the principle that a page can be broken up into constituent parts, saved in a database, and reassembled when the user wants to visit. PHP is a language that describes how that assembly should take place. So when you visit your homepage, it calls up a file called "loop.php". Like most other pages, it will make your header, menu, sidebars, and all the other stuff that you see on every page. What is different is what it puts into the content area.
+
+The PHP code tells browser to call up the following elements of the most recent post:
+[list style="check" color="blue"]
+<ul>
+	<li>Post Date</li>
+	<li>Post Title</li>
+	<li>Post Categories</li>
+	<li>Post Author</li>
+	<li><strong>Post Content</strong></li>
+	<li>Tags</li>
+</ul>
+[/list]
+
+Then it skips down and does it again for the next most recent post. That's the WordPress Loop. loop.php refers to the homepage of your blog. Thus "loop-single.php" refers to single post pages (when you click on a post title and it takes you to the page with just that post). Here is a list of common pages on which you might want to activate widget areas:
+
+[list style="arrow" color="blue"]
+<ul>
+	<li>loop.php - This is your homepage</li>
+	<li>loop-single.php - This is a single blog post page</li>
+	<li>loop-page.php - This is a page (like your "About Me" page). In actuality, pages are just specially formated posts.</li>
+</ul>
+[/list]
+<h4>Making Sense of  it All</h4>
+Don't worry if you only understood 1% of all that talk about PHP. All you really need to know is what I just wrote about what file does what. Anyway, when you click on say, loop-single.php, you'll see this:
+
+
+
+By checking these areas, you activate that widget area. All you need to do is save options and switch over to your widgets tab. You'll see that the corresponding area is now available to have widgets put into it!
+
+I particularly like "graphene_after_post_content". It makes the widget area right after all your post content, but before the part with the tags. Put a "Text" widget in there and add your RSS button code. If you don't want that big button, then you could get a smaller one. Search for 16x16 RSS icons. Or just put in text that links to your feed. Here's a favorite of mine,
+<pre>&lt;br&gt;
+&lt;hr /&gt;
+&lt;h3 style="margin-top:0px;margin-bottom:0px;"&gt;Like this post? &lt;a href="http://class.giip.org/feed"&gt;Subscribe!&lt;/a&gt;&lt;/h3&gt;</pre>
+This clearly demarcates where the post stops.
+<h3>Best Practices for Messing Around with Action Hooks</h3>
+There's the potential of getting lost here, so please experiment with intent. You can easily activate a dozen new areas and then immediately forget which does which. Activate a couple and then put text widgets into them with words describing what they are. Meaning, if you activate, "graphene_after_post_content" then make a text widget that says that. That way, when you look at your blog, you can tell exactly where that widget area is.
+<h2>Super Advanced</h2>
+I'm not sure if there's a material benefit to the following method other than increasing your skills. You risk breaking something by doing this, but that's fine. We can easily fix it.
+<ol>
+	<li><span style="line-height: 13px;">Open up Cyberduck and login with the same credentials you use to login to cPanel</span></li>
+	<li>Locate the file at "public_html/wp-content/themes/graphene/loop-single.php</li>
+	<li>On line 117, post in whatever code you want to display</li>
+	<li>Success!</li>
+</ol>
+Actually that wasn't that hard. Here's a picture of what we did:
+<p style="text-align: center;"></p>
+&nbsp;
+
+&nbsp;

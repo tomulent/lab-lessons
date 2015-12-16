@@ -1,0 +1,284 @@
+[two_third last="no"]
+
+In this lesson you will learn to code with HTML. HTML stands for Hyper Text Markup Language. It is the foundational coding language of every website. This is not nearly as intimidating as you might think. By laying down a basic understanding of HTML and how coding works, you will be able to branch out into more complicated technologies and languages. . If you take the time to learn these lessons well, you will be able to add value to any web-based project in the future.
+<h2><strong>Outcomes for this lesson:</strong></h2>
+<ul>
+	<li>Understand basic HTML elements</li>
+	<li>Create Links</li>
+	<li>Insert Images</li>
+</ul>
+[/two_third]
+
+[one_third last="yes"]
+<h2>Resources</h2>
+<ul>
+	<li><a href="http://www.codecademy.com/tracks/web" target="_blank">Codecademy</a></li>
+	<li><a title="Mozilla Developer Network" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></li>
+	<li><a href="http://www.w3schools.com/html/">W3 Schools: HTML</a></li>
+	<li><a href="http://www.codecademy.com/glossary/html">HTML Glossary 1</a></li>
+	<li><a href="http://www.w3schools.com/tags/">HTML Glossary 2</a></li>
+</ul>
+[/one_third]
+<h1>Tools of the Trade</h1>
+Before we get started learning HTML and becoming awesome web developers, we first need the right tools. Other than a computer, we need two additional tools to start coding.
+<h2>Text editor</h2>
+We write and save our code using a text editor. DO NOT use a program like Word for coding. Word processors (Microsoft Word, Pages, LibreOffice Writer, etc.) are not code friendly and will botch-up its formatting. Stick with one of the suggested text editors below.
+
+These are all <strong>free</strong> software:
+<h3>Windows:</h3>
+<p style="padding-left: 30px;"><a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a></p>
+<p style="padding-left: 30px;"><a href="https://atom.io/" target="_blank">Atom</a></p>
+
+<h3>Mac OSX:</h3>
+<p style="padding-left: 30px;"><a href="http://www.barebones.com/products/textwrangler/" target="_blank">TextWrangler</a> (Mac lab computers have this loaded)</p>
+<p style="padding-left: 30px;"><a href="https://atom.io/" target="_blank">Atom</a></p>
+Note: TextWrangler requires Mac OS 10.6.8 (Snow Leopard) or later. If your Mac is running anything before that, please contact the Tech Director (<a href="mailto:thomas@everettprogram.org" target="_blank">thomas@everettprogram.org</a>) for a free upgrade to Snow Leopard. Otherwise use, <a href="http://sourceforge.net/projects/smultron/" target="_blank">Smultron</a>.
+<h2>Web Browser</h2>
+Web browsers are what you view web pages with. You wouldn’t be seeing this lesson or reading Reddit in class without one. Some web browsers are Firefox, Google Chrome, Safari (if you have a Mac) and Internet Explorer (there are others as well).
+
+For this class, please use the latest versions of either Firefox or Google Chrome!
+<h1>HTML and the World Wide Web</h1>
+What if I told you, the Web (what you may call the internet) is just a bunch of text files? It’s a gross oversimplification, but it’s pretty true. I’ll prove it to you.
+
+First we need to understand what HTML is. As I mentioned earlier, HTML is an abbreviation for Hyper Text Markup Language. It is essentially a way to “mark up” text to give it meaning that a web browser can understand. I will mention this here and multiple times throughout the next few lessons: HTML describes the structure of our content for our web page. Think “HTML = structure/content”. The browser interprets our HTML and lays out (or displays) the structure and content that we coded. HTML does not deal with HOW it is displayed in the browser (we will visit this concept later and in future lessons).
+
+HTML consists of “tags” which are single words called “elements” enclosed by “&lt; &gt;”. There are two types: “opening” (like &lt;h1&gt;) and “closing” (like &lt;/h1&gt;). These tell the browser that everything in between the opening and closing tags have a special meaning. For instance, the tag &lt;h1&gt; means heading one. So when the browser sees
+
+[html]&lt;h1&gt;This is a Heading&lt;/h1&gt;[/html]
+
+It knows that everything between &lt;h1&gt; and &lt;/h1&gt; is heading one text. Likewise, the browser knows everything in between the &lt;p&gt; and &lt;/p&gt; tags is a paragraph. Enough talk, let’s jump in!
+
+Open up your text editor and type the following html exactly as shown below. You will have to type it yourself, do not copy and paste. This lesson and its code was written in a word processor and if you simply copy and paste it, it will not format properly in a text editor.
+
+<script src="https://gist.github.com/bnyeucsc/2a9bd07b6c09cbe3c6a0.js"></script>
+
+Now save it with the title “index.html” and then open it (in the picture, I have mine saved differently, but ignore that). To open this html file, either double click the file or right-click, choose “Open With” and pick either Firefox or Google Chrome. Notice that this file opens up in your browser. The file extension .html tells your computer that this is a file for the browser to read. The browser opens it, sees that it begins with &lt;!DOCTYPE html&gt; and an &lt;html&gt; tag, knows that it’s reading a HTML document which contains Hyper Text Markup Language, and everything in between the &lt;html&gt; tags should be treated as such.
+
+Congrats! You have just coded your (almost complete) first web page. This may be overwhelming, but do not fear! I will step you through this line-by-line, so you can understand everything you just wrote. Let’s dive in!
+
+<h2>Revelation Time</h2>
+
+So what have we created here? You made a file containing a bunch of text that you “marked up” using HTML tags that your browser opened and interpreted to display what you wanted. Guess what? At its most basic, that is what the web is made of. When you type “google.com” into your browser’s address bar, a request is sent to a specially formatted computer called a “server” that locates a file called “google.html” then sends it to your browser which reads the code and displays it in a way that looks good. Of course there is a lot more going on but in essence the web is a collection of text files sitting in a computer somewhere.
+
+<h2>Let’s Get Back To Your Webpage</h2>
+
+Let us start at the top. On the first line we have:
+
+
+[html]
+&lt;!DOCTYPE html&gt;
+[/html]
+
+
+This tells the browser that this is an html document that contains, you guessed it, HTML. You could get away with leaving this line out and most likely the page will display normally, but it is proper html and good practice to include it. On the next line we have:
+
+
+[html]
+&lt;html&gt;
+[/html]
+
+
+This is our opening &lt;html&gt; tag. If you look ahead, on the last line of our document we also have the closing &lt;/html&gt; tag. This tells the browser that this is the foundation or “root” of our html page. After our &lt;html&gt; tag we have:
+
+
+[html]
+&lt;head&gt;
+[/html]
+
+
+This is our opening &lt;head&gt; tag for the &lt;head&gt; area (Further down we also have the closing &lt;/head&gt; tag). The &lt;head&gt;area is where you put “Head Elements”. Head elements are information about the webpage that the browser reads, but the person viewing the webpage may or may not see it directly. To demonstrate this, let’s add an important tag within the head area. Start a new line right after our opening &lt;head&gt; tag and type:
+
+
+[html]
+&lt;meta charset=&quot;utf-8&quot;&gt;
+[/html]
+
+
+Your code should look like this now:
+
+<script src="https://gist.github.com/bnyeucsc/4e6f7da766181732ea20.js"></script>
+
+Now save and refresh your open html page in your browser (open this html file in your browser if you haven’t). Notice how at the top of our page, the tab shows “This is the Title”, but we don’t see anything different after adding &lt;meta charset=”utf-8”&gt;? Well this tag is meta data, which is data about data. This may sound confusing, but it is information that the browser reads, uses, and does not show the user. &lt;title&gt;This is the Title&lt;/title&gt; is also considered meta data, but the browser chooses to display it (for the purpose of displaying a title for your web page that is opened in a web browser).
+
+You may also be wonder why we have the &lt;meta&gt; tag with some extra stuff in it AND it doesn’t have a closing tag. The “charset=”utf-8” ” is called an attribute and we will discuss them later, trust me for now. This tag also does not have a closing tag because it is what we call a “self-closing tag”. “But you said tags need an opening and closing tag!” Well, some do not and to be perfectly honest, there is not an easy way to know if a tag needs to be closed or not. My suggestion is if you are unsure, either look up the tag on Google or try it out yourself and see what works.
+
+All we need to know about &lt;meta charset=”utf-8”&gt; tag is it sets the character set, which helps describe how our web page is to be formatted . On the next line we have:
+
+[html]
+&lt;title&gt;This is the title&lt;/title&gt;
+[/html]
+
+This is, you guessed it, the page title element. In between the opening and closing title tags is the title of our webpage. This is displayed on the web pages tab when opened in our web browser, and if we were searching for this web page on Google, it would display it as our web site link in the search results as well. Go ahead and change the text between the &lt;title&gt; tags to whatever you want. I’ll change mine to &lt;title&gt;My First Lesson Webpage&lt;/title&gt;. After this line we have:
+
+[html]
+&lt;/head&gt;
+[/html]
+
+This is the closing &lt;/head&gt; tag and tells the browser that this is the end of the head area. Cool, now onto the meat (or vegan meat) and potatoes of our webpage. On the next line we have:
+
+[html]
+&lt;body&gt;
+[/html]
+
+This is the opening body tag for our webpage. Everything that goes between the opening and closing body tag is the content we want the browser to display. It is crucial that our web pages have both a &lt;head&gt; section and a &lt;body&gt; section. You could get away with leaving out these sections and just put content in, but this is a BIG NO-NO. Just don’t do it. Here’s a quick joke to tie this all together: What kind of freakish animal has a head but no body?<sub>Answer: an octopus </sub> On the next line we have:
+
+[html]
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+[/html]
+
+This is a level one headline. I like to think of it as the title of a new section. There are six different levels of headlines, 1 through 6 (&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt;). Let’s try this out, after &lt;h1&gt;Hello World&lt;/h1&gt; on a new line add:
+
+[html]
+&lt;h4&gt;I’m on the planet Earth&lt;/h4&gt;
+[/html]
+
+This is a level four headline. It appears to be smaller than &lt;h1&gt;. Why? Well, web browsers choose to display head line element’s sizes in decreasing order (&lt;h1&gt; being the largest and &lt;h6&gt; being the smallest). On the next line we have
+
+[html]
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+[/html]
+
+This is a paragraph tag. Text put between paragraph tags will be displayed as normal text. Any amount of text can be put between these tags and it helps the browser know this is normal text and not something else.
+
+“Wait, wait, hold up! These last three elements are being displayed differently. Even the two headlines look different! You said that HTML is for structure and content, not for how it is displayed! Liar liar pants on fire!” Hold your horses, I wouldn’t lie to you J.
+
+Everything we have written is structure and content. Now think about all the beautiful HTML we have written. You finish writing your code, save it, and open it in your browser. Your browser reads through the file and it knows about all of the content you wrote. Next it wants to display your masterpiece, but wait, we didn’t tell it HOW to display our content (we will learn this in the next lesson). Well good thing web browsers are extremely smart. If you do not tell a web browser how to display an HTML element (in this case we haven’t), it displays these elements using pre-set defaults as a backup option (thank you web browser developers!). Now that is out of the way, on the last two lines we have:
+
+[html]
+&lt;/body&gt;
+&lt;/html&gt;
+[/html]
+
+These are the closing tags for the &lt;body&gt; and &lt;html&gt; tags. We need to tell the browser when the body section ends and the html page ends as well. That is it! That is the end of our page. I have a few more remarks before we move onto the next section.
+
+Notice how I read this HTML from top to bottom? Maybe you noticed how the elements such as &lt;h1&gt;, &lt;h4&gt;, and &lt;p&gt; displayed in the order we wrote them in? Well, that’s how the browser reads them, from top to bottom. We can’t randomly place html tags wherever we want when we are coding (unless that’s what you are going for) because the browser will interpret and display your web page the way you write it. If you randomly place tags, the browser will display them in the order it reads them.
+
+Nice work! Here is what your code should look like:
+
+<script src="https://gist.github.com/bnyeucsc/b6f73e56a36e2c360ee1.js"></script>
+
+<h1>A Note about Indentation and Code Styling</h1>
+
+Formatting our code is important. Imagine reading over an HTML file that had all of its code on one line? Ya no. The browser can still read it, but it's painful for us to look at. Compare the two code samples:
+
+<h4>Code Sample 1</h4>
+
+<script src="https://gist.github.com/bnyeucsc/106cebb809b8197e7e6d.js"></script>
+<h4>Code Sample 2</h4>
+<script src="https://gist.github.com/bnyeucsc/b6f73e56a36e2c360ee1.js"></script>
+
+I would much rather read and look over code sample 2. It is easier to see what is nested inside (surrounded by) the head section and the body. I didn’t further nest the paragraph element because it isn’t nested inside anything else other than the body section. Both the head section and body are nested inside the html tag as well.
+
+In general, we want to indent (use the tab key) elements that are inside of other elements. We also want to start new html elements on new lines (enter key). Don’t be afraid to add blank lines between code (like in Code Sample 1 on line 3 or 7). We call this <strong>whitespace</strong>. This does not affect how the browser reads our code. This isn’t always the case and it will take some practice. Also, different developers have different coding styles.
+
+Overall, we just want to make our code readable. This helps us catch mistakes and makes coding more pleasant.
+<h1>Attributes: Explained with Creating Links</h1>
+From the Mozilla Developer Network (MDN):
+
+“Elements in HTML have <strong>attributes</strong>; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.”
+
+An attribute is included in the opening tag of an HTML element. Earlier we saw &lt;meta charset=”utf-8”&gt; in the head section of our html document. Here we were using the &lt;meta&gt; tag and charset was the attribute that adjusted the behavior of this html element. If we put a different value in place of utf-8, we would change the character set for the web page.
+
+In general, the syntax (composition) of an attribute is as follows:
+
+Attribute_name = “value”
+
+Common attributes (that we also use frequently in this class) are href, src, class, and id. I will explain each attribute and its uses when we come to them in our lessons. With this knowledge, let’s learn how to create links!
+<h2>Creating Links</h2>
+First, we need to learn a new HTML tag, the &lt;a&gt; anchor tag. “Wait a minute! We are creating links. Shouldn’t it be &lt;link&gt;?” Good thinking! While this thinking may make sense now, &lt;link&gt; is reserved for another purpose already. You will see why we use the anchor tag to create links when we work through an example.
+
+Open up the html file we were working on previously. Change the text of your paragraph to “We can search the web using the Google Search Engine”. It should look like this:
+
+[html]&lt;p&gt;We can search the web using the Google Search Engine&lt;/p&gt;[/html]
+
+Next, let’s create a link using the &lt;a&gt; tag. Surround the text “Google Search Engine” in an &lt;a&gt; tag. Don’t forget the closing &lt;/a&gt; tag. In the opening &lt;a&gt;, add a generic href attribute. It should look like this now:
+
+[html]&lt;p&gt;We can search the web using the &lt;a href=&quot;&quot;&gt;Google Search Engine&lt;/a&gt;&lt;/p&gt;.[/html]
+
+Now we have created a link, but it doesn’t work. The link doesn’t know where to go. That’s where the href attribute comes into play. In between the two double quotes we need to write the destination the link will take us to. For this link, let’s use <a href="http://www.google.com">http://www.google.com</a>. We should now have:
+
+[html]&lt;p&gt;We can search the web using the &lt;a href=&quot;http://www.google.com&quot;&gt;Google Search Engine&lt;/a&gt;&lt;/p&gt;.[/html]
+
+If everything went smoothly, when you open this web page in the browser, the text between the opening and closing &lt;a&gt; should be highlighted and underlined in some manner. If you click this link, it should take you to the Google search engine. Pretty cool.
+
+In general, the anchor tag will be of the form:
+
+[html]&lt;a href=&quot;http://www.example.com&quot;&gt;Text or html element here will be the link&lt;/a&gt;[/html]
+
+The &lt;a&gt; can be used for more than just turning text into links. Images can be turned into links and much more. The important concept here is that whatever you put between the opening and closing &lt;a&gt; tags will become a link to the destination we set using the href attribute. The &lt;a&gt; tag “anchors” a link to whatever item it surrounds.
+<h2>Adding Images</h2>
+You’re a pro now so this should be easy. To add an image, you use the &lt;img /&gt; tag. A simple version looks like this:
+
+[html]&lt;img src=&quot;image-location-in-your-directory-or-a-URL&quot; &gt;[/html]
+
+&lt;img&gt; is special in that you don’t have to use a closing tag, just a slash at the end. As I mentioned earlier, it is a self-closing tag. I know that this may be confusing after all the jive we’ve been talking about how HTML elements need to have an opening <em>and </em>a closing tag.  Think of it like this: the image tag doesn’t need an opening and closing because there’s nothing you would put in between them. With &lt;p&gt; it makes sense because you’re telling the browser that everything in between &lt;p&gt; and &lt;/p&gt; belongs in one paragraph, but with &lt;img&gt; the tag itself represents the whole element.
+
+<img class="alignnone size-full wp-image-2210" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/everett-icon-144px.png" alt="everett-icon-144px" width="144" height="144" />
+
+Anyway, download the Everett logo and save it with default name. Make sure you save it in the same folder as your index.html file. After our &lt;p&gt; tag, on a new line add:
+
+[html]&lt;img  src=&quot;everett-icon-144px.png&quot;; &gt;[/html]
+
+Save, refresh and if you did this correctly, you should see the Everett logo under your paragraph text. For the &lt;img /&gt; tag, we use the src attribute, which stands for source. The value between the double quotes is the location or “source” where the browser needs to look to find and display the image. We don’t use href with images.
+
+In this example, we saved our image on our computer and with the src attribute, told the browser where to find the image file (that was also on our computer). We can also give the src attribute a value of a URL (ex. http://somewebsite.com/someotherfilestructurestuff ).
+
+For example, we can look up an image on Google Images or even a random website, find a specific images URL, and use that image in our own web page. I did a quick Google Images search for the Everett Program, viewed an image, and found its URL (<a href="http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg">http://www.everettprogram.org/main/wp-content/uploads/2014/01/EverettProgramPhoto.color_.jpg</a>). <em>Don’t use this URL by the way</em>. If I used this URL for an image in my own web page, it would display the image I found. Cool right? I didn’t have to save the image on my computer and by using the image’s URL, I have an image for my page, it works, and it was easy! Well….this is NOT a good practice! Here is what happened:
+
+<strong>Scenario 1:</strong> We downloaded the Everett image file and saved it on our computer. When we open our web page, the browser needs to download the image file to display it. This is why sometimes images don’t load on websites; they didn’t download properly. The act of the browser downloading the image file uses network bandwidth. For an explanation of network bandwidth, visit: <a href="http://its.ucsc.edu/security/bandwidth.html">http://its.ucsc.edu/security/bandwidth.html</a>. In this case it didn’t use any bandwidth because it just read the image file off of our computer. When we begin to host our websites on web servers (so anyone with an internet connection can view our page) and open our website in a browser, it will use network bandwidth. In this case, it will use bandwidth that WE pay for.
+
+<strong>Scenario 2:</strong> We didn’t download the image file and used the image’s source URL. The browser downloads the image file from <strong>another server or computer</strong> so that it can display the image on our page. This uses someone else’s network bandwidth, and in my second example, it would use the Everett Program’s network bandwidth. They pay for this bandwidth! We didn’t. This is a bad practice in the web development/design community.
+
+So, unless the image you want to use is hosted on a site or service that is meant for hosting images (like photobucket, flickr, etc.), always download the image and then reference it in your web page. We want to use the bandwidth we pay for (or the bandwidth of services that they want us to use). This is the best practice.
+
+Lastly, let’s add another attribute to our image. After the src attribute, add alt=”Everett Logo”. Your code should look like this:
+
+[html]&lt;img  src=&quot;everett-icon-144px.png&quot; alt=&quot;Everett Logo&quot; &gt;[/html]
+
+This text added alternative text to the image. If our image didn't load properly, the browser will display the text “Everett Logo”. Also, viewers with visual impairments that use screen readers benefit from this because the screen reader will read this out loud to them.
+<h2>Images as Links</h2>
+How about turning an image into a link? Easy. All you have to do is surround the &lt;img&gt; element that you just made with an anchor tag (between &lt;a&gt; and &lt;/a&gt;. So instead of:
+
+[html]&lt;a href=&quot;http://everettprogram.org&quot;&gt;Link text&lt;/a&gt;[/html]
+
+it will look like
+
+[html]&lt;a href=&quot;http://everettprogram.org&quot;&gt; &lt;img src=&quot;everett-icon-144px.png&quot;&gt;&lt;/a&gt;[/html]
+
+Why did that work? Remember that everything in between the &lt;a&gt; and &lt;/a&gt; becomes a link. The &lt;a&gt; tag anchored the link to the image. Nice!
+
+&nbsp;
+<h1>Homework Assignment</h1>
+Sign up for a Codecademy account at Codecademy.com  . It is free. This is where we will be completing our homework for the next two lessons. This is NOT where you submit your homework.
+<h3>Attention: Sign up for a Codecademy account BEFORE you start doing the lessons. If you do the lessons without signing up and being logged in, Codecademy won't save your progress.</h3>
+After logging into your Codecademy account, go to the HTML/CSS section. Complete the sections:
+<h4>HTML Basics</h4>
+<img class="alignnone size-full wp-image-3474" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_1.png" alt="HW_Img_1" width="782" height="334" />
+
+You do not need to complete the small project right after (But you can complete it for more practice).
+
+&nbsp;
+<h4>HTML Basics II</h4>
+<img class="alignnone size-full wp-image-3475" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_2.png" alt="HW_Img_2" width="685" height="342" />
+
+Again, you do not need to complete the small project right after (It’s good practice though!).
+<h4>HTML Basics III</h4>
+<img class="alignnone size-full wp-image-3476" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_3.png" alt="HW_Img_3" width="645" height="332" />
+
+Again, you do not need to complete the small project after.
+
+After you have completed these three sections, you need to submit your HW.
+
+You will need your Codecademy profile URL for submitting this homework. To get this, while logged into your Codecademy account, navigate to Me in the top right corner. Click Me and it will show a dropdown menu. Click “View my profile”.
+
+<img class="alignnone size-full wp-image-3477" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_4.png" alt="HW_Img_4" width="1197" height="444" />
+Now you are on your profile page. The link needed will be in your URL bar (this is a link that brings the viewer to your profile where they can see the badges you have earned).
+
+<img class="alignnone size-full wp-image-3478" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_5.png" alt="HW_Img_5" width="1140" height="223" />
+<h1 id="submission">Submission</h1>
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+<ul>
+	<li>Email subject line in the following format: <em>HW #1 Firstname Lastname</em></li>
+	<li>The web address of your Codecademy profile (put this in the body of the email)</li>
+</ul>
+&nbsp;

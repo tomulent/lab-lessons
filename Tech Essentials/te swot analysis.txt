@@ -1,0 +1,49 @@
+<h1>SWOT Analysis</h1>
+[toggle title="SWOT Analysis"]
+<h3>What is SWOT?</h3>
+It is a structured planning method used to evaluate the <b>strengths, weaknesses, opportunities and threats</b> involved in a project or in a business venture.
+
+<strong>S</strong>trengths (internal): characteristics of the business or project that give it an advantage over others
+
+<strong>W</strong>eaknesses (internal): characteristics that place the business or project at a disadvantage relative to others
+
+<strong>O</strong>pportunities (external): elements that the project could exploit to its advantage
+
+<strong>T</strong>hreats (external): elements in the environment that could cause trouble for the business or project
+
+<img class="alignnone wp-image-4278 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/320px-SWOT_en.svg.png" alt="320px-SWOT_en.svg" width="320" height="360" />
+<h3>How do I use SWOT?</h3>
+A SWOT analysis can be carried out for a product, place, industry or person.
+
+It involves specifying the objective of the business venture or project and identifying the internal and external factors that are favorable and unfavorable to achieve that objective.
+
+They work especially well for identifying inter-organization characteristics. NGOs use SWOT analysis to help achieve goals, both long term and short term!
+<h3>Where do I use SWOT?</h3>
+<ul>
+	<li>Create one now: SWOT Analysis Editable Slides</li>
+</ul>
+You can also use SWOT for personal improvement, group projects, evaluating progress, and more!
+<h3>Good vs. Bad SWOTs</h3>
+<h3>Good</h3>
+<ul>
+	<li>Clear</li>
+	<li>Specific to the company</li>
+	<li>Explains the point rather than listing words</li>
+	<li>Has 3-4 points for each topic</li>
+	<li>Makes sense</li>
+	<li>Identifies qualities</li>
+	<li>Easy to understand</li>
+</ul>
+<img class="alignnone wp-image-4279 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/Walt-Disney-SWOT-Analysis.jpg" alt="Walt-Disney-SWOT-Analysis" width="642" height="348" />
+<h3>Bad</h3>
+<ul>
+	<li>Lacks information</li>
+	<li>Incomplete for certain topics</li>
+	<li>Not appealing</li>
+	<li>Lists words without explanation</li>
+	<li>Not relevant to business/ company</li>
+	<li>Not presentable to others</li>
+</ul>
+<img class="alignnone wp-image-4280 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/Monocles.jpg" alt="Monocles" width="440" height="491" />
+
+[/toggle]

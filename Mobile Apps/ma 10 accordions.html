@@ -1,0 +1,56 @@
+You're pretty much a pro at this point, so we can do some more neat things. Reading the title, you might think I'm talking about this kind of accordion
+
+<iframe src="//www.youtube.com/embed/EFNNPZsO7-Q" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+But really I'm talking about a really useful user interface widget. Go to the jQuery Mobile website page <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/accordions/">on accordions</a> to see what they are and how to make them.
+<h1>Making a Basic Accordion</h1>
+You've got enough experience with how jQuery Mobile makes you use &lt;div&gt;'s and &lt;div&gt;'s within &lt;div&gt;'s, so this lesson will be easier for you than someone who was just starting out.
+<h3><a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/collapsibles/">Collapsibles</a></h3>
+Before we do accordions, we need to understand what makes them up, which are ui widgets called "collapsibles". These are widgets that look like buttons that  expand to reveal content they're hiding. Click <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/collapsibles/">here</a> to see what they are.
+
+They're extremely simple to create. You just need 3 things:
+<ol>
+	<li><span style="line-height: 14px;">A &lt;div&gt; with the attribute <strong>data-role="collapsible"</strong></span></li>
+	<li>As the first thing in the &lt;div&gt; an &lt;h1&gt; that will be the collapsible's lable</li>
+	<li>Some content to go inside the &lt;div&gt;</li>
+</ol>
+That's really it. Take the following code as an example and see what it produces
+
+[sourcecode language="html"]
+
+&lt;div data-role="collapsible"&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+
+[/sourcecode]
+
+[caption id="attachment_1711" align="aligncenter" width="300"] Collapsed[/caption]
+
+[caption id="attachment_1712" align="aligncenter" width="300"] Expanded[/caption]
+<h3>Styling/Theming</h3>
+<span style="line-height: 1.714285714; font-size: 1rem;">You can alter colors, borders, and backgrounds of course. You should really go top the </span><a style="line-height: 1.714285714; font-size: 1rem;" href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/collapsibles/#Theme">website</a><span style="line-height: 1.714285714; font-size: 1rem;"> for reference, but here are the two attributes to know:</span>
+<ol>
+	<li><span style="line-height: 14px;"><strong>data-theme="a-e"</strong>
+</span></li>
+	<li><strong>data-content=theme="a-e"</strong></li>
+</ol>
+where of course "a-e" means pick any letter a through e. Here are some examples:
+
+
+<h1>Mid Lesson Break</h1>
+<iframe src="http://www.youtube.com/embed/5IuRzJRrRpQ?feature=player_detailpage" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h1><a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/accordions/">Accordions</a></h1>
+You basically know how to make accordions now. Go to the <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/accordions/">website</a> and see if you can figure out how to make them.
+
+As you can see, all you have to do is put a two or more collapsibles next to each other and wrap them in a &lt;div&gt; with the attribute <strong>data-role="collapsible-set".</strong>
+
+Accordions are really useful for making large amounts of content smaller and for keeping content hidden. They basically keep things tidy, because only one section can be expanded at one time. See this example of how I turned the three collapsibles from earlier into an accordion. I've expanded the 2nd section so you can see what it looks like
+
+
+
+There's really nothing else to be said about accordions here. You know what you're doing by now. If you want to learn more like how to change icons, or make a section automatically expanded, or whatever, then you should head over to the <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/accordions/">accordion page on the website</a>.
+<h1>Project</h1>
+Find some way to incorporate an accordion. You might be running out of things to do to your proposal, so you can make some other app if you wish.
+
+Check out mine, and see that I put my objectives into an accordion...for some reason.

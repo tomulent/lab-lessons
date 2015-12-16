@@ -1,0 +1,280 @@
+<h2>CiviMail</h2>
+<h3>Outcome:</h3>
+<ul>
+	<li>Understand the difference between CiviMail and Send Mail action</li>
+	<li>Know how to set up CiviMail with your or the org's email address</li>
+	<li>Know how to create, edit and format an email on CiviMail</li>
+	<li>Be able to create mailing reports and keep track of open, click and bounce rates</li>
+</ul>
+<h3>What Is CiviMail And Why Use It?</h3>
+<p style="padding-left: 30px;">Emailing is a huge part of constituent management because it's the primary way of contacting and reaching out to your constituents nowadays. CiviMail is the CiviCRM component that deals with your emails. It helps you managing your emails, scheduling mass mailings, keeping track of the data of your mailings, etc. Of course, you don't have to use CiviMail to achieve all that, however, CiviMail, being part of the CiviCRM system, integrates with other CiviCRM components, and has more advantages than a external mailing management system. Here are a few examples:</p>
+
+<ul>
+	<li>Whenever you add new contacts in a mailing list Group, you don't have to update CiviMail like you'd do for an external mailing system.</li>
+	<li>CiviMail allows you to set up autoresponses to replies from recipients</li>
+	<li>You will be able to create reports for CiviMail and keep track of subscribers, click and open rates, and more.</li>
+</ul>
+<h3>Ways to Send Mails Via CiviCRM</h3>
+<p style="padding-left: 30px;">From the examples above, you might already have some idea of how CiviMail works. However, CiviMail is only one of the three ways to send mails through CiviCRM. Emails can also be done via the "Send Mail action", which can be found through Actions&gt;Send an Email in a contact's profile or contact search results. Send Mail action is good for emailing a small group of individuals, and has some functions slightly different from CiviMail. The difference between CiviMail and Send Mail action will be illustrated more in the next section. The last but not the least way to send out emails through CiviCRM is by setting up automated emails. This will be mentioned more in the future lessons because it integrates other CiviCRM components, but here are two examples: 1) when you create an event on CiviCRM, you may set up a confirmation email or a reminder email for participants. The emails will be triggered when participants register online, or event date is approaching. 2) when people sign up for memberships, you may set up automated membership renewal reminders weeks or days before their memberships expire.</p>
+
+<h3>CiviMail v.s. Send Mail action</h3>
+<p style="padding-left: 30px;">CiviMail and Send Mail action are both ways to send out emails via CiviCRM, however, they are slightly different in terms of functions and purposes. Below is a comparison of CiviMail and Send Mail action.</p>
+
+<table style="margin: 30px 0px 30px 30px; border: 1px solid black;">
+<tbody>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>Functions</strong></td>
+<td style="border: 1px solid black; padding: 5px;"><strong>CiviMail</strong></td>
+<td style="border: 1px solid black; padding: 5px;"><strong>Send Mail</strong></td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>1. Recipients</strong></td>
+<td style="border: 1px solid black; padding: 5px;">To mailing lists groups, or to multiple contacts from search results*</td>
+<td style="border: 1px solid black; padding: 5px;">To one contact via profile or multiple contacts from search results *</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>2. Number of Recipients</strong></td>
+<td style="border: 1px solid black; padding: 5px;">More than 50</td>
+<td style="border: 1px solid black; padding: 5px;">Up to 50</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>3. Tracking clicks and open rates</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Yes</td>
+<td style="border: 1px solid black; padding: 5px;">No</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>4. Keeping record of mailings</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Archiving is available.</td>
+<td style="border: 1px solid black; padding: 5px;">Sent mails will be treated as an activity.</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>5. Replies</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Will file replies from recipient and can set up autoresponses to replies.</td>
+<td style="border: 1px solid black; padding: 5px;">Replies will not be recorded (unless it's saved as an activity manually), and autoresponses is not available</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>6. Use of templates</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Yes</td>
+<td style="border: 1px solid black; padding: 5px;">Yes</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>7. File attachment</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Yes</td>
+<td style="border: 1px solid black; padding: 5px;">No</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>8. Creating a report</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Yes</td>
+<td style="border: 1px solid black; padding: 5px;">No</td>
+</tr>
+<tr style="border: 1px solid black; padding: 5px;">
+<td style="border: 1px solid black; padding: 5px;"><strong>9. Unsubscription</strong></td>
+<td style="border: 1px solid black; padding: 5px;">Recipients can only unsubscribe when in a mailing list. (can't unsubscribe if it's sent through search results and contact is not in a mailing list.)</td>
+<td style="border: 1px solid black; padding: 5px;">No unsubscription is available</td>
+</tr>
+</tbody>
+</table>
+<p style="padding-left: 60px;">*Both CiviMail and Send Mail action allow sending emails from search results. That being said, there are two different options for mailing under "Action" (see image below). Please make sure you know the difference and choose the correct option when you send out an email. <a href="http://book.civicrm.org/user/current/email/what-you-need-to-know/">Here</a> is a link to the CiviCRM users book. I highly recommend you to read through if you want to learn more about CiviMail.<a href="http://labs.everettprogram.org/wp-content/uploads/mail1.png"><img class="alignnone wp-image-5497 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail1.png" alt="mail1" width="558" height="507" /></a></p>
+
+<h3>Setting up &amp; configuration (Written by Thomas!)</h3>
+<div>[toggle title="Outbound Email"]
+If you're hoping to use Civi for any type of communications (mailings and such), then you're going to have to set up <code>Outbound Mail</code>. This has a few different components, so it's very important that you understand how these differnt parts interact.
+<h3 style="padding-left: 30px;">Where Do Emails Come From?</h3>
+<p style="padding-left: 30px;">Emails are generated by your domain's mail server. There's some computer stuff going on in there that we won't get into (mainly because we don't understand it) but bascially, your server has the ability to generate and send emails and CiviCRM taps into that ability. By default, any email sent from Civi will be generated by your server unless we go do some special stuff to get it to send from another mail server.</p>
+
+<h3 style="padding-left: 30px;">Configure "From Email" Address</h3>
+<p style="padding-left: 30px;">CiviCRM allows you to have lots of <code>From Email Address</code>es. That is, the address that people see mail and mailings coming from. There are lots of reasons for doing this. Some orgs like to have a new email address for each event they do. Like our friends at Aspiration had <a href="mailto:CATechFest2014@aspirationtech.org" target="_blank">CATechFest2014@aspirationtech.<wbr />org</a> for their CA Tech Fest event last year and will have <a href="mailto:CATechFest2015@aspirationtech.org" target="_blank">CATechFest2015@aspirationtech.<wbr />org</a> for it this year.</p>
+<p style="padding-left: 30px;">Before we can send emails with Civi, we'll need to set up at least one <code>From Address</code>. Head on over to <code>Administer &gt; CiviMail &gt; From Email Addresses</code>. When you get there you'll see the generic email address. Edit this to reflect the address you would like to use. Remember that you need to use the proper mail address format of having the name in quotes and then the address in carrots.</p>
+<p style="padding-left: 30px;"><img src="http://labs.everettprogram.org/wp-content/uploads/FromEmailAddresses.png" alt="image" /></p>
+
+<h3 style="padding-left: 30px;">Configure Mail Account</h3>
+<p style="padding-left: 30px;">Still not there yet. We have to specify an account to catch bounced emails when they happen. Go to <code>Administer &gt; CiviMail &gt; Mail Accounts</code>. Again choose to edit the generic account. We're going to use an email address that you create for this domain. For instructions on how to do this, please refer to <a href="http://labs.everettprogram.org/configuring-emails-on-your-domain/" target="_blank">this blog post</a>. Once you've created your new address, be sure to hit the "Configure Email Client" option and then scroll down to find the server name.</p>
+<p style="padding-left: 30px;"><img src="http://labs.everettprogram.org/wp-content/uploads/ConfigureMailCient.png" alt="image" />
+<img src="http://labs.everettprogram.org/wp-content/uploads/FindServer.png" alt="image" /></p>
+
+<h3 style="padding-left: 60px;">Input The Info</h3>
+<p style="padding-left: 60px;">The following are the required fields and what they're asking for.</p>
+
+<ul style="padding-left: 90px;">
+	<li><strong>Name</strong>: Doesn't matter what you put, this is just the internal name your giving it</li>
+	<li><strong>Server</strong>: The server you just copied when you made the email address. It will be something like <a href="http://cpsrv22.lithiumhosting.com" target="_blank">cpsrv22.lithiumhosting.com</a></li>
+	<li><strong>Username</strong>: The full email address you just created</li>
+	<li><strong>Password</strong>: The word of pass</li>
+	<li><strong>Email Domain</strong>: The part after the <code>@</code> in your email address</li>
+	<li><strong>Protocol</strong>: IMAP</li>
+	<li><strong>Use SSL?</strong>: Yes. Check it</li>
+	<li><strong>Used For?</strong>: Bounce Processing. We don't know how to do the other thing yet.</li>
+</ul>
+<p style="padding-left: 60px;">Once we've got that all done with, you should be ready to roll! Well...partially.</p>
+
+<h3 style="padding-left: 30px;">Test Out Send Mail</h3>
+<p style="padding-left: 30px;">You can send emails directly to individuals and small groups. Let's send one to our friend Garrus Vakarian about how we need him to calibrate our computers. We just search for his name and when we're on his contact page, hit <code>Actions &gt; Send an Email</code>. What you get is fairly straightforward, but let's break it down.</p>
+<p style="padding-left: 30px;"><img src="http://labs.everettprogram.org/wp-content/uploads/ComposeEmailToGarrus.png" alt="image" /></p>
+
+<ol>
+	<li><strong>From Address</strong>: By default, it will choose the email of the user who is signed in. This might be fine if you are intending to send an email as yourself as a staff member of the org, but remember it is never OK to send emails on behalf of an org from your personal email.</li>
+	<li><strong>Use Template</strong>: You can refer to the template section of this lesson, but briefly, if you ever send the same email twice, you should make a template. It will send you infinite time. You can just hit the <code>Save as Template</code> box at the bottom.</li>
+	<li><strong>Subject</strong>: You know what this is</li>
+	<li><strong>Insert Token</strong>: Put Tokens into the body of the email</li>
+	<li><strong>Editor</strong>: Write your email with the visual HTML editor. You can also click "Source" to edit the HTML</li>
+</ol>
+<h3 style="padding-left: 30px;">The Result</h3>
+<p style="padding-left: 30px;"><img src="http://labs.everettprogram.org/wp-content/uploads/EmailToGarrus.png" alt="image" /></p>
+<p style="padding-left: 30px;">[/toggle]</p>
+
+</div>
+<h3>Creating an email</h3>
+This section will be focused on CiviMail because mass mailing such as newsletters, event invitations or member-exclusive news will need more organizing and formatting than mailings to small groups of individuals. Before you begin writing an email, you need to understand how to set up the header, footer, content format, and images nicely, so lets start!
+<div style="margin-left: 30px;">
+
+[toggle title="Header and Footer"]
+<p style="padding-left: 30px;">Header and footer are important pieces of an email that wraps your main content. A header usually contains your organization's logo, or a title. It could be an image, plain text, or a combination of both. Here is an example of a header:</p>
+<p style="padding-left: 30px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail2.png"><img class="alignnone wp-image-5498 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail2.png" alt="mail2" width="957" height="497" /></a></p>
+<p style="padding-left: 30px;">On the other hand, footer usually contains information such as your organization's address, website, other contact info, and unsubscribe options. Here is an example of a footer:</p>
+<p style="padding-left: 30px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail3.png"><img class="alignnone wp-image-5499 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail3.png" alt="mail3" width="836" height="332" /></a></p>
+<p style="padding-left: 30px;">Something worth noting about what to include in the footer is the unsubscribe and opt-out options and their difference. To unsubscribe means to be removed from a mailing list, and to opt-out means to not receive any bulk emails. For example, I subscribe to a non-profit's Monthly Newsletter, Volunteer Opportunities, and Community Weekly Updates. If I unsubscribe to "Volunteer Opportunities", I will still receive emails from the other two mailing lists; however, if I opt-out from bulk mailing, I will no longer receive emails from any of the mailing lists. Make sure you put them in the right place in your footer!</p>
+<p style="padding-left: 30px;">In other words, header and footer contains elements that won't be changed frequently (similar to the <a href="http://labs.everettprogram.org/classes/web-design/wordpress-basics-part-1/">static page</a> of your website). A header or footer can be designed to be used for one specific type of mass mailing or multiple ones. For instance, you may create a header for Newsletters with an image title such as the UCSC Newsletter, or you may also create a header that only contains your organization name and logo for multiple occasion uses.</p>
+<p style="padding-left: 30px;">In order to add or edit your headers and footers on CiviMail, you need to go to "<strong>Administers&gt; CiviMail&gt; Headers, Footers, and Automated Messages</strong>". You may choose to edit the existing one, or start one from scratch. It might be a little confusing because we haven't talked about formatting and tokens, but we will get to it. So far you only need to know what headers and footers should contain, and how to edit or add one.</p>
+[/toggle]
+[toggle title="Token"]
+<p style="padding-left: 30px;">If you followed along the instructions and get to the "Headers, Footers, and Automated Messages" page, you will see that the existing footer contains something like this: {domain.address}. Those are tokens, which, according to <a href="http://book.civicrm.org/user/current/email/what-you-need-to-know/">CiviCRM users book</a>, "are placeholders that CiviCRM recognizes and replaces with an appropriate value when sending each message". For example, when you receive an newsletter that greets you with your name, that is probably the {contact.first_name} token.</p>
+<p style="padding-left: 30px;">When creating an email, you will see a dropdown list on the side that says "Insert Token". Click on it, choose the token you want to add, and it will be inserted with the correct format (<a href="http://book.civicrm.org/user/current/common-workflows/tokens-and-mail-merge/">see example here</a>). When editing or creating headers and footers, you won't see such options.You might want to refer to <a href="http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens">this page</a> when you're adding tokens for headers and footers to make sure you understand the token's function and choose the appropriate one. In headers and footers, tokens work like URLs, and you can edit and format them with some HTML codes.</p>
+<p style="padding-left: 30px;">CiviCRM requires every mail to contain your org's address, unsubscribe option and opt-out option, or you will see a warning sign like this:</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail11.png"><img class="alignnone wp-image-5539 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail11.png" alt="mail11" width="359" height="432" /></a></p>
+[/toggle]
+[toggle title="Formatting and Templates"]
+
+CiviMail allows two types of email displaying options: HTML, or plain text. For plain text, it is like a text message that doesn't allow any formatting. It is good for sending out simple and straightforward emails and communication on the individual level. You don't have to have a plain text version of your mass mailing, but some people might choose to receive plain text emails rather than fancily formatted emails; in that case, make sure you have a plain text version to keep in touch with your minimalist subscribers. On the other hand, the HTML option allows emails to be formatted with HTML and CSS codes. You may create your HTML-formatted emails from scratch, or you may look for free templates online and try to work with it. On CiviMail, every element,whether it is the header, footer, email body or templates, allows HTML coding, and takes similar steps to complete. Therefore, I will show you the techniques and steps I take to format an email with free templates I found online, and you can be creative and apply all or parts of the steps when you are creating yours. Here are the steps:
+<h3 style="padding-left: 30px;">Search and download free email templates online</h3>
+<p style="padding-left: 30px;">For online free templates, I recommend <a href="https://www.campaignmonitor.com/email-templates/all/">Campaign Monitor</a> because their HTML code works the best with CiviCRM. Campaign Monitor allows you to build your own templates or you can choose from 100+ free pre-made templates. Either way, you'll have to download the templates to obtain the HTML and CSS codes.</p>
+<p style="padding-left: 30px;">Make sure your CiviCRM have a new template (Mailings&gt;Message templates&gt;Add Message Template) or new email (Mailings&gt;New Mailing) opened up and ready for the next step.</p>
+
+<h3 style="padding-left: 30px;">Copy the HTML and CSS codes</h3>
+<p style="padding-left: 30px;">In the folder that you extracted, you will see a HTML file, and a image folder, like this:</p>
+<p style="padding-left: 60px;"><img class="alignnone wp-image-5545 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing1.png" alt="mailing1" width="853" height="597" /></p>
+<p style="padding-left: 30px;">Some pre-made templates comes with more than one HTML file. You can open them all and decide which one you like, and keep that one open on your browser.</p>
+<p style="padding-left: 60px;"><img class="alignnone wp-image-5546 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing2.png" alt="mailing2" width="853" height="597" /></p>
+<p style="padding-left: 30px;">On the browser, right click, and click on "View Page Source"</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mailing4.png"><img class="alignnone wp-image-5548 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing4.png" alt="mailing4" width="988" height="489" /></a></p>
+<p style="padding-left: 30px;">Copy the codes. You can paste the codes somewhere else and keep a record of it, or move on to the next step.</p>
+<p style="padding-left: 60px;"><img class="alignnone wp-image-5549 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing5.png" alt="mailing5" width="988" height="584" /></p>
+
+<h3 style="padding-left: 30px;">Paste the codes to new email or template</h3>
+<p style="padding-left: 30px;">Go to the new email or template that you opened, click on "Source" on the HTML editor</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail7.png"><img class="alignnone wp-image-5535 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail7.png" alt="mail7" width="1169" height="536" /></a></p>
+<p style="padding-left: 30px;">When the tool bar is disabled, paste your code in the box, then click on "Source" again</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail8.png"><img class="alignnone wp-image-5536 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail8.png" alt="mail8" width="915" height="313" /></a></p>
+<p style="padding-left: 30px;">*The HTML code will indicate where the header and footer are. Since we are using the header and footer function in CiviMail, please cut those sections off to avoid repetitive information.*</p>
+
+<h3 style="padding-left: 30px;">Edit the content of your email</h3>
+<p style="padding-left: 30px;">Now, your HTML box should show what your email will look like when you send them out, you can click and edit the content of your email. (Hint: The CiviMail header and footer will not be shown unless you use the preview function. )</p>
+<p style="padding-left: 60px;">  <a href="http://labs.everettprogram.org/wp-content/uploads/mailing3.png"><img class="alignnone wp-image-5547 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing3.png" alt="mailing3" width="1175" height="578" /></a></p>
+<p style="padding-left: 30px;">You may find the images not working, please jump to the "Adding Image" section below and use the technique to add image to your email. (for pre-made templates, the images are in the "images" folder) This will take some work to replace the URLs, but once you're done, you will have a great workflow when you send out mass mailings.</p>
+<p style="padding-left: 30px;">If you're creating a new template, save the template. If you're creating a new mails, move to the next step.</p>
+
+<h3 style="padding-left: 30px;">Send out a testing email (For new mails)</h3>
+<p style="padding-left: 30px;">If you scroll down, you will see preview and send test mail options. If it the email looks amazing, you may send it to your subscribers!</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mail10.png"><img class="alignnone wp-image-5538 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mail10.png" alt="mail10" width="1183" height="266" /></a></p>
+
+<div style="padding-left: 30px;">
+
+[/toggle]
+
+[toggle title="Adding Image (Written by Thomas)"]
+
+It's worth thinking about where you're going to be storing your images that Civi might use for headers, footers, and mailings. This section will take you through a real example of how this happens in the wild. We are going to:
+<ul>
+	<li>Upload an image to our server</li>
+	<li>Find its URL</li>
+	<li>Make a new Mailing Header</li>
+	<li>Include the image in this new header</li>
+	<li>Send off a mailing with the new header</li>
+</ul>
+<h3>Where Will Your Image Live?</h3>
+We advocate for keeping things all in the same place, so that if you're trying to find something, you only have to look in one place. Since your CiviCRM instance is installed in WordPress, lets use that.
+
+You've done this before in WordPress lab. Either in the sidebar or the top toolbar, choose <code>Add Media</code>.
+<h3>Upload Your Image</h3>
+<img src="http://labs.everettprogram.org/wp-content/uploads/AddNewMedia.png" alt="image" />
+
+Once you've uploaded the image you want, hit <code>Edit</code>. This will take you to the post editor screen for the image you just added. This isn't the WP lab obviously, but FYI this is where you can edit image files that you've already uploaded to your server.
+
+<img src="http://labs.everettprogram.org/wp-content/uploads/ClickEditOnImage.png" alt="image" />
+<h3>Copy the Image URL</h3>
+Every image on every website has a web address, i.e. it's own URL. Images are files, so it makes sense that they'de have an address doesn't it? There on the image info window, highlight the image URL and copy it.
+
+<img src="http://labs.everettprogram.org/wp-content/uploads/CopyTheImageURL.png" alt="image" />
+<h3>Create a New CiviCRM Header</h3>
+OK so we've got our image up on the website, what are we going to do with it? The image I uploaded happened to be the Everett Program logo. I want it to show up at the top of all the mailings I send out so I'm going to use it in a mailing header.
+
+To add a new header, go into your CiviCRM admin area, then find in the menu, <code>Mailings &gt; Headers, Footers, and Automated Messages</code>.
+
+Once you're there you just hit the <code>Add Mailing Component</code> button. This is why we taught you HTML. If you don't remember how to use any HTML, hit up <a href="http://codecademy.com" target="_blank">Codecademy</a> or consult W3Schools about creating an image.
+
+<img src="http://labs.everettprogram.org/wp-content/uploads/WhereIsTheHeadersOptions.png" alt="image" />
+
+<img src="http://labs.everettprogram.org/wp-content/uploads/AddTheHTML.png" alt="image" />
+
+In case your squinting, the HTML calls up the image using the URL I copied and then wraps it in an "a tag" to make the image into a link to the Everett homepage. Here's the code, written on multiple lines for your convenience,
+
+<code>&lt;a href="htttp://<a href="http://everettprogram.org" target="_blank">everettprogram.<wbr />org</a>&gt; &lt;img src="<a href="http://civiwp.icanfafsa.com/wp-content/uploads/2015/04/Everett-Logo-Transparent-Background.png" target="_blank">http://civiwp.icanfafsa.<wbr />com/wp-content/uploads/2015/<wbr />04/Everett-Logo-Transparent-<wbr />Background.png</a>" width="100%" /&gt; &lt;/a&gt; </code>
+
+You'll also have to include a text version for people who don't accept images.
+<h3>Test It With A Mailing</h3>
+We create a new mailing (addressed to a group of dummies of course), and when we get to the message editor, we can choose the new header. Send it out and let's see what it looks like.
+
+<img src="http://labs.everettprogram.org/wp-content/uploads/ChoosingAFooter.png" alt="image" />
+<h3>The Result</h3>
+<img src="http://labs.everettprogram.org/wp-content/uploads/LookAtTheImage.png" alt="image" />
+
+[/toggle]
+
+</div>
+<h3>Reports and Analyzing your mailings</h3>
+<h3 style="padding-left: 30px;">Before your mail is sent...</h3>
+<p style="padding-left: 30px;">When you send out a bulk mailing to your subscribers, you might want to see how many people really open your emails, click on the links, or unsubscription. Tracking those numbers is a good way to see how effective your bulk mailings are. You might send to one hundred of recipients and have only twenty clicks due to your unattractive title. In that case, you are only sending your messages out, but not making them visible to your audience. To track your open and click rates, make sure you click on both boxes in the "tracking" tab before you send out an email like so:</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/mailing7.png"><img class="alignnone wp-image-5625 size-full" src="http://labs.everettprogram.org/wp-content/uploads/mailing7.png" alt="mailing7" width="1175" height="431" /></a></p>
+
+<h3 style="padding-left: 30px;">After your mail is sent...</h3>
+<p style="padding-left: 30px;">To see the statistics of your bulk mailings, please look at the CiviCRM users Book section for<a href="http://book.civicrm.org/user/current/email/reports-and-analysis/"> reports and analyzing!</a></p>
+
+<h3>Homework</h3>
+<h3 style="padding-left: 30px;">Part I</h3>
+<p style="padding-left: 30px;">Follow the instructions in the lesson today and do the following tasks:</p>
+
+<ul style="padding-left: 60px;">
+	<li>Set up a "From Email" in this format: Civilab@YourDomainName.com, and take a screenshot of it. Name the screenshot: Lastname_From</li>
+	<li>Create an email account (just create an account, you don't have to go through "Access Mails" and "Set Up Forwarder"), and add the email account you created to CiviCRM for bounce processing. Take a screenshot of the "Mail Account" page, and name it: Lastname_Acct</li>
+</ul>
+<h3 style="padding-left: 30px;">Part II</h3>
+<p style="padding-left: 30px;">Follow the instructions below and in the lesson, and complete the following tasks:</p>
+
+<ul style="padding-left: 60px;">
+	<li>Create a new header with <a href="https://drive.google.com/file/d/0BzgkMtU8d1MwZXc1MENyT1Zpckk/view?usp=sharing">this image</a> and use you HTML knowledge to make it align center.</li>
+	<li>Create a new footer that contains the following information
+<ul>
+	<li>Organization address token</li>
+	<li>Unsubscribe with URL token</li>
+	<li> Opt-out with URL token</li>
+	<li>(Hint: Use the URL tokens like URLs in your HTML code)</li>
+</ul>
+</li>
+	<li>Create a new mail. Be creative. You can try to use one of the CiviCRM templates or format it yourself, or just type a few simple lines of nonsense.
+<ul>
+	<li>Use the new header and footer you created in the last part</li>
+	<li>Mailing Name: you can put anything here</li>
+	<li>From: the "From email" you created</li>
+	<li>Recipients: Newsletter Suscribers</li>
+	<li>Subject: Lastname_Mailing</li>
+	<li>Plain Text: you can put anything here</li>
+	<li>HTML: you can put anything here</li>
+	<li>Preview your email as HTML, take a screenshot of it and name it: Lastname_Mailing</li>
+</ul>
+</li>
+</ul>
+<h3>Homework Submission</h3>
+Submit your homework to: civicrm@labs.everettprogram.org
+
+Make sure your subject says: Firstname Lastname HW5
+
+</div>

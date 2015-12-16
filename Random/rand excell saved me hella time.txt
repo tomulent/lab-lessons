@@ -1,0 +1,81 @@
+Time for another walkthrough for something you'll never do!
+
+You'll probably never do what I describe here but that's not the point. The point is that I was confronted with a repetitive task and chose to let the computer do what it's built to do. Computers love repetitive tasks! Whenever you have to do the same thing over and over again, try and find an automated solution instead of a manual one.
+<h1>The Setup</h1>
+I'm a research collaborator for the Executive Director. We're currently working on a paper empirically describing the demographic crisis in Nigeria. I find myself often needing to download government reports from the Nigeria Bureau of Statistics. They publish a lot of great stuff, but their website is not laid out very well. There's no page to view all their publications. Also the site search is broken, so you have to use Google to search it (site:nigerianstat.gov.ng).
+
+I would find a result for something and it would be a link to a direct download URL like, "http://www.nigerianstat.gov.ng/pages/download/170". Well that's interesting. All the publications seem to be in a directory called "download" and are named with an integer. If you change the number right of the final slash, you get a different file. Well I wanted a full list of their downloadable publications, so why not just download them all? I have plenty of storage. It would take forever to change the integer for all 250 items I figured out they had, so I would need a computational solution.
+<h1>What I Want At The End</h1>
+A list of links that I can just click on to download a document instead of typing it into the URL bar. Also, I want a way to open multiple links at a time so that I don't have to click on them all.
+<h2>Define the Repetition</h2>
+Like I said, computers are awesome at repetitive tasks. You just need to figure out the part that stays the same and the part that changes. In my case, the only thing that was changing was the number at the end of the URL. I needed
+
+http://www.nigerianstat.gov.ng/pages/download/1
+http://www.nigerianstat.gov.ng/pages/download/2
+..................................and so on........................
+http://www.nigerianstat.gov.ng/pages/download/250
+
+So we want to keep http://www.nigerianstat.gov.ng/pages/download/ the same but just count up from one.
+<h2>Use Excel</h2>
+Funny story, this post was going to describe a completely different set of procedures to get this done. It would have you create a for loop (programming term) and also some somewhat simple regex (fancy find and replace) to get the job done. Then while I was thinking up an analogy for counting repeatedly, I realized I could've done the whole thing using the drag feature in Excel. That wouldn't have been as fun, but I'll show you the easy way so you'll actually use it.
+<h3>The Drag Feature</h3>
+Any time you have a number as the last part of the contents of a cell, you can click the little box at the bottom right corner and drag it down. This will copy the cell contents and step up the number at the end by one. That there, is how we will increase our integer!
+<h2>Links</h2>
+What we're going to do is use Excel to create a simple HTML link that we'll eventually upload to our server. If you haven't taken WordPress Part I yet, don't worry, it's easy. A link looks like this:
+
+&lt;a href="URL"&gt;Link Text&lt;/a&gt;
+
+For our purposes, the URL is http://www.nigerianstat.gov.ng/pages/download/1. We'll use the same thing for the link text because why not?
+<h2>Build The Link on Row 1</h2>
+Understand that http://www.nigerianstat.gov.ng/pages/download/1 needs to have its own cell in order for the drag feature to work. The number has to be at the end, so we'll have to build the rest of the link around it. We'll go through what to put in each cell and then combine them at the end.
+<h2>A1</h2>
+<pre>&lt;a href="</pre>
+The opening tag and first part of the hyper reference attribute
+<h2>B1</h2>
+<pre>http://www.nigerianstat.gov.ng/pages/download/1</pre>
+Our destination gets its very own cell
+<h2>C1</h2>
+<pre>"&gt;</pre>
+Finishes up the hyper reference and opening tag
+<h2>D1</h2>
+<pre>=B1</pre>
+This just repeats the URL from cell B1
+<h2>E1</h2>
+<pre>&lt;/a&gt;</pre>
+The closing tag
+<h2>F1</h2>
+Now comes the time to put them all together. We'll use the &amp; symbol to combine multiple cells to occupy the same cell
+<pre>=A1&amp;B1&amp;C1&amp;D1&amp;E1</pre>
+We end up with
+
+a href="http://www.nigerianstat.gov.ng/pages/download/1"&gt;http://www.nigerianstat.gov.ng/pages/download/1&lt;/a&gt;
+<h2>Now Drag!</h2>
+We've got a complete link! Highlight all 6 cells, grab the square at the bottom and pull down for 25o rows
+
+<img class="aligncenter size-full wp-image-4300" src="http://labs.everettprogram.org/wp-content/uploads/2014/12/Screenshot_12_1_14__4_29_PM.png" alt="Screenshot_12_1_14__4_29_PM" width="1051" height="379" />
+<h2>Copy Column F and Put Into an HTML Page</h2>
+You can see the finished product <a href="http://icanfafsa.com/bulk" target="_blank">here.</a>
+<h1>Learn This Lesson Well</h1>
+The point of all this is that with just a little know how you can save yourself oodles of time. Here's a list of why it's better to figure out a solution rather than stick it out and do it manually:
+<ul>
+	<li>The amount of time you spend figuring out the faster solution will typically be less than the time it takes you do something manually
+<ul>
+	<li>Even if it takes more time, you'll be able to do it right off the bat the next time</li>
+</ul>
+</li>
+	<li>Repetitive task are simple but they're draining. Learning something new will stimulate your brain rather than numbing it</li>
+	<li>You'll be better prepared to solve other problems in the future.</li>
+</ul>
+Try it out for yourself!
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;

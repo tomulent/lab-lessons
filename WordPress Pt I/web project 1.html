@@ -1,0 +1,182 @@
+<h1 id="web-designwordpress-part-1-midterm"><a class="headeranchor-link" href="#web-designwordpress-part-1-midterm" name="user-content-web-designwordpress-part-1-midterm"></a>Web Design/WordPress Part 1 Project 1</h1>
+<h2>Resources</h2>
+<ul>
+	<li><a href="http://www.codecademy.com/glossary/html">HTML Glossary 1</a></li>
+	<li><a href="http://www.w3schools.com/tags/">HTML Glossary 2</a></li>
+	<li><a title="CSS Reference: W3Schools" href="http://www.w3schools.com/cssref/default.asp" target="_blank">CSS Reference: W3schools
+</a></li>
+	<li><a href="http://www.codecademy.com/glossary/css/comments" target="_blank">CSS Reference: Codecadamy
+</a></li>
+	<li><a href="http://labs.everettprogram.org/simple-coding-troubleshooting-guide/" target="_blank">Code Troubleshooting</a></li>
+</ul>
+<h2 id="overview"><a class="headeranchor-link" href="#overview" name="user-content-overview"></a>Overview</h2>
+For the midterm, you will be creating a small website from scratch, including both an HTML document and CSS stylesheet.
+
+This midterm will consist of three parts: an HTML file, a CSS stylesheet, and uploading these files to your UCSC web storage via SFTP. You will need to link the CSS stylesheet to the HTML file. Create a new folder where you will save your two files. We have uploaded an image of what the finished website should look like as a reference.
+
+Please use either Firefox or Google Chrome while you do this midterm. Remember to use a text editor to do your coding, not Word.
+
+A helpful tip while editing your HTML and CSS files is to keep the HTML web page open in your web browser while you edit your HTML and CSS files. After making changes in the HTML or CSS file, save it, and refresh the web page in your browser to see what results.
+
+Utilize the resources you have if you have any questions. Look back at prior lessons and homework, use Google/Mozilla Developer Network/W3Schools, CodeAcademy, and ask anyone during the lab. My emails/ office hours can be found <a href="http://labs.everettprogram.org/classes/web-design">here</a>.
+
+<strong>Here is the finished website:</strong>
+
+<img class="alignnone size-full wp-image-4859" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/Midterm_Website_WD15.png" alt="Midterm_Website_WD15" width="1919" height="955" />
+
+Submission instructions will be at the end of this page after Part 3.
+
+<strong>Warning</strong>: These instructions will be less detailed than before. Follow them carefully.
+
+Before starting, create a new folder to save your files in.
+
+[toggle title="Part 1: HTML"]
+<h2 id="part-1-html"><a class="headeranchor-link" href="#part-1-html" name="user-content-part-1-html"></a>Part 1: HTML</h2>
+Tips: Remember that most HTML elements need an opening and closing tag, some do not.
+<ol>
+	<li>Create a new HTML document and save it as “index.html”.</li>
+	<li>Before we put our doctype, let’s include a comment in our HTML file.
+- HTML comments are different than CSS comments. Look up how to format them <a href="http://www.w3schools.com/html/html_comments.asp">here</a>.
+- On the first line of your HTML page, put a comment with your First and Last name.</li>
+	<li>Let’s start off by creating the barebones of our web page.
+- Start your HTML file with a doctype element (after your comment).
+- Put an opening and closing html tag (everything else will go between these).
+- Create a head section for your web page.
+- Create a body section for your web page.</li>
+	<li>Time to work on the head section. Inside the head section:
+- Put a meta tag. Inside the meta tag include the attribute “charset” with a value of “utf-8”.
+- Our page needs a title. Title this web page: “Midterm Firstname Lastname”.</li>
+	<li>Time to work on the body of our web page. Our web page is going to consist of two main sections. The first main section is going to be our header that will contain our primary website heading and our navigation.
+- Create a header section within the body tag, using the header tag. Hint: See homework 3.
+- Inside the header, put an h1 heading with the text “Midterm Firstname Lastname”.</li>
+	<li>Let’s work on the navigation. Do the following:
+- Inside the header section (tags), after the heading, create a nav section by putting an opening and closing nav tag.
+- Inside the nav tags, create an unordered list with 3 list items.- Inside each list item, create a link, each with a href attribute (leave the href attributes value empty for now).- The first link should go to Google’s homepage, <a href="http://google.com">http://google.com</a> . Inside the link (between the a tags), give it the text “Google”.- The second link (inside the second list item) should go to the Yahoo homepage, <a href="http://yahoo.com">http://yahoo.com</a>. Inside the link, give it the text “Yahoo”.- The third link (inside the third list item) should go to the Bing homepage, <a href="http://bing.com">http://bing.com</a> . Inside the link, give it the text “Bing”.</li>
+</ol>
+<strong>We are done with the header section, onto the main content....</strong>
+<ol>
+	<li>Let’s create the other main section of the website. We are going to surround the rest of our content (we haven’t written it yet) in a div.
+- Create a div. Give it an id with the value “wrap”.
+- Inside the div, create a level three heading (h3) with the text “My Lists”.</li>
+</ol>
+<strong>We are going to have two unordered lists, each with a heading. Let’s do the first one.</strong>
+<ol>
+	<li>This is going to be a list with a heading (this stuff still goes inside the div):
+- Create a level three heading with the text “Groceries”.
+- After, create an unordered list with four list items.
+- Each list item should contain a grocery item name (text between the li tags). Name the first list item “Eggs”, the second “Bread”, the third “Cheese”, and the fourth “Vegan Cheese”.</li>
+	<li>Time to work on the second list (this stuff still goes inside the div):
+- Create a level three heading with the text “To-do List”.
+- After, create an unordered list with four list items.
+- Each list item should contain a task to do. Give the first list item the task name “Go to SOCY30B Lecture”, the second “Go to WordPress Lab”, the third “Be a good student in lab”, and the fourth “Finish the Midterm”.</li>
+</ol>
+<strong>Let’s not forget about paragraphs and images....</strong>
+<ol>
+	<li>Let’s put in a basic paragraph element after the last unordered list (this stuff still goes inside the div):
+- Create a paragraph with the text “I’m almost done with the HTML section, I can do it!”.</li>
+	<li>Let’s include an image. After the paragraph and still inside the div:
+- Create an image with a source of “<a href="http://i890.photobucket.com/albums/ac105/lavidalinux/app.png">http://i890.photobucket.com/albums/ac105/lavidalinux/app.png</a>“.</li>
+	<li>We should add another paragraph after this image.
+- Create a paragraph with the text “Hi I am a paragraph that should be inline”.</li>
+	<li>Let’s add another image:
+- Create an image with a source of “<a href="http://i963.photobucket.com/albums/ae113/AndrewTooCool1/Icons/bigger.png">http://i963.photobucket.com/albums/ae113/AndrewTooCool1/Icons/bigger.png</a>“.</li>
+</ol>
+<strong>We are almost done, we just need to prepare for the next part, the CSS stylesheet. </strong>
+<ol>
+	<li>Inside the head section, let’s link a stylesheet we are going to create in the next part. You will name your stylesheet style.css.
+- Under the title element, link a stylesheet with a link tag.
+- Remember, a link has two attributes, rel and href. Hint: look back at previous homeworks and our stylesheet will be named “style.css”.</li>
+</ol>
+<h4 id="we-are-done-with-our-html-file-for-now-dont-close-it-because-in-part-2-we-are-going-to-come-back-and-edit-our-html-with-classes-and-ids"><a class="headeranchor-link" href="#we-are-done-with-our-html-file-for-now-dont-close-it-because-in-part-2-we-are-going-to-come-back-and-edit-our-html-with-classes-and-ids" name="user-content-we-are-done-with-our-html-file-for-now-dont-close-it-because-in-part-2-we-are-going-to-come-back-and-edit-our-html-with-classes-and-ids"></a>We are done with our HTML file for now. Don’t close it because in Part 2, we are going to come back and edit our HTML with classes and ids.</h4>
+[/toggle]
+[toggle title="Part 2: CSS"]
+<h2 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h2>
+Tip: Make sure to save and refresh the web page after you make edits. Copy and paste the colors we give you to ensure they are the correct ones.
+<ol>
+	<li>Create a new CSS stylesheet and save it as “style.css”. Your file has to be named style.css for this to work. Save it in the same folder as your index.html you just coded.</li>
+	<li>At the top, put a comment with your first and last name.
+- Hint: Look at past homeworks.</li>
+</ol>
+<strong>Each section after this will be an individual CSS style rule.</strong>
+<ol>
+	<li>Let’s start with the most general styling rules for this web page. Select the body tag and do the following:
+- Change the background color to #ECF0F1.
+- The browser by default gives the whole html page a little bit of margin. Get rid of them by changing the margin on all sides to 0.
+- Change the font to “Tahoma”.</li>
+	<li>You should have noticed that every element on the web page moved right up to the edge of the browser window. Let’s create some space for elements after our header section.
+- Select the div by id.
+- Give it a top and bottom margin of 0.- Give it a left and right margin of 8px.</li>
+	<li>Let’s start to style the header section. Select the header:
+- Change the background color to #3498db.
+- Change its bottom margin to 0px.</li>
+	<li>Style the level one heading. Select the h1 within the header section:
+- Center the text.
+- Change the text color to #fff.- Change the top and bottom padding to 30px and the left and right padding to 0.- Change the top, right, and left margin to 0, and change the bottom margin to 19.920px.</li>
+	<li>Let’s move onto the navigation. Select only the unordered list within the nav section:
+- Change the background color to #2980b9.
+- Center the text.- Give it top and bottom padding of 0 and left and right padding of 20px.</li>
+	<li>Right now, the list items are stacking vertically. We need to get more specific. Select only the list item inside the unordered list within the nav section:
+- Change the display to inline-block.
+- Give all sides padding of 20px.</li>
+	<li>Our links have a default styling with an underline and blue text color. Let’s change this. Select only the links within the list items, inside the unordered list within the nav section:
+- Change the text decoration to none.
+- Change the top and bottom padding to 30px and left and right padding to 20px.
+- Change the text color to #fff.- Change the font size to 1.25em.</li>
+	<li>Let’s get fancy. We want the user to know that they are targeting (hovering over) a link before they click it. Select only the links within the list items, inside the unordered list within the nav section.
+- In your selector, after the a, add the psuedo-class hover. Look at this web page if you need help <a href="http://www.w3schools.com/css/css_pseudo_classes.asp">Pseudo-classes</a>, as well as homework 3.
+- Change the text color to #34495E.</li>
+</ol>
+<strong>We are now going to style the HTML elements within the div.</strong>
+
+<strong>You will also need to edit your HTML, using classes an ids, so make sure to have index.html open in your text editor as well.</strong>
+<ol>
+	<li>Let’s style our headings. Select all h3 elements:
+- Change the color #1F3A93.</li>
+	<li>We want the last two h3 elements to have a different color from the first. We want to select only the last two h3 elements. Let’s use a class. Go into index.html and:
+- Give the last two h3 elements (the ones above the unordered lists) a class of “heading-purple”.</li>
+	<li>Go back to style.css. Let’s edit the h3 with the class “heading-purple”. Select the last two h3 elements by class:
+- Change the color to #663399.</li>
+	<li>Let’s edit both of the unordered lists within the div. Select the ul within the div with an id of “wrap”:
+<ul>
+	<li>Change the background color to #6C7A89.</li>
+	<li>Change the text color to #fff</li>
+	<li>We don’t want the bullet point style on our list item. Use the property of “list-style-type” with a value of none.</li>
+	<li>Give it a padding of 50px on all sides.</li>
+	<li>Center the text.</li>
+	<li>Change the width to 25%.</li>
+	<li>Give it a margin of auto (this centers the lists on the page).</li>
+</ul>
+</li>
+	<li>We want to style the second paragraph (between the images). We need to individually select it to prevent styling both paragraphs on the page. Go back into index.html and give the second paragraph an id of “inline-p”.</li>
+	<li>Go back to style.css. We now want to style this paragraph. Select it by id:
+- Change it to display inline.</li>
+	<li>Let’s change the size of both of the images. Select both images:
+- Give them a width of 100px.
+- Give them a height of 100px.</li>
+	<li>The cool penguin image is too big (second image). We need to uniquely select it so we don’t change both images on the web page. Go back into index.html and give the second image an id of “image”.</li>
+	<li>Go back to style.css. We now want to style this image. It is also being displayed as inline because it is displaying right next to the paragraph. Select the second image by id:
+- Change its display so that it no longer is inline and starts on a new line.</li>
+</ol>
+That is it. If you did all of this correctly, your web page should look like:
+
+<img class="alignnone size-full wp-image-4859" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/Midterm_Website_WD15.png" alt="Midterm_Website_WD15" width="1919" height="955" />
+
+[/toggle]
+[toggle title="Part 3: FTP"]
+<h3>Part 3: Upload your midterm using FTP</h3>
+With FTP, we are going to upload the website files you just wrote to a new folder on your UCSC web storage. Let's get started:
+<ul>
+	<li>Connect to your UCSC web storage via SFTP.</li>
+	<li>Inside the public_html folder, navigate into the webdesignlab folder you set up last lesson.</li>
+	<li>Inside the webdesignlab folder, create a new folder called <strong>midterm</strong></li>
+	<li>Once the midterm folder has been created, upload both index.html <strong>and</strong> style.css <strong>INSIDE</strong> the midterm folder.</li>
+	<li>To check that this worked, visit the web address people.ucsc.edu/~[your cruzid]/webdesignlab/midterm. If the website you made in Part 1 and Part 2 shows up properly, then it uploaded correctly.</li>
+</ul>
+[/toggle]
+<strong>To reiterate, your midterm website needs to show up properly when I visit the web address people.ucsc.edu/~[your cruzid]/webdesignlab/midterm! If it doesn't show up properly, I can't grade it.</strong>
+<h1>Submission</h1>
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
+<ul>
+	<li>Email subject line in the following format:<em> Midterm Firstname Lastname</em></li>
+	<li>The web address of your midterm webpage on your UCSC web storage (in the format: people.ucsc.edu/~[your cruzid]/webdesignlab/midterm)</li>
+</ul>

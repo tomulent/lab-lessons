@@ -1,0 +1,155 @@
+jQuery Mobile offers us some big advantages. It is very simple, very elegant. Drag and drop editors are great in theory, but in practice they are often buggy and don't do what you wanted them to do. jQuery Mobile editing is all based in HTML and CSS elements that are familiar with anyone who has done any light coding.
+
+This does however mean that one must know a bit about how to code. Luckily, one doesn't need to know that much about coding. This lesson will be geared toward figuring out just how proficient a person must become with HTML and CSS before they start using jQuery Mobile.
+<h1>What Must They Know?</h1>
+In my preliminary workings with jQuery Mobile, I've found that there are a few things that you have to know what they are. But before we get to that, let's talk about something more abstract: comfort.
+
+The most important thing that we can instill is a feeling of comfort in working with code. Think back to the first few weeks of web design and how intimidating it was to see all that incomprehensible code staring at you from the computer screen. Our crucial task in the beginning is to make the campers ok with seeing that.
+<h1>The Concepts</h1>
+<h2>&lt;h1&gt; - &lt;h6&gt;</h2>
+These are obviously used for labeling things like sections, headers, and lists
+<h2>&lt;ul&gt;</h2>
+These are super important for creating list view. Any time you see a list box or accordion or anything, they're built upon unordered lists.
+<h2>&lt;a&gt;</h2>
+Crucial for navigating between app pages.
+<h2>&lt;div&gt;</h2>
+These are probably the most important of all. So much of what jQuery Mobile is and does is based around putting things into &lt;div&gt;'s.
+<h2>id and class</h2>
+You need a firm grasp on how to use id's and why they're important.
+<h2>Attributes</h2>
+id and class are attributes. So is href and title. jQuery Mobile relies on special attributes that start with "data-" This will be more clear later on, but for now it's just important to know that you can put stuff in between '&lt;' and '&gt;'
+
+This lesson will be focused on refreshing you on your HTML. There will be explanations of the elements followed by a guided worksheet. Since most of these relate to each other, there is no real order to the next section.
+<h2>Headings</h2>
+Think of these as section headings. When you wrote your proposal outline in 30B, you had several sections like "Executive Summary" and "Methodology". If you were making an HTML version of your proposal (and that would be good practice) then you would use &lt;h1&gt; or &lt;h2&gt; to write those headings. Very straight forward.
+
+There are six headings:<code> &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</code>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+&lt;h1&gt; is the largest and &lt;h6&gt; is the smallest. Duh.
+<h2>Unordered Lists</h2>
+Writing things in list form keeps things very neat and forces you to write things concisely. Let's go over how to use lists. The basic syntax goes like this:
+
+<code><img class="aligncenter size-full wp-image-3018" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.56.20-PM.png" alt="Screen Shot 2014-05-16 at 12.56.20 PM" width="214" height="105" />
+</code>
+
+&lt;ul&gt; starts the unordered list. &lt;li&gt; stands for 'list item'. Everything in between '&lt;li&gt;' and '&lt;/li&gt; will be an item. By default it just shows up as normal text but list item can be anything. Even another list! Give this list a try in your tester page:
+
+<code><img class="aligncenter size-full wp-image-3019" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.57.28-PM.png" alt="Screen Shot 2014-05-16 at 12.57.28 PM" width="709" height="265" /> </code>
+
+As you can see, there is a lot you can do with a list. We had links, plain text, heading, and even other lists as items in our list! Lists come into play in mobile apps as well. The picture below is of an unordered list.
+
+<img class="aligncenter size-full wp-image-3021" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.59.07-PM.png" alt="Screen Shot 2014-05-16 at 12.59.07 PM" width="393" height="362" />
+
+That looks complicated doesn't it? Well not really actually. All you need to do is make an unordered list and add the attribute " data-role="list-view" " to the &lt;ul&gt; tag. Here's what the code looks like:
+<code>
+<img class="aligncenter size-full wp-image-3020" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png" alt="Screen Shot 2014-05-16 at 12.58.00 PM" width="488" height="185" /></code> That was easier than you thought it would be I bet.
+<h2 id="attributes">Attributes</h2>
+This is a tremendously important concept to grasp. Attributes are little pieces of information placed inside an opening tag that define information about the element. An attribute you're probably familiar with is 'href'. You're used to putting that in an &lt;a&gt;, or 'anchor', tag to define the destination. There is also a 'title' attribute for the anchor tag which floats a little tooltip when you mouse over the link. What other attributes can you think of? Here's some examples:
+<pre> &lt;a href="http://google.com" title="Google"&gt;Link to Google&lt;/a&gt;</pre>
+Both "href" and "title" are attributes. They define where the link is going and what to display when you mouse over the link
+<pre>&lt;img src="giip.png" alt="GIIP Logo" /&gt;</pre>
+"src" and "alt" are attributes. They define where the image is coming from and what text to display if the image can't be found
+
+The important thing to take away from this is that attributes are pieces of information placed into an opening tag to define something about that element. Let me repeat that and put it in bold because that shows that it's important: <strong>attributes are pieces of information placed into an opening tag to define something about that element</strong>. The syntax looks like this:
+<pre>name="value"</pre>
+<h2>Selectors: id and class</h2>
+This concept overlaps with CSS, but we'll be using it in a slightly different way regarding mobile apps. Selectors are used to identify elements. When we use them in CSS, it's to identify the element we want to change.
+
+Class and Id are both attributes which, as you recall, are pieces of information placed into an opening tag to define something about that element. Consider the example below of how id and class are added to elements and how they are used for CSS. (note we are using internal CSS so that we can see everything on the same page)
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.19.19-PM.png"><img class="aligncenter size-full wp-image-3022" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.19.19-PM.png" alt="Screen Shot 2014-05-16 at 1.19.19 PM" width="724" height="448" /></a>
+
+That's nothing new to you. But to one of the campers, that is a whole bunch of concepts to learn. Luckily, jQuery Mobile doesn't require us to mess with any style. It includes a massive stylesheet with everything we could need. Where id and class come in is as a way of identifying parts of the page.
+
+Mainly, you'll be using the id attribute. This is used to identify pages. Below is an example of a generic jQuery Mobile page. Don't worry that it's got attributes you won't recognize, just notice the use of attributes and especially where you see 'id'
+
+<img class="aligncenter size-full wp-image-3023" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-1.21.03-PM.png" alt="Screen Shot 2014-05-16 at 1.21.03 PM" width="353" height="314" />
+
+So how many attributes do you see there? There are 5 in total. 4 of them are the "data-role" attributes that are part of jQuery Mobile and 1 of them is id="page-1". We'll explain what all these divs are a little later and more fully in lesson 2. For now, just know that you'll be making a lot of those 'pages' you see above. Most importantly, note that the div with the data-role="page" also has the id="page-1". This is how navigations will happen throughout the app.
+<h2>&lt;a&gt;: Making Links</h2>
+We've covered how to make links pretty thoroughly in the previous sections, so there's no need to review the basic mechanics other than saying:
+<pre> &lt;a href="URL"&gt;Link Text&lt;/a&gt;</pre>
+What you may not know how to do is link to locations within a page rather than between pages. It's extremely simple. Typically, you would put an internet or file address as the href value. To link to a location on a page, you put an element id as the href value.
+
+Still confused? If you click <a href="#attributes">here</a>, you will jump to the attributes section of this page. This was accomplished with the code you see below.
+<pre> &lt;p&gt;Still confused? If you click &lt;a href="#attributes"&gt;here&lt;/a&gt;,
+ you will jump to the attributes section of this page. This was accomplished with the code you see below.&lt;/p&gt;
+
+</pre>
+I knew that that section had the id "attributes" because, well, I wrote this page, so I know what id I wrote.
+
+Look at your address bar after you clicked the link. See how it has #attributes at the end of it now? This isn't strictly related to this lesson, but if you know the id of something on a page, then you can add the #id directly to a link and send someone directly to that part of the page. Like when people link to Wikipedia, they sometimes link to a particular part, like <a href="https://en.wikipedia.org/wiki/Uc_santa_cruz#Mascot" target="_blank">this</a>.
+
+This is important to jQuery Mobile because it's the crux of how you get around the app. Again, we'll go more into it in the next lesson, but the way we write the apps is by putting all of our 'pages' as defined by &lt;div data-role="page"&gt; into one single HTML document and then linking to different parts of it using &lt;a href="#location"&gt;link&lt;/a&gt;. Look again at the list example from above.
+
+<img class="aligncenter size-full wp-image-3020" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png" alt="Screen Shot 2014-05-16 at 12.58.00 PM" width="488" height="185" />
+
+As you may have guessed, each item is a link to a different &lt;div data-role="page" id="meet-x"&gt;.
+<h3>&lt;div&gt;</h3>
+This one is important. You're used to HTML elements that have a visible result. &lt;p&gt; produces a paragraph. &lt;ul&gt; creates a list. But what about &lt;div&gt;? Put &lt;div&gt;...&lt;/div&gt; then you'll get nothing. That's because &lt;div&gt; is for structuring content. It does nothing on its own. You can throw &lt;div&gt;'s all over the place and it won't affect anything. &lt;div&gt; is there to wrap around other elements and act as a container. Copy the page below and see what it does.
+<pre> &lt;html&gt;
+ &lt;head&gt;
+
+ &lt;style type="text/css"&gt;
+ #header {
+   background-color: #e27c7c;
+ }</pre>
+<pre>#content {
+   background-color: #8656c9;
+ }</pre>
+<pre>#footer {
+   background-color: #55c675;
+ }
+ &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;div id="header"&gt;
+   &lt;h1&gt;Site Title&lt;/h1&gt;
+   &lt;h3&gt;Site Description&lt;/h3&gt;
+ &lt;/div&gt;</pre>
+<pre>&lt;div id="content"&gt;
+ &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+ &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqudecima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.&lt;/p&gt;
+ &lt;/div&gt;</pre>
+<pre>&lt;div id="footer"&gt;
+  &lt;p&gt;Powered by &lt;a href="http://giip.org"&gt;GIIP&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</pre>
+<pre>&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+The background colors allow you to see the &lt;div&gt;s. Basically, &lt;div&gt;s are invisible until you do something to them with CSS. Or, in the case of jQuery Mobile, we alter them with those magical "data-role" attributes.
+
+With jQuery Mobile, you'll need to get a firm grasp of &lt;div&gt;s and how we use them. Basically, it's all about wrapping our content up in the appropriate &lt;div&gt;s and letting the program take care of the rest.
+<h1>Homework</h1>
+<h2>Div-stravaganza</h2>
+You are going to create a  webpage with a series of &lt;div&gt;'s nested within one another. There should be 7 in all.
+<ul>
+	<li>Make the largest be 600px wide by 600px high. The second should bee 500x500 and so on so forth</li>
+	<li>Using CSS, give them each a different background color. I suggest red, orange, yellow, green, blue, purple, because that's the way the colors go. If you wanna be fancy you can add another dive between blue and purple that's indigo colored.</li>
+	<li>Refer to <a href="http://icanfafsa.com/mobileapps/divstravaganza.html" target="_blank">this page</a> (you can view the source code by right clicking on the page and hitting "view source".)</li>
+</ul>
+<h2> HTMLizing Your GIIP Proposal</h2>
+Make your Project Proposal into an HTML page. That's it.
+
+Simple, eh?
+
+Just take your project proposal from 30B and put it into HTML form.
+<h3>Parameters</h3>
+<ul>
+	<li>Make each section header (Executive Summary, Methodology, etc.) a &lt;h1&gt;</li>
+	<li>Give each heading a descriptive id (like id="goals")</li>
+	<li>At the end of each section, include a link that links to the section header</li>
+	<li>&lt;a href="#goals"&gt;Back To Top&lt;/a&gt;</li>
+	<li>Wrap each section in a &lt;div&gt;. Don't worry about giving the &lt;div&gt;'s an id. Just put them there</li>
+	<li>Make sure everything is correctly marked up. By that we mean no content not inside an HTML tag. If you open a tag, you better close it. A good way to make sure you're doing this is to see if you can collapse your &lt;div&gt;. That's the little triangle or +/- sign on the line number next to your opening &lt;div&gt;. They allow you to make things neater.</li>
+	<li>Make an HTML table for the budget</li>
+</ul>
+When you finish, upload it to your server and send me a link.
+
+Download "lesson-1" from the <a href="https://github.com/YouthEmpowermentInstitute" target="_blank">YEI GitHub page</a> to see an example of  completed HTMLized proposal

@@ -1,0 +1,64 @@
+<h1>Configuring Cron for Scheduled Mailings</h1>
+Every Civi user encounters this problem: You create a mailing in CiviMail, send yourself a test, see that it's good, schedule the mailing to go out at noon, and hit submit. Noon rolls around and nothing happens. Well what now?
+
+CiviCRM is wonderful and amazing and we would never speak ill of it, but some things aren't configured for you right out of the box. Some things "need" a systems admin to set up. Well we don't have one of those, so we need to hack together the solution.
+<h3>A Note About This Lesson Module</h3>
+The solution outlined below is one way of solving the problem. It may not be (probably isn't) the best solution, but it works, so we'll go with it. If you are able to configure one of the <em>other</em> methods, we have a favor to ask. Please show us how! Everett is collaborative learning environment and we all have something to contribute. If you can understand the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs">Managing Scheduled Jobs</a> documentation on the wiki, then please let know and we can write up a walkthrough that is readable by non-developers.
+<h2>Why Doen't My Mailing Send?</h2>
+The problem seems perplexing because you're able to send emails under different circumstances. If you go to a contact's page, you can send an email to them via the actions menu. Also, the test email step in CiviMail works no problem. So why doesn't it work for your mailing?
+<h2>Scheduled Jobs</h2>
+Many web apps rely on a schedule telling them when to fire various "jobs". You can think of jobs as an automated action performed by CiviCRM. To see the various jobs, you can check out the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs">Managing Scheduled Jobs</a> page on the wiki, or got to <code>Administer &gt; System Settings &gt; Scheduled Jobs</code>. All jobs are, by default, disabled. Every org has different needs, so Civi doesn't enable everything out of the box and chew up server resources.
+<h2>Executing a Job Manually</h2>
+Let's say you've got a mailing ready to go, but it won't send out because we haven't configured the scheduled jobs. I you go to <code>Administer &gt; System Settings &gt; Scheduled Jobs</code> scroll down to <code>Mailings Scheduler</code> then you'll see that it's disabled. Click edit and check the box asking if the job is enabled. This won't make it run, but it will be necessary for actually fixing the problem. Once you're back on the scheduled jobs page, click the <code>more</code> tab on the <code>Mailing Scheduler</code> box and then select <code>Execute Now</code>. This will trigger the mailing to send.
+<h3>The Problem With This Method</h3>
+Technically speaking, we accomplished what we wanted to: We got the mailing out. But we had to go and manually do something that should happen automatically. It's like needing to jump start your car single time you want to drive somewhere. Aside from being inconvenient, it is suboptimal for the following reasons:
+<ul>
+	<li><strong>You Can't Schedule Mailings</strong>: What if you have a mailing to go out at 5 o'clock on Friday, but you'll be in Belize that day? We'll you better reschedule canopy zipline journey because you personally gotta pull the trigger for your mailing.</li>
+	<li><strong>You Can't Schedule <em>Multiple</em> Mailings</strong>: Hitting <code>Execute Now</code> will fire <em>every</em> mailing job you have scheduled. So if you have multiple mailing lists to manage or want to get the next month's worth of mailings up in a queue, you're out of luck.</li>
+</ul>
+<h2>Doing it the "Right" Way</h2>
+A "cron job" is basically an action that is scheduled to execute at relative intercals. CiviCRM requires that you configure a "Cron Job" that will tell the jobs you've enabled that it's ok to fire. There are several ways to do this, and if you can explain a different way please let us know, but we'll be doing it in the most straight forward manner (i.e. the one I was actually able to figure out).
+<h3>Prepare the Command</h3>
+A cron job will "do a thing" periodically. We need to tell it what thing to do. The thing we'll tell it to do is to execute CiviCRM jobs. If you did the manual job execution thing, you may have noticed that it takes you to a url and the jobs execute. Basically, we're going to set up a command that will tell the server to go to this URL every time the cron runs.
+
+Looking at the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs#ManagingScheduledJobs-URLmethod">URL Method</a> section of the Managing Scheduled Jobs page on the wiki, you'll see the URL we need to visit. Choose the one that's right for the CMS you have Civi installed on.
+<h4>WordPress</h4>
+<code>http://[SITEROOT]/wp-content/plugins/civicrm/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+<h4>Drupal</h4>
+<code>http://[SITEROOT]/sites/all/modules/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+
+You'll see that this is a dummy url. You'll need to repalace a few things to make this work:
+<ul>
+	<li>username</li>
+	<li>password</li>
+	<li>site-key</li>
+</ul>
+The username and password are the admin credentials for the CMS, the site key is the unique id of your CiviCRM installation that was generated when you installed CiviCRM. Use the file manager or an ftp client to find the file <code>civicrm.settings.php</code>.
+<h4>Drupal</h4>
+<code>[SITEROOT]sites/default/civicrm.settings.php</code>
+<h4>WordPress</h4>
+<code>http://[SITEROOT]/wp-content/plugins/civicrm/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+
+Search for <code>CIVICRM_SITE_KEY</code> and you'll find a very long string of random numbers and letters. Copy this and you've now got everything you need to create our command. In your text editor, take the url you've created and insert it into this:
+
+<code>curl '[URL]'</code>
+
+Write it exactly like that, with single quotes around the url. We have our command. let's create the job
+<h3>Creating the Cron Job</h3>
+Now that we've got our command ready, we're going to tell our server how often to do it.Log into your cPanel and navigate to <code>Advanced &gt; Cron Jobs</code>. See how awesome you are? you're in the Advanced tab!
+<ul>
+	<li>Go down to <code>Add a New Cron Job</code></li>
+	<li>Under <code>-- Common Settings --</code> select <code>Once Per Minute (* * * * *)</code>
+<ul>
+	<li>You should change this to something less frequent after we've confirmed that it worked so that you don't chew up to many server resources</li>
+</ul>
+</li>
+	<li>Next to <code>Command</code> paste in the command you made in the previous section.</li>
+	<li>Hit <code>Add New Cron Job</code></li>
+</ul>
+<h3>Enable scheduled Jobs</h3>
+The one last step is to go back to your CiviCRM, navigate to Administer&gt;System Settings&gt;Scheduled Jobs. Find the one says "<span data-field="name">Send Scheduled Mailings"</span>, click on "more" on the very right side, and hit "enable". You may take a look at other scheduled jobs and enable the ones you want to use, but for now, we are focusing on scheduled mailings. Now, everything is set up correctly, schedule a testing email, and make sure it works. Don't forget to change your cron job setting to every half or one hour to reduce the workload for your server!
+<h2>Is It Working?</h2>
+Depending on your host, the exact command may or may not work. For Lithium Hosting, <code>curl</code> seems to work fine. When testing this type of thing, I typically make new instances of whatever I'm testing on my personal website which is hosted on Lithium. Fortunate, since that's what all of you use. The Everett site is hosted with a service called Site5 and when I went to implement this command, I found that it didn't work! I Googled around using phrases like "Site5 Cron Job curl". Eventually I found other people saying that the <code>GET</code> command instead of <code>curl</code> or <code>wget</code> would be the best bet. I did so and my next test mailing sent with no problem!
+
+When you're out in the field, things don't always work the way you think they will. That's why it's important to learn to trouble shoot, problem solve, and aks someone more knowledgable when you are confronted with something not working.

@@ -1,0 +1,29 @@
+<h2>Objectives:</h2>
+<p style="padding-left: 30px;">-Students will download and install Raspberry Pi software onto their SD cards and boot up the system for the first time.</p>
+
+<h1>Installation Day:</h1>
+The day has finally come! Today we are connecting our peripherals to our Raspberry Pi's. We will be working in pairs so everyone is going to have to split up the responsibilities in whatever way you and your partner thinks best. We will be refreshing the process by re-watching the video and then each of you will go off to your specific stations and begin the downloads. Our goal is to have our operating systems downloaded onto each of our SD cards by the end of the day.
+<h2>What you will need:</h2>
+<ol>
+	<li>One Raspberry PI (we are using model B's)</li>
+	<li>8 gig SD card</li>
+	<li>Keyboard</li>
+	<li>Mouse</li>
+	<li>Power Supply (USB cable connected to wall)</li>
+	<li>Monitor</li>
+	<li>HDMI cable</li>
+	<li>Ethernet Cable (optional)</li>
+</ol>
+<h2>Refresher:</h2>
+This video will be your guide throughout the process. Make sure to follow it carefully, step by step. Some steps will take longer than others so have patience. We will be going through each step in class, but for the most part, you are running this installation entirely between you and your partner.
+
+[embed]https://vimeo.com/90518800[/embed]
+<h2>Everything Installed and Ready to go?</h2>
+Now it is time for you to explore the operating system! As you will see, Raspbian looks very similar to other operating systems you have used in the past, only with less features and applications. Go through the menu and load whatever application looks most interesting to you. For example, open IDLE PYTHON 2 and test the skills you have been learning by running a line of python code!
+<h1>Homework Assignment:</h1>
+<h2></h2>
+Since you were all assigned your midterm in lecture, I am giving you the week to catch up on all your CodeAcademy assignments. This is you chance to work through the bugs in your programs and truly understand what is going on and possibly get ahead. If you do not have every assignment completed and up to date by this upcoming Thursday, your HW grade for this lab will be significantly docked.
+
+Do not interpret this week as your chance to "take a break" from coding. Remember, learning any language, programming or otherwise, requires consistent practice. In the upcoming class, you will be tested on your Python knowledge....you have been warned....
+
+&nbsp;

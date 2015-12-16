@@ -1,0 +1,161 @@
+[two_third last="no"]
+
+So far, we have learned how to install WordPress, install it in different subdirectories, and have a basic understanding of how to navigate the WordPress admin backend. We have learned how to create posts, pages, work with taxonomy, create custom menus, install themes, and use the WordPress Customizer to start tweaking WordPress. In this lesson, we will learn how to extend the functionality of our WordPress websites: plugins.
+<h2>Lesson Outcomes:</h2>
+<ul>
+	<li>Learn what WordPress plugins are</li>
+<li>Learn to search for and evaluate WordPress plugins</li>
+	<li>Install plugins</li>
+</ul>
+[/two_third]
+
+&nbsp;
+
+[one_third last="yes"]
+<h2 id="lesson-title">Resources</h2>
+<ul>
+	<li><a href="http://www.wordpress.org/plugins/" target="_blank">Plugin Directory</a></li>
+<li><a href="https://codex.wordpress.org/Managing_Plugins">Managing Plugins: WordPress Codex</a></li>
+	<li><a href="https://wordpress.org/plugins/captcha/" target="_blank">Electronic Frontier Foundation</a></li>
+</ul>
+[/one_third]
+<h1 id="plugins"><a class="headeranchor-link" href="#plugins" name="user-content-plugins"></a>Plugins</h1>
+
+<p>Plugins are little (or big) programs that add something to WordPress’s functionality. They do lots of things, from validating Google Analytics for you, to adding social networking to your site.</p>
+<p>Go to “Plugins” on your dashboard menu. You’ll see two plugins are already installed, “Askimet” and “Hello Dolly”.</p>
+<p>Aksimet helps reduce spam. Activate it when you have time. When it asks you for your donation amount, just set the slider to $0.</p>
+<p>Hello Dolly displays random lyrics from the 1964 Broadway musical “Hello, Dolly”. It’s unclear why this is preloaded… Delete it. It is good practice to delete useless plugins or plugins that you are no longer using, they will bloat your website.</p>
+<p>Why would we need to extend the functionality of WordPress? Good question! Let&rsquo;s run through an example of building a website where we want to sell products in a store format.</p>
+<p>With core WordPress (just a basic install of WordPress), we have the ability to make posts, pages, have people comment on our posts, and upload media such as images. But how do we create a website with online store (ecommerce) functionality? It doesn&rsquo;t seem like there is a way to do this with core WordPress functionality. We need to add this functionality! The way to do this: by installing a plugin that gives our website this functionality.</p>
+
+Read through the following articles on WordPress plugins:
+
+- <a href="https://easywpguide.com/wordpress-manual/plugins/">EasyWP</a>
+- <a href="http://codex.wordpress.org/Plugins">Codex on Plugins</a>
+
+
+<h1 id="adding-plugins-to-wordpress"><a name="user-content-adding-plugins-to-wordpress" href="#adding-plugins-to-wordpress" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Adding Plugins to WordPress</h1>
+<p>There are three basic steps to adding plugins to our WordPress websites: searching, evaluating, and installing.</p>
+
+<h2 id="searching"><a name="user-content-searching" href="#searching" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Searching</h2>
+<p>Finding free plugins is easy. Click <strong>Add New</strong> under “Plugins” on your dashboard menu, or if you’re on the plugin manager page, hit “Add New” up on the top left next to where it says “Plugins”. You can also look for plugins outside of the WordPress dashboard at the WordPress Plugin directory on the WordPress.org site found <a href="https://wordpress.org/plugins/">here</a>.</p>
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/2013/01/plugin-add.png"><img class="alignnone size-full wp-image-2244" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/plugin-add.png" alt="plugin-add" width="457" height="286" /></a>
+
+<p>You&rsquo;ll be taken to the WordPress plugin directory where you can search for plugins. You can use the seach bar to look for plugins or the preset categories such as featured or popular.</p>
+<p>Once you have a found a potential WordPress plugin, click on the plugin name or &ldquo;More details&rdquo; (don&rsquo;t hit install just yet) to view the plugin&rsquo;s information page. Here, we will evaluate the plugin before installing it on our website.</p>
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/searching_1.png"><img src="http://labs.everettprogram.org/wp-content/uploads/searching_1.png" alt="searching_1" width="536" height="288" class="alignnone size-full wp-image-6617" /></a>
+
+<h2 id="evaluating"><a name="user-content-evaluating" href="#evaluating" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Evaluating</h2>
+<p>It&rsquo;s not a good idea to blindly install code onto your website. Once you are on a plugin&rsquo;s information page, let&rsquo;s evaluate it. Typically, it is a good idea to consider these four things (at minimum) before installing a plugin on your website:</p>
+<ol>
+<li>Does the plugin&rsquo;s features meet the needs of the functionality you would like to add to your website? You can find the plugin&rsquo;s features in the <strong>Description</strong> area.</li>
+<li>When was the plugin last updated? Look at <strong>Last updated</strong> on the right. Generally, you want a plugin that has been updated recently (&lt;1 year) but there isn&rsquo;t a magic number.</li>
+<li>How many active installations of this plugin are running (how many other websites are using this plugin)? Look at the <strong>Active Installs</strong> on the right. Again, there isn&rsquo;t a magic number, but having a large number of installs is usually a good sign.</li>
+<li>How is the plugin rated by other WordPress users (the star rating)? This one is pretty self explanatory. Look at the <strong>Average Rating</strong> on the right.</li>
+</ol>
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/evaluating_2.png"><img src="http://labs.everettprogram.org/wp-content/uploads/evaluating_2.png" alt="evaluating_2" width="773" height="562" class="alignnone size-full wp-image-6616" /></a>
+
+<p>Ultimately, a plugin&rsquo;s description will only be able to tell you so much about the functionality it adds. You often will need to install the plugin on a demo WordPress website to play around with its functionality and evaluate if it fits your website&rsquo;s needs.</p>
+
+Also consider checking out the plugin’s homepage. Likewise, check out the WordPress.org plugin page to read reviews and get more info.
+
+<p>Once you are satisfied with a plugin after evaluating it, go ahead and install it.</p>
+
+<h2 id="installing"><a name="user-content-installing" href="#installing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installing</h2>
+<p>Click <strong>Install</strong>. Once your plugin has installed, you will need to activate it to begin using it on your website. You can either hit <strong>Activate Plugin</strong> at the installation prompt or hit <strong>Activate</strong> at the plugin manager page. Depending on the complexity of the plugin, you may have the option to configure its settings. If this is the case, via the plugin manager page, under the plugin name, it will usually have a link name <strong>Settings</strong> or <strong>Configure</strong>. Follow these links to configure your newly installed plugin.</p>
+<p>You can also install a plugin by uploading it to your WordPress website. If you have the files to the plugin, if you click on <strong>Add New</strong> in the plugin manager, you can then upload them using the <strong>Upload Plugin</strong> at the top.</p>
+
+Guide to installing plugins using different methods:
+
+- <a href="http://www.wpbeginner.com/beginners-guide/step-by-step-guide-to-install-a-wordpress-plugin-for-beginners/">WPBeginner Plugins Guide</a>
+[toggle title="Video for Installing WordPress Plugins"]
+<h3 id="video-for-installing-wordpress-plugins"><a class="headeranchor-link" href="#video-for-installing-wordpress-plugins" name="user-content-video-for-installing-wordpress-plugins"></a>Video for Installing WordPress Plugins</h3>
+<iframe src="https://www.youtube.com/embed/AXM1QgMODW0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+[/toggle]
+<h1>Widgets</h1>
+[toggle title="Widgets"]
+<h1><a class="headeranchor-link" href="#widgets" name="user-content-widgets"></a></h1>
+&nbsp;
+<h1 id="widgets"><a class="headeranchor-link" href="#widgets" name="user-content-widgets"></a>Widgets</h1>
+Widgets are like little blocks that you put into the sidebar or footer of your site. You can play around with them <strong>under Appearance &gt; Widgets</strong>. There is a suite of default widgets, and you can add more by installing plugins (we’ll talk more about widgets later). Most widgets are fairly self explanatory. It’s a good idea to play around with widgets to see what they do. Put them in the different areas as well to see where those are.
+
+You can add different widgets like a search bar, calendar or a feed of recent posts simply by dragging and dropping the features on the left side to the section you want it at, either the primary sidebar, content sidebar or footer. If you want to get rid of a widget on the sidebar, just click the drop-down arrow and delete.
+
+<a href="http://codex.wordpress.org/WordPress_Widgets">Codex on Widgets</a>
+[/toggle]
+<h1>Info on Cyber Security</h1>
+[toggle title="Cyber Security and Why We Should Care"]
+<h1 id="cyber-security-why-we-should-care"><a class="headeranchor-link" href="#cyber-security-why-we-should-care" name="user-content-cyber-security-why-we-should-care"></a>Cyber Security &amp; Why We Should Care</h1>
+Cyber security enables users and organizations to practice safe techniques to protect computers, networks, programs and data from being manipulated without their consent. The Internet is a powerful and dynamic technology, building bridges or barriers depending on how you use it. No matter how it’s being used, the number of people using the web is growing and so are outlets for invasions of privacy. Everyone is entitled to their own opinion on cyber security, but here are some inevitable reasons why you need it:
+<ul>
+	<li>Hackers</li>
+	<li>Online fraud and identity theft</li>
+	<li>Viruses</li>
+	<li>Spyware/Malware</li>
+	<li>Adware</li>
+	<li>cyber security</li>
+</ul>
+
+
+&nbsp;
+
+<a href="http://labs.everettprogram.org/wp-content/uploads/2014/12/cyber-security.jpg"><img class="alignnone size-full wp-image-4461" src="http://labs.everettprogram.org/wp-content/uploads/2014/12/cyber-security.jpg" alt="cyber security" width="800" height="2254" /></a>
+
+&nbsp;
+
+
+If you’re into Internet privacy, you should look into the Electronic Frontier Foundation. It is a non-profit organization devoted to defending civil liberties in the digital world. An Everett Program alumna, Mayra Sutton, is an international representative for EFF and has been involved with legal cases that have sued the NSA for illegally spying (isn’t that awesome?!?). Check out their work on privacy here: <a href="https://www.eff.org/">EFF</a>
+
+Whether or not you care if the government or businesses are looking at you personal searches or emails, I’m sure we can all agree that adware/viruses are annoying and nobody wants to suffer from cyber theft.
+[/toggle]
+
+<h1 id="homework-assignment"><a name="user-content-homework-assignment" href="#homework-assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Homework Assignment</h1>
+<p>Let&rsquo;s install a few common plugins on our resume website from last lesson. </p>
+<p><strong>For this homework assignment, you will be using your website from last lesson located at yourdomain/mysite</strong>.</p>
+<h2 id="part-1"><a name="user-content-part-1" href="#part-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 1</h2>
+<p>Websites often have contact forms. With core WordPress, we don&rsquo;t have a contact form. Time to add that functionality!</p>
+<p>First, we need a place to put the contact form.</p>
+<ul>
+<li>Create a new page called <strong>Contact</strong>. Leave the page body blank.</li>
+<li>Add this page to your main navigation menu.</li>
+</ul>
+<p>Next, we need a contact form plugin. There are many to choose from, but we will be using one called <strong>Very Simple Contact Form</strong>. It can be found in the WordPress plugin directory <a href="https://wordpress.org/plugins/very-simple-contact-form/">here</a>.</p>
+<ul>
+<li>Install this plugin on your WordPress website. Activate it.</li>
+<li>Embed this contact form on your <strong>Contact</strong> page. Read the plugin&rsquo;s information page to figure this out.</li>
+</ul>
+<h2 id="part-2"><a name="user-content-part-2" href="#part-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 2</h2>
+<p>Often, you will want to improve the performance and speed of your WordPress website (maybe to speed up the load time for your users). One way to do this is through Caching. Let&rsquo;s add this functionality to our websites.</p>
+<ul>
+<li>Install the <strong>WP Super Cache</strong> plugin. It can be found in the WordPress plugin directory <a href="https://wordpress.org/plugins/wp-super-cache/">here</a>. Activate it.</li>
+<li>In the plugin&rsquo;s settings, turn Caching on (and don&rsquo;t forget to hit the update status button after.).</li>
+<li>Take a screenshot proving that you installed the plugin and turned caching on (you will need to submit this image as part of your homework).</li>
+</ul>
+<h2 id="part-3"><a name="user-content-part-3" href="#part-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 3</h2>
+<p>Bad things can happen to your website. The server your website is on may crash or you may make a change to your WordPress site and break it. We need to have a backup plan so that if something bad happens, we have the ability to take action and either restore or reupload our website.</p>
+<ul>
+<li>Install the <strong>Updraft Plus Backup and Restoration</strong> plugin. It can be found in the WordPress plugin directory <a href="https://wordpress.org/plugins/updraftplus/">here</a>. Activate it.</li>
+<li>Run a backup by hitting <strong>Backup Now</strong> in the plugin&rsquo;s settings area.</li>
+<li>Take a screenshot proving that you installed the plugin (you will need to submit this image as part of your homework).</li>
+</ul>
+<h2 id="part-4"><a name="user-content-part-4" href="#part-4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Part 4</h2>
+<p>It&rsquo;s time you try and find a plugin on your own. This time, it can be any plugin you want.</p>
+<ul>
+<li>Install another plugin on your website.</li>
+<li>Take a screenshot proving that you installed this plugin.</li>
+<li>Think about why you installed this plugin. In the body of the email you are sending this assignment in, in <strong>3</strong> sentences, summarize why you picked this plugin and what it does.</li>
+</ul>
+
+<h1 id="submission"><a name="user-content-submission" href="#submission" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Submission</h1>
+<h2 id="this-homework-assignments-due-date-has-been-changed-this-homework-assignment-is-due-wednesday-december-9th-by-1159pm-we-will-not-be-accepting-late-submissions-for-this-homework-assignment"><a name="user-content-this-homework-assignments-due-date-has-been-changed-this-homework-assignment-is-due-wednesday-december-9th-by-1159pm-we-will-not-be-accepting-late-submissions-for-this-homework-assignment" href="#this-homework-assignments-due-date-has-been-changed-this-homework-assignment-is-due-wednesday-december-9th-by-1159pm-we-will-not-be-accepting-late-submissions-for-this-homework-assignment" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>This homework assignment&rsquo;s due date has been changed! This homework assignment is due Wednesday, December 9th by 11:59pm. We will not be accepting late submissions for this homework assignment.</h2>
+<h2 id="do-not-cancel-your-web-hosting-services-through-your-hosting-provider-until-you-receive-a-grade-for-socy-30a"><a name="user-content-do-not-cancel-your-web-hosting-services-through-your-hosting-provider-until-you-receive-a-grade-for-socy-30a" href="#do-not-cancel-your-web-hosting-services-through-your-hosting-provider-until-you-receive-a-grade-for-socy-30a" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Do not cancel your web hosting services through your hosting provider until you receive a grade for SOCY 30A.</h2>
+<p>Email the following to <a href="mailto:wordpress@labs.everettprogram.org"><a href="mailto:wordpress@labs.everettprogram.org"><a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a></a></a>:</p>
+<ul>
+<li>Email subject line in the following format: <em>HW#8 Firstname Lastname</em>.</li>
+<li>In the email body, provide the web address of your resume WordPress website (yourdomain/mysite).</li>
+<li>In the email body, include your 3 sentence summary from Part 4 of the homework assignment.</li>
+<li>Attach the screenshots from Part 2, 3, and 4 of the homework assignment</li>
+</ul>

@@ -1,0 +1,73 @@
+Recently I needed to take a class roster and create usernames to upload into Moodle. The problem was that it wasn't in a pretty format. This means that I needed to get clever with Excel functions.
+<h2>What I Had</h2>
+<ol>
+	<li>The full name in the format "<strong>lastname, firstname"</strong></li>
+	<li>Email</li>
+</ol>
+<h2>What I Wanted</h2>
+I wanted to end up with 4 rows:
+<ol>
+	<li>Last Name</li>
+	<li>First Name</li>
+	<li>Username (first initial and surname)</li>
+	<li>email</li>
+</ol>
+<h1>Walkthrough</h1>
+<h2>Step 1 - Make a New Row Next to the Names</h2>
+<img class="aligncenter size-full wp-image-2569" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.11.22-PM.png" alt="Screen Shot 2014-04-07 at 12.11.22 PM" width="384" height="133" />
+<h2>Step 2 - Get Rid of the Space After the Comma Using Find &amp; Replace</h2>
+You have to eliminate the space at some point so you might as well do it now.
+
+<img class="aligncenter size-full wp-image-2570" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.11.48-PM.png" alt="Screen Shot 2014-04-07 at 12.11.48 PM" width="469" height="265" />
+
+Just type a single space into the find field and leave the replace field blank.
+
+<img class="aligncenter size-full wp-image-2571" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.12.46-PM.png" alt="Screen Shot 2014-04-07 at 12.12.46 PM" width="352" height="89" />
+<h2>Step 3 - Use "Text to Columns" to Split the String</h2>
+Text to columns allows you to move portions of one cell into the cell next to it.
+
+<img class="aligncenter size-full wp-image-2572" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.12.56-PM.png" alt="Screen Shot 2014-04-07 at 12.12.56 PM" width="403" height="136" />
+
+Choose "Delimited". This allows us to select a <strong>delimiter</strong>, or 'thing that separates the things we care about'.
+
+<img class="aligncenter size-full wp-image-2573" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.13.02-PM.png" alt="Screen Shot 2014-04-07 at 12.13.02 PM" width="493" height="213" />
+
+Select "Comma" as your delimiter. i.e. the function will take everything to the right of a comma and put it into the cell to the right.
+
+<img class="aligncenter size-full wp-image-2574" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.13.09-PM.png" alt="Screen Shot 2014-04-07 at 12.13.09 PM" width="293" height="274" />
+
+Neat, huh?
+
+<img class="aligncenter size-full wp-image-2575" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.13.19-PM.png" alt="Screen Shot 2014-04-07 at 12.13.19 PM" width="374" height="110" />
+<h2>Step 4 - Create Username Column and Insert Function</h2>
+<img class="aligncenter size-full wp-image-2577" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.16.09-PM.png" alt="Screen Shot 2014-04-07 at 12.16.09 PM" width="534" height="148" />
+
+You can see the function at work in the picture.  Copy it here:
+
+=LOWER(CONCATENATE(LEFT(B2,1), A2))
+
+Explanation of this:
+<ul>
+	<li>CONCATENATE means "Combine two things together into one". We want to put the first letter of their first name onto the front of the full last name. So we need to tell it where to find those two things</li>
+	<li>LEFT(B2,1),A2) = Starting from the left of the cell, get x number of characters. This specifies cell B2 and gets 1 character (i.e. the first letter).</li>
+	<li>LOWER just turns everything lowercase</li>
+</ul>
+Note: Notice that my columns are setup with the last name first, but I want the username to be first initial followed by last name. That's why the LOWER function looks how it does. It <em>first</em> gets the first initial and <em>then</em> gets the last name. If your columns are the other way, then you'd have to flip it.
+<h2>How Did I Know How To Write That Function?</h2>
+I didn't. As a rule, knowing how to do something isn't as crucial as knowing what you want to do. I didn't know how to do what I wanted, but I knew how to describe it and that's really all you need. Nine times out of ten, just saying what you want to do into Google will return exactly what you wanted.
+
+<img class="aligncenter size-full wp-image-3468" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/excel_make_username_from_last_name_and_first_initial_-_Google_Search.png" alt="excel_make_username_from_last_name_and_first_initial_-_Google_Search" width="785" height="372" />
+
+Straightforward question yields quick results from StackOverflow.
+
+<img class="aligncenter size-full wp-image-3469" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Excel__How_do_I_take_the_first_character_of_1_cell_and_prepend_it_to_another_cell_and_place_it_in_a_3rd_cell__-_Stack_Overflow.png" alt="Excel__How_do_I_take_the_first_character_of_1_cell_and_prepend_it_to_another_cell_and_place_it_in_a_3rd_cell__-_Stack_Overflow" width="524" height="178" />
+
+Someone else has asked the same question you are asking before. There's no exception to this rule.
+<h2>Step 5 - Fill Down</h2>
+Excel has a function to copy the function. Just select the cell with the function in it and click the little circle on the bottom right corner of the box. Pull down and you're done!
+<h2>Or you could select all the cells in the column, select "<strong>Edit&gt;Fill&gt;Down</strong>" or follow the pictures here:
+<img class="aligncenter size-full wp-image-2578" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.18.59-PM.png" alt="Screen Shot 2014-04-07 at 12.18.59 PM" width="430" height="247" />You're Done</h2>
+Hooray! You just saved a lot of time and sweat!
+
+<img class="aligncenter size-full wp-image-2579" src="http://labs.everettprogram.org/wp-content/uploads/2014/04/Screen-Shot-2014-04-07-at-12.19.06-PM.png" alt="Screen Shot 2014-04-07 at 12.19.06 PM" width="433" height="98" />
+<h2></h2>

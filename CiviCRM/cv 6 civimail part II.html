@@ -1,0 +1,135 @@
+<h2>CiviMail Part II</h2>
+<ul>
+	<li>Be able to set up cron job for scheduled mailings</li>
+	<li>Be able to manage mailing subscribers</li>
+</ul>
+<h2>Schedule mails</h2>
+In the previous lesson, we have learned much about how to make your CiviMail more efficient and fit your workflow, and now, we are going to take it to the next level--Schedule emails. Why? well, I believe we all have experienced drafting an email, and planning to send it a week later or so. And after you save that email to the draft folder, you will remind yourself, constantly, that you need to send that email out, but sometimes life is overwhelming and we really don't have enough brain storage to remember that. Or, sometimes you might finish writing your email at 3 o'clock in the morning, but you don't want to send it out right away because then people will know you are a little nigh owl that procrastinate till late and have to sacrifice the precious sleeping time to finish a simple task (well, that's my case). You might have other reasons to schedule your mailings (like setting up reminders or invitations), but whatever the situation is, we can all appreciate scheduled emails one way or the other. Without further ado, lets get to work!
+<div style="padding-left: 30px;">
+<h2>Configuring Cron for Scheduled Mailings (written by Thomas Gelder)</h2>
+Every Civi user encounters this problem: You create a mailing in CiviMail, send yourself a test, see that it's good, schedule the mailing to go out at noon, and hit submit. Noon rolls around and nothing happens. Well what now?
+
+CiviCRM is wonderful and amazing and we would never speak ill of it, but some things aren't configured for you right out of the box. Some things "need" a systems admin to set up. Well we don't have one of those, so we need to hack together the solution.
+<h3>A Note About This Lesson Module</h3>
+The solution outlined below is one way of solving the problem. It may not be (probably isn't) the best solution, but it works, so we'll go with it. If you are able to configure one of the <em>other</em> methods, we have a favor to ask. Please show us how! Everett is collaborative learning environment and we all have something to contribute. If you can understand the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs">Managing Scheduled Jobs</a> documentation on the wiki, then please let know and we can write up a walkthrough that is readable by non-developers.
+<h2>Why Doen't My Mailing Send?</h2>
+The problem seems perplexing because you're able to send emails under different circumstances. If you go to a contact's page, you can send an email to them via the actions menu. Also, the test email step in CiviMail works no problem. So why doesn't it work for your mailing?
+<h2>Scheduled Jobs</h2>
+Many web apps rely on a schedule telling them when to fire various "jobs". You can think of jobs as an automated action performed by CiviCRM. To see the various jobs, you can check out the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs">Managing Scheduled Jobs</a> page on the wiki, or got to <code>Administer &gt; System Settings &gt; Scheduled Jobs</code>. All jobs are, by default, disabled. Every org has different needs, so Civi doesn't enable everything out of the box and chew up server resources.
+<h2>Executing a Job Manually</h2>
+Let's say you've got a mailing ready to go, but it won't send out because we haven't configured the scheduled jobs. I you go to <code>Administer &gt; System Settings &gt; Scheduled Jobs</code> scroll down to <code>Mailings Scheduler</code> then you'll see that it's disabled. Click edit and check the box asking if the job is enabled. This won't make it run, but it will be necessary for actually fixing the problem. Once you're back on the scheduled jobs page, click the <code>more</code> tab on the <code>Mailing Scheduler</code> box and then select <code>Execute Now</code>. This will trigger the mailing to send.
+<h3>The Problem With This Method</h3>
+Technically speaking, we accomplished what we wanted to: We got the mailing out. But we had to go and manually do something that should happen automatically. It's like needing to jump start your car single time you want to drive somewhere. Aside from being inconvenient, it is suboptimal for the following reasons:
+<ul>
+	<li><strong>You Can't Schedule Mailings</strong>: What if you have a mailing to go out at 5 o'clock on Friday, but you'll be in Belize that day? We'll you better reschedule canopy zipline journey because you personally gotta pull the trigger for your mailing.</li>
+	<li><strong>You Can't Schedule <em>Multiple</em> Mailings</strong>: Hitting <code>Execute Now</code> will fire <em>every</em> mailing job you have scheduled. So if you have multiple mailing lists to manage or want to get the next month's worth of mailings up in a queue, you're out of luck.</li>
+</ul>
+<h2>Doing it the "Right" Way</h2>
+<h4>(I recommend you follow along the steps from here and complete the cron job)</h4>
+A "cron job" is basically an action that is scheduled to execute at relative intercals. CiviCRM requires that you configure a "Cron Job" that will tell the jobs you've enabled that it's ok to fire. There are several ways to do this, and if you can explain a different way please let us know, but we'll be doing it in the most straight forward manner (i.e. the one I was actually able to figure out).
+<h3>Prepare the Command</h3>
+A cron job will "do a thing" periodically. We need to tell it what thing to do. The thing we'll tell it to do is to execute CiviCRM jobs. If you did the manual job execution thing, you may have noticed that it takes you to a url and the jobs execute. Basically, we're going to set up a command that will tell the server to go to this URL every time the cron runs.
+
+Looking at the <a href="https://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs#ManagingScheduledJobs-URLmethod">URL Method</a> section of the Managing Scheduled Jobs page on the wiki, you'll see the URL we need to visit. Choose the one that's right for the CMS you have Civi installed on.
+<h4>WordPress</h4>
+<code>http://[SITEROOT]/wp-content/plugins/civicrm/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+<h4>Drupal</h4>
+<code>http://[SITEROOT]/sites/all/modules/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+
+You'll see that this is a dummy url. You'll need to repalace a few things to make this work:
+<ul>
+	<li>username</li>
+	<li>password</li>
+	<li>site-key</li>
+</ul>
+The username and password are the admin credentials for the CMS, the site key is the unique id of your CiviCRM installation that was generated when you installed CiviCRM. Use the file manager or an ftp client to find the file <code>civicrm.settings.php</code>.
+<h4>Drupal</h4>
+<code>[SITEROOT]sites/default/civicrm.settings.php</code>
+<h4>WordPress</h4>
+<code>http://[SITEROOT]/wp-content/plugins/civicrm/civicrm/bin/cron.php?name=username&amp;pass=password&amp;key=site-key</code>
+
+Search for <code>CIVICRM_SITE_KEY</code> and you'll find a very long string of random numbers and letters. Copy this and you've now got everything you need to create our command. In your text editor, take the url you've created and insert it into this:
+
+<code>curl '[URL]'</code>
+
+Write it exactly like that, with single quotes around the url. We have our command. let's create the job
+<h3>Creating the Cron Job</h3>
+Now that we've got our command ready, we're going to tell our server how often to do it.Log into your cPanel and navigate to <code>Advanced &gt; Cron Jobs</code>. See how awesome you are? you're in the Advanced tab!
+<ul>
+	<li>Go down to <code>Add a New Cron Job</code></li>
+	<li>Under <code>-- Common Settings --</code> select <code>Once Per Minute (* * * * *)</code>
+<ul>
+	<li>You should change this to something less frequent after we've confirmed that it worked so that you don't chew up to many server resources</li>
+</ul>
+</li>
+	<li>Next to <code>Command</code> paste in the command you made in the previous section.</li>
+	<li>Hit <code>Add New Cron Job</code></li>
+</ul>
+<h3>Enable scheduled Jobs</h3>
+The one last step is to go back to your CiviCRM, navigate to Administer&gt;System Settings&gt;Scheduled Jobs. Find the one says "<span data-field="name">Send Scheduled Mailings"</span>, click on "more" on the very right side, and hit "enable". You may take a look at other scheduled jobs and enable the ones you want to use, but for now, we are focusing on scheduled mailings. Now, everything is set up correctly, schedule a testing email, and make sure it works (if you don't know how, we got you covered in the next section!).
+
+</div>
+<h2>Schedule a mailing</h2>
+<div style="padding-left: 30ps;">
+
+After you compose your email on CiviMail, click on "Next" at the very bottom, and you'll be brought to step two:<a href="http://labs.everettprogram.org/wp-content/uploads/smail1.png"><img class="alignnone wp-image-5665 size-full" style="padding-left: 60px;" src="http://labs.everettprogram.org/wp-content/uploads/smail1.png" alt="smail1" width="1202" height="461" /></a>When you're done setting up the time, hit "Submit Mailing":
+<p style="padding-left: 30px;"><a href="http://labs.everettprogram.org/wp-content/uploads/smail21.png"><img class="alignnone wp-image-5754 size-full" src="http://labs.everettprogram.org/wp-content/uploads/smail21.png" alt="smail2" width="805" height="312" /></a></p>
+You'll be brought to a page that shows your mailing status:
+<p style="padding-left: 30px;"><a href="http://labs.everettprogram.org/wp-content/uploads/smail31.png"><img class="alignnone wp-image-5755 size-full" src="http://labs.everettprogram.org/wp-content/uploads/smail31.png" alt="smail3" width="1189" height="375" /></a></p>
+
+</div>
+<h2>Profile</h2>
+<h3 style="padding-left: 30px;">What is a profile?</h3>
+<p style="padding-left: 30px;">According to the<a href="http://book.civicrm.org/user/current/organising-your-data/profiles/"> CiviCRM Users Book</a>, "A Profile is a collection of fields from your database. Profiles are a powerful tool that have many different uses across all components of CiviCRM. Profiles are used to collect data (e.g., on a sign-up form), and to display data to the user (e.g., as a member directory). They can be used both internally (e.g., to create simplified data entry screens for staff) and externally (to display up-to-date information in from database). "</p>
+<p style="padding-left: 30px;">Still not quite sure what it is or how it looks like? Here are two examples:</p>
+
+<ul>
+	<li><a href="http://youinyouth.com/civilab/subscribe-newsletter/">Profile for registration</a> (Just an example I made.)</li>
+	<li><a href="https://www.gsanetwork.org/civicrm/profile?reset=1&amp;force=1&amp;gid=5&amp;city-Primary=San+Francisco">Profile for directory</a> (How do I know this is a CiviCRM profile? Look at the icon. Familiar, right?)</li>
+</ul>
+<p style="padding-left: 30px;">For more details about profile and its settings and functions, please read the "Creating and managing Profiles" section in the <a href="http://book.civicrm.org/user/current/organising-your-data/profiles/">Users Book</a>. The following will be some steps that exemplifies the process of creating a profile:</p>
+<p style="padding-left: 30px;">[toggle title="Creating a Profile"]</p>
+<p style="padding-left: 30px;">Go to Administer&gt;Customize Data and Screens&gt;Profiles, click on "add profile", and enter the settings for your profile. If you are unsure of which does what, please refer back to the Users Book.</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile1.png"><img class="alignnone wp-image-5668 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile1.png" alt="profile1" width="1163" height="588" /></a></p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile2.png"><img class="alignnone wp-image-5669 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile2.png" alt="profile2" width="1064" height="542" /></a></p>
+<p style="padding-left: 30px;">Then, add the fields of information that you want to include:</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile3.png"><img class="alignnone wp-image-5670 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile3.png" alt="profile3" width="1202" height="538" /></a></p>
+<p style="padding-left: 30px;">When you finish adding every field, you'll be brought to a page that lists the field you created:</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile4.png"><img class="alignnone wp-image-5671 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile4.png" alt="profile4" width="1158" height="412" /></a></p>
+<p style="padding-left: 30px;">To use the profile you just created, you'll have to create a new post or page on your WordPress and insert the profile.</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile5.png"><img class="alignnone wp-image-5672 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile5.png" alt="profile5" width="671" height="447" /></a></p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile6.png"><img class="alignnone wp-image-5662 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile6.png" alt="profile6" width="712" height="361" /></a></p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile7.png"><img class="alignnone wp-image-5663 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile7.png" alt="profile7" width="798" height="412" /></a></p>
+<p style="padding-left: 30px;">Go to the page or post you created and check the result:</p>
+<p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/profile8.png"><img class="alignnone wp-image-5664 size-full" src="http://labs.everettprogram.org/wp-content/uploads/profile8.png" alt="profile8" width="787" height="737" /></a></p>
+ [/toggle]
+<h2></h2>
+<h2>Homework</h2>
+<ol>
+	<li>Set up a cron job to execute CiviCRM tasks every hour
+<ol>
+	<li>Make sure the scheduled mailings are being sent</li>
+</ol>
+</li>
+	<li>Create an email
+<ol>
+	<li>recipients should be the newsletter subscribers, the rest can be anything random</li>
+	<li>schedule it to be sent on 5/15/15 at 3:36am</li>
+	<li>Take a screenshot of the email with its status and name it: Lastname_SchMail</li>
+</ol>
+</li>
+	<li>Create an profile for newsletter subscription
+<ol>
+	<li>Include the following fields: First Name, Last Name, Gender, Phone (Primary), Email, and Birth Date</li>
+	<li>Insert the profile on a post or page, and publish it</li>
+</ol>
+</li>
+	<li><strong>Submission</strong>
+<ol>
+	<li>Subject: Firstname Lastname HW6</li>
+	<li>copy and paste the URL of the post or page with the profile you created in the mailing body</li>
+	<li>attach the screenshot Lastname_SchMail</li>
+	<li>Send to civicrm@labs.everettprogram.org</li>
+</ol>
+</li>
+</ol>

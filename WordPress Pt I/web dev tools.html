@@ -1,0 +1,94 @@
+In coming lessons, we will learn how to customize or “hack” WordPress themes authored by other web developers. To be able to “hack” a WordPress theme, we first need to get a sense of how it was developed. Each WordPress theme (free or paid) is different, with different CSS style rules and PHP. Then we will want to test the changes we want to make. Developer tools help us do both.
+
+Outcomes:
+<ul>
+	<li>Learn how to use Google Chrome Developer Tools for inspecting page elements.</li>
+	<li>Learn how to use the Firebug extension for Firefox to inspect page elements.</li>
+	<li>Use developer tools to test our changes and debug problems.</li>
+</ul>
+<h1 id="developer-tools"><a class="headeranchor-link" href="#developer-tools" name="user-content-developer-tools"></a>Developer Tools</h1>
+Most, if not all, web browsers come with developer tools. Developer tools are a suite of helpful utilities that range from allowing you to inspect elements on a webpage and their associated CSS, to being able to see communications between the web server and browser. In this lab, we will be focusing on the tools that best aid us in customizing our WordPress websites.
+
+For this lab, we will be teaching <strong>Google Chrome Developer Tools</strong> and <strong>Firebug</strong>, which is a developer tools extension for Firefox.
+
+Please use either Chrome Developer Tools or Firebug. Most browsers have developer tools and each one is slightly different.
+
+It is important to learn these for the upcoming lessons. Developer tools are going to help us to unmask any WordPress theme.
+<h1 id="note-about-editing-while-using-developer-tools"><a class="headeranchor-link" href="#note-about-editing-while-using-developer-tools" name="user-content-note-about-editing-while-using-developer-tools"></a>Note About Editing While Using Developer Tools</h1>
+As you will see in the next two sections, developer tools enable us to “edit on the fly” or simply: edit the web page we are currently using developer tools on. You will be able to change or create HTML elements, and change or edit CSS style rules. This is a powerful capability, but there is a drawback.
+
+<strong>ALL of the edits you make to a web page while using developer tools are NOT permanent! If you refresh or close the web page, the changes you make will go away.</strong>
+
+We call this <strong>Live editing</strong>. You aren’t editing the actual source files on the web server that stores that website. You are editing the web browser’s computed version of the website.
+
+Developer tools are a great way to debug your WordPress customizations and test new styling without having to save and refresh from a stylesheet.
+[toggle title="Google Chrome Developer Tools"]
+<h1 id="chrome-developer-tools"><a class="headeranchor-link" href="#chrome-developer-tools" name="user-content-chrome-developer-tools"></a>Chrome Developer Tools</h1>
+For the purpose of customizing WordPress, we are going to be using the elements panel which all developer tools include. Tuts+ is a paid course website and they have a full course on Chrome Developer Tools. Lucky for us, they let you preview the video on the Elements Panel! Just what we need.
+
+To open Chrome developer tools, right click on any web page and select “Inspect Element”. Also, make sure you are using Google Chrome.
+
+At times during the video, the instructor is going to use some terminology we are not familiar with and do not really need to know. I’m going to define one term that is used so it does not sound like total gibberish.
+
+<strong>DOM</strong>. DOM stands for Document Object Model. The Document Object Model can be thought of as the computed version of the HTML the web browser renders. The DOM is shown on the left side of the Elements Panel in the developer tools. It is represented as a “Tree”, called the “DOM Tree”, where it indents and builds the webpage’s HTML in a tree format, with branches and nodes (leaves). <em>Note: This is not the proper formal definition.</em>
+
+<strong>Ignore what the instructor talks about when discussing Event Listeners from 8:40 until 10:30. We will not be using this, but it is interesting</strong>.
+
+As Everett does not own this content, you will need to navigate to the video here:
+
+<a href="http://code.tutsplus.com/courses/chrome-developer-tools/lessons/elements">Chrome Dev Tools</a>
+[/toggle]
+[toggle title="Firebug"]
+<h1 id="firebug"><a class="headeranchor-link" href="#firebug" name="user-content-firebug"></a>Firebug</h1>
+Firebug is a Firefox add on that allows you to inspect a webpage and see the HTML and CSS that comprise it. Download it <a href="http://getfirebug.com/">here</a> while using FireFox. Once you do, right-click anywhere on a webpage and select “Inspect Element With Firebug”.
+
+<iframe src="https://www.youtube.com/embed/oJMBaxPFumQ" width="480" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<h2>Firebug Basic Text Walkthrough</h2>
+<h3 id="step-1-identify-an-element"><a class="headeranchor-link" href="#step-1-identify-an-element" name="user-content-step-1-identify-an-element"></a>Step 1: Identify An Element</h3>
+I want to change the way the menu looks in the Twenty Twelve Theme. Specifically, I want to make the menu items centered instead of left-aligned.
+
+Open up Firebug and click the select tool. Then select the menu area. Look to make sure that you’ve got the right thing selected by looking at the HTML. The class on that unordered list (remember that we used unordered lists to make the nave menus?) is “nav-menu” so this is probably the thing we want to alter
+<h3 id="step-2-mess-with-the-css"><a class="headeranchor-link" href="#step-2-mess-with-the-css" name="user-content-step-2-mess-with-the-css"></a>Step 2: Mess with the CSS</h3>
+Here is where you get to play around. On the right hand side of the Firebug pane, you’ll see the style tab. This will tell you all the style rules affecting the element that you have selected. Double click on values to change them. Since we wanted to make the menu aligned in the center, let’s alter the “text-align” property to “center”. Don’t worry about all the other stuff.
+
+You’ll notice that the change takes effect immediately on the page so you know what you did worked.
+<h3 id="step-3-copy-pasta"><a class="headeranchor-link" href="#step-3-copy-pasta" name="user-content-step-3-copy-pasta"></a>Step 3: Copy Pasta</h3>
+Now all you have to do is copy the rule you just made.
+[/toggle]
+<h1 id="which-one-to-use"><a class="headeranchor-link" href="#which-one-to-use" name="user-content-which-one-to-use"></a>Which one to use?</h1>
+It is more of a personal preference. I personally use Chrome Developer Tools. One reason is it already comes with Google Chrome. There are differences between the two, but for this lab, it does not matter. You can decide for yourself.
+<h1 id="homework-assignment"><a class="headeranchor-link" href="#homework-assignment" name="user-content-homework-assignment"></a>Homework Assignment</h1>
+<h2 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h2>
+I have made changes to the default Twenty Fifteen WordPress theme <a href="http://brendinnye.me/wordpresspart2/lesson2">here</a>.
+
+Download <a href="http://labs.everettprogram.org/wp-content/uploads/lesson2_part1.txt">this text file</a>.
+
+Your job is to use either Chrome Developer Tools or Firebug to figure out the values for each CSS property I made a change to. This text file contains a skeleton of properties that I changed. Properties that have been changed are sectioned by the HTML element they style. After you have filled in all of the values, save this text file with the following name format: <em>lastname_lesson2_part1.txt</em>. Make sure to fill out the information with your lastname, firstname, and UCSC email in the text file as well.
+<h2 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h2>
+Time to have some fun! With developer tools we can make test changes to a website.
+
+For part 2, you will make some changes to a webpage using developer tools and take a screenshot of your changes.
+
+Let’s make some changes to one of our other Fellow’s labs. Go to CiviCRM’s second lesson <a href="http://labs.everettprogram.org/classes/civicrm/lesson-2/">here</a>.
+
+We are going to have some respectful fun! Follow these instructions:
+<ul>
+	<li>Change the text of the lesson title “Lesson 2 …” to “Lesson 1.5: Installing the Kinda Cool CiviCRM”. Give this title a font-family of Cursive.</li>
+	<li>Give the title “Installion and basics of CiviCRM” a margin of 50px 5px.</li>
+	<li>Give the h3 with text “Outcome” a color of #E52FDC.</li>
+	<li>Change the text of the three list items under Outcome to something different.</li>
+	<li>On the right, give the title of “Contact” a font-size of 2em.</li>
+	<li>On the right, give the both the h3 titles “Leader” and “Facilitator” a font-size of 25px.</li>
+	<li>Change the text of the title “Leader” to “CiviCRM Geek”.</li>
+	<li>Change the text of the title “Facilitator” to “CiviCRM Geek Helper”</li>
+</ul>
+Take a screenshot of the webpage after you have made these test changes. Make sure to not refresh the page. You are able to close the developer tools panel without the changes reverting back.
+
+Save the screenshot as: lastname_part2. (whatever the picture file extension is, for example mine was .png).
+<h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> as follows:
+<ul>
+	<li>Your email subject should be in the following format: <em>HW#2 Firstname Lastname</em></li>
+	<li>In the body of the email, email me what type of computer you use at home (PC/Mac/Linux) and what developer tool you are using (Chrome dev tools/Firebug).</li>
+	<li>your Part1 text file answers and your Part2 screenshot as attachments.</li>
+</ul>

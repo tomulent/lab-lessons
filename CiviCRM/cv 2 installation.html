@@ -1,0 +1,176 @@
+<h2>Installation and basics of CiviCRM</h2>
+<h3>Outcome:</h3>
+<ul>
+	<li>be able to install CiviCRM as a plug in on WordPress independently</li>
+	<li>Understand basic functions of CiviCRM</li>
+	<li>be able to set up Organization Address and Contact Info</li>
+</ul>
+[toggle title="Install CiviCRM on WordPress"]
+<ol>
+	<li>Before we begin installing CiviCRM, make sure you have WordPress installed on a sub-directory</li>
+	<li>If you don't, please refer to <a href="http://labs.everettprogram.org/classes/web-design/installing-wordpress/">this WP lesson</a> and complete all three steps.</li>
+	<li><a href="https://civicrm.org/download">Download </a>CiviCRM for WordPress</li>
+	<li>Log in to your Cpanel by going to yourdomainname.com/cpanel</li>
+	<li>Go to your file manager, and choose Web Root
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi0.png"><img class="alignleft wp-image-145 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi0.png" alt="civi0" width="861" height="495" /></a></li>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi01.png"><img class="alignleft wp-image-146 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi01.png" alt="civi01" width="743" height="522" /></a></li>
+</ul>
+</li>
+	<li>Find the folder with WordPress installed
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi1.png"><img class="alignleft wp-image-147 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi1.png" alt="civi1" width="999" height="452" /></a></li>
+</ul>
+</li>
+	<li>In the folder, go to "wp-content",then "plugins" and click upload
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi2.png"><img class="alignleft wp-image-148 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi2.png" alt="civi2" width="956" height="483" /></a></li>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi3.png"><img class="alignleft wp-image-149 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi3.png" alt="civi3" width="837" height="474" /></a></li>
+</ul>
+</li>
+	<li>Upload the CiviCRM zip file you downloaded
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi4.png"><img class="alignleft wp-image-150 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi4.png" alt="civi4" width="1037" height="641" /></a></li>
+</ul>
+</li>
+	<li>Once it's done, go back to the "plugins" folder and extract the zip file
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi5.png"><img class="alignleft wp-image-151 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi5.png" alt="civi5" width="936" height="408" /></a></li>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi6.png"><img class="alignleft wp-image-152 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi6.png" alt="civi6" width="997" height="410" /></a></li>
+</ul>
+</li>
+	<li>Create a new folder named "files". Make sure it is the exact same name and all lower case.
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi7.png"><img class="alignleft wp-image-153 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi7.png" alt="civi7" width="943" height="427" /></a></li>
+</ul>
+</li>
+	<li>Go to your WordPress page and log in</li>
+	<li>Find your database information
+<ul>
+	<li>You're going to three pieces of information relating to the instance of WordPress you wish to install CiviCRM onto:
+<ol>
+	<li>Database Name</li>
+	<li>Database User</li>
+	<li>Database Password</li>
+</ol>
+</li>
+	<li>You can find these things in the file manager by going to the file "wp-config.php" in the root directory of your WP installation</li>
+	<li>Open it up in the code editor and you will find these three bits of info on lines 19, 22, and 25</li>
+	<li><img class="aligncenter size-full wp-image-5376" src="http://labs.everettprogram.org/wp-content/uploads/findingdbinfo.png" alt="findingdbinfo" width="752" height="597" /></li>
+</ul>
+</li>
+	<li>Go to plugins and activate CiviCRM
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi8.png"><img class="alignleft wp-image-154 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi8.png" alt="civi8" width="942" height="576" /></a></li>
+</ul>
+</li>
+	<li>On the sidebar, go to settings and find "CivicRM Installer"
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi8_5.png"><img class="alignleft wp-image-158 size-full" style="padding-left: 30px; padding-right: 120px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi8_5.png" alt="civi8_5" /></a></li>
+</ul>
+</li>
+	<li>Enter the required information. If you don't remember your database name and username, go to Cpanel, and MySQL Databases to retrieve the correct information.</li>
+	<li>Once you enter the information, click on "Re-check Requirements"
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi9.png"><img class="alignleft wp-image-155 size-full" style="padding-left: 30px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi9.png" alt="civi9" width="1040" height="585" /></a></li>
+</ul>
+</li>
+	<li>If all shows green, then click on "Check Requirements and Install CiviCRM".</li>
+	<li>If you see the CiviCRM logo underneath Dashboard in your sidebar, congrats, you're done!
+<ul>
+	<li><a href="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi11.png"><img class="alignleft wp-image-157 size-full" style="padding-left: 30px; padding-bottom: 50px;" src="http://youinyouth.com/civilab/wp-content/uploads/2015/03/civi11.png" alt="civi11" width="1082" height="414" /></a></li>
+</ul>
+</li>
+</ol>
+[/toggle]
+<h3>Basics of CiviCRM</h3>
+[toggle title="Contacts"]
+<p style="padding-left: 30px;">Keeping tract of members, volunteers and donors is the most essential task of running a non-profit, that is why contacts are so important that the CiviCRM users book describes contacts as "the centre of your CiviCRM universe". Contacts also connects with other CiviCRM features tightly because it records a contact's attendance to events, contributions, membership status, and more. When users are viewing a contact, it lists the contact's demographic and basic information as well as its interaction with your organization and relationships with other contacts.</p>
+<p style="padding-left: 30px;">CiviCRM offers three different types of contacts:</p>
+
+<ol style="padding-left: 60px;">
+	<li>individuals: obviously, this includes persons such as members, volunteers, donors etc. that your organization keeps contact with.</li>
+	<li>organizations: other non-profit organizations, groups, or companies that work with your organization.</li>
+	<li>Households: "typically families that share a physical location", according to the users book.</li>
+</ol>
+<p style="padding-left: 30px;">CiviCRM also allows configuration of sub contact types. For instance, individuals can be divided into students, staff, volunteers, etc. And organizations can have subtypes like team, committee, sponsors and more.</p>
+[/toggle]
+[toggle title="CiviContribution"]
+<p style="padding-left: 30px;">CiviContribute is designed to manage the organization's financial sector, such as donations, contributions, and membership fees. According to the users book, CiviContribute has two main uses:</p>
+
+<ul style="padding-left: 60px;">
+	<li>To facilitate fundraisers, donations, pledges and campaigns.</li>
+	<li>To support other financial activities created by other CiviCRM features.</li>
+</ul>
+<p style="padding-left: 30px;">Also, according to the users book, CiviContribute allows users to perform the following tasks:</p>
+
+<ul style="padding-left: 60px;">
+	<li>Process and manage membership fees, donations and other contributions.</li>
+	<li>Create personal campaigns for fundraising.</li>
+	<li>Create reports for the results of fundraising events and activities.</li>
+	<li>And more!</li>
+</ul>
+[/toggle]
+[toggle title="CiviEvent"]
+<p style="padding-left: 30px;">CiviEvent helps setting up and organizing events with efficiency. Whether it's volunteer meeting, workshops, or fundraisers, CiviEvents supports users by reducing the workload of administration and management. CiviEvent provides the following features:</p>
+
+<ul style="padding-left: 60px;">
+	<li>Allow participants of events to register and pay online.</li>
+	<li>Send out automated emails for confirmations and reminders.</li>
+	<li>To signing up participant onsite, and keep record of attendance such as no show or cancellation.</li>
+	<li>Promote events on user's website (ex: campaign page).</li>
+	<li>If users host a certain event, like workshops, regularly, CiviEvents also allows saving events as templates.</li>
+	<li>And more!</li>
+</ul>
+[/toggle]
+[toggle title="CiviMail"]
+<p style="padding-left: 30px;">CiviMail serves the essential functions of email marketing services, such as scheduled emails, email templates, monitoring clicks and open rates, etc. CiviMail allows users to send out emails on behave of the organization. Because CiviMail is integrated with other CiviCRM functions, it is easier to send mails to event participants, people who have volunteered before, or students who might be interested in interships, etc. Also, the emails sent from CiviCRM will leave records on each recipient's activity history. According to the users book, email is sent from CiviCRM in the following situations:</p>
+
+<ol style="padding-left: 60px;">
+	<li>to individuals and small groups of people via the Send Email action.</li>
+	<li>to a large group of people as a mass mailing via CiviMail, for instance, newsletters.</li>
+	<li>to individuals who trigger an email as part of workflows in other compoenets, for example, an event registration confirmation email.</li>
+</ol>
+[/toggle]
+[toggle title="CiviMember"]
+<p style="padding-left: 30px;">Members are essentially just a part of the contacts; However, members are distinctive because conventionally, memberships requires fees and renewal, and that's why CiviCRM creates CiviMember to manage memberships. According to the users book, CiviMember allows you to perform the following tasks:</p>
+
+<ul style="padding-left: 60px;">
+	<li>Customize membership types and pricing that fits users' needs.</li>
+	<li>Allow members to sign-up or renew membership online.</li>
+	<li>Send out automated messages to members. For instance, a welcoming message for new members, or a reminder to members when renewal is due.</li>
+	<li>Provide members exclusive website privileges.</li>
+	<li style="padding-bottom: 30px;">And more!</li>
+</ul>
+[/toggle]
+<h3>Homework</h3>
+<h4>Part 1</h4>
+You have installed CiviCRM on Wordpress in class, so let me give you some credits for your hard work!
+<ul>
+	<li>Take a screenshot of your CiviCRM dashboard so I know you have successfully installed CiviCRM on your WordPress!</li>
+	<li>Make sure you include the web address bar so I can identify your screenshot.</li>
+	<li>Name your screenshot: Lastname_Install, for example, mine will be: Yang_Install</li>
+</ul>
+<h4>Part 2</h4>
+On your CiviCRM dashboard, it is asking you to set up "organization name" and "from email address", lets work on them!
+<ul>
+	<li>Click on the little icon that says go on the right to "Organization Name"</li>
+	<li>Fill out organization name and description. it could be a made up organization or your potential partner organization.</li>
+	<li>Fill out "from name" and "from email" with your name and UCSC email address</li>
+	<li>Fill out organization address with the address of the Everett Office: 1156 High Street, Social Science 2 Rm 047, Santa Cruz, 95060, CA</li>
+	<li>Take a screenshot of the page with required info filled in before you click on "save"
+<ul>
+	<li>To revisit the configuration page, go to "Administer" &gt; "Communications" &gt; "Organization Address and Contact Info".</li>
+</ul>
+</li>
+	<li>Name the screenshot: Lastname_Info. (ex: Yang_Info)</li>
+</ul>
+<h4>Part 3</h4>
+After reading the brief introduction of CiviCRM features, which two do you think is the most useful to you/your project and why? Or, which two are the most interesting to you and why?
+<ul>
+	<li>You can write about one for each question, but make sure you write about two different features.</li>
+	<li>You can write in bullet points with complete sentences or in paragraphs.</li>
+	<li>Please write no more than 200 words for each tab.</li>
+	<li>Save your text file as a word document or pdf and name the file: Lastname_Tabs. (ex: Yang_Tabs)</li>
+</ul>
+&nbsp;

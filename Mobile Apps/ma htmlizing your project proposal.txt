@@ -1,0 +1,22 @@
+Make your Project Proposal into an HTML page. That's it.
+<h1>Simple, eh?</h1>
+Just take your project proposal from 30B and put it into HTML form.
+<h2>Parameters</h2>
+[list style="orb" color="blue"]
+<ul>
+	<li>Make each section header (Executive Summary, Methodology, etc.) a &lt;h1&gt;</li>
+	<li>Give each heading a descriptive id (like id="goals")</li>
+	<li>At the end of each section, include a link that links to the section header
+<ul>
+	<li>&lt;a href="#goals"&gt;Back To Top&lt;/a&gt;</li>
+</ul>
+</li>
+	<li>Wrap each section in a &lt;div&gt;. Don't worry about giving the &lt;div&gt;'s an id. Just put them there</li>
+	<li>Make sure everything is correctly marked up. By that we mean no content not inside an HTML tag. If you open a tag, you better close it. A good way to make sure you're doing this is to see if you can collapse your &lt;div&gt;. That's the little triangle or +/- sign on the line number next to your opening &lt;div&gt;. They allow you to make things neater.</li>
+	<li>Make an HTML table for the budget</li>
+</ul>
+[/list]
+
+When you finish, upload it to your server and send me a link.
+
+Here's an example yeiproposal

@@ -1,0 +1,67 @@
+<h1 style="text-align: center;">Note to Coordinator</h1>
+<p style="text-align: center;"><span style="color: #3366ff;">This lessons was supposed to be lesson 8, but It became apparent that it was just overcomplicating things. Please feel free to revisit this and fix what was broken. I'm writing this as I am halfway done with the lesson and decided to not include it with the official curriculum. I'll finish the lesson but it's up to you to make it work for real. I'm sure you can do that, whoever you are. We YEI coordinators tend to be very smart. Good looking as well.</span></p>
+So we did all that work to make our apps run locally, but unfortunately that may not have been the best move. We actually made it load <em>slower</em> even though everything is on your own server. This all comes back to our friend the <strong>Content Delivery Network.</strong>
+<h1>CDN is Faster</h1>
+We highly recommend checking out <a href="http://royal.pingdom.com/2012/07/24/best-cdn-for-jquery-in-2012/">this article</a> from Pingdom that outlines the reasons to use what CDN and why. Here are some reasons they say that using a CDN for jQuery is faster than hosting it on your own server:
+
+There are several benefits to using one of these CDNs:
+<ul>
+	<li>The file will normally load faster than it would if self hosted.</li>
+	<li>Odds are better that the site visitor will have a cached copy of the file since other sites will also be linking to the same file.</li>
+	<li>It saves the site owner some bandwidth since the file is externally hosted.</li>
+	<li>For the same reason it also offloads the site’s own web server.</li>
+</ul>
+<h2>Proof</h2>
+Here are speed test comparisons for CDN delivered vs. locally hosted jQuery libraries. I used the webpage speed service from Pingdom (<a href="http://tools.pingdom.com">tools.pingdom.com</a>) and <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> to see how my they compared. I used my app from project 6, which used CDN, and project 7, which locally hosted jQuery.  You can recreate the tests yourself and see all the associated data using your own app versions.
+
+[gallery ids="1604,1605"]
+<h1>So What Was the Point of That Last Lesson?</h1>
+Learning, of course! And it will help us with this lesson. We want an app that works fast, so we want it to fetch the jQuery Mobile API from the CDN, but we want it to work even if there's no internet, but that will slow it down. How can we have it both ways? Well I don't know so let's just Google it!
+<h1>What Say Thou, Google?</h1>
+So we want it to fetch the API from the CDN if theres an internet connection and use our local copy if there is not internet. There's probably a technical term for that, but I don't know it. So let's just Google "jquery mobile local and cdn". I feel like that's going to come up with something useful.
+
+<a href="http://www.class.giip.org/wp-content/uploads/2013/06/search-results.png"><img class="aligncenter size-medium wp-image-1654" src="http://www.class.giip.org/wp-content/uploads/2013/06/search-results-300x237.png" alt="search results" width="300" height="237" /></a>
+
+Well that sounds like exactly what we want. "Fallback" they call it.
+<h2>The Code</h2>
+I lied, I'm not going to work out the whole lesson. I have to much else to do. I'll just say check out this<a href="http://matthewdaly.co.uk/blog/2012/08/13/falling-back-to-local-copies-of-jquery-and-jquery-mobile/"> link</a> and follow this code (your file paths may vary:
+
+[sourcecode language="html"]
+
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;title&gt;jQuery Mobile Demos&lt;/title&gt;
+&lt;!--The CDN--&gt;
+&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /&gt;
+&lt;script src="http://code.jquery.com/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/custom-scripts.js"&gt;&lt;/script&gt; &lt;!--This isn't working in the fallback--&gt;
+&lt;script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"&gt;&lt;/script&gt;
+&lt;!--Local Fallbacks--&gt;
+&lt;script&gt;
+if (typeof jQuery == 'undefined') {
+document.write(unescape("%3Cscript src='scripts/jquery.js' type='text/javascript'%3E%3C/script%3E"));
+}
+&lt;/script&gt;
+
+&lt;script&gt;
+if(typeof $.mobile == 'undefined') {
+document.write(unescape("%3Cscript src='scripts/custom-scripts.js' type='text/javascript'%3E%3C/script%3E"));
+}
+if(typeof $.mobile == 'undefined') {
+document.write(unescape("%3Cscript src='scripts/jquery-mobile.js' type='text/javascript'%3E%3C/script%3E"));
+}
+
+$(function() {
+if($('.ui-helper-hidden:first').is(':visible') === true){
+$('&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;').appendTo('head');
+}
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="ui-helper-hidden"&gt;&lt;/div&gt;
+
+[/sourcecode]
+
+It works, <em>mostly. </em>It's all jacked up on Firefox during transitions but seems to work fine on safari and chrome. I'm sure the kinks could be worked out, but is this really important? I mean, do we really need to put hours into getting the apps' initial load time down 15ms? Hell no! I'm hungry and calling it quits on this lesson.

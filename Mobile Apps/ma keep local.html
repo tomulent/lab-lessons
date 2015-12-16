@@ -1,0 +1,82 @@
+You've been doing some amazing things in a very short period of time. You should be proud of yourself. We're going to do something a little different this time. We're going to make it possible to run your apps offline.
+<h1>Going Local</h1>
+Until now, you've been linking to the jQuery and jQuery Mobile API's by pointing to the jQuery servers. I'm sure these lines look familiar:
+<pre>&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /&gt;
+&lt;script src="http://code.jquery.com/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"&gt;&lt;/script&gt;</pre>
+Those are links to the jQuery CDN, or Content Delivery Network. A CDN is basically a place where a company puts files and objects that it wants others to have very fast access to. In this case, all the scripts and styles that make up our apps are stored at code.jquery.com. The CDN as resources in place that make sure it's served as fast as possible, faster than from your own server usually. If you go to <a href="http://code.jquery.com">code.jquery.com</a> you will see that they have files for download of every version of jQuery available for download.
+
+&nbsp;
+
+You'll notice that there are two versions of most of the files. The ones with <b>.min </b>near the end are "minified" click on both and see the difference. The non-minified version has comments and spaces and everything. It's there so that you can dig into the code and figure out what's going on. The minified version has all the comments, spaces, tabs, etc. removed so that it's absolutely nothing but code. To understand why, lets have an...
+<h1>Unnecessary Computer Science Lesson</h1>
+Bear with this and you'll learn something.
+<h2>Binary Counting</h2>
+We use a decimal counting system in normal life. The decimal counting system is based on the number ten, i.e. it is a "base ten" system. That means, we count to powers of ten repeatedly. The number 1968 is 1 thousand, 9 hundreds, 6 tens, and 8 ones. All those are powers of 10. 1 is 10<sup>0</sup>, 10 is 10<sup>1</sup>, 100 is 10<sup>2</sup>, 1000 is 10<sup>3</sup>.
+
+
+
+Basically, you count using the digits 0-9 until you get to the next power of ten. <strong>7, 8, 9...10 </strong>ten is a power of ten(obviously), so you add a ten to the count, and start at 0. 10 is 1 ten an 0 ones. 11 is 1 ten and 1 one. 12 is 1 ten and 2 two's. 99 is 9 tens and 9 ones. Add one more and you have 100 or 1 hundred, 0 tens, and zero ones.
+
+Computers use a <strong>Base 2 </strong>counting system. With base 2, there are only two digits, <strong>0 </strong>and <strong>1. </strong>Remember that with base ten, we count up to ten, add a digit to the left, and start the count back at zero. So in base 2, we count up to two, add a digit to the left, and start back at zero.
+
+Binary | Decimal
+<ul style="list-style: none;">
+	<li>0 = 0</li>
+	<li>1 = 1</li>
+	<li>10 = 2</li>
+	<li>11 = 3</li>
+	<li>100 = 4</li>
+	<li>101 = 5</li>
+	<li>110 = 6</li>
+	<li>111 = 7</li>
+</ul>
+
+
+This is super confusing for us humans, but for a machine it's incredibly efficient to store numbers and do calculations in this form. If you paid close attention, you can now laugh at this t-shirt.
+
+<img class="aligncenter" src="http://rlv.zcache.com/there_are_10_types_of_people_those_who_understa_tshirt-r1fe4f7e36d084bb593d2b7594977456d_804gs_216.jpg" alt="" width="216" height="216" />
+<h2>What's the Point of This?</h2>
+So in computing, we call 1 digit a bit. 8 bits equals 1 byte. Each character you type is encoded by an 8 digit binary sequence. For instance, a lower case "a" is represented by the binary code <strong>00101001</strong> or 41 in decimal notation.
+<h2>Please Get to the Point</h2>
+I am! So this means every single character you type equals 1 byte. It takes up 1 byte of storage. 1,024 bytes equals 1 Kilobyte (KB). This is getting familiar, no? KB's refer to the size of a file. The larger a file, the more data needs to sent via the internet. The more data that needs to be sent, the longer it takes to load. We want our apps to load fast, so we want the files to take up as little space as possible.
+<h2>Minifying</h2>
+Minifying files means that all the spaces, line breaks, tabs, and all the other whitespace that we put in there to make it readable by humans is removed. That, in a very long way, is the answer to the question you didn't ask about why there are two versions of each .js file. Here you can see how much smaller the file gets when you remove all the spaces, tabs, and returns.
+
+
+<h1>Well That Was...Interesting</h1>
+Fine. We'll get back to practical matters.
+<h2>Running Our Apps Locally</h2>
+Our apps run fine, as long as they have a connection to the internet. We tell the browser to go to the jQuery CDN and find the jQuery libraries we want and it uses those to execute all the scripts that our magical data attributes are telling it to. To run things locally, we have to create our own jQuery libraries. So you'll be coding your own.
+
+Just kidding. Even minimized, the jQuery API alone is 207,009 characters. You're just going to follow the links that already there in your head section and copy the code into local files
+<h2>Do What Now?</h2>
+Look at the references that you have in your app already:
+<pre>&lt;link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /&gt;
+&lt;script src="http://code.jquery.com/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"&gt;&lt;/script&gt;</pre>
+Copy the full URL for the stylesheet into your browser. Once you get there, select all text and paste it into a new text file. Save this as "<strong>style.css</strong>". Do that with the next line and save it as "<strong>jquery.js</strong>". Do it once more for the third line and save it as "j<strong>query-mobile.js</strong>".
+<h2>Link It Up</h2>
+I like keeping things neat in my home directory, so I put all my .js files into a folder called "scripts". If you do this, remember that you need to make sure you include that reference when linking the files to your app.
+
+Here's what it looks like on mine.  &lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;script src="scripts/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/custom-scripts.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/jquery-mobile.js"&gt;&lt;/script&gt;
+<h2>Is Everything Working?</h2>
+Let's take a look at how our apps are running. Mine seems to be working fine. If the app is broken, you probably made an error in referencing your files. Go back and make sure you named everything right.
+<h1>If the Icons Aren't Working</h1>
+So I'm revisiting these lessons a year after I wrote them and there have been a few changes since I was last here. It used to be that if you went local, then you would need to make special arrangements in order to have the images (like button and list icons) show up. Apparently that is no longer the case. I think what they've done is produce these icons directly using CSS to generate SVG images. At any rate, you can pretty much just disregard the following sections and skip to the project. I'm leaving them in in case I'm wrong about what's going on.
+<h2>Where Did My Icons Go?</h2>
+You probably noticed that all your icons are now empty circles.
+
+
+<h2>What Happened?</h2>
+The icons don't come out of nowhere. There's probably a directory somewhere close to the stylesheet that contains all the necessary images. In fact there is. Let's get it.
+<h2>Getting Our Own Images Directory</h2>
+Go to <a href="http://jquerymobile.com/download">jquerymobile.com/download</a>. This is where you can build a custom library based on what you know you'll be doing in the app so you don't need to download everything else along with it. Scroll to the bottom and underneath the download button you should see a note about images. Go ahead and download the image library and throw it in to your project 7 directory.
+<h1>Project</h1>
+Go local! Download the appropriate js files, style sheet, and image library and make your app totally self sufficient. If You were to run it on your desktop, it would work even if you didn't have the internet.
+
+We're going to go more in depth into this in the next lesson, because, contrary to what we've been saying, this made the site slower. We're going to need to go back and fix all the damage we did.
+<p style="text-align: left;">Example on <a href="https://github.com/YouthEmpowermentInstitute/lesson-6" target="_blank">GitHub</a></p>

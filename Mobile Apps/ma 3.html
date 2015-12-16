@@ -1,0 +1,82 @@
+[two_third last="no"]
+<h2>Outcomes</h2>
+<ul style="margin-top: 1px;"><!--OUTCOMES-->
+	<li>Learn what Listviews are</li>
+	<li>Make buttons</li>
+	<li>Make a simple listview</li>
+	<li>Change list icons</li>
+</ul>
+[/two_third]
+[one_third last="yes"]
+<h3>Resources</h3>
+<ul>
+	<li><a href="http://demos.jquerymobile.com/1.4.2/button/" target="_blank">Buttons</a></li>
+	<li><a href="http://demos.jquerymobile.com/1.4.2/listview/" target="_blank">Listviews</a></li>
+</ul>
+[/one_third]
+
+<hr />
+
+Now that we've got down the basics of creating a page, we're going to slow things down a bit. We'll try and introduce only one or two new concepts per lesson so that you can learn at an easier pace.
+
+Today, we're going to go over ways of displaying links. You may have noticed that the apps you created for Project 2 were kinda janky. You put links to the next and previous pages with links at the bottom of each and there was no central place to skip to specific sections. We need to think of a better user interface (UI).
+<h2>What is a Listview?</h2>
+We saw one way of displaying links back in lesson 1. It looked like this:
+
+
+
+That was a listview. Listviews allow us to make lists of links. There are other ways, but listviews will display them in a certain way and afford you more options. Let's consider a few different ways of displaying links.
+<h2>Follow Along Activity</h2>
+Please download the <a href="https://github.com/YouthEmpowermentInstitute/lesson-3" target="_blank">lesson 3 zip</a>. It contains a zip file that will have a  file inside called <a id="136a4feafe263b11ec1e8f8d00bb6d67-528e2cd090c3b22c7054429479f2cb65ba79df46" class="js-directory-link" style="color: #4183c4;" title="lesson-3-app-template.html" href="https://github.com/YouthEmpowermentInstitute/lesson-3/blob/master/lesson-3-app-template.html">lesson-3-app-template.html</a>. Sorry it had to be like that, it's kinda weird linking html files for download. The app contains 5 pages in all. A home page, and 4 other pages. Each page links back to the home page.
+<h1>Objective: On the Homepage, Create Links to the Other Four Pages</h1>
+Let's do it very simply and just create a bunch of bare-bone links to the other pages. As you recall, you do this like,
+<pre>&lt;a href="#page-1"&gt;Page One&lt;/a&gt;</pre>
+Do that for all four pages, and look at what it looks like in the browser.
+
+<img class="aligncenter size-full wp-image-3027" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.00.58-PM.png" alt="Screen Shot 2014-05-16 at 3.00.58 PM" width="406" height="199" />
+
+Looks pretty bad. We want things to look more "app-y". Luckily, jQuery Mobile does that for us. Let's make those boring links into buttons. As with everything in this framework, we do it with a data-role attribute. Add <strong>data-role="button"
+</strong> to each of your links' opening tags so that they look like this:
+<pre>&lt;a href="#page-2" data-role="button"&gt;Page Two&lt;/a&gt;</pre>
+The result looks like this:
+
+<img class="aligncenter  wp-image-3028" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.11.43-PM.png" alt="Screen Shot 2014-05-16 at 3.11.43 PM" width="221" height="208" />
+
+That looks much more like an app. Those do look better, but it still looks kinda weird. Maybe it's just my aesthetic preference, but a bunch of buttons stacked on top of each other just looks weird. Let's do it different. Make each of those links into list items in an unordered list, remove the <strong>data-role="button"</strong> and take a look.
+
+<img class="aligncenter  wp-image-3029" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.17.18-PM.png" alt="Screen Shot 2014-05-16 at 3.17.18 PM" width="322" height="194" />
+
+Looks awful of course. But here we use some jQuery magic. Let's see if you've been paying attention. We want to transform this unordered list into something called a "listview". How do you think we would do that? <strong>Hint</strong>: it's the same way we have done crazy stuff to everything else.
+
+That's correct! You add <strong>data-role="listview" </strong>to the &lt;ul&gt; tag. It ends up looking like this:
+
+<img class="aligncenter  wp-image-3030" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.11.43-PM1.png" alt="Screen Shot 2014-05-16 at 3.11.43 PM" width="301" height="283" />
+
+Now that's snazzy. We have a listview that looks hella "app-y". We can further customize it by, what else, adding new data attributes. Try adding the following.
+<h3>data-inset="true"</h3>
+<img class="aligncenter  wp-image-3031" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.19.04-PM.png" alt="Screen Shot 2014-05-16 at 3.19.04 PM" width="246" height="217" />
+<h3>data-icon="false" to remove the arrows</h3>
+<img class="aligncenter  wp-image-3032" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.19.55-PM.png" alt="Screen Shot 2014-05-16 at 3.19.55 PM" width="267" height="231" />
+
+Or you can add "data-icon="gear/info/delete/etc" to individual list items. Check <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/icons/">here</a> for full list of icon names.
+<pre>&lt;li data-icon="bars"&gt;&lt;a href="#page-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+&lt;li data-icon="plus"&gt;&lt;a href="#page-2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
+&lt;li data-icon="delete"&gt;&lt;a href="#page-3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
+&lt;li data-icon="gear"&gt;&lt;a href="#page-4"&gt;Page 4&lt;/a&gt;&lt;/li&gt;</pre>
+produces
+
+<img class="aligncenter  wp-image-3033" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.21.29-PM.png" alt="Screen Shot 2014-05-16 at 3.21.29 PM" width="359" height="301" />
+
+You obviously shouldn't stick these icons just anywhere. They have meanings and should be used appropriately.
+
+We won't go over any more here. You'll have to look over the listview documentation linked <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/listviews/">here</a>.
+<h1>Project Three</h1>
+Go back to your proposal app from Project Two and make a copy of it. This is so you'll have a backup copy of your app at previous stages of development.
+
+You'll be using your new knowledge of navigation methods to improve your proposal app.
+<h2>Parameters</h2>
+On the homepage of your app, create a listview containing links to each section of your proposal (i.e. each page of your app).
+
+Get rid of the stupid forward/backward links at the bottom of each page and simply replace them with a button linking back to the home page. Give the button a "home" icon using <strong>data-icon="home"</strong>.
+
+Check the <a href="https://github.com/YouthEmpowermentInstitute" target="_blank">YEI GitHub</a> to see a completed example.

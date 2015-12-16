@@ -1,7 +1,7 @@
 [two_third last="no"]
 
 Cascading Style Sheets (CSS) is the language to compliment HTML. Using HTML you were able to put all the elements in place and could even add a tiny bit of style in the form of bold or italics, but you couldn’t do much. HTML is about structure and content. CSS comes in and allows us to change how our HTML is displayed. With CSS, we can change sizes, fonts, add shadows, rearrange layouts, add special bullets, and more.
-<h1><b>Outcomes For This Lesson</b></h1>
+# **Outcomes For This Lesson**
 <ul>
 	<li>Cascading Style Sheets (CSS)</li>
 	<li>Inline Style</li>
@@ -11,7 +11,7 @@ Cascading Style Sheets (CSS) is the language to compliment HTML. Using HTML you 
 [/two_third]
 
 [one_third last="yes"]
-<h2>Resources</h2>
+## Resources
 <a title="Mozilla Developer Network" href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a>
 <a title="W3Schools" href="http://www.w3schools.com/" target="_blank">W3Schools</a>
 <a title="CSS Reference: W3Schools" href="http://www.w3schools.com/cssref/default.asp" target="_blank">CSS Reference: W3schools
@@ -24,16 +24,16 @@ Cascading Style Sheets (CSS) is the language to compliment HTML. Using HTML you 
 So you’ve got your webpage, but it looks to be from the dawn of the World Wide Web. HTML tells your browser how to structure a webpage, but not how to display your content and give it style. Any sort of modern web design project will require good aesthetics and a certain level of professionalism, and HTML alone doesn’t do that.
 
 So to solve this problem, we have another acronym to get acquainted with. CSS stands for Cascading Style Sheets. CSS is a language that we use to tell the browser HOW to display our HTML (content). From the get go, think: “CSS = style/appearance”. With CSS, we can change font sizes, fonts, text and background colors, HTML element positioning (where an element is on a page), and much much more.
-<h1>Lesson Preparation</h1>
+# Lesson Preparation
 Before we jump into coding some CSS, we need to set ourselves up for this exercise. Open four (4) new blank text files. In three (3) of the text files, copy and paste the HTML code below:
 
 <script src="https://gist.github.com/bnyeucsc/e521c30f68fe8830b002.js"></script>Create a new folder on your computer and save the first three as HTML documents (.html file). Name the first “inline.html”, the second “internal.html”, and the third “external.html”. Save your 4<sup>th</sup> text file as “style.css” (this creates a CSS file). We will come back to style.css in a bit. Make sure all of these files are in the same folder!
 
-<h1>How to include CSS in our Web Pages</h1>
+# How to include CSS in our Web Pages
 
 CSS can be included in our web pages in three different ways: Inline, Internally, and Externally. We will go through each, but to give you a preview, we will only be including our CSS externally to style our HTML pages after this lesson. Just keep this in mind and you will see why soon.
 
-<h2>Inline CSS Styling</h2>
+## Inline CSS Styling
 
 Go to the folder where you save the html/css files we created earlier. Open inline.html in your text editor. The first paragraph element should look like:
 
@@ -59,7 +59,7 @@ Save and open your web page in your web browser. What happened? If everything we
 
 Back to coding. Let’s see how the CSS we just included worked. Remember attributes, like href? Well, we just used the style attribute. It works a little bit differently than href, but it is the same idea. The style attribute changes the behavior of HTML element we include it with. In this case, we changed the styling of the paragraph element. “Hey! The value between the double quotes doesn’t look normal.” That’s because we are writing CSS. The value for the style attribute is written as: “property: value;” In this example, we wanted to change the paragraph element’s color property and we changed it to green (the value). We end our CSS declaration using a semicolon because we can include multiple different “property:value” pairs in one style attribute. Also note: The only text that changed color was the text of the paragraph element we modified using the style attribute.
 
-<h2>Internal Style</h2>
+## Internal Style
 
 Go back to the folder where we save the html/css documents and open internal.html in your text editor. In the head section of your HTML document, after your title element on a new line, add:
 
@@ -72,20 +72,20 @@ Go back to the folder where we save the html/css documents and open internal.htm
 
 Now we are going to create a new CSS rule (this will be explained later). Between the style tags, add: p { font-size: 20px; }. It should look like this(I also indented and made things easier to read):<script src="https://gist.github.com/bnyeucsc/83e05e3151592f3a8024.js"></script>
 Save and open this HTML file in your web browser. If everything went smoothly, all of your paragraph text should be larger than it was before (we increased the font size). We just created a CSS rule. What happened here? In our CSS rule, we selected all p elements on the page (we call p the “selector” in our CSS rule). Then we made a CSS declaration. The property we wanted to change was the font size of our paragraphs and we gave it a value of 20px. This probably still doesn’t make sense, but trust me, in the next few sections, it will all become clear. A nice feature of internal CSS is by putting the &lt;style&gt; &lt;/style&gt; tags, we are creating an internal style sheet that applies to this whole HTML document. We can write as many CSS rules as we want in this internal style sheet. This is pretty useful since we don’t need to go line-by-line and edit each element throughout the document.
-<h2>External Style</h2>
+## External Style
 Go back to the folder that you saved the html/css document in. Open external.html in your text editor. In the head section of your HTML document, after the title on a new line add:
 
 [html]&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot; &gt;[/html]
 
 Your head section should now look like this:  <script src="https://gist.github.com/bnyeucsc/712045643c36bd08c10a.js"></script>What did we just do there? Well we just connected the style.css file to our external.html file (We didn’t literally connect them, but external.html now knows about style.css). We used the &lt;link&gt; tag to “link” our HTML document with the external file, style.css. The href attribute tells the browser where to find the file we want to link. Since style.css is in the same folder as external.html, we can just put style.css. The rel attribute gives a name to connection we established between the two files. Don’t worry too much about rel=”stylesheet”, just include it in your &lt;link&gt; tag if linking a stylesheet to your HTML document. Open your style.css file now. We are going to start to write some CSS, the right way! In your style.css file, add:  <script src="https://gist.github.com/bnyeucsc/5a3d5e9974d571145e7c.js"></script>
 Save and open external.html in your web browser, if it isn’t open already (Just refresh the page if it’s open). If it all went smoothly, the &lt;h1&gt; text should be blue and in Arial font, and all paragraphs should be in the Courier font. Pretty cool! So what happened here? Since we linked our CSS stylesheet (styles.css) to our HTML document (external.html), our HTML page now references style.css for styling rules. Here we created a CSS rule for all h1 tags an all paragraphs. If we had more paragraph elements, our CSS would apply to those as well. That was much easier than going line by line and applying a style rule to each element. Life is good! Let’s formally explain CSS and its syntax. You may have noticed me using the term CSS/style rule. Well, in CSS we create “style rules” to instruct the browser on how to display HTML elements. In general CSS rules are formatted as such:
-<script src="https://gist.github.com/bnyeucsc/ead7115994173918d2f4.js"></script>The selector is what element(s) we want our rule to apply to. Property is the “property” (of the element we selected) that we want to change (such as color, font-family, etc.). Value is well… the value we want that property to change to (ex. Font color from black to green). This “property: value;” pair is what we call a declaration. After each selector, we must surround our declarations in opening curly braces ( <strong>{</strong> ) and closing curly braces ( <strong>}</strong> ).After each property we must have a colon ( : ) and at the end of each declaration, we must have a semicolon ( ; ). While coding, we have to be very meticulous with our code. If we forget something so small as a semicolon or used the opposite facing curly brace, our code won’t work. Keep your code nice and tidy. Use indentation and spacing when needed. The computer and browser don’t mind. It makes it easier for you and everyone else to read, and it is easier to catch mistakes as well. Be consistent with your notation and you will be fine!
+<script src="https://gist.github.com/bnyeucsc/ead7115994173918d2f4.js"></script>The selector is what element(s) we want our rule to apply to. Property is the “property” (of the element we selected) that we want to change (such as color, font-family, etc.). Value is well… the value we want that property to change to (ex. Font color from black to green). This “property: value;” pair is what we call a declaration. After each selector, we must surround our declarations in opening curly braces ( **{** ) and closing curly braces ( **}** ).After each property we must have a colon ( : ) and at the end of each declaration, we must have a semicolon ( ; ). While coding, we have to be very meticulous with our code. If we forget something so small as a semicolon or used the opposite facing curly brace, our code won’t work. Keep your code nice and tidy. Use indentation and spacing when needed. The computer and browser don’t mind. It makes it easier for you and everyone else to read, and it is easier to catch mistakes as well. Be consistent with your notation and you will be fine!
 
-<h2>Why Should We Use External Style Sheets?</h2>
+## Why Should We Use External Style Sheets?
 
-Because there’s no other practical way to style your webpages. Imagine you had a website with 10 HTML pages and you want to have all the paragraphs be 14 point Times New Roman. Can you imagine going in and adding inline style to <strong><em>every single paragraph</em></strong>? It would take forever! And even if you did, you would have to go back and change <strong><em>every single paragraph</em> </strong>every time you wanted to make a change. That’s just not feasible and would be just plain tedious. With external CSS stylesheets, we can have 10 HTML pages linked to the same stylesheet. When we make one change in our stylesheet, this change effects every HTML page linked to it. Computer programmers have a motto, “DRY: Don’t Repeat Yourself”. Instead of changing the same thing multiple times, we make the change once. This is powerful! Take hold of it you web hero! In this lab, we will only be using external CSS stylesheets to change the appearance of our web page. No inline or internal! Also, just a friendly reminder: HTML is for content and CSS is for styling/how to display things :).
+Because there’s no other practical way to style your webpages. Imagine you had a website with 10 HTML pages and you want to have all the paragraphs be 14 point Times New Roman. Can you imagine going in and adding inline style to <strong>*every single paragraph*</strong>? It would take forever! And even if you did, you would have to go back and change <strong>*every single paragraph* </strong>every time you wanted to make a change. That’s just not feasible and would be just plain tedious. With external CSS stylesheets, we can have 10 HTML pages linked to the same stylesheet. When we make one change in our stylesheet, this change effects every HTML page linked to it. Computer programmers have a motto, “DRY: Don’t Repeat Yourself”. Instead of changing the same thing multiple times, we make the change once. This is powerful! Take hold of it you web hero! In this lab, we will only be using external CSS stylesheets to change the appearance of our web page. No inline or internal! Also, just a friendly reminder: HTML is for content and CSS is for styling/how to display things :).
 
-<h1>More Specific Selectors</h1>
+# More Specific Selectors
 
 In our last example, we create a style rule for paragraph elements on the page. We used the rule:
 
@@ -101,7 +101,7 @@ font-family: Courier;
 [/css]
 
 
-This changed the font to Courier for ALL the paragraph elements in our HTML document. This is good if we want to make general rules for any element of the same type, but what if we wanted to get more specific? What if we want to change the style for only one of the paragraphs? We need to get more specific. One way of doing this is using the <em>class</em> and <em>id</em> attributes. We use these attributes in our HTML and then are able to reference these in our style rules. Let’s work through an example using the id attribute. In this example, we want to specifically target only the second paragraph element. In your external.html file, give the second paragraph element an id attribute with the value of “identity”. Your code should look like this:
+This changed the font to Courier for ALL the paragraph elements in our HTML document. This is good if we want to make general rules for any element of the same type, but what if we wanted to get more specific? What if we want to change the style for only one of the paragraphs? We need to get more specific. One way of doing this is using the *class* and *id* attributes. We use these attributes in our HTML and then are able to reference these in our style rules. Let’s work through an example using the id attribute. In this example, we want to specifically target only the second paragraph element. In your external.html file, give the second paragraph element an id attribute with the value of “identity”. Your code should look like this:
 
 
 [html]
@@ -122,30 +122,30 @@ If everything worked correctly, only the second paragraphs text should be pink. 
 
 Now, let’s create a style rule that targets this specific paragraph. In style.css, start a new rule after everything else. To begin targeting an element by class, we use a period (dot) followed by the class value (sometimes we also call this a class name). Then add your opening and closing curly braces. In between the curly braces, let’s change the font-size to 30px, the font color to white, and the background color to steelblue (We haven’t used this last property yet). Our style rule should look like:<script src="https://gist.github.com/bnyeucsc/605c1daa7a34f5c1a29a.js"></script>If everything worked correctly, the third paragraph text size should have increased, the text color change to white, and the background color of THIS specific element should be a darker shade of blue (more on this in the next lesson). Sweet! Practically, we use the class attribute when we want to target multiple HTML elements and there currently is not a better way to target them.
 
-<h2>What’s the Difference Between id and class?</h2>
+## What’s the Difference Between id and class?
 
-Functionally there is none. They operate in the exact same fashion. But by convention, we use ids when we want to target only one element in our HTML document and we use classes when we want to target multiple elements in the same HTML document. This concept is difficult to grasp. Here is another way to think about it: <strong>Id</strong>’s <strong>Id</strong>entify and <strong>Class</strong>es <strong>Class</strong>ify. Don’t worry if this concept doesn’t make total sense yet, we will be going over this in the next lesson again and CodeAcademy will cover this in your HW assignment for this lesson as well.
+Functionally there is none. They operate in the exact same fashion. But by convention, we use ids when we want to target only one element in our HTML document and we use classes when we want to target multiple elements in the same HTML document. This concept is difficult to grasp. Here is another way to think about it: **Id**’s **Id**entify and **Class**es **Class**ify. Don’t worry if this concept doesn’t make total sense yet, we will be going over this in the next lesson again and CodeAcademy will cover this in your HW assignment for this lesson as well.
 
-<h1>Colors</h1>
+# Colors
 
-In previous examples, we have changed the color of various HTML elements. So far, the color values we have been using are all color names, such as steelblue, red, or pink. We call these color “keywords” and there are a predefined number of these keywords. This is one way to use color on a web page, but what if there is a shade of blue that we want to use and it doesn’t have a name? The answer: Hexadecimal color values. Hexadecimal color values give us an easy way to get the exact color and shade we would like to use in our web pages. Hexadecimal color values are in the form: #0033FF This would be a dark shade of blue. <strong>Note that there is a # sign before the six characters</strong>. The # signifies that we are using a hexadecimal value. If we omit the #, our color will not work. The explanation of how hexadecimal color values work is a bit beyond the scope of this course. All you need to know is that we don’t typically come up with these values off the top of head. There are a multitude of tools online and offline (like photoshop) to help us pick the color we want and translate it into a hex color value. An easy to use tool that is online can be found at <a href="http://www.colorpicker.com/">ColorPicker.com</a>. Play around with it. Here you can find a color you like and copy and paste it for use in your own documents. Here is an example of me changing the color of paragraph elements using a hexadecimal color value:<script src="https://gist.github.com/bnyeucsc/2bc143e661ee7cd6d170.js"></script>
+In previous examples, we have changed the color of various HTML elements. So far, the color values we have been using are all color names, such as steelblue, red, or pink. We call these color “keywords” and there are a predefined number of these keywords. This is one way to use color on a web page, but what if there is a shade of blue that we want to use and it doesn’t have a name? The answer: Hexadecimal color values. Hexadecimal color values give us an easy way to get the exact color and shade we would like to use in our web pages. Hexadecimal color values are in the form: #0033FF This would be a dark shade of blue. **Note that there is a # sign before the six characters**. The # signifies that we are using a hexadecimal value. If we omit the #, our color will not work. The explanation of how hexadecimal color values work is a bit beyond the scope of this course. All you need to know is that we don’t typically come up with these values off the top of head. There are a multitude of tools online and offline (like photoshop) to help us pick the color we want and translate it into a hex color value. An easy to use tool that is online can be found at <a href="http://www.colorpicker.com/">ColorPicker.com</a>. Play around with it. Here you can find a color you like and copy and paste it for use in your own documents. Here is an example of me changing the color of paragraph elements using a hexadecimal color value:<script src="https://gist.github.com/bnyeucsc/2bc143e661ee7cd6d170.js"></script>
 In this example, I used a dark shade of teal. Just remember to include the # before the hexadecimal value. From now on, we will no longer use predefined color keywords. Use hexadecimal color values in your work.
-<h1>Homework Assignment</h1>
+# Homework Assignment
 &nbsp;
-<h3>Attention! There are two parts to this homework assignment.</h3>
+### Attention! There are two parts to this homework assignment.
 &nbsp;
-<h2>Part 1</h2>
-Login to your Codecademy account and go to the HTML/CSS section. <strong>Make sure you are logged into your Codecademy account so that it saves your progress!</strong>
+## Part 1
+Login to your Codecademy account and go to the HTML/CSS section. **Make sure you are logged into your Codecademy account so that it saves your progress!**
 
 Complete the following sections:
-<h4>CSS: An Overview</h4>
+#### CSS: An Overview
 <img class="alignnone wp-image-3542 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_img1.png" alt="HW_img1" width="1089" height="614" />
 You do not need to complete the small project right after. It is good practice though!
-<h4>CSS Selectors</h4>
-<img class="alignnone size-full wp-image-3543" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_img2.png" alt="HW_img2" width="1141" height="597" /> Again, no need to complete the small project after. You have completed <strong>Part 1</strong>! Make sure to get your Codecademy profile URL. You will need it for your submission email.
+#### CSS Selectors
+<img class="alignnone size-full wp-image-3543" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_img2.png" alt="HW_img2" width="1141" height="597" /> Again, no need to complete the small project after. You have completed **Part 1**! Make sure to get your Codecademy profile URL. You will need it for your submission email.
 
 Just as a reminder, to find your Codecademy profile URL, while logged into your Codecademy account, navigate to Me in the top right corner. Click Me and it will show a dropdown menu. Click “View my profile”. <img class="alignnone size-full wp-image-3477" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_4.png" alt="HW_Img_4" width="1197" height="444" /> Now you are on your profile page. The link needed will be in your URL bar (this is a link that brings the viewer to your profile where they can see the badges you have earned). <img class="alignnone size-full wp-image-3478" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_5.png" alt="HW_Img_5" width="1140" height="223" /> Copy and paste this link into the body of your email. We aren't done with the homework assignment yet, move on to part two.
-<h2>Part 2</h2>
+## Part 2
 We need some practice creating and saving actual HTML and CSS files.
 
 Create a new folder on your computer.
@@ -168,14 +168,14 @@ With your new style.css, use CSS to do the following:
 	<li>Select the first paragraph by its id. Change its color to the Hex code: #43E660.</li>
 	<li>Select the second paragraph by its class. Change its font-size to 2em. Change its color to #D67220.</li>
 </ul>
-Save and make sure everything shows up properly.  <strong>You will submit this style.css in HW #2 as well.</strong>
+Save and make sure everything shows up properly.  **You will submit this style.css in HW #2 as well.**
 
 Now you can submit your HW. Done!
-<h1>Submission</h1>
+# Submission
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>Email subject line in the following format: <em>HW #2 Firstname Lastname</em></li>
+	<li>Email subject line in the following format: *HW #2 Firstname Lastname*</li>
 	<li>The web address of your Codecademy profile (put this in the body of the email)</li>
-	<li>Attach the <em>style.css</em> you did for Part 2 to the email.</li>
+	<li>Attach the *style.css* you did for Part 2 to the email.</li>
 </ul>
 &nbsp;

@@ -1,27 +1,27 @@
-<h1>Objectives</h1>
+# Objectives
 -Students will apply their knowledge of computing to run through the installation of a LAMP server onto their Raspberry Pi's.
 
 -Students will become familiar with using the Terminal for commands.
 
 - Students will work collaboratively with their partner to troubleshoot any issues that arise during the installation process.
-<h1>The Final Assignment</h1>
+# The Final Assignment
 Today we will continue with the installation of the LAMP servers onto our Raspberry Pi's. Last week you were introduced to the basics in what a server is and how it operates. Today you will extend this knowledge by turning your Raspberry Pi's into servers themselves! This process will require extensive interaction with the Terminal--a necessary skill to have for any aspiring programmer. This assignment will test your knowledge in how to access and alter files, install software packages, and run commands all via the Terminal. Patience and collaboration with your partner are key to getting the assignment done. We will fully complete this assignment in our final lesson, but for today, let us continue forward with the project!
-<h1>Directions</h1>
+# Directions
 We are continuing to follow the lesson plan provided by the Raspberry Pi Foundation to complete this project: https://www.raspberrypi.org/learning/lamp-web-server-with-wordpress/worksheet/. You and your partner must complete each step. We will be stopping periodically as a class to answer any questions and make sure everyone is on track.
-<h1>Homework Assignment</h1>
-<h3>Part A:</h3>
+# Homework Assignment
+### Part A:
 This assignment has introduced you to new types of hardware, software, and new languages that we have not fully discussed during class. Unfortunately we will not have enough time to go through each topic extensively in class, so it is up to you to tackle these new topics on your own.
 
 For Part A of this assignment, you will be required to type a one paragraph (5-10 sentences) of one of the following 5 topics. Feel free to choose any you like. For whatever topic you do choose, however, you must answer its subsequent questions.
 <ul>
-	<li><strong>Servers:</strong> What are the different types of servers? What do they do? How do servers differentiate from personal computers?</li>
-	<li><strong>PHP Language:</strong> What does PHP stand for? What is this language used for? How does it differ from Python? Name 2-3 websites that use this language.</li>
-	<li><strong>APACHE Software:</strong> What does this software package provide? Why is it so popular? Name 2-3 projects that employ/have emerged from this software.</li>
-	<li><strong>MYSQL:</strong> What does MYSQL stand for? What is it used for? Name 2-3 websites that use it.</li>
-	<li><strong>Wordpress:</strong> What is Wordpress? What services does it provide? What are some of the reasons someone might use Wordpress to create their website?</li>
+	<li>**Servers:** What are the different types of servers? What do they do? How do servers differentiate from personal computers?</li>
+	<li>**PHP Language:** What does PHP stand for? What is this language used for? How does it differ from Python? Name 2-3 websites that use this language.</li>
+	<li>**APACHE Software:** What does this software package provide? Why is it so popular? Name 2-3 projects that employ/have emerged from this software.</li>
+	<li>**MYSQL:** What does MYSQL stand for? What is it used for? Name 2-3 websites that use it.</li>
+	<li>**Wordpress:** What is Wordpress? What services does it provide? What are some of the reasons someone might use Wordpress to create their website?</li>
 </ul>
-<em>SUBMISSION: Please type your response and send me the assignment in a PDF file to the raspberry pi email address. </em>
-<h3>Part B:</h3>
+*SUBMISSION: Please type your response and send me the assignment in a PDF file to the raspberry pi email address. *
+### Part B:
 Your final task to complete in CodeAcademy is "Unit 9: Exam Statistics".
 
 The assignment prior to this one, "Practice Makes Perfect" can be completed to make up any missed homework assignments/points you have lost in this lab. It is not mandatory to complete.

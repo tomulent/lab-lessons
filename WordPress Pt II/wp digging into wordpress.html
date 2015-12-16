@@ -5,7 +5,7 @@ The first half of this quarter is going to be spent getting you comfortable with
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 <ul>
 	<li><a href="http://easywpguide.com/" target="_blank">Easy WP Guide</a></li>
 	<li><a href="http://labs.everettprogram.org/classes/web-design/installing-wordpress/" target="_blank">Installing WP Manually</a></li>
@@ -15,9 +15,9 @@ The first half of this quarter is going to be spent getting you comfortable with
 [/one_third]
 
 [toggle title="Being an Awesome Hacker"]
-<h1>Being an Awesome Hacker</h1>
+# Being an Awesome Hacker
 We don't have enough time to make you into real web developers or designers so we will get you far enough so that you can learn on your own and have the confidence to fiddle around with websites in ways you see fit.
-<h2>Real World Example</h2>
+## Real World Example
 Child themes allow you to make tweaks to an existing theme that you already like. No matter how nice a theme that you bought or got for free is, it will never be 100% the way you want it, and it will never have all the theme options you want in order to get it that way. Below is a series of screen casts taking us through a real world example of how a child theme helped us tweak the Everett Program website.
 
 Just sit back and watch these. They're not a tutorial so don't bother trying to follow along on your site. The idea is for you to just take in a practical example of how a child theme allows you to tweak your site to work to your liking.
@@ -30,11 +30,11 @@ Just sit back and watch these. They're not a tutorial so don't bother trying to 
 [/toggle]
 
 [toggle title="Where is my Content?"]
-<h1>Where Is My Content?</h1>
+# Where Is My Content?
 You remember making a website from scratch way back in Intro to Web Design. You made a bunch of HTML webpages and put them into a directory (folder). People would navigate from one page to another. It was rather straight forward (well, relatively) where your content was. If you have a page called “About” then odds are that you wrote an HTML page called “about.html”.
 
 Let's say you  create an "About" page using WordPress and want to see the HTML file. So you go snooping around in the backend of your WordPress using FTP. Where is the about.html to go with the page called “About” that you just made? It’s not there. The reason for this is that WordPress doesn't work in the same way as the websites we made from scratch.
-<h2>So How Does WordPress Work Then?</h2>
+## So How Does WordPress Work Then?
 Brilliantly, that's how. WP, and all content management systems really, are about separating your website into two things
 <ol>
 	<li>Content (data)</li>
@@ -46,15 +46,15 @@ Think back to Intro to Web Design when you were working with CSS and quickly you
 Internal style is when you put all the CSS in the head of the page</blockquote>
 Say you've got a website containing 3 pages. You've used inline style to make all the paragraphs on each page be blue, meaning you added the style attribute into the opening tag of every single paragraph. Every paragraph on your site is now blue. Great. What if you want them red? Go through and change every single blue paragraph to red. What if you want them to be a different font? Go through and add a new rule to every paragraph. This is infeasible.
 
-The solution of course, is just to create an external stylesheet and link it to each page. You separate your website between <strong>content </strong>like words and images and the<strong> rules</strong> that govern how those words and images are displayed.
-<h2>What's This Have To Do With WP?</h2>
+The solution of course, is just to create an external stylesheet and link it to each page. You separate your website between **content **like words and images and the** rules** that govern how those words and images are displayed.
+## What's This Have To Do With WP?
 I was getting to that. The ethic that drives the thinking of content management is the same as the ethic that saves us time when coding websites from scratch: You enter your data once and then create rules on how to display it later.
 
 As we've established, when you use WordPress to create the page "About" it does not create an "about.html" file. When you think about it, things would get really cluttered if that's how it worked. If your site had 50 pages, it would have 50 HTML files. Also, don't forget about all the revisions. As I write this lesson there are already 6 revisions. I have pages containing 50+ revisions. If WP made a new HTML file with every revision, then you'd eventually be clogging up your directory with hundreds and thousands of files! WordPress offers a more elegant solution.
 
-WordPress stores all your content in a "<strong>database</strong>" and then calls up the necessary parts whenever a request for a particular page is made. A database is like a set of interconnected spreadsheets containing every piece of content you produce. Your theme is a set of instructions called "<strong>templates</strong>" on how that content should be displayed.
+WordPress stores all your content in a "**database**" and then calls up the necessary parts whenever a request for a particular page is made. A database is like a set of interconnected spreadsheets containing every piece of content you produce. Your theme is a set of instructions called "**templates**" on how that content should be displayed.
 
-In the coming lessons we'll delve deeper into just how the <strong>database </strong>and <strong>templates </strong>work together to create your site, but for now just try and understand that the underlying ethic of WordPress, and web design in general, is to separate your <strong>content</strong> from the <strong>rules</strong> used to display it.
+In the coming lessons we'll delve deeper into just how the **database **and **templates **work together to create your site, but for now just try and understand that the underlying ethic of WordPress, and web design in general, is to separate your **content** from the **rules** used to display it.
 
 These screencasts walk us through an example of what was just explained, so grab some popcorn and watch.
 <iframe src="//www.youtube.com/embed/JDmAUpQJXgM" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
@@ -62,9 +62,9 @@ These screencasts walk us through an example of what was just explained, so grab
 [/toggle]
 
 [toggle title="Brushing Up on CSS"]
-<h1>Brushing Up On CSS</h1>
+# Brushing Up On CSS
 The homework, and life, will require you to do a fair amount of CSS manipulation. We recommend checking out the previous CSS lessons from the Beginning Web Lab, or do the CSS track on <a href="http://www.codecademy.com/tracks/web" target="_blank">Codecademy Web Lessons</a>. But here's just a refresher.
-<h2>Syntax</h2>
+## Syntax
 CSS, like all languages, has rules for how it must be displayed. CSS goes like this
 <code>
 selector {
@@ -74,11 +74,11 @@ property: value;
 </code>
 
 If you're working with CSS and your changes don't seem to be applying, a lot of the time you can look at your syntax and see that you forgot a semi-colon or bracket.
-<h2>Hex Colors</h2>
+## Hex Colors
 The homework will have you changing the color of a lot of stuff and asking you to use "hex codes". This just means that when you specify the color value of something, you use a string of letters and numbers preceded by a pound sign like "#6fa062" rather than a word like "Everett Green".
 
 Hex codes are a way of representing colors with exact numbers rather than names. They're called 'hex' because they're represented by 6 digits and because the numbers use a hexadecimal base rather than decimal. There are 16 numbers per digit rather than 10, which means you can count higher.
-<h2>Spacing</h2>
+## Spacing
 CSS uses the "Box Model" to determine the dimensions of an element. Say you have a paragraph, now picture a series of boxes around it. Here's a diagram:
 
 <img class="aligncenter size-full wp-image-2617" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/css_box_model.gif" alt="css_box_model" width="391" height="250" />
@@ -88,7 +88,7 @@ CSS uses the "Box Model" to determine the dimensions of an element. Say you have
 	<li>Border: The area framing the content</li>
 	<li>Margin: The invisible area around the whole element and is the space between elements</li>
 </ul>
-<h2>Divs</h2>
+## Divs
 The assignment will explain divs better than I can here since they're somewhat abstract, but here's a brief explanation.
 
 &lt;div&gt; is an HMTL element that acts as a container for other elements. It has no border, margin, padding, color, or properties of its own until you change them with CSS. Think divs as a way of grouping sections of a page together and then applying rules to them at large.
@@ -98,47 +98,47 @@ The assignment will explain divs better than I can here since they're somewhat a
 <h2 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h2>
 A new lab means a new WordPress instance!
 
-Using the 5 minute install method, install a new WordPress instance at <em>yourdomain/wordpresspart2</em>
+Using the 5 minute install method, install a new WordPress instance at *yourdomain/wordpresspart2*
 
 After you have it installed:
 <ul>
 	<li>delete the sample page under Pages</li>
 	<li>delete the Hello World! post under Posts</li>
-	<li>Install the WordPress theme <strong>Twenty Twelve</strong>.</li>
+	<li>Install the WordPress theme **Twenty Twelve**.</li>
 </ul>
 Before we move on, download the <a href="http://labs.everettprogram.org/wp-content/uploads/wp2_lesson1_files1.zip">wp2_lesson1_files1</a> zip file. We will use these files in the next few steps in Part 1.
 
 Next, create a new page:
 <ul>
-	<li>Title it <strong>Home</strong>.</li>
-	<li>For the body text, use the text in the file that I provide you in the <strong>Testpage.txt</strong>.</li>
+	<li>Title it **Home**.</li>
+	<li>For the body text, use the text in the file that I provide you in the **Testpage.txt**.</li>
 	<li>To download and save this file, right click the link and hit “Save link as” and save it as testpage.txt. Just copy the text from the document and paste it in the body of the Home page.</li>
 </ul>
 Next, create a new page:
 <ul>
-	<li>Title it <strong>Blog</strong>.</li>
+	<li>Title it **Blog**.</li>
 	<li>Leave the body text blank.</li>
 </ul>
 Next, create a post:
 <ul>
-	<li>Title it <strong>Doing Well in Lab</strong></li>
-	<li>For the body text, use the text in the file that I provide you in the <strong>Doing-well.txt</strong>.</li>
+	<li>Title it **Doing Well in Lab**</li>
+	<li>For the body text, use the text in the file that I provide you in the **Doing-well.txt**.</li>
 	<li>To download and save this file, right click the link and hit “Save link as” and save it as doingwell.txt. Just copy the text from the document and paste it in the body of the Doing Well in Lab post.</li>
 </ul>
-<strong>Create a custom menu. Add both pages to the custom menu.</strong>
+**Create a custom menu. Add both pages to the custom menu.**
 
-<strong>Under Appearance, go to Customize and set the Home page as the Front page and set the Blog page as the Posts page.</strong>
+**Under Appearance, go to Customize and set the Home page as the Front page and set the Blog page as the Posts page.**
 <h2 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h2>
 We need to refresh ourselves on CSS.
 
-Download the <a href="http://labs.everettprogram.org/wp-content/uploads/wp2_lesson1_files2.zip">wp2_lesson1_files2</a> zip file. It contains an HTML and CSS file. You don’t need to make any changes to the HTML file. You will make changes to the style.css file. Directions for what changes to make <strong>are comments within the style.css file</strong>.
-<h5><span style="font-size: 1.5em; line-height: 1.5em;">Tips for Doing This Assignment</span></h5>
+Download the <a href="http://labs.everettprogram.org/wp-content/uploads/wp2_lesson1_files2.zip">wp2_lesson1_files2</a> zip file. It contains an HTML and CSS file. You don’t need to make any changes to the HTML file. You will make changes to the style.css file. Directions for what changes to make **are comments within the style.css file**.
+##### Tips for Doing This Assignment
 A lot of times, you’ll be asked to change fonts or colors. Refer to <a title="this page" href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank">this page</a> for fonts and use <a title="this tool" href="http://www.colorpicker.com/" target="_blank">this tool</a> to pick hexadecimal colors. You must use hex colors for this assignment, no words.
 
 If you don’t remember how to alter a given property, just google that property. 99 times out of 100 the very first result will be the W3Schools page on that property.
 <h2 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h2>
-Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the web address of your new WP instance, <em>yourdomain/wordpresspart2</em>. Attach the edited style.css in the email.
+Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the web address of your new WP instance, *yourdomain/wordpresspart2*. Attach the edited style.css in the email.
 
-Your email subject line needs to be in the format: <em>HW#1 Firstname Lastname</em>.
+Your email subject line needs to be in the format: *HW#1 Firstname Lastname*.
 
 If your assignment is late or a resubmission, add it to the end of the email subject line.

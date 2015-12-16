@@ -1,4 +1,4 @@
-<h1 id="midterm">Midterm</h1>
+# Midterm
 You will be using the _s (pronounced “Underscores”) theme framework as your parent theme and create a child theme for it. Usually, you wouldn’t use the _s theme framework as a parent theme. Normally, it is used as a foundation to build WordPress themes. For this midterm, go along with it.
 
 Make sure you don’t miss something by reading each section.
@@ -16,18 +16,18 @@ Use your searching skills for this. If you come across something you don’t kno
 Take a look at the mini help section:
 [toggle title="Help Section"]
 <h2 id="midterm-help-section"><a class="headeranchor-link" href="#midterm-help-section" name="user-content-midterm-help-section"></a>Midterm Help Section</h2>
-<h1>A Note on Clutter</h1>
+# A Note on Clutter
 As we've mentioned before, you're child theme is only for changes. Everything in your stylesheet is there because it's altering something. Copypasting code from Firebug is a useful way to figure out what you need to change, but you need to delete all the superfluous code. You will be penalized for superfluous code.
-<h1></h1>
-<h1 id="help">Things To Help You in This</h1>
+# 
+# Things To Help You in This
 Here's some general tips. Please, please, please, seek help for this. Utilize office hours, work together, whatever. You're not alone.
-<h2>Did I Do This Right?</h2>
+## Did I Do This Right?
 We get a lot of people asking if they’ve done this or that correctly, but the truth is you don’t typically need us to answer that. If the requirement is “Change the font of the site-title” then all you need to do is look at your site and ask yourself the question, “Is the site-title’s font different after I inserted that CSS?” If the answer is yes, then you did it right. You can check basically all your work in this manner. There is no ambiguity here.
-<h2>The Coding</h2>
+## The Coding
 We highly recommend you revisit the Codecademy lesson “<a title="C is for Cascading" href="http://www.codecademy.com/courses/web-beginner-en-WF0CF/1/1#" target="_blank">C is for Cascading</a>“. It helps a lot in understanding how elements cascade into one another.
 
 Here are some basic things to remember about CSS:
-<h3>Syntax</h3>
+### Syntax
 <code> selector {
 property: value;
 property: value;
@@ -35,7 +35,7 @@ property: value;
 </code>
 
 In other words, you start with the thing you want to change and then say how you want to change it.
-<h3>Selectors</h3>
+### Selectors
 How do you know what the right selector is? In other words, how do you know the name of the thing you want to style? Just look at the source code or use Firebug to identify the thing you want to change. Let’s say you want to know what to use for the selector to change the font of the site title of your site. You look at the code and see.
 
 <code>
@@ -47,8 +47,8 @@ There’s the thing to use right there. The heading that makes the site title ha
 
 <code>&lt;h1 class="site-title"&gt;</code>
 
-as your selector. Always remember:<strong> Use a “.” to select for classes and a “#” to select for id.</strong>
-<h3>Cascading</h3>
+as your selector. Always remember:** Use a “.” to select for classes and a “#” to select for id.**
+### Cascading
 The first C in CSS stands for “Cascading”. That means you are able to make changes in things nested inside other things. Take the example of site title up there. The site title isn’t just an &lt;h1&gt;. It’s also a link to your homepage. That means that there’s an &lt;a&gt; nested within it. You’ve probably noticed by now that if you tried to change the color of the site title, then just selecting “.site-title” won’t do it. You have to be more specific, but how? The &lt;a&gt; doesn’t have an id or class for us to select. That’s where the cascading nature of CSS comes in. You would write:
 
 <code>
@@ -66,7 +66,7 @@ color: Thistle;
 </code>
 
 Your basically saying, “I want to go to the main navigation, into the unordered list you find there, into the list items that make up that list, and finally into the links that are printed on the screen and change their color.”
-<h2>The :hover Property</h2>
+## The :hover Property
 You don’t need to know that much about :hover. Just know that it’s a thing called a “pseudo class” and that it makes the rules you write take effect when you hover your mouse over them. You’ve used :hover in conjunction with a before.
 
 <code>
@@ -75,12 +75,12 @@ color: lemonchiffon;
 }
 </code>
 <div id="hoverexample"><a>That would make it so you when you mouse over a link, it will turn a different color. You can actually use :hover on any element. If you feel like it, you can apply it to your paragraphs and make them turn a different color (or anything else) when you put your mouse on them. Mouseover this paragraph and see it in action</a></div>
-<h2>Finding the &lt;div&gt;’s in the Template Files</h2>
+## Finding the &lt;div&gt;’s in the Template Files
 Just search the document for the id or classes you’re looking for. No need to over think it.
 [/toggle]
 [toggle title="Part 1"]
 <h1 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h1>
-We need a new WordPress instance. Using the 5 minute install method, install a new WordPress instance at <em>yourdomain/wpmidterm</em>.
+We need a new WordPress instance. Using the 5 minute install method, install a new WordPress instance at *yourdomain/wpmidterm*.
 
 After you have it installed:
 <ul>
@@ -90,29 +90,29 @@ After you have it installed:
 </ul>
 Next, create a new page:
 <ul>
-	<li>Title it <strong>Home</strong>.</li>
-	<li>For the body text, use the html provided in this <a href="http://labs.everettprogram.org/wp-content/uploads/testpage.txt">text file</a> Make sure the WordPress page editor is in <strong>text</strong> mode when copying and pasting this html.</li>
+	<li>Title it **Home**.</li>
+	<li>For the body text, use the html provided in this <a href="http://labs.everettprogram.org/wp-content/uploads/testpage.txt">text file</a> Make sure the WordPress page editor is in **text** mode when copying and pasting this html.</li>
 </ul>
 Next, create a new page:
 <ul>
-	<li>Title it <strong>Blog</strong>.</li>
+	<li>Title it **Blog**.</li>
 	<li>Leave the body text blank.</li>
 </ul>
 Next, create a post:
 <ul>
-	<li>Title it <strong>Midterm Post</strong>.</li>
+	<li>Title it **Midterm Post**.</li>
 	<li>For the body text, answer the following questions in your own words:</li>
 	<li>What is the purpose of creating a child theme?</li>
 	<li>What is the purpose of functions.php when creating a child theme?</li>
 	<li>How does WordPress serve up HTML to a web browser without having any HTML files in a theme?</li>
 </ul>
-<strong>Create a custom menu. Add both pages to the custom menu.</strong>
+**Create a custom menu. Add both pages to the custom menu.**
 
-<strong>Under Appearance, go to Customize and set the Home page as the Front page and set the Blog page as the Posts page.</strong>
+**Under Appearance, go to Customize and set the Home page as the Front page and set the Blog page as the Posts page.**
 [/toggle]
 [toggle title="Part 2"]
 <h1 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h1>
-Make a child theme for the _s theme (the parent theme). Give the child theme folder the name, <strong>underscores-child</strong>.
+Make a child theme for the _s theme (the parent theme). Give the child theme folder the name, **underscores-child**.
 [/toggle]
 [toggle title="Part 3"]
 <h1 id="part-3"><a class="headeranchor-link" href="#part-3" name="user-content-part-3"></a>Part 3</h1>
@@ -123,7 +123,7 @@ You are responsible for making the following changes to the following things:
 <h3 id="basic-elements"><a class="headeranchor-link" href="#basic-elements" name="user-content-basic-elements"></a>Basic elements</h3>
 <h4 id="h1-h6"><a class="headeranchor-link" href="#h1-h6" name="user-content-h1-h6"></a>h1-h6</h4>
 <ul>
-	<li>Start big and then evenly decrease both the size and top/bottom margins of each successive heading. <strong>To clarify:</strong> You are giving each heading a new size and top/bottom margin</li>
+	<li>Start big and then evenly decrease both the size and top/bottom margins of each successive heading. **To clarify:** You are giving each heading a new size and top/bottom margin</li>
 	<li>change font and color of each</li>
 </ul>
 <h4 id="p"><a class="headeranchor-link" href="#p" name="user-content-p"></a>p</h4>
@@ -207,8 +207,8 @@ This is a professional theme, make it look like it. We don’t want some blank r
 <h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>The email subject line in the following format: <em>Midterm Firstname Lastname</em>.</li>
-	<li>The web address of your WordPress instance <em>yourdomain/wpmidterm</em>.</li>
+	<li>The email subject line in the following format: *Midterm Firstname Lastname*.</li>
+	<li>The web address of your WordPress instance *yourdomain/wpmidterm*.</li>
 	<li>Download a copy of your child theme, put it in a zip file, and attach it to the email. Inside the zip file, it should have all of your PHP template files and your child theme stylesheet.</li>
 </ul>
 </div>

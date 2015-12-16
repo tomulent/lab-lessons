@@ -5,48 +5,48 @@ For the last couple lessons we've been trying to drive home the point that the e
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 [/one_third]
-<h2>Lesson Preparation</h2>
+## Lesson Preparation
 Before you dive into the lesson, we need a clean WordPress slate to start from.
 <ul>
 <ul>
-	<li>Install a new WordPress instance at <em>yourdomain/wplesson4.</em></li>
+	<li>Install a new WordPress instance at *yourdomain/wplesson4.*</li>
 	<li>Leave all the standard pages and posts from the fresh install.</li>
 	<li>Install the Twenty Twelve theme.</li>
-	<li>Create a new page titled <strong>Blog.</strong> Leave the body text blank.</li>
-	<li>Create a new page titled <strong>Home</strong>. In the body text, put "This is the home page".</li>
-	<li>Create a new page titled <strong>About</strong>. In the body text, put your first and last name. Additionally, write a sentence or two about your project.</li>
+	<li>Create a new page titled **Blog.** Leave the body text blank.</li>
+	<li>Create a new page titled **Home**. In the body text, put "This is the home page".</li>
+	<li>Create a new page titled **About**. In the body text, put your first and last name. Additionally, write a sentence or two about your project.</li>
 	<li>Create a custom menu that includes all of these pages, including the default Sample page.</li>
-	<li>Under Appearance, in Customize, set this custom menu as the primary menu. Set the <b>Home</b> page as the front page and <b>Blog </b>page as the Posts page.</li>
+	<li>Under Appearance, in Customize, set this custom menu as the primary menu. Set the **Home** page as the front page and **Blog **page as the Posts page.</li>
 </ul>
 </ul>
 [toggle title="Clarifying Post Types"]
-<h2>Clarifying Post Types</h2>
+## Clarifying Post Types
 In the following lesson, we’re going to make a lot of references to different post types and views. It’s important that we clearly define just what we’re talking about so theres no (ok less) confusion as we move forward.
 
 <iframe src="//www.youtube.com/embed/Qg0Booaid7g" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<h3>Index</h3>
+### Index
 The front page. By default it contains your most recent posts. It is your blog.
-<h3>Single Post</h3>
+### Single Post
 This is when you click on the title of a post and it takes you to a page with just that post on it
-<h3>Archive Page</h3>
+### Archive Page
 When you click on a date or taxonomy (tag/category) it will take you to an archive page for that thing you clicked. For example, let’s say you click on the tag “Puppy”. You will be taken to an archive page containing all the posts tagged with “Puppy”.
-<h3>Search Page</h3>
+### Search Page
 A search page comes up when you search for something. It will typically have the title of each post that came up as a result and an excerpt from that page or post
-<h3>Page Page</h3>
+### Page Page
 A static page that you created. Like a post but not chronological. It’s the kind of thing you would put your “About Us” in.
 
 [/toggle]
 [toggle title="How is a WP Page Put Together?"]
-<h2>How is a WP Page Put Together?</h2>
+## How is a WP Page Put Together?
 WordPress uses "templates" to put together a pages.
 
 <iframe src="//www.youtube.com/embed/EikDT84yBIc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 [/toggle]
 [toggle title="Anatomy of a Page"]
-<h2>Anatomy of a Page</h2>
+## Anatomy of a Page
 <iframe src="//www.youtube.com/embed/GPN-NSJ9-Bg" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 One way of gaining understanding how something works is to smash it to bits and then put the pieces back together. This is more or less how computers are made. We won’t do anything as drastic, but we will bust up our sites a bit. Go to your homepage, for me it’s “brendinnye.me/wplesson4”.  You’ll see some basic page parts. For your convenience, I’ve labeled most of them.
 
@@ -56,7 +56,7 @@ Here is the main part
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-2.png"><img class="alignnone size-full wp-image-2162" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/With-Style-2.png" alt="With-Style-2" width="243" height="582" /></a>
 
-Very simple, very straight forward. It’s very easy to see what’s on the page. What happens when we mess with things? Go to your child theme directory for <em>yourdomain/wplesson4</em> and rename your functions.php file to functions1.php. This will basically unlink the parent stylesheet from the website. <strong><em>Remember at the end of the lesson to change the name of the functions.php file back.</em></strong> Refresh your page and see what’s up. It’s grotesque isn’t it? There are a couple things to note about this:
+Very simple, very straight forward. It’s very easy to see what’s on the page. What happens when we mess with things? Go to your child theme directory for *yourdomain/wplesson4* and rename your functions.php file to functions1.php. This will basically unlink the parent stylesheet from the website. <strong>*Remember at the end of the lesson to change the name of the functions.php file back.*</strong> Refresh your page and see what’s up. It’s grotesque isn’t it? There are a couple things to note about this:
 
 Nothing is gone. Take note that you’re looking at a bunch of HTML elements much like what you were producing back in intro to web design. Look carefully and you’ll notice that all the elements are still there. It’s all just arranged in a different way.
 
@@ -69,17 +69,17 @@ First half of the page
 <dl id="attachment_833"><dt><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-2.png"><img class="alignnone size-full wp-image-2165" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/No-Style-2.png" alt="No-Style-2" width="356" height="525" /></a></dt></dl>What we can take away from this weird thing I’ve had you do? Not much at the moment, but it will come in handy later. Ok, one thing we can take away is that the page is built from the top down, just like you would when hard coding an HTML page. But as we found earlier, there are no HTML pages anywhere in our WP folder. Instead, the pages are built from individual parts every time you load a page. This happens thanks to PHP.
 [/toggle]
 [toggle title="PHP and Template Files"]
-<h3>What is PHP?</h3>
+### What is PHP?
 PHP stands for “PHP: Hypertext Preprocessor”. The inventor had a sense of humor. PHP is what we call a “Server Side Scripting Language”.
-<h3>What Does “Scripting Language” Mean?</h3>
+### What Does “Scripting Language” Mean?
 Scripting is a way of saying “telling the computer to do something”. We can tell it to do some math, print out some text, or call something out of a data base. Javascript is a very popular Client Side Scripting Language. That means that when it’s embedded in a webpage, then it tells the browser to do stuff (perform math, create alerts, etc.). With Server Side Scripting Language all the stuff is done on the server before the webpage is sent to your browser.
 
 In the case of WordPress, PHP tells the server to generate some HTML depending on what page we’re on. If you look at your WP directory, then you will see a bunch of php files. These are essentially the instructions that the server uses to construct any given WordPress page.
-<h3>Building a Single Post Page</h3>
-For simplicity purposes, let’s look at how a single post page gets built. Click on the heading of “Hello World” to get to an individual post page (you need to open your website <em>yourdomain/wplesson4</em> in a web browser). In a new tab, using CPanel, go to the Twenty Twelve theme folder for <em>yourdomain/wplesson4</em>.  The file “single.php” is what’s used to built single post pages, so open it up with the Code Editor tool.
+### Building a Single Post Page
+For simplicity purposes, let’s look at how a single post page gets built. Click on the heading of “Hello World” to get to an individual post page (you need to open your website *yourdomain/wplesson4* in a web browser). In a new tab, using CPanel, go to the Twenty Twelve theme folder for *yourdomain/wplesson4*.  The file “single.php” is what’s used to built single post pages, so open it up with the Code Editor tool.
 
 Don’t Panic! This will be confusing and you won’t understand most of it. That is normal. You’re not in a PHP class and you’re not expected to become PHP coders. Even if you don’t get 99% of what you see, you’re still getting 1% and that’s something to be proud of.
-<h3>single.php</h3>
+### single.php
 Immediately, you’ll see some grey text. This is text that’s been commented out and is for your benefit.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/single-php-1-10.png"><img class="alignnone size-full wp-image-2166" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/single-php-1-10.png" alt="single-php-1-10" width="455" height="192" /></a>
@@ -87,7 +87,7 @@ Immediately, you’ll see some grey text. This is text that’s been commented o
 See how they give you a helpful little explanation of what this file does? That was nice of them. We see our first PHP function start on line one with “”. That is instructions to, well, get the header. The header, in the context of WP, is the area of the webpage that contains the &lt;head&gt; section, the site title and description, and the nav menu. So when the PHP function runs, it’s basically saying, “Get the &lt;head&gt; section, the site title, the site description, and the nav menu. Then we can make the rest of the page.”
 
 You’re about to get mad at me. We shouldn’t be in single.php. We jumped the gun a little. The header gets built first, so look for the file “header.php” and open it.
-<h3>header.php</h3>
+### header.php
 Sorry for jerking you around. Anyway, now that you’ve got header.php open, you’ll see a whole bunch of incomprehensible code. What’s it all mean? We can’t go through every line but we can identify a few parts. Look on line 38. It starts with &lt;h1&gt;
 That’s straight forward enough. That’s something you could do. It’s the opening tag for a size one heading and they’ve given it the class “site-title”. If you inspect the site title using Firebug, then you’ll see it has the class “site-title”. Naturally, what should follow is the title of our site, in my case Donkey. What do you see after it?
 
@@ -108,7 +108,7 @@ Calls up the website’s title.
 That’s how it’s done. Basically the same thing happens on the next line with the site description, and the same thing a few lines down with the navigation menu, and a few lines below that for the header image if you have one.
 
 Why all this crazy PHP, you ask? I answer with, How else could we do it? Twenty Twelve is a generic theme. It comes stock with every installation of WordPress and is identical for everyone who uses it. No two people have the same website, but there are 10,000 people right now who have the same theme. Without PHP, the theme would have to be fundamentally customized for each individual website. It might not seem like a big deal right now when all we’re talking about is something as simple as the site title, but it has big implications when you start thinking about your post content, or links, or all the other things that make up your site. Speaking of post content, let’s go back to single.php.
-<h3>content.php</h3>
+### content.php
 We won’t go through every line here. You can download one of our marked up versions of Twenty Twelve if you want to see notes and explanatory comments out the wazoo. We’re just going to look at the essentials.
 
 Starting on line 19 of content.php:
@@ -130,7 +130,7 @@ Back to single.php AgainLine 19-23 calls up the “previous post/next post” li
 There you have it! That wasn't so complicated was it?
 [/toggle]
 [toggle title="WordPress Databases"]
-<h1>So That’s How it Was Built, But Where Does the Data Come From?</h1>
+# So That’s How it Was Built, But Where Does the Data Come From?
 Good question. We just described in painful detail how a page is put together, but it still doesn’t answer the question of where our posts and pages are actually stored. Search all through your root directory and you’ll never find the post “Hello World” (for more on this, check out the screencasts "How is WP Different from HTML Sites" Parts <a href="http://www.youtube.com/watch?v=Gr9G9lj290Q" target="_blank">1</a> and <a href="http://www.youtube.com/watch?v=PhYplaD4gGY" target="_blank">2</a>). Instead we had all these PHP functions build the post. The actual content of that post is found in your MySQL database. Remember when we created the database and user when we installed WordPress manually? No? If you want to know how, check out this <a href="http://www.youtube.com/watch?v=gsfzF0dGzB8" target="_blank">screencast</a>. When we did that, we were creating the place where all our data would go.
 
 This screencast will walk you through the relationship between the database and your WordPress site
@@ -138,7 +138,7 @@ This screencast will walk you through the relationship between the database and 
 <iframe src="//www.youtube.com/embed/a8_h6hmPCOQ" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 <iframe src="//www.youtube.com/embed/IJJ_k__E-JM" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<h2>Text Walk Through of WordPress Databases</h2>
+## Text Walk Through of WordPress Databases
 Consider again our first post, “Hello World”.
 
 Here is the main part
@@ -165,12 +165,12 @@ We could spend a year talking about this, but we’re just going to leave at at 
 If you want to play around in your database, please do so carefully. Backup before you do so, and keep in mind that you may break everything. If you must, consider using a 3rd party database client. They make editing easier.
 
 [/toggle]
-<h1>Creating Your Own Template Files in Your Child Theme</h1>
+# Creating Your Own Template Files in Your Child Theme
 The HW is going to have you messing around in the template files we just discussed. As we discussed last week, child themes offer a layer of protection between your parent theme and the edits we make. You’ve seen this in action with your style sheets. Child themes also allow us to make custom template files without worrying about screwing anything up.
-<h2>Adding Template Files to Your Child Theme</h2>
+## Adding Template Files to Your Child Theme
 Simply duplicate the template file you want from your parent theme and place it in your child theme. Make sure to remove the word "copy" from the end of the duplicate's name. This will override the parent theme’s template file and call up yours instead. If you mess up a template file really badly, then you can just throw it away and try again wit a clean version!
 [toggle title="Code Notes"]
-<h1>Code Notes</h1>
+# Code Notes
 We've developed a helpful way for you to reveal page elements. Basically, you go through template files to find where important things are generated and then insert a piece of text beneath it so that when you load the page, you'll see know what you're looking at.
 
 It's best to make them unobtrusive, so give them a custom css class. Here's an example of the HTML you would insert into your template file underneath the site-description
@@ -183,52 +183,52 @@ Then in your stylesheet, make a CSS rule to make the text small, monospace font,
 
 <iframe src="//www.youtube.com/embed/EKijS3psiIc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 [/toggle]
-<h1>Homework</h1>
-All of this homework will be done on your WordPress instance located at <em>yourdomain/wplesson4</em>.
-<h2>A note on Developer Tools Copypasta</h2>
-Often, students forget something important to using child themes: Simplicity. Many people use the method of figuring out how to make a desired change by using developer tools, then copy/pasting the CSS into their stylesheets. This is a great way to learn, but this method carries baggage with it. Often you paste several lines of CSS when you only needed to change one thing. You need to delete the stuff that you didn't change. Child themes are <strong>only for changes</strong><strong>. </strong>This is an important concept to understand and for that reason, <strong>any submitted style sheets containing superfluous, unaltered CSS will receive a penalty</strong>.
+# Homework
+All of this homework will be done on your WordPress instance located at *yourdomain/wplesson4*.
+## A note on Developer Tools Copypasta
+Often, students forget something important to using child themes: Simplicity. Many people use the method of figuring out how to make a desired change by using developer tools, then copy/pasting the CSS into their stylesheets. This is a great way to learn, but this method carries baggage with it. Often you paste several lines of CSS when you only needed to change one thing. You need to delete the stuff that you didn't change. Child themes are **only for changes****. **This is an important concept to understand and for that reason, **any submitted style sheets containing superfluous, unaltered CSS will receive a penalty**.
 
 [toggle title="HW Part 1: Setup New Child Theme"]
 
-Create a child theme for the Twenty Twelve theme on <em>yourdomain/wplesson4</em>.
+Create a child theme for the Twenty Twelve theme on *yourdomain/wplesson4*.
 
 [/toggle]
 
 [toggle title="HW Part 2: Revealing the Page Components"]
-<h2>Part II: Revealing the Page Components</h2>
-<h3>Add Code Notes</h3>
-<strong>Create copies of the below template files</strong> and put them into your child theme folder. This way you can alter them without risking damage to the parent theme and can start over easily if you break everything.
+## Part II: Revealing the Page Components
+### Add Code Notes
+**Create copies of the below template files** and put them into your child theme folder. This way you can alter them without risking damage to the parent theme and can start over easily if you break everything.
 
 Add explanatory code notes below the following page elements. For example, if you're putting a code note under the Site Title, you could write ".site-title" or "This is the Site Title". For your convenience, we list them by php file
-<h3>In header.php</h3>
+### In header.php
 Site Title
 Site Description
-<h3>In content.php</h3>
+### In content.php
 Entry Title (the one that creates a link)
 
 —And—
 
 Entry Title (that doesn’t make a link)
-<h3>In footer.php</h3>
+### In footer.php
 Above the Site Info (where it says “proudly powered by WordPress”)
-<h3>In Sidebar.php</h3>
+### In Sidebar.php
 Above the widget area
-<h2>Style the Notes</h2>
-Create a CSS class to style your notes to make them unobtrusive. Make them a <strong>color</strong> that will stand out, make them have <strong>no margins</strong> on the top and bottom, and make them a <strong>monospace font</strong>.
+## Style the Notes
+Create a CSS class to style your notes to make them unobtrusive. Make them a **color** that will stand out, make them have **no margins** on the top and bottom, and make them a **monospace font**.
 [/toggle]
 [toggle title="HW Part 3: Rearrange the Page Components"]
-<h2>Part III: Rearrange The Page Components</h2>
+## Part III: Rearrange The Page Components
 This theme is your's to screw with. Be brave and take control.
 
-Rearrange the code in the template file so that the navigation menu and site title/description switch places. In other words, the <strong>site navigation</strong> will rest right on top of the <strong>site header</strong>.
-<h2>Style These Components</h2>
-<h3>Navigation Menu</h3>
-Make sure you're using the <strong>custom menu that you created.</strong>
+Rearrange the code in the template file so that the navigation menu and site title/description switch places. In other words, the **site navigation** will rest right on top of the **site header**.
+## Style These Components
+### Navigation Menu
+Make sure you're using the **custom menu that you created.**
 
-Make the menu items <strong>centered</strong>.
+Make the menu items **centered**.
 
 We also want to tighten things up a bit. Remove the space between the navigation menu and the top of the page div (that's where it turns from grey to white)
-<h3>Site Header</h3>
+### Site Header
 Get rid of the space the top and bottom of the site header.
 
 Change the site title to be right aligned and the site description to be center aligned.
@@ -237,7 +237,7 @@ It should end up looking something like this:
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/example-of-hw-.png"><img class="alignnone size-full wp-image-2172" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/example-of-hw-.png" alt="example of hw" width="1077" height="254" /></a>
 [/toggle]
-<h1>Completeness Checklist</h1>
+# Completeness Checklist
 <ul>
 	<li>Create a child theme for the Twenty Twelve theme.</li>
 	<li>Copy necessary template files into your child theme</li>
@@ -248,10 +248,10 @@ It should end up looking something like this:
 	<li>Style the navigation menu and site header in the specified ways</li>
 	<li>You can check <a href="http://brendinnye.me/wordpresspart2/lesson3">brendinnye.me/wordpresspart2/lesson3</a> for an example</li>
 </ul>
-<h1>Submission</h1>
+# Submission
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>Email subject line in the following format: <em>HW #4 Firstname Lastname</em></li>
-	<li>The web address of your WordPress instance <em>yourdomain/wplesson4</em></li>
+	<li>Email subject line in the following format: *HW #4 Firstname Lastname*</li>
+	<li>The web address of your WordPress instance *yourdomain/wplesson4*</li>
 	<li>Download a copy of your child theme and attach it to your email as a zip file</li>
 </ul>

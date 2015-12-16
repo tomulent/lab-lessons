@@ -1,15 +1,15 @@
-<h2>Contributions tab</h2>
-<h3>Outcome:</h3>
+## Contributions tab
+### Outcome:
 <ul>
 	<li>Understand what CiviContribute does</li>
 	<li>Be able to set up payment processors and contribution pages</li>
 	<li>Be able to record contributions manually through batch data entry</li>
 </ul>
-<h3>What is CiviContribute</h3>
+### What is CiviContribute
 <p style="padding-left: 30px;">CiviContribute is the CiviCRM component that facilitates, manages and keeps track of your organization's monetary flow. According to the CiviCRM <a href="http://book.civicrm.org/user/current/contributions/what-you-need-to-know/">Users Book</a>, "throughout CiviCRM, the term contribution refers to any financial transaction or payment taking place in the system". Besides donations and other monetary supports from your supporters, CiviContribute also integrates with CiviEvent and CiviMembership and helps organizations keeping track of payments such as event fee, registration fee, or membership fees.</p>
 <p style="padding-left: 30px;">CiviContribute connects to the front end of your website in a similar way as CiviEvent. You may set up a "Donate now!" page to generate donations on a daily basis, or you may set up a campaign page to generate funding for events or occasions. For example, the Everett Program students could create campaign pages for their projects for crowdfunding. However, communication with your organization or the org's accountant is highly recommended before start using CiviContribute. According to the <a href="http://book.civicrm.org/user/current/contributions/what-you-need-to-know/">Users Book</a>, in order to efficiently tack contributions, you might want to "write down all the information you want to track about your contributions, including reports (described later in this chapter), then compare your data needs to CiviCRM's predefined fields. An easy way to do this is is to look at the screen for adding a new contribution. A lot of useful functionality is built in to the core contribution fields so there's no point in duplicating them with custom fields, but your organisation may have specific needs that require custom fields. " If your organization uses an accounting system and you want to integrate it with CiviCRM, " you can assign an Accounting Code to each Financial Type [which will be mentioned later in the lesson]" according to the <a href="http://book.civicrm.org/user/current/contributions/what-you-need-to-know/">Users Book</a>.</p>
 
-<h3>Financial Type &amp; Financial Account (written by Thomas)</h3>
+### Financial Type &amp; Financial Account (written by Thomas)
 <p style="padding-left: 30px;">Financial Type Accounts are a new feature of CiviCRM. They allow the money taken in by Civi to be accounted for more thoroughly. When a payment is made, not all of it goes to a single pot. For example, when you pay your student loans each month, part of it goes towards the principal (the original amount loaned) and part goes towards the interest. Same as when your org takes in a $100 donation for a plate at a fancy dinner, it is split into different parts:</p>
 
 <div>
@@ -26,7 +26,7 @@
 <div></div>
 </div>
 </div>
-<h3>Setting Up Your CiviContribute</h3>
+### Setting Up Your CiviContribute
 <div style="padding-left: 30px;">
 
 [toggle title="Payment Processor"]
@@ -43,14 +43,14 @@
 <p style="padding-left: 30px;">Once you are done with the basic information about the Batch, click save and proceed to the next step. You will see columns of different information that you can record. it may not all fit in your browser window.  According to the <a href="http://book.civicrm.org/user/current/contributions/everyday-tasks/">Users Book</a>, These are the columns and what information they are designed to contain:</p>
 
 <ul style="padding-left: 90px;">
-	<li><strong>Amount</strong>: amount of the payment</li>
-	<li><strong>Status</strong>: status of the payment</li>
-	<li><strong>Received – Date and Time</strong>: date and time payment was received</li>
-	<li><strong>Source</strong> : enter text that describes the source of the payment [It's better to state whether its from the campaign page, event, or other occasions, so when you go to individual contacts, you see when and where they make the contribution]</li>
-	<li><strong>Paid by</strong>: enter the type of payment vehicle, e.g. cash, check, EFT, etc.</li>
-	<li><strong>Check Number</strong>: if paid by check</li>
-	<li><strong>Send Receipt</strong>: check the box if you want to send a receipt via email</li>
-	<li><strong>Invoice ID</strong></li>
+	<li>**Amount**: amount of the payment</li>
+	<li>**Status**: status of the payment</li>
+	<li>**Received – Date and Time**: date and time payment was received</li>
+	<li>**Source** : enter text that describes the source of the payment [It's better to state whether its from the campaign page, event, or other occasions, so when you go to individual contacts, you see when and where they make the contribution]</li>
+	<li>**Paid by**: enter the type of payment vehicle, e.g. cash, check, EFT, etc.</li>
+	<li>**Check Number**: if paid by check</li>
+	<li>**Send Receipt**: check the box if you want to send a receipt via email</li>
+	<li>**Invoice ID**</li>
 </ul>
 <p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/contri3.png"><img class="alignnone wp-image-5818 size-full" src="http://labs.everettprogram.org/wp-content/uploads/contri3.png" alt="contri3" width="1222" height="472" /></a></p>
 <p style="padding-left: 30px;">When you're entering contributions, you will be able to match donors to the existing contacts. If your donor is not one of your contacts, you may add them on the spot.</p>
@@ -76,58 +76,58 @@
 [/toggle]
 
 [toggle title="Price Set (Written by Thomas)"]
-<h3 style="padding-left: 30px;">What Are Price Sets</h3>
+### What Are Price Sets
 <p style="padding-left: 60px;">There are many situations in which your org might want to present constituents with an array of different price options. For instance, many orgs employ "Contributor Levels" which rank donors by the amount that they give. Think "Bronze Level, Gold Level, Platinum Level, etc.". It's a simple way of allowing people to feel more special for giving more. Often times, these levels carry with them certain perks, like, donors who give $20 will get a Holiday card signed by the org's founder, or donors who give $1000 will be invited to a special dinner (where they'll be pumped for more donations, but hey, that's philanthropy). Price tiering with increasingly "good" rewards is a very common tactic in crowdfunding.</p>
 <p style="padding-left: 60px;">Take this example from Mou, my favorite markdown app, <a href="https://www.indiegogo.com/projects/mou-1-0-markdown-editor-on-os-x-for-you" target="_blank">crowdfund page</a>. In case you're wondering, Markdown is a simple syntax for formatting.</p>
 <p style="padding-left: 60px;">Creating <code>Price Sets</code> allows you to create this tiered pricing and then insert it to any place you make a donation appeal. The obvious place is your main donation page, but you can also stick it onto event pages and probably some other places.</p>
 
-<h3 style="padding-left: 30px;">Creating Price Sets</h3>
+### Creating Price Sets
 <p style="padding-left: 60px;">Let's go through a somewhat generic example of a nonprofit's standard donation structure. To create a new price set, just go to <code>Contributions &gt; New Price Set</code>. Give it a "Set Name" and pre/post form help if you want.</p>
 
-<h4 style="padding-left: 60px;">Used Form</h4>
+#### Used Form
 <p style="padding-left: 60px;">You'll need to indicate what it's used for:</p>
 
 <ul style="padding-left: 90px;">
-	<li><strong>Event</strong>: If an event your doing requires a ticket price</li>
-	<li><strong>Contribution</strong>: A donation</li>
-	<li><strong>Membership</strong>: a fee to join your organization</li>
+	<li>**Event**: If an event your doing requires a ticket price</li>
+	<li>**Contribution**: A donation</li>
+	<li>**Membership**: a fee to join your organization</li>
 </ul>
 <p style="padding-left: 60px;">As you can see, there are different circumstances in which you'll want to create a set of varrying prices. For this example, we'll be going with <code>Contribution</code>.</p>
 
-<h4 style="padding-left: 60px;">Default Financial Type</h4>
+#### Default Financial Type
 <p style="padding-left: 60px;">Corresponds with the <code>Used For</code> selection. The type of contribution we're going with is "Donation".</p>
 
-<h3 style="padding-left: 30px;">Add Fields</h3>
+### Add Fields
 <p style="padding-left: 60px;">Now that the price set is created, you can start adding prices. The label is the name you decide to give it and the price is...the price. Add how ever many you want by filling in <code>Field Label</code> and <code>Price</code> and hitting <code>Save and New</code>. Once you've added as many donation levels as you want, you can just hit "Save" and your price set is complete!
 <img src="http://labs.everettprogram.org/wp-content/uploads/price-field.png" alt="image" /></p>
 
-<h3 style="padding-left: 30px;">Using Your Donation Price Set</h3>
+### Using Your Donation Price Set
 <p style="padding-left: 60px;">Now that you've created the set, you can summon it up on contribution pages in the "Amounts" tab.</p>
 <p style="padding-left: 60px;">[/toggle]</p>
 
 </div>
-<h3>Creating Contribution Page</h3>
+### Creating Contribution Page
 <p style="padding-left: 30px;">I know you're tired of reading by now, so here is a screencast made by Thomas. The first part will be about setting up a dummy processor, which is part of your homework, and the second part will be setting up a contribution page, which, again, will be part of your homework as well, so please make sure you watch the video!</p>
 <p style="padding-left: 30px;"><iframe src="https://www.youtube.com/embed/Is9ops8VQ64" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 
-<h3>Extra resources</h3>
+### Extra resources
 <ul>
 	<li><a href="http://book.civicrm.org/user/current/contributions/soft-credits/">Soft Credit</a></li>
 	<li><a href="http://book.civicrm.org/user/current/contributions/personal-campaign-pages/">Personal Campaign Page</a></li>
 	<li><a href="http://book.civicrm.org/user/current/contributions/reports-and-analysis/">Reports</a></li>
 </ul>
-<h3>Homework</h3>
+### Homework
 <p style="padding-left: 30px;">This assignment consist three parts. Please follow the instructions below</p>
 <p style="padding-left: 30px;">Part 1: Payment Processors</p>
 <p style="padding-left: 60px;">Follow the screencast, and set up the dummy payment processor (it's the first part of the video).</p>
 <p style="padding-left: 60px;">Make sure the processor is active and default.</p>
 <p style="padding-left: 60px;">For site URLs (all four of them), please use your own website.</p>
-<p style="padding-left: 60px;">Take a screenshot of the page with everything filled out, and name the screenshot:<strong> Lastname_Payment</strong></p>
+<p style="padding-left: 60px;">Take a screenshot of the page with everything filled out, and name the screenshot:** Lastname_Payment**</p>
 <p style="padding-left: 30px;">Part 2: Contribution Page</p>
 <p style="padding-left: 60px;">Set up a contribution page. This part is similar to last week's . Make sure you have the following fields filled out:</p>
-<p style="padding-left: 60px;"><strong>Title Tab:</strong> Title, Financial Type, Introductory Message, Use a confirmation Page, Allow sharing through Social Media, and the event should be Active.</p>
-<p style="padding-left: 60px;"><strong>Amounts Tab: </strong>Execute real-time monetary transaction, Set the dummy processor as the payment processor, Contribution Amounts section enabled, Allow other amounts (minimum=1, maximum=100), set at least three contribution options.</p>
-<p style="padding-left: 60px;"><strong>Profile Tab: </strong>Add the "New individual profile", Edit the profile to include "Phone", "Gender", and "Preferred communication method".</p>
+<p style="padding-left: 60px;">**Title Tab:** Title, Financial Type, Introductory Message, Use a confirmation Page, Allow sharing through Social Media, and the event should be Active.</p>
+<p style="padding-left: 60px;">**Amounts Tab: **Execute real-time monetary transaction, Set the dummy processor as the payment processor, Contribution Amounts section enabled, Allow other amounts (minimum=1, maximum=100), set at least three contribution options.</p>
+<p style="padding-left: 60px;">**Profile Tab: **Add the "New individual profile", Edit the profile to include "Phone", "Gender", and "Preferred communication method".</p>
 <p style="padding-left: 60px;">Save the contribution page and make sure the link at the bottom of the Title tab is working.</p>
 <p style="padding-left: 30px;">Part 3: Batch Data Entry</p>
 <p style="padding-left: 60px;">You just received the following five contributions! Please record them in your CiviCRM by using the Batch Data Entry (Name it HW 8). These contributions are all donations, payed in cash, and completed (hint: that's the status) today (05/21) at 6pm</p>
@@ -136,9 +136,9 @@
 <p style="padding-left: 60px;">Stannis Baratheon donated $180</p>
 <p style="padding-left: 60px;">Petyer Baelish donated $580</p>
 <p style="padding-left: 60px;">Robb Stark donated $400</p>
-<p style="padding-left: 60px;">Validate and process the batch entry. Find the batch in "Closed Batches", click on "Transactions" on the right, and take a screenshot of all the transactions, name it: <strong>lastname_Batch</strong></p>
+<p style="padding-left: 60px;">Validate and process the batch entry. Find the batch in "Closed Batches", click on "Transactions" on the right, and take a screenshot of all the transactions, name it: **lastname_Batch**</p>
 
-<h3>Submission</h3>
+### Submission
 <p style="padding-left: 30px;">Please make sure you include the following items in your submission</p>
 
 <ul>

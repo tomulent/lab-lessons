@@ -1,5 +1,5 @@
 Sometimes it's hard to connect the more technical aspects of what you learn in lab. This is going to show you that the applications of any specific concept may not be immediately apparent, but they are there if you try.
-<h2>How I  Saved A Lot of Time And Energy</h2>
+## How I  Saved A Lot of Time And Energy
 When you signed up for the class we had you submit a writing sample, a survey, and a picture. It would be horrible to sort through if they were all in one folder so we wanted an individual folder for every person enrolled. There being upwards of 50 people, you can imagine how tedious that would be to create a folder for every single person.
 
 To get a folder in the format "Last Name, First Name" You would have to:
@@ -10,13 +10,13 @@ To get a folder in the format "Last Name, First Name" You would have to:
 	<li>Repeat</li>
 </ol>
 That doesn't sound like much, but do it 50 times and it's pretty annoying. Why can't we do it all at once?
-<h1>The Terminal</h1>
+# The Terminal
 Your computer uses a Graphical User Interface (GUI) to make it analogous to a physical desktop complete with folders and files and such. In the olden days, you would do everything via a "Command Line Interface" (CLI). That means instead of double clicking on a folder called "30 A Students" to open it, you would need to write a command into the computer to make it perform that action. We won't get into all the commands that there are to execute, but suffice it to say, anytime you do anything on the computer (moving files, creating folders, deleting things, etc.) the computer is executing a command.
 
 Using a GUI is much faster and more intuitive for individual tasks, but what if you want to do the same thing over and over again, say, 50 times? Like make 50 folders?
-<h2>A Comparison</h2>
+## A Comparison
 Let's see what it looks like to make a folder using the GUI vs. the CLI
-<h3>GUI</h3>
+### GUI
 I start in a folder called "Example" and go to "File &gt; New Folder"
 
 <img class="aligncenter size-full wp-image-3619" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/gui-1.png" alt="gui 1" width="633" height="305" />
@@ -26,7 +26,7 @@ I've got a new folder, so I click on the title and rename it "Last Name, First N
 <img class="aligncenter size-full wp-image-3620" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/gui-2.png" alt="gui 2" width="466" height="100" />
 
 The whole thing took about 10 seconds. That's not painful, but that's only because I had to do it once. What if I had to do that 50 times? Don't forget you have to shift your focus between the folder and the list of names and believe me this takes a long, long time.
-<h3>CLI</h3>
+### CLI
 I start by going to "Applications &gt; Utilities &gt; Terminal.app" and opening it up
 
 <img class="aligncenter size-full wp-image-3622" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/Cli-01.png" alt="Cli 01" width="445" height="469" />
@@ -52,17 +52,17 @@ mkdir "Last Name, First Name"
 As you can see, the name that we put in between quotes after the command "mkdir" creates a folder of that name.
 
 <img class="aligncenter size-full wp-image-3626" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/cli-5.png" alt="cli 5" width="570" height="334" />
-<h3>Which Was Faster?</h3>
+### Which Was Faster?
 Probably the first one.  But that's what it was built for. Doing something once. What if I want to make 4 folders? I would just type the command "mkdir" followed by the name of the folders I wanted to create, in double quotes, separated by spaces.
 
 We now have the working knowledge to create 50 folders. We just need to manipulate the list we already have a bit to get it in this format.
-<h1>Excel Functions</h1>
+# Excel Functions
 Naturally, our class roster comes to us as a spreadsheet so it's already in a format ripe for manipulation. Here's what it looks like (these are fake names of course)
 
 <img class="aligncenter size-full wp-image-3627" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-1.png" alt="names 1" width="507" height="371" />
 
 First name in column A, last name in column B. Remember, we want it in the format "Last Name, First Name". So we need to create a function that will do that.
-<h2>Combine Values</h2>
+## Combine Values
 We're going to make a function that will take the value from the cell in column B (last names), insert a comma and a space and then take the value from the cell in column A (first name). The simplest way to do that is with the following function,
 
 =B2 &amp; ", " &amp; A2
@@ -74,19 +74,19 @@ The "&amp;" sign means "And". The comma and space in between double quotes means
 <img class="aligncenter size-full wp-image-3629" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-3.png" alt="names 3" width="401" height="95" />
 
 That's the format we want, for sure, but there's something else. Remember that we need to have each folder name in between double quotes. So we just need to update the function to put double quotes on either end. To do that you change the function to this,
-<p class="p1">=CHAR(34) &amp; <span class="s1">B2</span> &amp; ", " &amp; <span class="s2">A2</span> &amp; CHAR(34)</p>
+<p class="p1">=CHAR(34) &amp; B2 &amp; ", " &amp; A2 &amp; CHAR(34)</p>
 <p class="p1">You might ask, "What's with the CHAR(34) thing? You said anything in between double quotes will show up in the cell." Well, that's what I thought too. But apparently, Excel get's confused by this, so you need to CHAR(34) to represent a double quote character. Anyway, here's what it ends up looking like,</p>
 <p class="p1"><img class="aligncenter size-full wp-image-3630" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-4.png" alt="names 4" width="636" height="178" /></p>
 <p class="p1"><img class="aligncenter size-full wp-image-3631" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-5.png" alt="names 5" width="522" height="189" /></p>
 <p class="p1">Sweet! We've got it how we need it! Now just grab the little square and drag down for the rest and we've got ourselves our formatted list.</p>
 
-<h2 class="p1">One Last Bit of Formatting Left</h2>
+## One Last Bit of Formatting Left
 We can't just paste this into the Terminal quite yet. Each name is on a different line, which Terminal will read as you actually hitting the return key and consequently will only make the first name and then give you a bunch of errors. So we need to clear the line breaks so that all the names are on one line and separated by a single space.
-<h3>Paste the Column into Word as Unformatted Text</h3>
+### Paste the Column into Word as Unformatted Text
 If you just do normal paste, it will be a table and we don't want that. Go to "Edit &gt; Paste Special..." and select "Unformatted Text". You'll be left with something like this:
 
 <img class="aligncenter size-full wp-image-3632" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/words-1.png" alt="words 1" width="418" height="221" />
-<h3>Open the Find and Replace Pane</h3>
+### Open the Find and Replace Pane
 The thing that we need to find is called a "Carriage Return". If you've ever seen an old timey typewriter, they had this lever that you would push to scroll the paper up a line and bring it back to the starting position so you could keep writing.
 
 [caption id="attachment_3633" align="aligncenter" width="500"]<img class="wp-image-3633 size-full" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/typewriter3.jpg" alt="typewriter3" width="500" height="375" /> 7 is the carriage return lever[/caption]
@@ -104,7 +104,7 @@ Put that into the find field and just type a space into the replace field, hit R
 <img class="aligncenter size-full wp-image-3635" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/words-3.png" alt="words 3" width="513" height="163" />
 
 Pretty cool, eh?
-<h2>Back To Terminal</h2>
+## Back To Terminal
 Now it's just a matter of pasting that into the terminal after typing the "mkdir" command
 
 <img class="aligncenter size-full wp-image-3636" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/Screen-Shot-2014-10-22-at-2.21.51-PM.png" alt="Screen Shot 2014-10-22 at 2.21.51 PM" width="687" height="427" />
@@ -112,5 +112,5 @@ Now it's just a matter of pasting that into the terminal after typing the "mkdir
 Hit return and let 'er rip.
 
 <img class="aligncenter size-full wp-image-3637" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/Screen-Shot-2014-10-22-at-2.22.28-PM.png" alt="Screen Shot 2014-10-22 at 2.22.28 PM" width="466" height="545" />
-<h1>What Have We Learned</h1>
+# What Have We Learned
 Something very specific, no doubt. You may never actually use what we showed you here, but the important thing to understand is this: There is a faster way to stuff. It's just a matter of being brave and trying to find the solution.

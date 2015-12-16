@@ -1,7 +1,7 @@
 Make your Project Proposal into an HTML page. That's it.
-<h1>Simple, eh?</h1>
+# Simple, eh?
 Just take your project proposal from 30B and put it into HTML form.
-<h2>Parameters</h2>
+## Parameters
 [list style="orb" color="blue"]
 <ul>
 	<li>Make each section header (Executive Summary, Methodology, etc.) a &lt;h1&gt;</li>

@@ -4,7 +4,7 @@ We want you to try and conceptualize what we're doing in this lesson as what you
 
 [/two_third]
 [one_third last="yes"]
-<h2>Resources</h2>
+## Resources
 <ul>
 	<li><a href="http://wordpress.org/plugins/duplicator/" target="_blank">Duplicator</a></li>
 	<li><a title="BackupWordpress" href="http://wordpress.org/extend/plugins/backupwordpress/" target="_blank">BackupWordPress</a></li>
@@ -17,7 +17,7 @@ We want you to try and conceptualize what we're doing in this lesson as what you
 </li>
 </ul>
 [/one_third]
-<h1>Backing up WordPress</h1>
+# Backing up WordPress
 With each update of WordPress and its plugins, there are many bug fixes that benefit the running of your site, however, the more variables you have, you risk of running into incompatibilities between your site’s WordPress installation and your third-party plugins, making your site pop up with a nasty error message.
 
 In addition, misplacing files, editing the wrong ones, messing with the databases incorrectly, or changing some settings in wp-admin could run your site into the ground, making it unusable for any visitors or yourself.
@@ -25,9 +25,9 @@ In addition, misplacing files, editing the wrong ones, messing with the database
 Breaking your site is just something that happens sometimes, so you need to learn how to back up your own site files and restore them so you never have to work from scratch. It is important to have your site up and running as fast as possible, because few new viewers ever return to a site that didn’t catch their attention the first time.
 
 Your web host is another potential point of failure. By storing/hosting your website files on your web host, you are trusting them to keep your website files safe and secure. But everyone makes mistakes. Your web server can go down. You take a risk by having someone else handle your website files. We need to take matters into our own hands and ensure that we are prepared for any bad event.
-<h2>What Needs To Be Backed Up?</h2>
+## What Needs To Be Backed Up?
 There are two parts to backing up your WordPress site: Database (Content) and Files (Structure, Rules). You need to back up the entire site, and you need to back up your WordPress database to ensure the site can be fixed when an error occurs.
-<h3>Your WordPress site consists of the following</h3>
+### Your WordPress site consists of the following
 <ol>
 	<li>The WordPress Core Installation</li>
 	<li>WordPress Plugins (/wp-content/plugins/)</li>
@@ -37,48 +37,48 @@ There are two parts to backing up your WordPress site: Database (Content) and Fi
 	<li>Additional Files and Static Web Pages</li>
 </ol>
 As you already know from the first half of the class, all of these are used in various combinations to generate your website. The database contains your posts and a lot of data generated on your site, but it does not include the above elements that all come together to create the look and information on your site. These need to be saved.
-<h1>Backing up Site Files</h1>
+# Backing up Site Files
 We have quite a few options when it comes to how we want to backup and restore our websites. This section will walk us through using the plugin that we recommend. In the toggles you will find alternate methods that are definitely worth checking out because they offer their own unique benefits.
 <h1 id="backup-plugin-updraftplus"><a class="headeranchor-link" href="#backup-plugin-updraftplus" name="user-content-backup-plugin-updraftplus"></a>Backup Plugin: UpdraftPlus</h1>
 We’ve evaluated a lot of backup plugins, but we feel that <a href="https://wordpress.org/plugins/updraftplus/">Updraft Plus</a> is a solid plugin. It is easy to use and has nice features. Go ahead and install and activate <a href="https://wordpress.org/plugins/updraftplus/">Updraft Plus</a>.
 
-By default, UpdraftPlus does complete backups, meaning it backs up your database, themes, plugins, and media uploads. Under <strong>Settings</strong>, you can change whether it backs up your plugins, themes, and uploads. We suggest to leave it how it is and back up these folders.
+By default, UpdraftPlus does complete backups, meaning it backs up your database, themes, plugins, and media uploads. Under **Settings**, you can change whether it backs up your plugins, themes, and uploads. We suggest to leave it how it is and back up these folders.
 
-One downside to UpdraftPlus is that it <strong>does not</strong> backup a copy of the core WordPress files. The good news is: you can always redownload these from WordPress.org again (the same WordPress files you downloaded to install WordPress manually).
+One downside to UpdraftPlus is that it **does not** backup a copy of the core WordPress files. The good news is: you can always redownload these from WordPress.org again (the same WordPress files you downloaded to install WordPress manually).
 <h2 id="scheduling"><a class="headeranchor-link" href="#scheduling" name="user-content-scheduling"></a>Scheduling</h2>
-An important feature to note is that UpdraftPlus allows for scheduling. By default, it’s set to do backups of the database and files <strong>only</strong> manually. When determining how what kinds of backups you want to schedule, you need to consider a few things.
+An important feature to note is that UpdraftPlus allows for scheduling. By default, it’s set to do backups of the database and files **only** manually. When determining how what kinds of backups you want to schedule, you need to consider a few things.
 <h3 id="frequency-of-changing-content"><a class="headeranchor-link" href="#frequency-of-changing-content" name="user-content-frequency-of-changing-content"></a>Frequency of Changing Content</h3>
 Just how often is this site being updated? If it’s a blog or something that’s often publishing new content, then you’ll probably want to backup more often. If it’s a static site, then you probably don’t need to schedule a regular backup and can get by with just a manual backup whenever you do an overhaul.
 <h2 id="scheduling-walk-through"><a class="headeranchor-link" href="#scheduling-walk-through" name="user-content-scheduling-walk-through"></a>Scheduling Walk-Through</h2>
-Depending on your website’s needs, you may need to change the scheduling of your backups. Go to your installed plugins and under UpdraftPlus hit <strong>Settings</strong>. At the main page, hit the <strong>Settings</strong> tab.
+Depending on your website’s needs, you may need to change the scheduling of your backups. Go to your installed plugins and under UpdraftPlus hit **Settings**. At the main page, hit the **Settings** tab.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/schedule1.png"><img class="alignnone size-full wp-image-5653" src="http://labs.everettprogram.org/wp-content/uploads/schedule1.png" alt="schedule1" width="739" height="144" /></a>
 
-Under <strong>Confige Backup Contents and Schedule</strong>, you can see the intervals that are set for the File backup and Database backup (by default they are set to manual). To the right, you will also see the number of backups that will be stored/retained of each backup type. Depending on your needs, you can set up a schedule for automatic backups for each backup type. For example, your could set the file backup to once a week and database backup to daily.
+Under **Confige Backup Contents and Schedule**, you can see the intervals that are set for the File backup and Database backup (by default they are set to manual). To the right, you will also see the number of backups that will be stored/retained of each backup type. Depending on your needs, you can set up a schedule for automatic backups for each backup type. For example, your could set the file backup to once a week and database backup to daily.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/schedule2.png"><img class="alignnone size-full wp-image-5654" src="http://labs.everettprogram.org/wp-content/uploads/schedule2.png" alt="schedule2" width="989" height="609" /></a>
 
-In the <strong>Include in files backup</strong> section, you can select or deselect what files will be included in the files backup portion.
+In the **Include in files backup** section, you can select or deselect what files will be included in the files backup portion.
 
-If you have made any changes, make sure to scroll to the bottom and hit <strong>Save Changes</strong>.
+If you have made any changes, make sure to scroll to the bottom and hit **Save Changes**.
 <h2 id="backup-file-storage"><a class="headeranchor-link" href="#backup-file-storage" name="user-content-backup-file-storage"></a>Backup File Storage</h2>
-By default, when the plugin runs a backup, it will create multiple zip archives in a directory called <strong>updraft</strong> in your wp-content folder for that WordPress instance. Cool beans, you think. They’re right there when I need them. Wrong! What if the server goes down? What if there’s a fire at the data center? What if the police or an intelligence agency come by and rip the server out of the wall? You’d lose your files and data! Backups need to be stored somewhere else.
+By default, when the plugin runs a backup, it will create multiple zip archives in a directory called **updraft** in your wp-content folder for that WordPress instance. Cool beans, you think. They’re right there when I need them. Wrong! What if the server goes down? What if there’s a fire at the data center? What if the police or an intelligence agency come by and rip the server out of the wall? You’d lose your files and data! Backups need to be stored somewhere else.
 
 You need to pull the backup files off your server and deposit them somewhere safe. Options for this include: an external hard drive, the hard drive of the main office computer, CDs, flash drives, cloud storage like Google Drive, Box, or Dropbox. At any rate, you should have a discussion with your org about how they want to keep copies of their site.
 
-Lucky for us, UpdraftPlus includes <strong>remote storage</strong>, meaning you can enable it to upload copies of your backup files to many cloud storage services.
+Lucky for us, UpdraftPlus includes **remote storage**, meaning you can enable it to upload copies of your backup files to many cloud storage services.
 <h3 id="remote-storage"><a class="headeranchor-link" href="#remote-storage" name="user-content-remote-storage"></a>Remote Storage</h3>
 This is an extremely important feature. Storing backup files in multiple places helps us ensure that we will be able to retrieve our files when we need to, even when things go south.
 
 For each cloud storage option (Dropbox, Google Drive, etc.) there is a different process to set it up. For this walk through, we will be using Dropbox as it is relatively easy to set up.
 
-In the UpdraftPlus settings area, go to the <strong>Settings</strong> tab.
+In the UpdraftPlus settings area, go to the **Settings** tab.
 
-Under the <strong>Copying Your Backup To Remote Storage</strong> section, choose the remote storage service you want to use. For this example, choose <strong>Dropbox</strong>.
+Under the **Copying Your Backup To Remote Storage** section, choose the remote storage service you want to use. For this example, choose **Dropbox**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/backup1.png"><img class="alignnone size-full wp-image-5648" src="http://labs.everettprogram.org/wp-content/uploads/backup1.png" alt="backup1" width="945" height="263" /></a>
 
-Next, scroll to the bottom and hit <strong>Save Changes</strong>.
+Next, scroll to the bottom and hit **Save Changes**.
 
 Go back to the Settings tab under the remote storage area. We need to authenticate UpdraftPlus with Dropbox. Follow the link that is provided (mine looks slightly different as I already authenticated with Dropbox).
 
@@ -87,12 +87,12 @@ Go back to the Settings tab under the remote storage area. We need to authentica
 It will take you to Dropbox where you will need to sign in and verify the authentication process. Once you have done that, you are finished. To double check, go back to UpdraftPlus to the remote storage section. If it says, “You appear to be already authenticated”, you did this correctly.
 
 Now when you backup your website (either manually or scheduled), it will also upload a copy of the backup to your cloud storage, in this case Dropbox.
-<h2>Our Recommendation</h2>
+## Our Recommendation
 Since we're dealing with dummy accounts and development playgrounds, you should set your backups to manual only.
-<h2>Other Methods</h2>
+## Other Methods
 Expand the below sections for other backup methods.
 [toggle title="Backup Plugin: Backup WordPress"]
-<h2><strong>Backup Plugin: Backup WordPress</strong></h2>
+## **Backup Plugin: Backup WordPress**
 We've evaluated a lot of backup plugins, but we feel that "<a title="BackupWordpress" href="http://wordpress.org/extend/plugins/backupwordpress/" target="_blank">BackupWordPress</a> " is a very solid program. It is easy to use and has some nice features. So go ahead and install and activate <a title="BackupWordpress" href="http://wordpress.org/extend/plugins/backupwordpress/" target="_blank">BackupWordPress</a>.
 
 The plugin has three different types of backup. What they do is fairly self evident:
@@ -102,13 +102,13 @@ The plugin has three different types of backup. What they do is fairly self evid
 	<li>Complete</li>
 </ol>
 An important feature to note is that it allows for scheduling. By default, it's set to do a daily database backup and a complete weekly. When determining how what kinds of backups you want to schedule, you need to consider a few things.
-<h3>Frequency of Changing Content</h3>
+### Frequency of Changing Content
 Just how often is this site being updated? If it's a blog or something that's often publishing new content, then you'll probably want to backup more often. If it's a static site, then you probably don't need to schedule a regular backup and can get by with just a manual backup whenever you do an overhaul.
-<h2>What to Do with Backup Files</h2>
+## What to Do with Backup Files
 When the plugin runs a backup, it will create a zip archive in your root directory. Cool beans, you think. They're right there when I need them. Wrong! What if the server goes down? What if there's a fire at the data center? What if the police or an intelligence agency come by and rip the server out of the wall? You'd lose your files and data! Backups need to be stored somewhere else.
 
 You need to pull the backup files off your server and deposit them somewhere safe. Options for this include: an external hard drive, the hard drive of the main office computer, CDs, flash drives, cloud storage like Google Drive, Box, or Dropbox. At any rate, you should have a discussion with your org about how they want to keep copies of their site.
-<h2>Scheduling with BackupWordPress Plugin</h2>
+## Scheduling with BackupWordPress Plugin
 The plugin has a scheduling feature that allows you to set up several different backups. By default it has two set up: A daily database-only and a weekly complete.
 
 <img src="http://labs.everettprogram.org/wp-content/uploads/2014/03/backup-w-9-1024x339.png" alt="backup-w--9" width="669" height="221" />
@@ -121,12 +121,12 @@ The plugin has a scheduling feature that allows you to set up several different 
 	<li>Set a schedule for automatic updates for both files and the database separately</li>
 	<li>(Recommended: Daily as a maximum for the Database, Weekly as a maximum for Files)</li>
 </ul>
-<strong>Congratulations!</strong> You now have your WordPress installation backed up, either on your own computer, your email, your website's root directory, or your WordPress installation's /wp-content/c4ca4238a0-backups/.
+**Congratulations!** You now have your WordPress installation backed up, either on your own computer, your email, your website's root directory, or your WordPress installation's /wp-content/c4ca4238a0-backups/.
 [/toggle]
 
 [toggle title="Full Domain Backup with cPanel"]
-<h2><strong>Full Domain Backup with cPanel
-</strong></h2>
+## **Full Domain Backup with cPanel
+**
 This will create a backup of your entire domain. i.e. every file and database you have.
 <ul>
 	<li>Login to your domain's cPanel (www.yourdomain.org/cpanel)</li>
@@ -144,29 +144,29 @@ This will create a backup of your entire domain. i.e. every file and database yo
 [/toggle]
 
 [toggle title="Selective Manual Backups"]
-<h2 style="text-align: left;"><strong>Selective backups</strong></h2>
+## **Selective backups**
 <p style="text-align: left;">This will create a backup of your WordPress installation and WordPress database</p>
 
-<h3 style="text-align: left;">WordPress Files:</h3>
+### WordPress Files:
 In your CPanel File Manager, create a zip/compress file of your WordPress instance's directory. Download a copy of this.
-<h3>WordPress Database:</h3>
+### WordPress Database:
 In cPanel, navigate to phpMyAdmin
 
 <img class="aligncenter size-large wp-image-2278" src="http://labs.everettprogram.org/wp-content/uploads/2014/03/backup-w-4-1024x254.png" alt="backup-w--4" width="669" height="165" />
 
 &nbsp;
 
-Go to the<strong> Databases</strong> tab. Select the database of your WordPress installation
+Go to the** Databases** tab. Select the database of your WordPress installation
 
 <img class="aligncenter  wp-image-2279" src="http://labs.everettprogram.org/wp-content/uploads/2014/03/backup-w-5.png" alt="backup-w--5" width="229" height="317" />
 
-Select<strong> Export</strong>, then generate an SQL export
+Select** Export**, then generate an SQL export
 
 <img class="aligncenter  wp-image-2280" src="http://labs.everettprogram.org/wp-content/uploads/2014/03/backup-w-6-1024x378.png" alt="backup-w--6" width="401" height="148" />
 
 <img class="aligncenter size-full wp-image-3229" src="http://labs.everettprogram.org/wp-content/uploads/2014/06/Export-via-phpMyAdmin.gif" alt="Export via phpMyAdmin" width="624" height="430" />
 
-<strong>Make sure to hit Go at the bottom to export the SQL database.</strong>
+**Make sure to hit Go at the bottom to export the SQL database.**
 
 [/toggle]
 <h1 id="restoration"><a class="headeranchor-link" href="#restoration" name="user-content-restoration"></a>Restoration</h1>
@@ -174,35 +174,35 @@ What’s the use of a backup if you don’t know how to restore from it?
 
 If you used UpdraftPlus to backup your WordPress site, you will have multiple zip archive located in your WordPress instance’s wp-content/updraft folder. You will also have zip archives of your backup on your remote storage if you set it up.
 
-UpdraftPlus gives a lot of flexibility in what we want to backup and subsequently, what parts of our website we want to restore. You should have a zip archive for each of these if you did a complete backup: <strong>Database, Plugins, Themes, Uploads, and Other</strong>.
+UpdraftPlus gives a lot of flexibility in what we want to backup and subsequently, what parts of our website we want to restore. You should have a zip archive for each of these if you did a complete backup: **Database, Plugins, Themes, Uploads, and Other**.
 
 With UpdraftPlus, you can restore as much or as little as you want. Say you only want to restore your website’s database. Well, you would only upload your backed up database and restore based off of that. It would not restore your plugins, themes, uploads, and other things.
 
 You also have the ability to restore from backups stored on your hosting storage. Think of this as a backup option to files that are stored on remote storage.
 <h2 id="restoration-walk-through"><a class="headeranchor-link" href="#restoration-walk-through" name="user-content-restoration-walk-through"></a>Restoration Walk Through</h2>
-Before you can restore your WordPress site, you will have needed to back it up already. You can check this by looking at <strong>Last backup job run:</strong> in the Current Status tab in UpdraftPlus.
+Before you can restore your WordPress site, you will have needed to back it up already. You can check this by looking at **Last backup job run:** in the Current Status tab in UpdraftPlus.
 
-If you have already done a backup, hit <strong>Restore</strong>.
+If you have already done a backup, hit **Restore**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/restore1.png"><img class="alignnone size-full wp-image-5650" src="http://labs.everettprogram.org/wp-content/uploads/restore1.png" alt="restore1" width="956" height="422" /></a>
 
 We have two options for restoring our WordPress site. We can either use files that UpdraftPlus can “see” (files that are either stored on the web hosting storage or remote storage) or upload the individual zip archives from a backup.
 
-You can hit <strong>Rescan local folder for new backup sets</strong> or <strong>Rescan remote storage</strong> to refresh backup files that UpdraftPlus can “see”. If UpdraftPlus can see any backup files in will list them by backup date, show what backup zip archives are available, and lets you Restore from there.
+You can hit **Rescan local folder for new backup sets** or **Rescan remote storage** to refresh backup files that UpdraftPlus can “see”. If UpdraftPlus can see any backup files in will list them by backup date, show what backup zip archives are available, and lets you Restore from there.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/restore5.png"><img class="alignnone size-full wp-image-5652" src="http://labs.everettprogram.org/wp-content/uploads/restore5.png" alt="restore5" width="974" height="183" /></a>
 
-If you want to be selective in the different parts of your WordPress site you want to backup or use different backup files from what UpdraftPlus can see, you can upload individual zip archives using <strong>Upload backup files</strong>.
+If you want to be selective in the different parts of your WordPress site you want to backup or use different backup files from what UpdraftPlus can see, you can upload individual zip archives using **Upload backup files**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/restore2.png"><img class="alignnone size-full wp-image-5651" src="http://labs.everettprogram.org/wp-content/uploads/restore2.png" alt="restore2" width="1020" height="490" /></a>
 
 In the image above, I uploaded the database zip archive from a backup. Notice that the other backup parts (Plugins, themes, etc.) aren’t there. If I hit Restore, UpdraftPlus would restore our site based off what backup data was uploaded, in this case, only the database. In this way, we can be selective in how we restore our WordPress websites.
-<h4><strong>Pro-Tip:</strong> If you still have issues with 'Page not found' errors after restoring, in WP-Admin, under Settings &gt; Permalinks, change your permalink type, 'Save Changes', set it back, 'Save Changes'. <strong>Ta-Da!</strong></h4>
+#### **Pro-Tip:** If you still have issues with 'Page not found' errors after restoring, in WP-Admin, under Settings &gt; Permalinks, change your permalink type, 'Save Changes', set it back, 'Save Changes'. **Ta-Da!**
 <h1 id="homework-assignment"><a class="headeranchor-link" href="#homework-assignment" name="user-content-homework-assignment"></a>Homework Assignment</h1>
 <h2 id="backup-your-site"><a class="headeranchor-link" href="#backup-your-site" name="user-content-backup-your-site"></a>Backup Your Site</h2>
 This assignment will demonstrate that you can perform a site restoration from a database backup. The steps involved are deliberate as they prove that you indeed did the work, so please follow them exactly.
 
-We are going to be using your WordPress site <em>yourdomain/wplesson4</em> for this assignment.
+We are going to be using your WordPress site *yourdomain/wplesson4* for this assignment.
 <h2 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h2>
 <ol>
 	<li>Set your front page to be your blog</li>
@@ -216,14 +216,14 @@ The last post you made will be gone since it wasn’t backed up in the database 
 <h2 id="part-2"><a class="headeranchor-link" href="#part-2" name="user-content-part-2"></a>Part 2</h2>
 Sometimes plugins fail. We do not want to be completely dependent on plugins that are developed by others. For Part 2, we are going to manually backup the database (not using UpdraftPlus).
 
-Following the instruction under <strong>Selective Manual Backups</strong> in this lesson, export your WordPress site’s database. This will be in the form of a .sql file.
+Following the instruction under **Selective Manual Backups** in this lesson, export your WordPress site’s database. This will be in the form of a .sql file.
 
 This may seem out of place in this lesson/homework, but it is important for the next lesson.
 <h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>Email subject line in the following format: <em>HW #5 Firstname Lastname</em></li>
-	<li>The web address of your WordPress instance <em>yourdomain/wplesson4</em></li>
+	<li>Email subject line in the following format: *HW #5 Firstname Lastname*</li>
+	<li>The web address of your WordPress instance *yourdomain/wplesson4*</li>
 	<li>Attach the screenshot you took proving that you made a new post.</li>
 	<li>Attach the .sql database you manually backed up in Part 2. Make sure the file ends in .sql.</li>
 </ul>

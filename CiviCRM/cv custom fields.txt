@@ -1,44 +1,44 @@
-<h1>Custom Fields</h1>
+# Custom Fields
 CiviCRM has multitude of individual contact fields. Like a lot of them. They try and account for the most common cases, but sometimes you want to have contact fields that tell you information about a specific type of person. This module will explore why you should use custom fields and how to set them up.
-<h3>Everett Case - Major Advisors and UCSC People</h3>
-Everett is interdisciplinary so we like to maintain relationships with the various major advisors (sometimes called undergraduate program coordiantors) so that we can get in contact with them once it's time to start our recruitment drive. We ask them to send out blurbs about us to their list serves. So the <strong>need</strong> is to have their contact information on hand. Simple enough using the existing contact fields. But sometimes we also want to go and visit them in person. This means you have to look them up on the campus directory. It would be nice to have their office locations. You can do that using the existing address field, but it's kinda awkward to shoehorn in UCSC campus addresses sometimes when what we really need is just the office building and room number.
+### Everett Case - Major Advisors and UCSC People
+Everett is interdisciplinary so we like to maintain relationships with the various major advisors (sometimes called undergraduate program coordiantors) so that we can get in contact with them once it's time to start our recruitment drive. We ask them to send out blurbs about us to their list serves. So the **need** is to have their contact information on hand. Simple enough using the existing contact fields. But sometimes we also want to go and visit them in person. This means you have to look them up on the campus directory. It would be nice to have their office locations. You can do that using the existing address field, but it's kinda awkward to shoehorn in UCSC campus addresses sometimes when what we really need is just the office building and room number.
 
 Thinking deeper, there are other important things to consider about UCSC people. Wouldn't it be nice to be able to look for people by department? Or by Division? These aspects aren't neatly reflected by the existing contact fields. Let's explore how we used custom fields for the Everett databse and how we set them up.
-<h2>How Do?</h2>
+## How Do?
 You start by reading the <a href="http://book.civicrm.org/user/current/organising-your-data/custom-fields/">CiviBook Entry on Custom Fields</a>. Yes read it. Then mosey on over to <code>Administer &gt; Customize Data and Screens &gt; Custom Fields</code> to make your own custom fields.
-<h3>Create a New Field Set</h3>
+### Create a New Field Set
 This step is obvious because you read the CiviBook entry. Before creating a custom field, you need to create a set in which to put it. For the purposes of this example, we'll go with <code>UCSC Info</code>. It's descriptive but not overly specific. As time goes on, and we better understand our own needs, we can add more fields that don't necessarily pertain to advisors.
-<h3>Set What It's Used for</h3>
-You can create custom fields for <em>any</em> data type (contacts, activities, events, etc.). We'll make this set apply to <code>Individual</code> contacts.
-<h3>Multiple Records</h3>
-You'll see a checkbox appear asking "Does this Custom Field Set allow multiple records?". For simplicity's sake, <strong>don't check this box</strong>. Multiple records are for things like "Employment History", where you might want to have official records of someone's last 5 employers. This is a fine thing to have in your database, but there are two big caveats:
+### Set What It's Used for
+You can create custom fields for *any* data type (contacts, activities, events, etc.). We'll make this set apply to <code>Individual</code> contacts.
+### Multiple Records
+You'll see a checkbox appear asking "Does this Custom Field Set allow multiple records?". For simplicity's sake, **don't check this box**. Multiple records are for things like "Employment History", where you might want to have official records of someone's last 5 employers. This is a fine thing to have in your database, but there are two big caveats:
 <ol>
-	<li>The fields in this set will not be importable through the normal importer which is a <strong>huge</strong> drawback. You would have to use the Multi-value Custom Importer (good luck finding it!). We're really not sure how this thing works yet, but if you can figure it out, please tell us how you did it because it would be great for the site.</li>
+	<li>The fields in this set will not be importable through the normal importer which is a **huge** drawback. You would have to use the Multi-value Custom Importer (good luck finding it!). We're really not sure how this thing works yet, but if you can figure it out, please tell us how you did it because it would be great for the site.</li>
 	<li>You cannot export mulit-record data, only the most recent record.</li>
 </ol>
-<h3>Display Style</h3>
+### Display Style
 This sets how the custom set info will show up when you're looking at an individual's profile. Will it show up on the first screen? Or will you want it all in another tab? I prefer to have this field display inline and uncollapsed rather than as a tab because I don't want to have to click around to find out.
-<h2>Creating the Fields</h2>
+## Creating the Fields
 Now that the field set is created, you can start creating the actual fields. Using our UCSC Info example, let's start with <code>Department</code>.
-<h3>Data and Input Field Type</h3>
+### Data and Input Field Type
 We don't need to go into too much detail here as you can play around with these to your heart's content. Basically, you just need to choose two things:
 <ul>
-	<li>What <em>type</em> of data you want</li>
+	<li>What *type* of data you want</li>
 	<li>How you want that data entered</li>
 </ul>
-<h4>Data Type</h4>
+#### Data Type
 This refers to whether it's alphanumeric text, numbers, money, dates, files, etc.
-<h4>Input Field Type</h4>
+#### Input Field Type
 Should you have a text field? Check boxes? Radio buttons? A dropdown menu? It's all about how much freedom and constraint you want in the choices.
 
 With that in mind, we'll choose <code>Alphanumeric</code> for our data type, and <code>Text</code> for our input type. Alphanumeric because it wouldn't make sense to look at someones profile and under "Department" it reads, "$3.50". We choose text because there are like 40 departments and we trust whoever is doing this to type it in correctly. If the field were something with fewer options and you wanted to make sure only those options were ever chosen, then you might want to choose <code>Select</code> or <code>Radio Buttons</code>.
-<h3>Offer Help?</h3>
+### Offer Help?
 You can add explanatory text before or after the field so that when someone is entering contacts through civi, they'll have some context. Ideal your chosen field label is clear enough on its own.
-<h3>Searchable?</h3>
+### Searchable?
 It bothers me that this isn't checked by default. I mean, I made the field so obviously I'd want to search for it later, right? Click it and then save the field. We created two more fields in this set, <code>Office Bldg.</code> and <code>Office Number</code>
-<h2>Importing Into Custom Fields</h2>
+## Importing Into Custom Fields
 With the Everett database, we had a whole bunch of Excel sheets for different groups. This might not always be your situation, but typically, if you have a bunch of contacts (like from a sign up sheet or left over from an old system) it's best to enter them into a spreadsheet before importing them to Civi. It's much quicker than adding them one by one.
-<h3>Setting Up Your Import Sheet</h3>
+### Setting Up Your Import Sheet
 You've (probably) imported before, so you should be familiar with this. Make a header row where the column names match the fields in CiviCRM:
 <ul>
 	<li>First Name</li>

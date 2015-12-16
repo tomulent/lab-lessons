@@ -1,5 +1,5 @@
 [two_third last="no"]
-<h2>Outcomes</h2>
+## Outcomes
 <ul>
 	<li>Learn what transitions are</li>
 	<li>Learn how to set a different transition type</li>
@@ -8,15 +8,15 @@
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 <ul>
 	<li>Data Transitions</li>
 </ul>
 [/one_third]
-<h1>Transitions</h1>
+# Transitions
 You may notice while going through your apps, the pages just kind of blink into existence. We'de like to change that.
-<h2>data-transition=""</h2>
-Links are the elements that take us places so that's where we'll put our data attributes. Go ahead and put <strong>data-transition="pop". </strong>Or set it to whatever transition type you want. The full list is <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/transitions/">here</a> in the demo page. At time of writing this, the transition page in the version 1.4.2 demos is reading 404, so I linked an earlier version. The transitions from version 1.3.1 are:
+## data-transition=""
+Links are the elements that take us places so that's where we'll put our data attributes. Go ahead and put **data-transition="pop". **Or set it to whatever transition type you want. The full list is <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/transitions/">here</a> in the demo page. At time of writing this, the transition page in the version 1.4.2 demos is reading 404, so I linked an earlier version. The transitions from version 1.3.1 are:
 <ul>
 	<li>fade</li>
 	<li>pop</li>
@@ -30,22 +30,22 @@ Links are the elements that take us places so that's where we'll put our data at
 	<li>none</li>
 </ul>
 Play around with these and see which one you like. Something to notice is that when you hit the back button, the transition will play in reverse. Cool, huh?
-<h2>Setting A Global Transition</h2>
-As always, we don't want to have to manually add <strong>data-transition="pop"</strong> to every stupid link in the document, so we'll just change the default page transition for the entire document. To do this, we'll have to get a little crafty.
-<h3>Create a New js File</h3>
+## Setting A Global Transition
+As always, we don't want to have to manually add **data-transition="pop"** to every stupid link in the document, so we'll just change the default page transition for the entire document. To do this, we'll have to get a little crafty.
+### Create a New js File
 We are going to write a script that will override the current global page transition (which happens to be 'fade'). Don't be intimidated by this. As always, we'll do this together.
 
-Open up your text editor of choice and create a new document named <strong>"custom-scritps.js"</strong>. Just as we create a .css file and fill it full of CSS style rules, we create a .js file and fill it with jQuery scripts. jQuery is really just a shorthand way of calling up javascript scripts.
+Open up your text editor of choice and create a new document named **"custom-scritps.js"**. Just as we create a .css file and fill it full of CSS style rules, we create a .js file and fill it with jQuery scripts. jQuery is really just a shorthand way of calling up javascript scripts.
 
 Inside this file, enter the following:
 <pre>$(document).bind("mobileinit", function () {
  $.mobile.defaultPageTransition = 'slide';
  });</pre>
 That probably means nothing to you. That there is a jQuery function. If you would like to learn how to use jQuery, you should check out the jQuery track on <a href="http://www.codecademy.com/tracks/jquery">Codecademy</a>. It's surprisingly easy to pick up and fun to use. You'll feel like a magician with all the cool stuff you learn to do. Anyway, back to the lesson.
-<h3>Link It To Your App</h3>
-Here is where we start getting a little bit more sophisticated. If you haven't already been doing so, put the html file for this project into a folder called "project-5". In the same folder, put the newly created "<strong>custom-scripts.js</strong>" file. In your index.html, go to the head section where we will be linking our custom script.
+### Link It To Your App
+Here is where we start getting a little bit more sophisticated. If you haven't already been doing so, put the html file for this project into a folder called "project-5". In the same folder, put the newly created "**custom-scripts.js**" file. In your index.html, go to the head section where we will be linking our custom script.
 
-You'll notice that there are two js files linked in the head. The first one calls up the jQuery API and the second calls up the jQuery Mobile API. We are going to put our custom script <strong>in between</strong> these two. Very important that they be in between.
+You'll notice that there are two js files linked in the head. The first one calls up the jQuery API and the second calls up the jQuery Mobile API. We are going to put our custom script **in between** these two. Very important that they be in between.
 <pre>&lt;head&gt;
 &lt;meta charset="utf-8"&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
@@ -55,9 +55,9 @@ You'll notice that there are two js files linked in the head. The first one call
 &lt;script src="custom-scripts.js"&gt;&lt;/script&gt;
 &lt;script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;</pre>
-<h2>Test Out Your Handiwork</h2>
+## Test Out Your Handiwork
 If that broke your site, then you should go back and check to see that there are no problems with your syntax. You may have left out a quote or bracket or something. Otherwise, you've got a grand spanking new transition! Notice that when you hit the back button, the animation goes backward.
-<h1>Project</h1>
+# Project
 I think it's fairly obvious what you should do.
 
 Change the global page transition to something other than 'fade'.

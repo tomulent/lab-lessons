@@ -1,25 +1,25 @@
 So we've got an app that's a little easier to navigate around. You'll notice that it was also easier to put a link back to home than it was to make a forward and backward link on each individual page. This lesson will be a short one and not so technical.
 
 <a href="http://view.jquerymobile.com/1.3.1/dist/demos/faq/how-does-theming-work.html">How Does Theming Work?</a>
-<h1>"I want it to look iPhone-y"</h1>
+# "I want it to look iPhone-y"
 You'll notice that right now our header bar is black. You may like how that looks, but you should be able to make things look any way you want. Take a guess how you'll make the page elements (i.e. toolbars, buttons, text, etc) look different. If you said "with a data attribute, then you've been paying attention. Specifically, we'll be using the attribute ' data-theme="a-e" '. Let's do an example of how to quickly change the theme of a header bar.
-<h2>Use That jQuery Magic</h2>
+## Use That jQuery Magic
 Here's what my app's homepage looks like right now
 <p style="text-align: center;"></p>
-<p style="text-align: left;">Now we add  <strong>data-theme="b" </strong>to the header of my homepage. b refers to a particular color scheme. You can set the value to any letter between a and e.</p>
+<p style="text-align: left;">Now we add  **data-theme="b" **to the header of my homepage. b refers to a particular color scheme. You can set the value to any letter between a and e.</p>
 <p style="text-align: center;"></p>
 <p style="text-align: left;">Now look at it.</p>
 <p style="text-align: left;"></p>
 <p style="text-align: left;">That was easy wasn't it?</p>
 
-<h2 style="text-align: left;">All Together Now</h2>
+## All Together Now
 You'll notice that we only changed the theme of that one header bar. We want to change how they all look. I'm trying hard to find a way to have the default theme be "b" instead of "a", but for now, we'll need a work around. We have two options:
 <ol>
-	<li><span style="line-height: 13px;">Manually add <strong>data-theme="b" </strong>to every header in our app</span></li>
+	<li>Manually add **data-theme="b" **to every header in our app</li>
 	<li>Write it once and have it do the work for us.</li>
 </ol>
 The credo of every coder is "Don't Repeat Yourself" so we'll be going with option 2. How do we do that? A simple find and replace in our text editor should do it.
-<h2>Find and Replace</h2>
+## Find and Replace
 In case you haven't encountered this term before, it refers to a function of text editors and word processors that will find all the occurrences of a string (that's computer talk for "sequence of characters to be treated as text") and replace it with another string.
 
 Say you had written a poem for someone in the past. But now you don't like that person anymore and want to give the poem to a new person. You can quickly tailor it to the new person by doing a find and replace that will find all the instances of the name of your old squeeze and replace them with the name of the new one.
@@ -31,5 +31,5 @@ In the equally tumultuous world of coding, we're going to use the same principle
 Everywhere that &lt;div data-role="header"&gt; showed up on my page, there will now be &lt;div data-role="header" data-theme="b"&gt;
 
 &nbsp;
-<h1>Project</h1>
+# Project
 Super easy. Use find and replace to change the theme of your headers.

@@ -7,7 +7,7 @@ Luckily, WP is all about being open and customizable. Any theme can be built upo
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 <ul>
 	<li><a href="http://codex.wordpress.org/Theme_Development" target="_blank">Codex entry on Theme Development</a></li>
 	<li><a href="http://codex.wordpress.org/Child_Themes" target="_blank">Codex entry on Child Themes</a></li>
@@ -55,20 +55,20 @@ We are going to make a child theme for Twenty Twelve WordPress theme. You should
 	<li>Find the directory where your WordPress instance is installed. For me, its in the lesson3 folder.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_1.png"><img class="alignnone size-full wp-image-5281" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_1.png" alt="cthemes_1" width="503" height="124" /></a></li>
-	<li>Go into this folder. There is a directory called <strong>wp-content</strong>. Go into that folder.
+	<li>Go into this folder. There is a directory called **wp-content**. Go into that folder.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_2.png"><img class="alignnone size-full wp-image-5282" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_2.png" alt="cthemes_2" width="599" height="203" /></a></li>
-	<li>Inside wp-content, there is a directory called <strong>themes</strong>. As it is named, this folder contains the themes installed on this WordPress instance. Go into this folder.
+	<li>Inside wp-content, there is a directory called **themes**. As it is named, this folder contains the themes installed on this WordPress instance. Go into this folder.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_3.png"><img class="alignnone size-full wp-image-5283" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_3.png" alt="cthemes_3" width="440" height="160" /></a></li>
 	<li>Here, we can see all the themes installed on this WordPress instance.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_4.png"><img class="alignnone size-full wp-image-5284" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_4.png" alt="cthemes_4" width="581" height="205" /></a></li>
-	<li>We want to make a child theme based off of the Twenty Twelve theme. Notice that the directory for the Twenty Twelve theme is <em>twentytwelve</em>.</li>
-	<li>To create a child theme, we need to create a new directory that will house the child theme’s files. Create a new directory in the <strong>themes</strong> directory called <strong>twentytwelve-child</strong>. At the top of the File Manager, use the <strong>New Folder</strong> tool.
+	<li>We want to make a child theme based off of the Twenty Twelve theme. Notice that the directory for the Twenty Twelve theme is *twentytwelve*.</li>
+	<li>To create a child theme, we need to create a new directory that will house the child theme’s files. Create a new directory in the **themes** directory called **twentytwelve-child**. At the top of the File Manager, use the **New Folder** tool.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_5.png"><img class="alignnone size-full wp-image-5285" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_5.png" alt="cthemes_5" width="401" height="109" /></a></li>
-	<li>To make it easy to find our child theme, name it <strong>twentytwelve-child</strong>. The <em>-child</em> differentiates it from the original theme. Make sure the end of the filepath is themes, meaning the new folder will be placed in the themes folder. Hit <strong>Create New Folder</strong>.
+	<li>To make it easy to find our child theme, name it **twentytwelve-child**. The *-child* differentiates it from the original theme. Make sure the end of the filepath is themes, meaning the new folder will be placed in the themes folder. Hit **Create New Folder**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_6.png"><img class="alignnone size-full wp-image-5286" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_6.png" alt="cthemes_6" width="497" height="189" /></a></li>
 	<li>If the folder didn’t automatically show up, hit the refresh button right above all of the folders. If you did everything correctly, you should see your new folder.
@@ -83,10 +83,10 @@ Next, we are going to create a style.css file to house all of the CSS changes we
 <h1 id="part-1"><a class="headeranchor-link" href="#part-1" name="user-content-part-1"></a>Part 1</h1>
 <ol>
 	<li>Go into your new child theme folder.</li>
-	<li>It should be empty. To create a new file with File Manager, use the <strong>New File</strong> tool at the top.
+	<li>It should be empty. To create a new file with File Manager, use the **New File** tool at the top.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_8.png"><img class="alignnone size-full wp-image-5288" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_8.png" alt="cthemes_8" width="534" height="207" /></a></li>
-	<li>Name the new file, <strong>style.css</strong>. Do not forget to include the <em>.css</em>. Hit <strong>Create New File</strong>.
+	<li>Name the new file, **style.css**. Do not forget to include the *.css*. Hit **Create New File**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_9.png"><img class="alignnone size-full wp-image-5289" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_9.png" alt="cthemes_9" width="497" height="222" /></a></li>
 	<li>If everything worked, we should see the style.css appear in the child theme folder.
@@ -97,17 +97,17 @@ Next, we are going to create a style.css file to house all of the CSS changes we
 We need to fill in the style.css file with some prerequisite information.
 <ol>
 	<li>Go to the WordPress Codex page on Child themes <a href="http://codex.wordpress.org/Child_Themes">here</a>.</li>
-	<li>Copy and paste the following code from the Codex page into your style.css file. You can open your style.css file in File Manager by highlighting the style.css file and then using the <strong>Code Editor</strong> tool at the top. When the popup appears, just hit <strong>Edit</strong>.
+	<li>Copy and paste the following code from the Codex page into your style.css file. You can open your style.css file in File Manager by highlighting the style.css file and then using the **Code Editor** tool at the top. When the popup appears, just hit **Edit**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_11.png"><img class="alignnone size-full wp-image-5291" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_11.png" alt="cthemes_11" width="778" height="232" /></a></li>
-	<li>You should have this in code in your style.css file. The two important lines we need to change are <strong>Theme name</strong> and <strong>Template</strong>.
+	<li>You should have this in code in your style.css file. The two important lines we need to change are **Theme name** and **Template**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_12.png"><img class="alignnone size-full wp-image-5292" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_12.png" alt="cthemes_12" width="1313" height="244" /></a></li>
-	<li>Change <em>Theme Name</em> to what you want your child theme named (it will be displayed in the theme manager). Change the value of <em>Template</em> to the name of the folder for the original theme, in our case, it was <strong>twentytwelve</strong>.
+	<li>Change *Theme Name* to what you want your child theme named (it will be displayed in the theme manager). Change the value of *Template* to the name of the folder for the original theme, in our case, it was **twentytwelve**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_13.png"><img class="alignnone size-full wp-image-5293" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_13.png" alt="cthemes_13" width="722" height="210" /></a></li>
 	<li>The CSS style rule changes you make will be placed after this big comment block.</li>
-	<li>Make sure to hit <strong>Save</strong> before exiting.</li>
+	<li>Make sure to hit **Save** before exiting.</li>
 </ol>
 You can now move to Step 3.
 
@@ -115,7 +115,7 @@ You can now move to Step 3.
 
 [toggle title="Step 3: Create new functions.php for Child Theme"]
 <h1 id="step-3-create-new-functionsphp"><a class="headeranchor-link" href="#step-3-create-new-functionsphp" name="user-content-step-3-create-new-functionsphp"></a>Step 3: Create new functions.php</h1>
-Login into the backend of your WordPress instance. Go to <strong>Themes</strong>. If everything worked so far, you should see your child theme appear in the Theme Manager.
+Login into the backend of your WordPress instance. Go to **Themes**. If everything worked so far, you should see your child theme appear in the Theme Manager.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_14.png"><img class="alignnone size-full wp-image-5294" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_14.png" alt="cthemes_14" width="786" height="447" /></a>
 
@@ -123,31 +123,31 @@ Activate your child theme. What do you see? Hmmm, it seems that our website is s
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_15.png"><img class="alignnone size-full wp-image-5295" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_15.png" alt="cthemes_15" width="788" height="631" /></a>
 
-Well, we created the child theme directory inside the theme folder. We put in our style.css file and changed the <strong>Template</strong> value to the original theme’s folder name. This was suppose to tell WordPress what theme’s style we are basing our child theme off of. Why didn’t this work?
+Well, we created the child theme directory inside the theme folder. We put in our style.css file and changed the **Template** value to the original theme’s folder name. This was suppose to tell WordPress what theme’s style we are basing our child theme off of. Why didn’t this work?
 
 In the past, below the comment in our style.css file, we would use an import statement to tell WordPress the location of the style sheet of the original theme. Now, there is a new best practice we will go over in this section.
 
-We need to tell WordPress what styling to import and use. Then, we can make changes to those styles in our new style.css instead of sifting through a 1000+ lines in the original theme. This is the <strong>Cascading</strong> nature of CSS.
+We need to tell WordPress what styling to import and use. Then, we can make changes to those styles in our new style.css instead of sifting through a 1000+ lines in the original theme. This is the **Cascading** nature of CSS.
 
 We do this with functions.php. Let’s get started.
 <ol>
-	<li>Back in File Manager, inside your child theme folder (the same folder as our style.css file), create a new file called <strong>functions.php</strong>. Do not forget the <em>.php</em>.
+	<li>Back in File Manager, inside your child theme folder (the same folder as our style.css file), create a new file called **functions.php**. Do not forget the *.php*.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_16.png"><img class="alignnone size-full wp-image-5296" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_16.png" alt="cthemes_16" width="520" height="119" /></a></li>
-	<li>Open this functions.php with the <strong>Code Editor</strong> tool.</li>
+	<li>Open this functions.php with the **Code Editor** tool.</li>
 	<li>In a new tab, go back to the WordPress Codex page on Child themes <a href="https://codex.wordpress.org/Child_Themes">here</a>.</li>
 	<li>Copy and paste this code into the functions.php file. There are two PHP code snippets, use the second one.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_17.png"><img class="alignnone size-full wp-image-5297" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_17.png" alt="cthemes_17" width="779" height="316" /></a></li>
-	<li>We aren’t done yet with the PHP code we just pasted. We need to use an opening PHP tag (&lt;?php) to start this file with. On a line before the code you just pasted (for me I’ll put it on the first line in the file), put <strong>&lt;?php</strong>. There is not a closing angle bracket on an opening php tag.
+	<li>We aren’t done yet with the PHP code we just pasted. We need to use an opening PHP tag (&lt;?php) to start this file with. On a line before the code you just pasted (for me I’ll put it on the first line in the file), put **&lt;?php**. There is not a closing angle bracket on an opening php tag.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cthemes_18.png"><img class="alignnone size-full wp-image-5298" src="http://labs.everettprogram.org/wp-content/uploads/cthemes_18.png" alt="cthemes_18" width="746" height="214" /></a></li>
-	<li>Hit <strong>Save</strong> before exiting the file.</li>
+	<li>Hit **Save** before exiting the file.</li>
 	<li>Refresh your WordPress instance. If everything worked, the correct styling should be applied.</li>
 </ol>
 [/toggle]
 [toggle title="Step 3a: Add a Theme Image"]
-<h1>Step 3a: Add a Theme Image</h1>
+# Step 3a: Add a Theme Image
 You don’t have to do this, but it will make it look nice. This creates a preview image for your theme manager. Just take any image file and title it “screenshot.png” and put it in the child directory
 [/toggle]
 [/accordian]
@@ -165,7 +165,7 @@ In the next lesson, we will be learning about some of the PHP template files Wor
 <iframe src="https://www.youtube.com/embed/jZN2YGfrhwI" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 
-<h1>How Do People Use Child Themes?</h1>
+# How Do People Use Child Themes?
 Lot's of people use child themes as a jumping off point for their own theme or as a learning tool. Twenty Twelve is really nice to learn from and improve upon. Check out this <a href="http://imgur.com/a/MS0zO#0" target="_blank">gallery</a> comparing several different Twenty Twelve Children.
 
 We have already watched this video, but it is a good example of how to use developer tools and start making changes with your child theme:
@@ -173,50 +173,50 @@ We have already watched this video, but it is a good example of how to use devel
 <iframe src="//www.youtube.com/embed/oJMBaxPFumQ" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 [accordian]
 [toggle title="Text Walk through of How to use Child Themes"]
-<h2>Text Walk Through</h2>
-<h2>Step 1: Identify An Element</h2>
+## Text Walk Through
+## Step 1: Identify An Element
 I want to change the way the menu looks in the Twenty Twelve Theme. Specifically, I want to make the menu items centered instead of left-aligned.
 
 Open up Firebug and click the select tool. Then select the menu area. Look to make sure that you’ve got the right thing selected by looking at the HTML. The class on that unordered list (remember that we used unordered lists to make the nave menus?) is “nav-menu” so this is probably the thing we want to alter
-<h2>Step 2: Mess with the CSS</h2>
+## Step 2: Mess with the CSS
 Here is where you get to play around. On the right hand side of the Firebug pane, you’ll see the style tab. This will tell you all the style rules affecting the element that you have selected. Double click on values to change them. Since we wanted to make the menu aligned in the center, let’s alter the “text-align” property to “center”. Don’t worry about all the other stuff.
 
 You’ll notice that it the change takes effect immediately on the page so you know what you did worked.
-<h2>Step 3: Copy Pasta</h2>
+## Step 3: Copy Pasta
 Now all you have to do is copy the rule you just made and paste it into your child theme’s style sheet.
 <div><dl id="attachment_915"><dt></dt><dd>Select it all. You’ll copy the right part, don’t worry</dd></dl></div>
-<h2>Step 4: Paste Into Your Stylesheet</h2>
+## Step 4: Paste Into Your Stylesheet
 Simple enough.
 
 This will work perfectly fine and do everything you need it to, but do you really need everything else?
-<h2>Step 5: Get Rid of Superfluous Code</h2>
-Child themes inherit everything from their parents so you only employ your child theme when you’re <em>changing </em>something. That means that all we wanted to do was change the text alignment so that’s all we have to have on there.
-<h3></h3>
-<h2>Step 6: You’re Done!</h2>
+## Step 5: Get Rid of Superfluous Code
+Child themes inherit everything from their parents so you only employ your child theme when you’re *changing *something. That means that all we wanted to do was change the text alignment so that’s all we have to have on there.
+### 
+## Step 6: You’re Done!
 Hooray! You wanted to get the menu items in the middle and that’s what we did!
 [/toggle]
 [toggle title="Google Web Fonts"]
-<h1>Google Web Fonts</h1>
+# Google Web Fonts
 Browsers only recognize a small amount of fonts so we must go outside for solutions. Google Web fonts is an open source repository of fonts that anyone can access. Let’s use Google Web Fonts to put a new font on our site title.
 
 <iframe src="//www.youtube.com/embed/Lef-Q74q210" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-<h2>Text Walk Through:</h2>
-<h3>Step 1: Go to the Web Fonts Homepage</h3>
+## Text Walk Through:
+### Step 1: Go to the Web Fonts Homepage
 You can find it at <a title="google.com/fonts" href="http://google.com/fonts" target="_blank">google.com/fonts</a>
-<h3>Step 2: Choose the One You Want</h3>
+### Step 2: Choose the One You Want
 On the bottom right of each pane, there is a button that says “quick use”. Click it.
-<h3>Step 3: Choose the Addition Method</h3>
+### Step 3: Choose the Addition Method
 On step 3 you are asked how you want to add the code to your website. Choose the ‘@import’ option. This is much like the way that we made our style sheets import the parent theme styles.
 
 Open up your style sheet and paste it in below where you imported the Twenty Twelve style sheet. I like to add a little note to show that this is the place to put font imports.
-<h3>Step 4: You Now Have That Font</h3>
+### Step 4: You Now Have That Font
 The font is now able to be called upon. Copy the CSS from the Web Font page so you don’t forget it.
 
 &nbsp;
 
 
-<h2>A Cautionary Note</h2>
+## A Cautionary Note
 Don’t go overboard with Web Fonts. Every time you add one, you’re making your blog make an external request to Google. This slows down page loads slightly. A few font’s won’t hurt but put in a lot and you’ll see a slow down.
 
 If you're going to use special fonts, then it's a good idea to limit it to two or three. Heading and body text, and maybe a special font for your site title
@@ -224,14 +224,14 @@ If you're going to use special fonts, then it's a good idea to limit it to two o
 [/accordian]
 
 
-<h1>Homework Assignment</h1>
+# Homework Assignment
 <div id="homework">
 
 You will be putting that shiny new child theme to good use. Whenever you change the color of anything, you must use a hex color code. Use <a title="ColorPicker.com" href="http://www.colorpicker.com/" target="_blank">ColorPicker.com</a> for hex codes or get the ColorZilla Chrome and Firefox extension. Whenever you must use a different font, use a <a title="web safe fon" href="http://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank">web safe font</a> or import a Google web font. Please make the following changes to your site.
-<h2>Part I: Revealing The Container Structure</h2>
-Reveal the container structure of your WordPress site, <em>yourdomain/wordpresspart2</em>, by color coding it. This will help you better understand that a page is made up of several &lt;div&gt;s all nested within each other.
+## Part I: Revealing The Container Structure
+Reveal the container structure of your WordPress site, *yourdomain/wordpresspart2*, by color coding it. This will help you better understand that a page is made up of several &lt;div&gt;s all nested within each other.
 
-If your haven't already, create a child theme for the Twenty Twelve theme installed on your WordPress instance at <em>yourdomain/wordpresspart2</em>.
+If your haven't already, create a child theme for the Twenty Twelve theme installed on your WordPress instance at *yourdomain/wordpresspart2*.
 
 Add the following rules to all the major page containers
 <pre>#selector {
@@ -255,17 +255,17 @@ Add these rules to the following divs:
 	<li>#secondary</li>
 	<li>#colophon</li>
 </ul>
-<h2>Part II: Styling the Content</h2>
-Next, we are going to put our child theme’s stylesheet to use. Use your knowledge of developer tools to help you. Add the following CSS changes to the style.css file in your child theme that you just created at <em>yourdomain/wordpresspart2</em>:
+## Part II: Styling the Content
+Next, we are going to put our child theme’s stylesheet to use. Use your knowledge of developer tools to help you. Add the following CSS changes to the style.css file in your child theme that you just created at *yourdomain/wordpresspart2*:
 
-Change the <strong>font </strong>and<strong> color </strong>of
+Change the **font **and** color **of
 <ul>
 	<li>The site title</li>
 	<li>The site description</li>
 	<li>Page titles</li>
 	<li>The menu items</li>
 </ul>
-<strong>Paragraphs:</strong> Change the font of all paragraphs appearing in the post or page content
+**Paragraphs:** Change the font of all paragraphs appearing in the post or page content
 
 Change the spacing of the menu items.
 <h1 id="submitting"><a class="headeranchor-link" href="#submitting" name="user-content-submitting"></a>Submitting</h1>
@@ -273,7 +273,7 @@ Once you’ve completed all the parts, download a copy of your child theme’s s
 
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> with :
 <ul>
-	<li>The email subject line in the following format: <em>HW#3 Firstname Lastname</em></li>
+	<li>The email subject line in the following format: *HW#3 Firstname Lastname*</li>
 	<li>The web address of your WordPress instance</li>
 	<li>A copy of your child theme’s stylesheet attached to the email</li>
 </ul>

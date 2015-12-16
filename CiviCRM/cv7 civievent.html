@@ -1,15 +1,15 @@
-<h2>CiviEvent</h2>
-<h3>Outcome:</h3>
+## CiviEvent
+### Outcome:
 <ul>
 	<li>Be able to create events and set up online registration and email reminders</li>
 	<li>Be able to create customized event types, participant roles, and registration fields</li>
 	<li>Understand how to use profile</li>
 	<li>Understand how to add custom fields exclusively for a participant role or an event type</li>
 </ul>
-<h3>What is CiviEvent</h3>
+### What is CiviEvent
 <p style="padding-left: 30px;">CiviEvent is the CiviCRM component that allows you to create, manage, and document the events hosted by your organization. These events can be as large as the Everett Program's May event for Paul's retirement ( and we did use CiviEvent!), or as small as a 10-participant meeting. CiviEvent allow user-defined event types and participant roles so it covers the needs of different organizations. CiviEvent also integrates with CiviMail and CiviContribute. Through CiviMail, you can set up email registrations, schedule reminders, and send confirmations to your participants; through CiviContribute, you may keep track of registration fees or donations that are associated with the event, and generate reports of the overall income of the event.</p>
 
-<h3>Event types</h3>
+### Event types
 <p style="padding-left: 30px;">Event type is pretty self explanatory. Depends on what events you host on a regular bases, you may categorize your events into a few types. The concept of event type is similar to contact subtypes. Event types are mostly useful when you need to search participants who have attended a certain type of events. Also, because CiviCRM allows you to create custom fields exclusively for an event type, it might be easier to create event types based on that function. For example, the Everett Program have hosted many different events, such as the spaghetti night, LinkedIn workshop, etc,  in the past for recruitment purposes; therefore, it might be more efficient to manage those events with an event type called "recruitment", rather than "workshops". Also, we may create a custom field for participants of recruitment events asking how they know about the event, their major and fields of interest, so we can examine how effective our flyering or postering methods are, whether we attract the people as we plan to, and most importantly, generate a list of participants of these recruitment event and follow up with them when it's time to register for classes.</p>
 <p style="padding-left: 30px;">However, that was my own understanding of event types, there are no "right" way to do this. As long as it increase efficiency for you, use it however you feel fit. CiviCRM already create a few types of events for you, and you may used them as they way they set up, or you may delete the ones you don't want, and create ones that fit your need. However, according to the<a href="http://book.civicrm.org/user/current/events/setup/"> CiviCRM Users Book</a>, "you cannot delete event types which have been assigned to one or more events. " Therefore, make sure you think thoroughly before you create event types for your organizations.</p>
 
@@ -26,7 +26,7 @@
 <p style="padding-left: 30px;">[/toggle]</p>
 
 </div>
-<h3>Participant roles</h3>
+### Participant roles
 <p style="padding-left: 30px;">The concept of participant roles is not much different from Event Types and Contact Subtypes. Every event participant is assigned a role when they register in order to document their involvement in the event. You can create and design participant roles that you feel fit for your organization, and also create custom fields for any specific roles. There are also other ways to assign participant roles, as CiviCRM says, "You can also allow people to choose a Role by creating a Profile with the Participant Role field. Then include that Profile when you configure the Online Registration page for this event." One thing worth noting is that you may create an event for just one participant role. For example, if you are hosting a talent show, you will have two major participants, performer, and attendees/audience. For events like this, you'd want to have one or multiple rehearsals, but the audiences won't be there during rehearsals, so all the participants will be performers. However, again, that's only my interpretation, and the single-participant-type event is just one of the tools CiviCRM has to offer.</p>
 
 <div style="padding-left: 30px;">
@@ -42,11 +42,11 @@
 <p style="padding-left: 30px;">[/toggle]</p>
 
 </div>
-<h3>Custom fields and Profile</h3>
+### Custom fields and Profile
 <p style="padding-left: 30px;">As I briefly mention earlier, Custom Fields and Profiles help you set up events.  Remember that we set up a profile for email registration last week? A the<a href="http://book.civicrm.org/user/current/organising-your-data/profiles/"> CiviCRM Users Book</a> said, "A Profile is a collection of fields from your database....By creating a Profile, you are able to pick and choose only those fields that are relevant for a specific purpose." Also, when you're creating Profiles, you are only allowed to used the existing fields (Individual first name, contact email, etc) in CiviCRM, which means the Profiles draw certain fields/data from the existing frame work and display them (Directory), or generate more of them (Sign-up page).  It might be easier to conceptualize Profiles by thinking of them as a platform that connects the outside world to the data in your CiviCRM. Profiles don't change how your store your data nor what data your store because they are just agents. On the other hand, Custom Fields are things you build upon the CiviCRM framework, and allow you to collect the data you need. However, data collected from Customized Fields has lesser interconnection, and are less systematized. Also, unlike Custom Fields that are designed for contacts (ex: the emergency contact fields for Staff), the ones you used for event participants will not appear in contact profiles unless you click on "Events" and view their registration information of an event. However when you're generating a list of participants for an event, it is possible to display information in Custom Fields.</p>
 <p style="padding-left: 30px;">So, after reading my explanation of Profile and Custom Fields, I hope you understand both of them a little bit more. Another way to conceptualize their connection is that you can create Profiles that include Custom Fields. <a href="http://youinyouth.com/civilab/civicrm/?page=CiviCRM&amp;q=civicrm/event/info&amp;reset=1&amp;id=1">Here</a> is an event example with uses of Profiles with Custom Fields, click on "register now!" and look at the registration form. I created the Custom Field sets for "Dietary Restrictions" and "Information About Your Kids", then created a profile with those sets to generate information I need. Feel free to try to go through the registration process if you want to. It helps you designing your events as well.</p>
 
-<h3>Setting up and using CiviEvent</h3>
+### Setting up and using CiviEvent
 <p style="padding-left: 30px;">Create a new event by going to "Events&gt; New Event"</p>
 <p style="padding-left: 30px;">The fist page is pretty simple and straightforward. We explained participant Role and Event Type in the previous section. If you don't understand what other items are for, the blue question mark icon is really useful! This is how your information will be displayed (click on image for bigger view)</p>
 <p style="padding-left: 60px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-1.png"><img class="alignnone wp-image-5707 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-1.png" alt="event3-1" width="1574" height="922" /></a></p>
@@ -65,7 +65,7 @@
 <p style="padding-left: 60px;">The "Duplicate Matching" rule is for when people who are already your contacts are signing up, they will be recognized when they match to the contact based on that rule you set.</p>
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-4.png"><img class="alignnone wp-image-5718 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-4.png" alt="event3-4" width="796" height="333" /></a></p>
 
-<h3 style="padding-left: 60px;">Registration Screen</h3>
+### Registration Screen
 <p style="padding-left: 60px;">In this section you will set up the fields that your attendees fill out with their information. The dropdown list allows you to pick from existing profiles.</p>
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-5.png"><img class="alignnone wp-image-5712 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-5.png" alt="event3-5" width="884" height="461" /></a></p>
 <p style="padding-left: 60px;">If you want to add Custom Fields to an existing Profile, you can select that Profile and click on "Edit". You'll be able to drag and drop the fields into your profile. You can also create new Custom Fields on the spot.</p>
@@ -78,7 +78,7 @@
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-9.png"><img class="alignnone wp-image-5711 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-9.png" alt="event3-9" width="1021" height="538" /></a></p>
 <p style="padding-left: 60px;"> If you think this is a little too messy to deal with, you can also begin with creating Custom Fields for event participants, then create a Profile with the Custom Fields, and finally just simply add the Profile when you're setting up online registration.</p>
 
-<h3 style="padding-left: 60px;">Confirmation and Thank-you Screen, and Confirmation Email</h3>
+### Confirmation and Thank-you Screen, and Confirmation Email
 <p style="padding-left: 60px;">Confirmation screen and confirmation email are both optional. You may choose to use one, both, or none. Confirmation emails allow participants to retrieve the information simply by searching for that email after they register. However, a confirmation page allows participants to double check the information they entered, and avoid misspell of names or emails, or mistakes in checkboxes, etc.</p>
 <p style="padding-left: 60px;">On the other hand, the Thank-you Screen is not optional, but you are able to edit the texts that are being displayed.</p>
 <p style="padding-left: 60px;">Below are some comparisons how these screens and emails look like and how your texts are shown.</p>
@@ -86,7 +86,7 @@
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-11.png"><img class="alignnone wp-image-5720 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-11.png" alt="event3-11" width="746" height="1022" /></a></p>
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-10.png"><img class="alignnone wp-image-5719 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-10.png" alt="event3-10" width="648" height="814" /></a></p>
 
-<h3 style="padding-left: 60px;">Email Invitation</h3>
+### Email Invitation
 <p style="padding-left: 60px;">If you want to send out email invitations of your event, CiviEvent doesn't yet have the capability to do so like confirmation emails yet. However, you can create a nicely formatted CiviMail, and link your event information or online registration to the email. You can get the link of the event page by going to the "Info and Settings" tab when you're configuring your event, and at the very bottom you will see the link:</p>
 <p style="padding-left: 90px;"><a href="http://labs.everettprogram.org/wp-content/uploads/event3-13.png"><img class="alignnone wp-image-5723 size-full" src="http://labs.everettprogram.org/wp-content/uploads/event3-13.png" alt="event3-13" width="965" height="342" /></a></p>
 <p style="padding-left: 60px;">And, if you want to link the registration page, just click on the "Register now!" button on the event page and copy the web link. Test it in a private/incognito window. If everything shows up correctly, the link is good to use!</p>
@@ -105,12 +105,12 @@
 <p style="padding-left: 30px;">[/toggle]</p>
 
 </div>
-<h3>Other resource:</h3>
+### Other resource:
 <p style="padding-left: 30px;"><a href="http://labs.everettprogram.org/activities-in-civicrm/">How to import participant status as activities</a></p>
 <p style="padding-left: 30px;"><a href="http://book.civicrm.org/user/current/events/reports-and-analysis/">Event report and analysis</a></p>
 <p style="padding-left: 30px;"><a href="http://book.civicrm.org/user/current/events/everyday-tasks/">More about CiviEvent</a></p>
 
-<h3>Homework</h3>
+### Homework
 <p style="padding-left: 30px;">Isn't it fun to plan a fake event? Yes it is. That's why your homework this week is to create a fake event. It could be anything, like a girls night out, a food tasting event, a training workshop, a yoga class, or  you can go crazy with it and plan your own wedding. No one is stopping you, so get ready to show me your creativity! All the requirement will be listed down below. Some will be broad because restrictions kill creativity, but some will be specific so it's easier to grade (yes, we have to be real for a second, sorry), but for the things I don't mention, please feel free to set it up the way you want to. Let me know if there is any confusion and have fun!</p>
 <p style="padding-left: 30px;">Requirements</p>
 
@@ -130,7 +130,7 @@
 </ul>
 </li>
 </ul>
-<h3>Submit Your Homework</h3>
+### Submit Your Homework
 <ul>
 	<li>Subject: Firstname Lastname HW7</li>
 	<li>Copy and paste your event page link</li>

@@ -4,14 +4,14 @@ I thought I would send out an email to let you know a few things adn to help pre
 
 This quarter will be a bit different than the previous web lab. We’ll be doing less lecture and more collaboration. By that I mean we will do no classwide activities in which the instructor tells you to type something and then waits for all 14 of you to do it. The model will be more me lecturing for 30–45 minutes then everybody working on the homework with myself and the TA’s going around assisting. We feel like this environment may be more conducive to community and learning.
 
-We ask that you do a few things to get ready <b>before</b> class on Thursday. We’re going to be making new WordPress sites as part of the homework so you need to be able to access cPanel. <b>Please</b> <b>please</b> <b>please</b> have your cPanel username and password on hand for class.
+We ask that you do a few things to get ready **before** class on Thursday. We’re going to be making new WordPress sites as part of the homework so you need to be able to access cPanel. **Please** **please** **please** have your cPanel username and password on hand for class.
 
 I also recommend brushing up on your CSS as the first homework assignment has you doing some. The most important thing to understand is syntax:
 <pre>class {</pre>
 <pre>property:value;</pre>
 <pre>}</pre>
 Try going through a few lessons on the Intro to CSS track on <a href="http://www.codecademy.com/tracks/web">Codecademy</a>.
-<h1><b>Changing cPanel/FTP Password</b></h1>
+# **Changing cPanel/FTP Password**
 When you sign up for hosting with Lithium, they send you two crucial things:
 <ol>
 	<li>Your username</li>
@@ -24,7 +24,7 @@ This was sent to you in an email from Lithium with the subject “New Account In
 To change your password, just log into cPanel and go to the “Preferences” tab and choose “Change Password”.
 
 Please try and remember this. Write it and keep it in your wallet or something. It’s a pain to go searching or having to change it. Which reminds me…
-<h1><b>If You Lose Your cPanel Password</b></h1>
+# **If You Lose Your cPanel Password**
 No big deal, you just need to reset it. Follow these steps:
 <ol>
 	<li>Go to <a href="http://lithiumhosting.com/">lithiumhosting.com</a></li>
@@ -34,34 +34,34 @@ No big deal, you just need to reset it. Follow these steps:
 	<li>Click on the “Change Password” Tab</li>
 </ol>
 You can view our <a href="http://labs.everettprogram.org/changing-your-cpanel-password/">post</a> on the subject for a visual walkthrough.
-<h1><b>Lost Your WordPress Password</b></h1>
+# **Lost Your WordPress Password**
 If you forgot your password to log into your WordPress site, you should be able to just use WordPress’s built in password reset function. However, some people have reported that not working. Never fear! You have complete access to your data so this won’t be a problem.
 
-What we need to do is go into your site’s database and change the password there. The database is where all your content, options, comments, tags, users, and more are stored. Essentially, the database <b>is</b> your site.
-<h2><b>Step 1 - Find Your Site’s Database Name</b></h2>
+What we need to do is go into your site’s database and change the password there. The database is where all your content, options, comments, tags, users, and more are stored. Essentially, the database **is** your site.
+## **Step 1 - Find Your Site’s Database Name**
 Go to Softaculous and click on “All Installations” up in the header. It’s an icon of a crate. This will give you a full list of all the software you have installed (WordPress sites, forums, Moodles, Wikis, etc.)
 
 In the options column, click on the paper and pencil icon which is “Edit Details”. Don’t edit anything, you’re just here to look. Find the “Database Name” and write it down. It’s going to be “yourusername_xxxx”.
-<h2><b>Step 2 - Find Your Username in the Database</b></h2>
+## **Step 2 - Find Your Username in the Database**
 Go back to your cPanel and click on “phpMyAdmin” under the Databases tab. This is a free, open source mySQL database client that you will find installed on basically any domain from any provider.
 
 Click on the “Databases” tab and then select your database. You will be greeted with 11 “tables”. They’ll all have some prefix and then an underscore and the name of the table. The prefix is different for every install of WordPress but whenever you read about doing stuff in the database, people will refer to them with the prefix “wp_”. Find the “wp_users” table and click on it.
-<h2><b>Step 3 - Reset Your Password by Choosing “Edit”</b></h2>
-Click the little pencil icon on the row of your username. This will take you to another screeen wherein you can edit each record (cell) in that row. The one we’re interested int is “<b>user_pass</b>”. You need to do two things:
+## **Step 3 - Reset Your Password by Choosing “Edit”**
+Click the little pencil icon on the row of your username. This will take you to another screeen wherein you can edit each record (cell) in that row. The one we’re interested int is “**user_pass**”. You need to do two things:
 <ol>
-	<li>From the drop down menu in the “Function” column, select “<b>MD5</b>”. This will encrypt the password</li>
+	<li>From the drop down menu in the “Function” column, select “**MD5**”. This will encrypt the password</li>
 	<li>Write in your desired password.</li>
 </ol>
 After that just scroll down an hit “Go” and Bob’s your uncle. You may now log in to your site through wp-admin.
-<h2><b>How I Find Solutions to Any Problem</b></h2>
+## **How I Find Solutions to Any Problem**
 A lot of people ask me what sites I go to find answers to my WP problems. The answer is more that I get answers <i>from</i> a lot of the same sites but I don’t got <i>to</i> them to find answers.
-<h2><b>Ok What’s That Mean?</b></h2>
+## **Ok What’s That Mean?**
 I don’t like searching individual sites for things unless I need information specifically pertaining to their product or service. I’d rather search all sites everywhere. I also want the most relevant answers provided to me first. By using Google, your casting a larger net and letting their algorithm find something of quality.
 
 My search results usually take me to the <a href="https://codex.wordpress.org/">Codex</a>, the wordpress.org <a href="https://wordpress.org/support/">support forums</a>, <a href="http://wordpress.stackexchange.com/">StackOverflow</a>, or a WordPress webiste like <a href="http://www.wpbeginner.com/">WPBeginner</a>, or <a href="http://premium.wpmudev.org/blog/">WPMU Dev</a>.
 
 By typing my exact problem into Google, I can usually find the solution fairly quickly. Think of it this way. Your problem is not unique. Other people have faced it, solved it, and written a blog post or tutorial about it. Other people experience the problem and find that post and then share it. This cycle repeats and eventually the best articles rise to the top and Google is what connects you to them.
-<h1><b>WordPress Resources</b></h1>
+# **WordPress Resources**
 I highly recommend you follow a few WP related sites. It’s a great way to expand your horizons, learn about the culture, and engage with your classmates by sharing articles. Here is a list of sites I follow
 <ul>
 	<li><a href="http://www.wpbeginner.com/">WP Beginner</a></li>

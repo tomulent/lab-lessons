@@ -1,10 +1,10 @@
 Go back to your proposal app from Project Two and make a copy of it. This is so you'll have a backup copy of your app at previous stages of development.
 
 You'll be using your new knowledge of navigation methods to improve your proposal app.
-<h3>Parameters</h3>
+### Parameters
 On the homepage of your app, create a listview containing links to each section of your proposal (i.e. each page of your app).
 
-Get rid of the stupid forward/backward links at the bottom of each page and simply replace them with a button linking back to the home page. Give the button a "home" icon using <strong>data-icon="home"</strong>.
+Get rid of the stupid forward/backward links at the bottom of each page and simply replace them with a button linking back to the home page. Give the button a "home" icon using **data-icon="home"**.
 
 Upload it to your server and send me a link. You may have noticed that I've just been putting my examples into a folder called "mobile-test" and giving them names like "project-1" and "project-3". You might want to do the same thing to keep everything tidy.
 

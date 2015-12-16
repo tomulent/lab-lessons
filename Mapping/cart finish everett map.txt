@@ -1,5 +1,5 @@
 &nbsp;
-<h1>Final Project</h1>
+# Final Project
 Our last assignment for the class will be to finish the Everettprogram.crowdmap.com Ushahidi website.
 
 The objective of our map was to establish great places around campus to study in peace. In addition, where on campus students have access to printers.

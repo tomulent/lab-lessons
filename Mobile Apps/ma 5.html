@@ -1,50 +1,50 @@
 So things are looking slick now, but navigation is kind of awkward. It's better than it was, but it can be better. It's too bad we can't have a navigation bar stuck at the top that will let us easily move backward or skip home. Oh wait. We totally can!
-<h2>Navbars</h2>
+## Navbars
 Easy navigation is crucial if you want your users to ever use your app again. Poor navigation is reason enough to uninstall an app so we better make ours better. Before you even start in on this lesson, give it a shot for yourself. Seriously. You've gotten this far and you may have figured out how this lesson might go. Challenge yourself and take a stab at doing this without a net. Here's the need to know:
 <ul>
-	<li>The jQuery attribute to put in the div is <strong>data-role="navbar"</strong></li>
+	<li>The jQuery attribute to put in the div is **data-role="navbar"**</li>
 	<li>The navbar itself is an unordered list</li>
 	<li>It can go in the header div or outside of it.</li>
 </ul>
-<h1>Walkthrough</h1>
+# Walkthrough
 If you didn't take off the training wheels, here's where we start.
 
 You can put a navbar anywhere you want theoretically, but we want ours to be at the top. The very top, actually, so we'll put it right in the header of a page.
 
-As with most things in this course, we'll be creating a div and giving it a jQuery attribute. The jQuery attribute we use to turn a div into a navbar is <strong>data-role="navbar".</strong> I know, I know. They like making it all cryptic and not straightforward. Just try and bear with it and follow along. Here is an example of the code that I used in mine.
+As with most things in this course, we'll be creating a div and giving it a jQuery attribute. The jQuery attribute we use to turn a div into a navbar is **data-role="navbar".** I know, I know. They like making it all cryptic and not straightforward. Just try and bear with it and follow along. Here is an example of the code that I used in mine.
 
 <img class="aligncenter size-full wp-image-3038" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.46.38-PM.png" alt="Screen Shot 2014-05-16 at 3.46.38 PM" width="396" height="148" />
 
-Super straightforward. You get two equal-sized butons at the top. You may notice that the first one links to <strong>#back. </strong>That won't work, but we can make it work later.
-<h2>Icons</h2>
-Would you like some icons? Add the attribute <strong>data-icon="icon_name" </strong>to the &lt;a&gt; tag. They're usually named pretty logically. In the case of 'back' and 'home' , the values of <strong>data-icon</strong> are <strong>back</strong> and <strong>home.</strong>
+Super straightforward. You get two equal-sized butons at the top. You may notice that the first one links to **#back. **That won't work, but we can make it work later.
+## Icons
+Would you like some icons? Add the attribute **data-icon="icon_name" **to the &lt;a&gt; tag. They're usually named pretty logically. In the case of 'back' and 'home' , the values of **data-icon** are **back** and **home.**
 
 <img class="aligncenter  wp-image-3040" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.52.11-PM.png" alt="Screen Shot 2014-05-16 at 3.52.11 PM" width="211" height="251" />
 
-That's pretty cool, but i don't like how tall it looks with the icons on top of the text. Let's change the position of those icons. In the navbar div, insert the attribute and value <strong>data-iconpos="right" </strong>or whatever position you want (left/right/top/bottom).
+That's pretty cool, but i don't like how tall it looks with the icons on top of the text. Let's change the position of those icons. In the navbar div, insert the attribute and value **data-iconpos="right" **or whatever position you want (left/right/top/bottom).
 
 <img class="aligncenter size-full wp-image-3041" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-16-at-3.54.00-PM.png" alt="Screen Shot 2014-05-16 at 3.54.00 PM" width="410" height="91" />
 
 That's better. Actually it's kinda janky. Try it without the text and move the icons to the center. Or get rid of the icons totally. Or remove the h3 title. It's up to you as this is your app.
-<h2>Making a Functioning "Back Button"</h2>
+## Making a Functioning "Back Button"
 Before we move on, let's fix that non-functioning back button. You may or may not have need for a back button in your app depending on how you arranged it. If everything is a direct child of the Home screen, then 'back' and 'home' would function identically.
 
 Let's supposed you had nested "Goals" under "Project Description" so the path looks like "Home/Project Description/Goals" How would you get from "goals" to "project description"? You could link directly back to previous page, but that would require that you change the destination of the "back" button every time you put it on your page. We need a more computer-y solution.
 
-We want the back button to always take us to the page we were just at, but we don't want to hard code the individual cases into our page. jQuery to the rescue! Instead of giving the back button the <strong>href</strong> attribute, we'll give it <strong>data-rel="back"</strong>. Give it a try and see how it works.
-<h1>Putting Navbars on Each Page with Find/Replace</h1>
+We want the back button to always take us to the page we were just at, but we don't want to hard code the individual cases into our page. jQuery to the rescue! Instead of giving the back button the **href** attribute, we'll give it **data-rel="back"**. Give it a try and see how it works.
+# Putting Navbars on Each Page with Find/Replace
 You could
-<h1>Back to Navbars. Making Them Stick</h1>
-So we've got the two buttons that will make for nice navigation, but you're user needs to be at the top of the page to use them. Wouldn't it be nice if we coul-- You know where this is going. Put data-<strong>position="fixed"</strong> in the header div.
+# Back to Navbars. Making Them Stick
+So we've got the two buttons that will make for nice navigation, but you're user needs to be at the top of the page to use them. Wouldn't it be nice if we coul-- You know where this is going. Put data-**position="fixed"** in the header div.
 
 <img class="aligncenter size-full wp-image-3043" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.37.30-AM.png" alt="Screen Shot 2014-05-17 at 7.37.30 AM" width="400" height="554" />
-<h2>It Still Doesn't Look How I Want It</h2>
-Having the header text <em>and</em> the top-fixed navbar sure does take up a lot of space. What's to be done?
+## It Still Doesn't Look How I Want It
+Having the header text *and* the top-fixed navbar sure does take up a lot of space. What's to be done?
 
 We could take out the header text. That would free up some space but it would mean that the user could get confused about where they are. The user is an easily excitable creature and if they get confused can lash out violently. A single non-working button could be all that it takes to push a user over the edge into a blind rage where they shake their phone violently to punish the tiny men who live inside that make it work.
 
 Another option is to just get rid of the navbar altogether and put the buttons in the header bar itself. If you think doing that is somewhat antithetical to the whole theme of this lesson, then welcome to the world of web design. You're going to learn stuff and then find out you don't want to use it in a particular instance. Just keep in mind that you're adding tools to your kit and you never know when they'll come in handy.
-<h2>Alternatives to the Top Navbar</h2>
+## Alternatives to the Top Navbar
 So in doing this lesson I learned a few things. Namely, you can just jam a link right next to the header text and it will just show up as a button. Try out the following code:
 <pre>&lt;div data-role="header" data-theme="b" data-position="fixed"&gt;
   &lt;h3&gt;Executive Summary&lt;/h3&gt;
@@ -57,19 +57,19 @@ That looks a lot neater. Still want your home button? Just add the link right un
 <img class="aligncenter  wp-image-3045" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-7.42.26-AM.png" alt="Screen Shot 2014-05-17 at 7.42.26 AM" width="258" height="186" />
 
 Hot dog! That's slick, compact, and functional!
-<h2>Yet More Stuff to Invalidate This Whole Lesson</h2>
-Now comes the thing that makes like half this lesson moot. There is an attribute <strong>data-add-back-btn="true"</strong> that, when added to the header div, will automatically create a back button in the header. Go ahead and add that to one of your pages and see how it looks.
-<h3>This Could Be an Easier Method</h3>
-To use navbars, you would have to add the navbar code into the header of every page. With the <strong>data-add-back-btn</strong> attribute, you can just do a find replace. Here's a handy snippet
+## Yet More Stuff to Invalidate This Whole Lesson
+Now comes the thing that makes like half this lesson moot. There is an attribute **data-add-back-btn="true"** that, when added to the header div, will automatically create a back button in the header. Go ahead and add that to one of your pages and see how it looks.
+### This Could Be an Easier Method
+To use navbars, you would have to add the navbar code into the header of every page. With the **data-add-back-btn** attribute, you can just do a find replace. Here's a handy snippet
 
 <img class="aligncenter size-full wp-image-3047" src="http://labs.everettprogram.org/wp-content/uploads/2013/05/Screen-Shot-2014-05-17-at-11.50.12-AM.png" alt="Screen Shot 2014-05-17 at 11.50.12 AM" width="542" height="196" />
 
 There. Now all your headers have a back button (but you still have to add a home button manually if you want one). You can apply the same principle with the header div to make all headers fixed.
-<h2>So What Does All This Mean?</h2>
+## So What Does All This Mean?
 It means that there is more than one way to produce the desired effect. You are the designer so you make the choice about how this thing will work.
-<h2>Project: Navigation Refinements</h2>
-<h3>Parameters</h3>
-Make all headers fixed and give all of them a functioning back button. Also, change the listview you have on the frontpage into a navbar. It's easy enough to do. Just remove the attributes making it a listview and wrap it in a div with <strong>data-role="navbar". </strong>
+## Project: Navigation Refinements
+### Parameters
+Make all headers fixed and give all of them a functioning back button. Also, change the listview you have on the frontpage into a navbar. It's easy enough to do. Just remove the attributes making it a listview and wrap it in a div with **data-role="navbar". **
 
 Upload it to your server and send me a link.
 

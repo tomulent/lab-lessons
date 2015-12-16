@@ -4,7 +4,7 @@ You've all been using WordPress for a fairly good amount of time at this point. 
 This lesson is going to further flesh out what exactly a post is and how they can be used to create rich, big, and well organized sites.
 [/two_third]
 [one_third last="yes"]
-<h2>Resources</h2>
+## Resources
 <ul>
 	<li><a href="http://codex.wordpress.org/Post_Types" target="_blank">Codex: Post Types</a></li>
 </ul>
@@ -12,27 +12,27 @@ This lesson is going to further flesh out what exactly a post is and how they ca
 
 <hr />
 
-<h1>What is a Post?</h1>
-You most likely think of posts simply as articles or blog entries. They are the things you use to get words onto your blog. They are that, but the posts you're thinking of are but one "<b>Post Type</b>".
+# What is a Post?
+You most likely think of posts simply as articles or blog entries. They are the things you use to get words onto your blog. They are that, but the posts you're thinking of are but one "**Post Type**".
 
 We'll give the dry definitions of the basic post types, then run through examples of "Custom Post Types" and why they make WordPress so useful.
-<h2>Standard Post Types</h2>
+## Standard Post Types
 There are five standard post types that come out of the box in WordPress:
-<h3>Post</h3>
-These show up on your blog feed. By default, the front page of your WP site will display you posts in reverse chronological order (most recent first). Posts are arranged using  <strong>taxonomy</strong>, or tags and categories. Posts are non-hierarchical, i.e. they have no structure in relation to one another. They are all on the same "level".
-<h3>Page</h3>
+### Post
+These show up on your blog feed. By default, the front page of your WP site will display you posts in reverse chronological order (most recent first). Posts are arranged using  **taxonomy**, or tags and categories. Posts are non-hierarchical, i.e. they have no structure in relation to one another. They are all on the same "level".
+### Page
 Do not show up in your blog feed. Pages do not have taxonomy, but are rather arranged using a hierarchy, i.e. pages can be nested within one another in a "tree" like arrangement.<!--password to super secret page is "rhubarb"-->
-<h3>Revision</h3>
+### Revision
 WordPress has a version control system in place. Every time you hit "Update" in the post editor, it saves a copy of the old version of a page or post so that if you need to go back to an earlier version, you can.
-<h3>Navigation Menu</h3>
+### Navigation Menu
 Custom menus are important for users being able to navigate your site. They're also a helpful way of arranging lists of link. Custom menus are stored in the database as a post type.
-<h3>Attachment</h3>
+### Attachment
 Attachments are basically anything uploaded through the media upload feature. This includes images and files. While not super important to what we're talking about, let me relate a story on how I learned about this.
 
 In my early days of making WordPress sites, I did a lot of reckless things that I probably shouldn't have. For some reason I thought that my site would run faster if I purged all the old revisions of previous posts and pages from my database. So I sorted the posts table so that all the published, and therefor most recent, posts would be at the top. I then highlighted and deleted everything beneath that. Given what I just told you about navigation menus and attachments, you can guess why this might have been a stupid thing to do. This deleted my custom menus, including one containing all 33 CA public universities. It also deleted all the attachment posts, meaning that as far as WordPress was concerned, none  of my images that I had uploaded existed!
-<h1>Post Types and Site Organization</h1>
+# Post Types and Site Organization
 Let's focus on how posts and pages can be arranged to create a well ordered site.
-<h2>Page Hierarchy</h2>
+## Page Hierarchy
 As you know, pages are for static content that is not time-sensitive. All the lessons on this website are pages. We keep track of them by ordering them in a hierarchy. On this site there is a page called "Classes". Within Classes, there is a page called "WordPress". Within WordPress, there is a page called "Custom Post Types". There is even a child of that page called "Super Secret Page" which is password protected. Look in the source of this page to find password.
 
 We use a plugin called "<a href="http://wordpress.org/plugins/cms-tree-page-view/" target="_blank">CMS Page Tree View</a>" because...let's face it, the native WP page manager isn't well suited to quickly assessing your many pages. In the picture below, you can see how the 100+ pages of this website are neatly arranged into a hierarchy.
@@ -40,23 +40,23 @@ We use a plugin called "<a href="http://wordpress.org/plugins/cms-tree-page-view
 <img class="aligncenter size-full wp-image-3148" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Pages_Tree_View_‹_Everett_Labs_—_WordPress_and_Edit_Page_‹_Everett_Labs_—_WordPress.png" alt="Pages_Tree_View_‹_Everett_Labs_—_WordPress_and_Edit_Page_‹_Everett_Labs_—_WordPress" width="509" height="614" />
 
 This is straightforward and probably not news to you.
-<h2>Post Taxonomy</h2>
+## Post Taxonomy
 Tags and categories allow us to define information about a post so that we can sort through them later on. You'll see exactly what we mean by that in a later section, but for now, here's what they are:
-<h3>Categories</h3>
+### Categories
 For broadly classifying posts. If you had a photography blog, you would probably make broad categories like "Landscapes, Portraits, Buildings, Animals". Categories are hierarchal, meaning you can have sub-categories. For example, the "Landscapes" category could have the sub-categories of "Fields, Mountains, Volcanoes, and Tundra".
 
 It's generally good practice think before hand about the kinds of posts you're going to be publishing so that you can keep your categories to a manageable number.
-<h3>Tags</h3>
+### Tags
 Thanks to Twitter and Instagram, people are becoming more familiar with this concept, although the way people use them socially, is not necessarily the best practice for creating site organization.
 
 Tags are a more freeform than categories and are not hierarchical.
-<h2>How Are Taxonomies Used?</h2>
+## How Are Taxonomies Used?
 Categories and Tags show up as clickable links at the beginning or end of a post. When you click on a tag or category, it will take you to an archive page. An archive page is page that basically shows you every post that contains that cat or tag.
-<h1>Organizing the EverettProgram.org</h1>
+# Organizing the EverettProgram.org
 If you go to <a href="http://everettprogram.org" target="_blank">everettprogram.org</a> and explore around then you'll find that there's actually quite a bit of content in there. We spent a lot of time figuring out how best to organize the things we wanted visitors to be able see. Easy site navigation is a good design practice and should always be in you mind when you're designing a website.
-<h2>Avada Theme</h2>
+## Avada Theme
 After much research, we purchased a theme calla <a href="http://theme-fusion.com/avada/" target="_blank">Avada</a> to be used on everettprogram.org and it's subdomains. It's an extremely extensive theme and offers a lot of routes towards organizing a site.
-<h3>Avada's Approach to Blogs</h3>
+### Avada's Approach to Blogs
 Avada has a somewhat different way of displaying your site's blog. Under normal circumstances, if you wanted to have a blog page, you would create a blank page and then go to "Settings&gt;Reading" and set that page to be your posts page. Avada sees this as limiting so they came up with a different method.
 
 To create a blog/posts page you would create a page and then generate a "shortcode". We haven't gone over these in detail, but think of them as simple small snippets of code that have big consequences. Anyway, you generate a shortcode called "blog", and put it in the page. You select which categories you want to show up, which style of blog you want, how many posts per page you wan, etc. You then place this shortcode in your page and when the page loads, you will see a blog feed. Here's a visual example.
@@ -73,29 +73,29 @@ To create a blog/posts page you would create a page and then generate a "shortco
 
 <hr />
 
-<h3>This is a blog created by a shortcode</h3>
+### This is a blog created by a shortcode
 <div style="border: 5px black solid; padding: 5px;">[blog number_posts="1" cat_slug="wordpress-pt-i" exclude_cats="" title="yes" thumbnail="yes" excerpt="yes" excerpt_words="35" meta_all="yes" meta_author="yes" meta_categories="yes" meta_comments="yes" meta_date="yes" meta_link="yes" meta_tags="yes" paging="no" scrolling="pagination" strip_html="yes" blog_grid_columns="3" layout="large"][/blog]</div>
-<h3>That was a blog created by a shortcode</h3>
-<h2>Why Do It This Way?</h2>
+### That was a blog created by a shortcode
+## Why Do It This Way?
 The traditional method of creating a blog via the settings menu is limiting. Creating blogs via shortcodes allows us to insert dynamic content wherever we want.
-<h2>Blog Pages for Everett People</h2>
-If you go to <a href="http://www.everettprogram.org/team/" target="_blank">everettprogram.org/team</a>, you'll see the directors and staff, followed by pictures of many of the current fellows (we don't have photos for everyone yet :-/ ). The top part with the staff and directors is part of the page, while the part below the fellows description is "<strong>dynamically generated</strong>". It is essentially an archive page for all posts with the category "Current Fellows".
+## Blog Pages for Everett People
+If you go to <a href="http://www.everettprogram.org/team/" target="_blank">everettprogram.org/team</a>, you'll see the directors and staff, followed by pictures of many of the current fellows (we don't have photos for everyone yet :-/ ). The top part with the staff and directors is part of the page, while the part below the fellows description is "**dynamically generated**". It is essentially an archive page for all posts with the category "Current Fellows".
 
 <img class="aligncenter  wp-image-3181" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Our_Team____Everett_Program.png" alt="Our_Team____Everett_Program" width="468" height="309" />
-<h2>Why Do It This Way?</h2>
+## Why Do It This Way?
 If all we want to do is display portraits of current fellows, then why not just add them into the page itself instead of dealing with all these fancy shortcodes? As usual, it's because we want to separate data from rules. Each fellow has an individual post page. That page contains their picture, a bio, links to their public social media, and has room to expand in the future. Think of each post as a collection of data. By creating rules in the form of these blog shortcodes, we can decide how we want content to display.
 
 Right now, the Everett People page only includes fellows portraits and names. What if we wanted to show an excerpt from their bios? Simple tweak to the shortcode. What if we wanted to change the whole look of how the fellows are displayed?  The shortcode allows us to display the blog previews in several different ways (<a href="http://theme-fusion.com/avada/blog-grid-right-sidebar/" target="_blank">grid</a>, <a href="http://theme-fusion.com/avada/timeline-full-width/" target="_blank">full width</a>, <a href="http://theme-fusion.com/avada/category/creative/" target="_blank">image</a>, and more). If we had just added the fellows as normal page content, then making these changes would be extremely time consuming.
-<h3>How Else Does the Site Use Taxonomy?</h3>
+### How Else Does the Site Use Taxonomy?
 <ul>
 	<li>The <a href="http://www.everettprogram.org/everett-partners/" target="_blank">Everett Partners</a> page is a blog of the category "Partners"</li>
 	<li>The <a href="http://www.everettprogram.org/alumni/" target="_blank">Everett Alumni</a> page is a blog of the category "Alumni"</li>
 	<li>The Everett in the News page (not yet public) is a blog of the category "Recognition</li>
 </ul>
 You might be wondering why we didn't included <a href="http://www.everettprogram.org/project-archive/" target="_blank">Everett Projects</a> in that list. That's a very astute observation. We wouldn't hand craft a page with 30+ individual projects on it so it must be a blog page right? Well, it's close to that but each project is actually a custom post type called "Portfolio" and they are displayed with a shortcode called "Recent Works". This will takes some explaining.
-<h1>Custom Post Types</h1>
+# Custom Post Types
 WordPress wouldn't dream of limiting you to only using posts and pages. They built in a way to expand, and that way is custom post types. These basically allow you create something that's like a page or like a post, but you want to serve a different function. Think back to last week with the <a href="http://wordpress.org/plugins/wp-help/" target="_blank">WP Help</a> Plugin. It allowed you to create help topics for your users. Those help topics are actually a custom post type. They are posts that are configured in a way that makes it so you have to be logged in to the backend of WordPress to view them. Let's look at how we use custom post types on the Everett website.
-<h2>FAQs</h2>
+## FAQs
 Avada has a custom post type called "FAQ" or "Frequently Asked Questions". Lots of sites have this type of page and the Avada developers wanted to see if they could make an easier way of maintaining one. Instead of creating a normal page and writing in your FAQ items, you add each item as a post along with categories.
 
 <img class="aligncenter  wp-image-3167" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Edit_Post_‹_The_Everett_Program_—_WordPress_and_Edit_Page_‹_Everett_Labs_—_WordPress.png" alt="Edit_Post_‹_The_Everett_Program_—_WordPress_and_Edit_Page_‹_Everett_Labs_—_WordPress" width="894" height="379" />
@@ -103,7 +103,7 @@ Avada has a custom post type called "FAQ" or "Frequently Asked Questions". Lots 
 You then create a page and select "FAQs" from the template menu and you get a page like <a href="http://www.everettprogram.org/faq/" target="_blank">this</a>.
 
 <img class="aligncenter size-full wp-image-3168" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/FAQ_-_The_Everett_Program.png" alt="FAQ_-_The_Everett_Program" width="730" height="515" />
-<h2>Portfolio</h2>
+## Portfolio
 Avada is set up to be especially useful to artists, and business sites. They created a custom post type called "Portfolio Item". Portfolio items have special single pages set up just to display them (see <a href="http://theme-fusion.com/avada/portfolio-items/curabitur-malesuada-lorem/" target="_blank">here</a>, <a href="http://theme-fusion.com/avada/portfolio-items/curabitur-in-tristique/" target="_blank">here</a>, and <a href="http://theme-fusion.com/avada/portfolio-items/praesent-quis-eros/" target="_blank">here</a>). They also three different taxonomies that are created specifically for this post type. We adapted them for our own purposes, but in their original context they relate to a product or art project. Imagine our site is for an artist and we are making a portfolio item post for a digital drawing we made with Photoshop and Illustrator of two Rhinos fighting on the edge of a volcano. We would use taxonomy like:
 <ul>
 	<li>Category: Animals, Nature</li>
@@ -111,18 +111,18 @@ Avada is set up to be especially useful to artists, and business sites. They cre
 	<li>Skills: Photoshop, Illustrator</li>
 </ul>
 See how it has a third taxonomy called skills? The developers felt like that was an important bit of information that was distinct from the general category and wanted people to be able to use it to categorize their work.
-<h2>How We Use it on the Everett Site</h2>
+## How We Use it on the Everett Site
 We felt that this post type was perfect to showcase our student project, partly because we wanted something separate from the other blog posts and partly because the theme has some really nifty ways of showing off your projects. Note the sweet animated sorting tool on the <a href="http://www.everettprogram.org/project-archive/" target="_blank">Projects</a> page. That was made using a shortcode. It sorts based on the project category. We also really like the single posts page for portfolio items.
 
 <img class="aligncenter  wp-image-3169" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Giving_Artisans_Information_Technology_Skills__GAITS__-.png" alt="Giving_Artisans_Information_Technology_Skills__GAITS__-" width="793" height="356" />
 
 Those "Project Details" are portfolio taxonomies. The "Location" is the "Skills" taxonomy and the "Project Theme" is the Category taxonomy. They say something different here because in our child theme, we included the single portfolio template and changed where it said "Skills" and "Category" to what you see above. For more on how we did this, check out the <a href="https://www.youtube.com/watch?v=z9EMo7TSSkw&amp;index=2&amp;list=PLipbqiwGLZkyN7OVsh68bTabBck6zmRER" target="_blank">Why Hack?</a> Series on our YouTube Channel.
-<h1>Why is This Important?</h1>
+# Why is This Important?
 Custom post types add a greater freedom for you to create the exact site that you want. If the custom posts aren't exactly what you need, then tweak them until they are. We'll show you how to create custom post types of your own, but you should know that you'll encounter them in out-of-the-box themes like we did with Avada that may be more developed than anything you could pull off.
-<h1>Examples in Themes</h1>
-<h2>Ureeka - Bookshelf Theme</h2>
+# Examples in Themes
+## Ureeka - Bookshelf Theme
 This neat theme found <a href="http://www.fabthemes.com/ureeka/" target="_blank">here</a>, turns your site into a book review site or shop. They've created a custom post type called "Book" which works in with the special front blog page and single posts page they've created. Here's How the process works.
-<h3>Create a Book Post</h3>
+### Create a Book Post
 <img class="aligncenter  wp-image-3171" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Add_New_Book_‹_I_chnageed_ittt_—_WordPress.png" alt="Add_New_Book_‹_I_chnageed_ittt_—_WordPress" width="761" height="396" />
 
 You would put your review/synopsis/quote or whatever in the body. It has a custom taxonomy called "Genre"
@@ -130,22 +130,22 @@ You would put your review/synopsis/quote or whatever in the body. It has a custo
 <img class="aligncenter  wp-image-3173" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Screen-Shot-2014-05-27-at-9.34.24-AM.png" alt="Screen Shot 2014-05-27 at 9.34.24 AM" width="585" height="195" />
 
 As well as a place to put the author and star rating.
-<h3>Front Page View</h3>
+### Front Page View
 Once you've published it, your front page looks like this
 
 <img class="aligncenter  wp-image-3175" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Screen-Shot-2014-05-27-at-9.44.20-AM.png" alt="Screen Shot 2014-05-27 at 9.44.20 AM" width="503" height="213" />
-<h3>Single Book View</h3>
+### Single Book View
 And the book view looks like this
 
 <img class="aligncenter  wp-image-3174" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Screen-Shot-2014-05-27-at-9.36.37-AM.png" alt="Screen Shot 2014-05-27 at 9.36.37 AM" width="509" height="476" />
-<h2>Portfolio Themes</h2>
+## Portfolio Themes
 There are a lot of portfolio themes out there and you should check them out. They don't necessarily have custom post types, but if you ever want to turn your site into a portfolio, there you go. Here's a roundup I got from searching 'portfolio' in the WP theme repository.
 <ul>
 	<li><a href="https://wordpress.org/themes/corpo">Corpo</a></li>
 	<li><a href="https://wordpress.org/themes/pilot-fish" target="_blank">Pilot Fish</a></li>
 	<li><a href="http://wordpress.org/themes/gravit" target="_blank">Gravit</a></li>
 </ul>
-<h1>Glossary Plugins</h1>
+# Glossary Plugins
 Another common application of custom post types is the prolific field of glossary plugins. This <a href="http://premium.wpmudev.org/blog/wordpress-glossary-plugins/" target="_blank">article</a> from WPMU has a great roundup of some of the best. Let's look at the <a href="http://wordpress.org/plugins/wp-glossary/" target="_blank">WP Glossary Plugin</a>.
 
 As you can see, we have a new custom post types. Go ahead and add a new term
@@ -163,32 +163,32 @@ When you want to call up the glossary term, you write the term and then wrap tha
 Now when you view the text on your website, the term will be highlighted and when you mouse over it, it will show the definition you supplied
 
 <img class="aligncenter size-full wp-image-3209" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Showing_the_Glossary___I_chnageed_ittt.png" alt="Showing_the_Glossary___I_chnageed_ittt" width="636" height="358" />
-<h1></h1>
-<h3></h3>
-<h1></h1>
+# 
+### 
+# 
 <h1 id="homework-assignment"><a class="headeranchor-link" href="#homework-assignment" name="user-content-homework-assignment"></a>Homework Assignment</h1>
 We have a guest speaker from RadicalDesigns (radicaldesigns.org) Skyping in next week. We would like for everyone to be able to get the most out of this experience, so we are going to have you do a little preparation. In a word document or text file, answer the following prompts:
-<h3>Prompt 1 (5-7 sentences):</h3>
+### Prompt 1 (5-7 sentences):
 <ul>
 	<li>Describe your project. How does WordPress and taking the Intermediate WordPress lab fit in with you project?</li>
 </ul>
-<h3>Prompt 2 (2-4 sentences):</h3>
+### Prompt 2 (2-4 sentences):
 <ul>
 	<li>Describe the organization you are working with (If you don't have an organization, describe how you are directing your project). Do you know any of their needs? How long will you be there for?</li>
 </ul>
-<h3>Prompt 3 (2-4 sentences):</h3>
+### Prompt 3 (2-4 sentences):
 <ul>
 	<li>After you finish implementing your project, what are some steps you are going to take to ensure the project you started can live on without you?</li>
 </ul>
-<h3>Prompt 4 (Minimum 1 sentence each):</h3>
+### Prompt 4 (Minimum 1 sentence each):
 <ul>
-	<li>Write down <strong>at least</strong> three questions to ask the guest speaker. These could also be topics you would like the speaker to elaborate more on.</li>
+	<li>Write down **at least** three questions to ask the guest speaker. These could also be topics you would like the speaker to elaborate more on.</li>
 </ul>
 &nbsp;
 <h2 id="part-3-cereal-posts"><a class="headeranchor-link" href="#part-3-cereal-posts" name="user-content-part-3-cereal-posts"></a><a class="headeranchor-link" href="#part-5-template-editing" name="user-content-part-5-template-editing"></a></h2>
 <h1 id="submission"><a class="headeranchor-link" href="#submission" name="user-content-submission"></a>Submission</h1>
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>Email subject line in the following format: <em>HW #7 Firstname Lastname</em></li>
+	<li>Email subject line in the following format: *HW #7 Firstname Lastname*</li>
 	<li>Attach the text file/Word document with your answers to the above prompts.</li>
 </ul>

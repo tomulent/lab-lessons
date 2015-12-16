@@ -1,26 +1,26 @@
 You would think that we would've covered something so basic as images much earlier. You might also think that the person preparing these lessons simply forgot to make the images lesson earlier. Well maybe that's true, but you should welcome something so simple after all that jazz about bits, bytes, and binary counting.
 
 This lesson will go through adding images in simple ways like as centered page headers as well as other ways like incorporating them into your paragraphs so that you have better layout
-<h1>Adding Images to Your App</h1>
-<h3>Finding Your Image</h3>
+# Adding Images to Your App
+### Finding Your Image
 Adding images to your app is simple. First you're going to need to find an image you want. I'm going to use the YEI logo in my app. Feel free to download it yourself:
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/2013/06/YEI-Remake1.png"><img class="aligncenter size-full wp-image-3057" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/YEI-Remake1.png" alt="YEI Remake1" width="593" height="285" /></a>
-<h2>Put it in the Right Place</h2>
+## Put it in the Right Place
 Make a new directory and call it something like, "pics" or "images". Here's what my directory looks like. You won't have a file call 'README.md' of course. That's the file that holds the text that shows up beneath the file list when you look at these project example repositories on GitHub.
 
 <img class="aligncenter size-full wp-image-3059" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.39.22-AM.png" alt="Screen Shot 2014-05-19 at 11.39.22 AM" width="298" height="140" />
-<h2>Add it in Code</h2>
+## Add it in Code
 Go to the place in your app's code where you want the image to show up. I'm going to put mine on the first page right above the navigation list. Here is the syntax for adding images in HTML:
 <pre>&lt;img id="image-id" src="image-folder/image-name.png" /&gt;</pre>
 It's important to give it an id. We'll talk about that soon.
-<h2>How Does That Look?</h2>
+## How Does That Look?
 <img class="aligncenter  wp-image-3060" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.44.11-AM.png" alt="Screen Shot 2014-05-19 at 11.44.11 AM" width="185" height="302" />
 
 &nbsp;
 
 That doesn't look right. For one it's huge. For two it's cut off on the right side. When we added in the image, we didn't specify how big or small we wanted it so it just made it full size. We need to specify some things about the image. To do that, we'll use another language called CSS.
-<h2>Making Your Own Style Rules</h2>
+## Making Your Own Style Rules
 <ol>
 	<li>Create a new file called "custom.css"</li>
 	<li>Add a link to it in the &lt;head&gt; of your app, just below where we link to the main stylesheet
@@ -30,22 +30,22 @@ That doesn't look right. For one it's huge. For two it's cut off on the right si
 </ul>
 </li>
 </ol>
-<h2>CSS Crash Course</h2>
+## CSS Crash Course
 CSS stands for Cascading Style Sheets. Cascading refers to how styles trump and flow into one another. CSS is how we change the color, size, position, and various other things about the HTML elements that we put into our apps.
-<h3>Syntax</h3>
+### Syntax
 <pre>#element-id {
   property: value;
   property: value;
 }</pre>
 Let's go over what all these parts mean:
 <ul>
-	<li><strong>#element-id</strong>  This is what we call the "selector". It is how we identify the element that we want to alter. Notice that we start it off with a pound sign. When we're identifying an element by its id, we use a hash tag.</li>
-	<li><strong>{</strong>  We enclose our style rules in curly braces</li>
-	<li><strong>property</strong>  This is the thing that we want to change about the element. It can be something like "color", "font-size", or "text-align"</li>
-	<li><strong>:</strong>  a colon goes between the property and value</li>
-	<li><strong>value</strong>  This is how we want to change that thing.  Paired up with the properties above, we could set them as "blue", "16px", and "center"</li>
-	<li><strong>;</strong>  a semicolon ends a property/value pair</li>
-	<li><strong>}</strong> Closes out the CSS</li>
+	<li>**#element-id**  This is what we call the "selector". It is how we identify the element that we want to alter. Notice that we start it off with a pound sign. When we're identifying an element by its id, we use a hash tag.</li>
+	<li>**{**  We enclose our style rules in curly braces</li>
+	<li>**property**  This is the thing that we want to change about the element. It can be something like "color", "font-size", or "text-align"</li>
+	<li>**:**  a colon goes between the property and value</li>
+	<li>**value**  This is how we want to change that thing.  Paired up with the properties above, we could set them as "blue", "16px", and "center"</li>
+	<li>**;**  a semicolon ends a property/value pair</li>
+	<li>**}** Closes out the CSS</li>
 </ul>
 Let's pretend that we have a paragraph with the id of "rhubarb" and we want to make it have size 16 purple text that is center aligned. We would write the code as follows:
 <pre>#rhubarb {
@@ -54,15 +54,15 @@ Let's pretend that we have a paragraph with the id of "rhubarb" and we want to m
   text-align: center;
 }</pre>
 That's just an example. We're going to be using a different set of rules. And they require their own explanations.
-<h2>Styling Our Image</h2>
+## Styling Our Image
 So I want my image to
 <ol>
 	<li>Be smaller</li>
 	<li>Be centered</li>
 </ol>
 That's plenty easy to do.
-<h2>Changing the Size: width</h2>
-Sizing is generally handled by the height and width properties. We'll be using <strong>width</strong>. The reason for this is that we have to make sure that nothing is wider than the width of the screen. It will also automatically scale the height for us.
+## Changing the Size: width
+Sizing is generally handled by the height and width properties. We'll be using **width**. The reason for this is that we have to make sure that nothing is wider than the width of the screen. It will also automatically scale the height for us.
 
 To alter the height of our image, we'll just follow the syntax as laid out above:
 <pre>#logo-img {
@@ -77,17 +77,17 @@ According to that, the image I put in that was so big will now be 80% of the siz
 It's kinda awkward to tell from the pictures, but the second image is of a much wider browser window. The window got wider, but the image always takes up the same proportion. Now we just need to keep it from hugging the left side.
 
 (side note: i'm changing the app navigation panel on the front page back to a list view. I think it looks dumb as a navbar. Just telling you this so you don't get confused by it changing looks.)
-<h2>Setting the Alignment: margin-left and margin-right</h2>
+## Setting the Alignment: margin-left and margin-right
 As you've noticed, the image, while the size we want it, is jammed against the left side of the page. English uses a Roman alphabet, so we're used to reading things left to right. That's why everything in web design automatically justifies itself to the left of the page. If we were in a society based on a language that reads right to left, like Arabic or Hebrew, then the opposite would be true. Check out this <a href="http://www.aljazeera.net/portal">link</a> to see what I mean.
 
 Earlier, we used "text-align: center; " as an example of how to center align a paragraph. You would naturally assume that there was some property like "image-align", but there isn't. Not sure why we can't have something like that, but oh well.
 
-Since the lords of CSS haven't given us something that would be so useful as an image-align property, so we will alter the image's <strong>margin</strong>s. Margins are the invisible areas to the top, right, bottom, and left of an element. They are what gives space between elements. Notice all the whitespace in between paragraphs? That's a margin. By default, the browser adds a margin between block-level elements like lists, paragraphs, headings, and images.
+Since the lords of CSS haven't given us something that would be so useful as an image-align property, so we will alter the image's **margin**s. Margins are the invisible areas to the top, right, bottom, and left of an element. They are what gives space between elements. Notice all the whitespace in between paragraphs? That's a margin. By default, the browser adds a margin between block-level elements like lists, paragraphs, headings, and images.
 
 At any rate, we need to get that thing centered. We're going to do that by setting the invisible space on either side of the image (i.e. the left and right margins).
-<h3>Using the margin Property</h3>
+### Using the margin Property
 There a couple ways you can do this: one is easy to remember but inefficient, the other is a little more complicated but will save you time and space if you learn it. They both have to do with how you specify which side of the element you are altering the margin for. Remember that every element has margins on the top, right, bottom, and left.
-<h3>Easy Way</h3>
+### Easy Way
 You can simply specify in the property which side you're altering like this:
 <pre>#logo-img {
   margin-left: 10%;
@@ -98,19 +98,19 @@ That would set the invisible space on the left side of our image to take of 10% 
 
 
 Imagine the blue area is our image and the purple areas are its left and right margins.
-<h3>The 'Hard' Way</h3>
+### The 'Hard' Way
 You don't need to learn this, so this will be brief. You can set the all the margins at once. Just write all 4 values you want starting with the top and working clockwise. To get the same result as above, you would write:
 <pre>#logo-img {
   margin: 0 10% 0 10%;
 }</pre>
-In this case, "<b>0</b>" is just a placeholder. It means "leave as is". If you put "<strong>0%</strong>" it would be a different story. Either way, here is the final result
+In this case, "**0**" is just a placeholder. It means "leave as is". If you put "**0%**" it would be a different story. Either way, here is the final result
 
 <img class="aligncenter size-full wp-image-3063" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.58.58-AM.png" alt="Screen Shot 2014-05-19 at 11.58.58 AM" width="332" height="387" />
 
 Nice and pretty!
-<h1>Mid Lesson Break</h1>
+# Mid Lesson Break
 <iframe src="//www.youtube.com/embed/yo61q5QgN-A" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<h1>Incorporating Images Into Your Text</h1>
+# Incorporating Images Into Your Text
 The &lt;img&gt; tag can be dropped right into a paragraph like so,
 
 
@@ -123,9 +123,9 @@ Here's how it looks
 
 <img class="aligncenter size-full wp-image-3064" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.03.58-PM.png" alt="Screen Shot 2014-05-19 at 12.03.58 PM" width="327" height="389" />
 
-That's sort of there, but not quite. The image just kinda jumps in there, shoving everything else out of the way. We want the text to wrap around the image. To do that we'll use the CSS property "<strong>float</strong>".
-<h2>Float</h2>
-As I rambled about earlier, elements are automatically aligned left, and take up their own line. Float makes it so that two elements can be next to each other. This property can do great things or cause headaches, but the name of the game here is simplicity so we'll just use it in simple ways. To get the desired effect, just add "<strong>float: right;</strong>" to your CSS. It will end up looking like this.
+That's sort of there, but not quite. The image just kinda jumps in there, shoving everything else out of the way. We want the text to wrap around the image. To do that we'll use the CSS property "**float**".
+## Float
+As I rambled about earlier, elements are automatically aligned left, and take up their own line. Float makes it so that two elements can be next to each other. This property can do great things or cause headaches, but the name of the game here is simplicity so we'll just use it in simple ways. To get the desired effect, just add "**float: right;**" to your CSS. It will end up looking like this.
 <pre>#logo-img2 {
   width: 40%;
   float: right;
@@ -135,26 +135,26 @@ After doing that, my app looks like this:
 <img class="aligncenter size-full wp-image-3065" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-12.05.16-PM.png" alt="Screen Shot 2014-05-19 at 12.05.16 PM" width="331" height="336" />
 
 Now that looks good.
-<h1>You Said This Lesson Would Be Simple...</h1>
+# You Said This Lesson Would Be Simple...
 You should know by now not to trust me. There's just one last thing before this lesson's project.
-<h2>Image Optimization</h2>
+## Image Optimization
 We need to make sure that the images we're including in our app are not any bigger than they need to be. Big images mean big apps, and people don't like downloading those.
 
 Here's an <a href="https://developers.google.com/speed/articles/optimizing-images">article</a> from Google on the issue.
-<h2>Tutorial Using Preview in Mac</h2>
+## Tutorial Using Preview in Mac
 Here is a version of the YEI logo
 <p style="text-align: center;"></p>
 <p style="text-align: left;">It's pretty big; both in dimensions and file size. It's 640x328 pixels in size and the file is 245KB. What can we do to cut this down?</p>
 
-<h4 style="text-align: left;">Cropping</h4>
+#### Cropping
 We can eliminate some of the empty whitespace by cropping it out. Use the Select Tool to outline the area you want to keep. I want to get rid of the white on the sides and a little bit of the wave on the left. Here's my selection
 
 Now I just go to the menu bar and choose "Menu&gt;Crop". Doing this made the image smaller, but we need it much smaller.
-<h4>Scaling Down</h4>
+#### Scaling Down
 Go to the menu bar and choose "Tools&gt;Adjust Size". Here you can set the image to be whatever size you want. You can count on the normal size of a screen being about 280px wide, so let's set it to that.
 
 You can see there at the bottom that the file size is getting smaller again.
-<h2>Changing Image Format</h2>
+## Changing Image Format
 I made this logo on a program called "Sketchbook Express". This program, like Photoshop, allows for layers. To have layers, you need to save files in the .tiff format. That's good for designing things and you should keep a .tiff copy on your computer, but .tiff is a very large format. We need to go simpler.
 
 Go to "File&gt;Save As". This will create a copy of the file your working on and allows you to choose the format you want to save the copy as. GIF will do for us.
@@ -162,7 +162,7 @@ Go to "File&gt;Save As". This will create a copy of the file your working on and
 
 
 Notice any difference? I don't. There is a difference in size though. When we started, we had an image 245KB in size. Now it's 24KB. We managed to shave it down by a factor of 10!
-<h1>Project</h1>
+# Project
 Add some images to your proposal.
 
 <a href="https://github.com/YouthEmpowermentInstitute/lesson-7" target="_blank">GitHub</a>

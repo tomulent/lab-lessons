@@ -1,6 +1,6 @@
 [two_third last="no"]
 We have learned the basics of HTML and how to change the appearance of our HTML elements with CSS, but we have not been able to tell the web browser where and how to place our HTML elements on the web page. In this lesson, we will further learn how to take control over our web pages. We will learn about divs and the CSS Box Model.
-<h3>Outcomes for this lesson</h3>
+### Outcomes for this lesson
 <ul>
 	<li>Learn about divs</li>
 	<li>CSS: The Box Model</li>
@@ -10,7 +10,7 @@ We have learned the basics of HTML and how to change the appearance of our HTML 
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 <ul>
 	<li><a title="MDN" href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></li>
 	<li><a title="W3Schools" href="http://www.w3schools.com/">W3Schools</a></li>
@@ -24,12 +24,12 @@ We have learned the basics of HTML and how to change the appearance of our HTML 
 [/one_third]
 
 &nbsp;
-<h1>Lesson Preparation</h1>
-Before we get started coding, let's setup for the exercise. Create a new folder on your computer. We will be saving our work for the lesson here. <strong>*Note*</strong> You will want to keep these files for when you do your HW. Open your text editor and create a new HTML document with the following code:
+# Lesson Preparation
+Before we get started coding, let's setup for the exercise. Create a new folder on your computer. We will be saving our work for the lesson here. ***Note*** You will want to keep these files for when you do your HW. Open your text editor and create a new HTML document with the following code:
 
 <script src="http://pastebin.com/embed_js.php?i=Thbdgak1"></script>Save this HTML document as index.html. Open and create a blank CSS stylesheet (blank text document). Save it as style.css. Make sure both of these files are in the same folder!
 
-<h1>Divs</h1>
+# Divs
 
 [toggle title="Divs"] Sometimes there is not a clear way of selecting HTML elements on a web page for a CSS style rule. Right now, we have classes and ids in our web development arsenal. What if we wanted to put a blue background behind the h1 and first 2 p elements and change their text color to be white? How would we go about solving this? Well, the first thing that comes to mind is using classes. We could:<script src="http://pastebin.com/embed_js.php?i=dDkLb6VK"></script>
 We could then select the class "blue", add in our CSS declarations (property: value pairs) and be done. This does work, but it isn't manageable. Another, more manageable, way we could do this is by using divs.
@@ -56,11 +56,11 @@ Open up style.css. Let's begin creating a new style rule. Select the div by id. 
 
 <script src="http://pastebin.com/embed_js.php?i=wAtFUUKG"></script>Save and refresh your HTML page in your browser (CTRL + R Windows, CMD + R Mac). All of the elements' text colors inside of the div should have changed to a white color and there should be a blue background. Nice! You may ask why I did this. Other than to demonstrate the div tag to you, in this situation, the div tag was more manageable to use. What if we wanted more elements to also have the blue background with white text? Let's say I wanted the third paragraph in our HTML document to also have this styling. In our first instance where I was only using classes, I could give that new element (the third p element) a class. That would work, but by using this method, we can quickly overuse classes in our HTML document. Using our latest example with divs, all I need to do is place any additional elements inside of the div. Try it. Cut and paste the third paragraph element inside the div element, save, and refresh the web page. The third paragraph's styling should have changed. Ultimately, how you organize your HTML and style your web page is up to you. Every situation is different and calls for a different solution. Sometimes using just classes will be better and others you will want to use a div. **I will mention this:** Divs aren't always the most semantic (meaningful) solution/ element to use. Beginning web designers often start to overuse divs in their HTML, which is called "divitis". Get it? It's named like a medical condition! Hahaha....... well at least I found it funny. On a more serious note, use divs only when necessary. If there is a more semantic (meaningful) way to select elements for styling, don't use divs. [/toggle]
 
-<h1>CSS Box Model</h1>
+# CSS Box Model
 
 [toggle title="The Box Model"] So far, we have been able to change the appearance of our HTML elements with CSS. We have changed background colors, text color, and more. For basic CSS styling this is fine, but to delve deeper and learn more, we need to learn how the browser (and we) should view HTML elements.
 
-<h2>Let's get Rectangular</h2>
+## Let's get Rectangular
 
 In HTML, every element is displayed as a rectangle. The CSS Box Model is how we conceptualize an HTML element as a whole. This image visualizes the CSS Box Model: <img class="alignnone size-full wp-image-2215" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/box-model.gif" alt="box-model" width="536" height="289" /> Let's see how this works. Open up the same index.html file we have been using. After the third paragraph, add a new paragraph with an id of "p-target". Add whatever text you want between the opening and closing p tags. Your code should look like:<script src="http://pastebin.com/embed_js.php?i=SsJEbbwV"></script>
 
@@ -68,7 +68,7 @@ Save and refresh the page in your browser (Open it if you haven't already). You 
 
 <script src="http://pastebin.com/embed_js.php?i=V5R9ZV7p"></script>Save and refresh your web page. The paragraph you added should have a purple background and white text. Notice how the purple stretches across the browser window. This is what we call the **content area** (the area for your content).
 
-<h3>Padding</h3>
+### Padding
 
 Things feel a little stuffy in here. There isn't much space around the text of the p element. Let's add some space for it. In stlye.css under the same style rule we just used, add a declaration of:
 
@@ -102,7 +102,7 @@ padding: 25px 10px 15px 5px;
 [/css]
 
 Change your padding property to this. Using this syntax is easier. All you have to remember is that (from left to right) the values are top, right, bottom, left. I like to think of it as going around the box model of an HTML element clockwise.
-<h3>Border</h3>
+### Border
 HTML elements have a border. In the CSS Box Model image, the border area width is big, but just remember that it is the border of an element. In the same CSS style rule from before, add a declaration of:
 
 [css]
@@ -111,9 +111,9 @@ border: 3px solid #2ecc71;
 
 Your code should look like:
 
-<script src="http://pastebin.com/embed_js.php?i=j44hUD4K"></script>Save and refresh your web page in the browser. You should have a tiny green border around your p element. Following the syntax (left to right), the first value is the <strong>border-width</strong>, then the <strong>border-style</strong>, and the <strong>border-color</strong>. We use the border property to create borders.
+<script src="http://pastebin.com/embed_js.php?i=j44hUD4K"></script>Save and refresh your web page in the browser. You should have a tiny green border around your p element. Following the syntax (left to right), the first value is the **border-width**, then the **border-style**, and the **border-color**. We use the border property to create borders.
 
-<h3>Margin</h3>
+### Margin
 
 Margins are the area around an element (outside of the border). The margin property follows the same syntax as padding; four values, read left to right, representing the element's box model clockwise. Let's see it in action. In the same CSS rule, add the following declaration:
 
@@ -127,15 +127,15 @@ Your code should look like:<script src="http://pastebin.com/embed_js.php?i=M848U
 
 Save and refresh your web page in your browser. Your p element should have moved down 30px and to the right 30px. This is what we call the **margin area**. With margins, we can control how much space we want around HTML elements. You may have noticed the paragraph element moved away (down) from the one above it. That's because we made the top margin bigger and created more margin area above the p element.
 [/toggle]
-<h1>The Display Property</h1>
+# The Display Property
 [toggle title="Display Property"]
-Each HTML element has a preset display value. The two most common display values are <strong>block</strong> and <strong>inline</strong>.
+Each HTML element has a preset display value. The two most common display values are **block** and **inline**.
 
 Add two unordered lists, each with three list items, under your last paragraph element in your index.html file. Give the second ul element an id of "inline-list". I've added a elements between each of my list items. Your code should look like:
 
 <script src="http://pastebin.com/embed_js.php?i=TsaecQEY"></script>Save and refresh your web page in your browser. You should see two new lists under your paragraphs. Notice how the each list item starts on a new line.
 
-<h3>Display: Block</h3>
+### Display: Block
 
 Block elements start on a new line, take up the full width of their container (in our case, the whole browser window), and end with a new line. Li elements by default display as block elements. As you can see, the first list's items each start on a new line. If you want to change an elements display property, the CSS declaration would look like:
 
@@ -147,7 +147,7 @@ display: block;
 
 &nbsp;
 
-<h3>Display: Inline</h3>
+### Display: Inline
 
 Inline elements do not disrupt the flow of elements on a web page. They only take up the width they need and do not start on new lines. Good examples of inline elements are span and a tags, as well as images. Let's see what an inline element looks like in action. In style.css, under all your previous style rules, begin to create a new CSS style rule. In this style rule, we want to make the list items in the second list display as inline. To do this, select the second ul element by the id of "inline-list". Now, we don't want to make the unordered list display as inline. We want the list items inside the ul with an id of "inline-list" to be displayed as inline, so we use a selector of: "#inline-list li" Then, add a declaration of:
 
@@ -161,13 +161,13 @@ Your CSS style rule should look like:<script src="http://pastebin.com/embed_js.p
 
 Save and refresh your web page in your browser. The second list's items should have moved onto one line and dropped the bullet points. These li items are now being displayed as inline (not starting on a new line and taking up full width of their parent container).
 [/toggle]
-<h2>A Note on CSS Box Model and Layout</h2>
+## A Note on CSS Box Model and Layout
 The CSS Box Model and other layout properties are difficult to grasp at first. In this lesson, I haven't gone over how to control the layout (flow of elements) in our web pages. I **HIGHLY** recommend you check out the following website: <a href="http://learnlayout.com/">Learn Layout</a>
 
 I strongly suggest you check out and go through these few pages. The authors of this site have done a phenomenal job on explaining this difficult concept to learn.
 <h1 id="file-transfer-protocol-ftp"><a class="headeranchor-link" href="#file-transfer-protocol-ftp" name="user-content-file-transfer-protocol-ftp"></a>File Transfer Protocol (FTP)</h1>
 [toggle title="FTP"]
-FTP or <strong>File Transfer Protocol</strong> is a network protocol that allows files to be transfered between two computers over the internet (and other networks).
+FTP or **File Transfer Protocol** is a network protocol that allows files to be transfered between two computers over the internet (and other networks).
 
 With FTP, you can upload website files onto a web server and edit them.
 
@@ -185,7 +185,7 @@ There are other FTP clients out there, namely Filezilla, the ones listed are jus
 <h2 id="different-modes-of-ftp"><a class="headeranchor-link" href="#different-modes-of-ftp" name="user-content-different-modes-of-ftp"></a>Different modes of FTP</h2>
 File Transfer Protocol has multpile protocol modes. An example analogy would be visiting a website online via http (not secure) vs visiting a website in https (secure, usually with a lock icon near the address bar).
 
-One mode, <strong>SFTP</strong> or <strong>SSH File Transfer Protocol</strong> allows for secure access to the other computer you are connecting to (in this case a web server).
+One mode, **SFTP** or **SSH File Transfer Protocol** allows for secure access to the other computer you are connecting to (in this case a web server).
 
 When we connect to our personal UCSC website space (web server), we will be using SFTP.
 <h2 id="connecting-to-a-web-server"><a class="headeranchor-link" href="#connecting-to-a-web-server" name="user-content-connecting-to-a-web-server"></a>Connecting to a Web Server</h2>
@@ -213,25 +213,25 @@ Open up Cyberduck. You will be met with an application that looks somewhat like 
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_1.png"><img class="alignnone size-full wp-image-6232" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_1.png" alt="cyberduck_1" width="603" height="533" /></a>
 
-Hit <strong>Open Connection</strong>. The connection credential menu should appear.
+Hit **Open Connection**. The connection credential menu should appear.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_2.png"><img class="alignnone size-full wp-image-6233" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_2.png" alt="cyberduck_2" width="461" height="247" /></a>
 
-Fill in the necessary information. Make sure the protocol is set as <strong>SFTP</strong>. Fill in the rest of the credentials, which are listed above (server is hostname, port, username, and password).
+Fill in the necessary information. Make sure the protocol is set as **SFTP**. Fill in the rest of the credentials, which are listed above (server is hostname, port, username, and password).
 
-Once your details are filled in, hit <strong>Connect</strong>.
+Once your details are filled in, hit **Connect**.
 
-A fingerprint popup may appear. If so, hit <strong>allow</strong>.
+A fingerprint popup may appear. If so, hit **allow**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_3.png"><img class="alignnone size-full wp-image-6234" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_3.png" alt="cyberduck_3" width="422" height="156" /></a>
 
-Once your connection to UCSC’s server authenticates, you should see a list of folders and files. Only one folder in your UCSC <em>storage space</em> can be used to place website files in for people to view. This is the public_html file.
+Once your connection to UCSC’s server authenticates, you should see a list of folders and files. Only one folder in your UCSC *storage space* can be used to place website files in for people to view. This is the public_html file.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_4.png"><img class="alignnone size-full wp-image-6235" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_4.png" alt="cyberduck_4" width="509" height="23" /></a>
 
 Navigate to the public html folder. Files placed in here will be viewable to the public (if they are website files). Navigate inside the public html folder. You may or may not have files already located in this folder depending on if you have used it before.
 
-Here, I have an HTML file named <em>index.html</em>. The general web convention is that an HTML file named <em>index.html</em> will be the web page a web server first looks for to serve to the website visitor. Also in this folder, I have a CSS file that is styling index.html.
+Here, I have an HTML file named *index.html*. The general web convention is that an HTML file named *index.html* will be the web page a web server first looks for to serve to the website visitor. Also in this folder, I have a CSS file that is styling index.html.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_5.png"><img class="alignnone size-full wp-image-6236" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_5.png" alt="cyberduck_5" width="548" height="22" /></a>
 
@@ -239,24 +239,24 @@ Here, I have an HTML file named <em>index.html</em>. The general web convention 
 
 When a visitor visits people.ucsc.edu/~[ucsc id], they will be sent to the public_html folder and the web server looks for an HTML file to serve up. In this case, it’s my index.html file.
 <h3 id="adding-subdirectories"><a class="headeranchor-link" href="#adding-subdirectories" name="user-content-adding-subdirectories"></a>Adding subdirectories</h3>
-We can put other folders inside of our public_html folder to better organize our <em>virtual website storage</em>. For example, I put a folder named <em>webdesignlab</em> inside my public html folder. We would call <em>webdesignlab</em> a <strong>subdirectory</strong>.
+We can put other folders inside of our public_html folder to better organize our *virtual website storage*. For example, I put a folder named *webdesignlab* inside my public html folder. We would call *webdesignlab* a **subdirectory**.
 
 <a href="http://labs.everettprogram.org/wp-content/uploads/cyberduck_8.png"><img class="alignnone size-full wp-image-6238" src="http://labs.everettprogram.org/wp-content/uploads/cyberduck_8.png" alt="cyberduck_8" width="537" height="17" /></a>
 
-We can also send visitors to this new subdirectory. To reach the <em>webdesignlab</em> folder, the URL would be **people.ucsc.edu/~[cruzid]/webdesignlab.
+We can also send visitors to this new subdirectory. To reach the *webdesignlab* folder, the URL would be **people.ucsc.edu/~[cruzid]/webdesignlab.
 
 Inside webdesignlab we can put other website files.
 
-To create a new folder in Cyberduck, right click where you want the folder to be and hit <strong>New Folder</strong> and name it whatever you want. It’s very similar to the process you would go through on your own computer.
+To create a new folder in Cyberduck, right click where you want the folder to be and hit **New Folder** and name it whatever you want. It’s very similar to the process you would go through on your own computer.
 <h3 id="editing-files"><a class="headeranchor-link" href="#editing-files" name="user-content-editing-files"></a>Editing files</h3>
-You can edit files located on your web server from Cyberduck. Right click on the file you want to edit, hover over <strong>Edit With</strong> and select the editor (text editor in this case) that you want to use. When you save your changes, they will be uploaded to the web server.
+You can edit files located on your web server from Cyberduck. Right click on the file you want to edit, hover over **Edit With** and select the editor (text editor in this case) that you want to use. When you save your changes, they will be uploaded to the web server.
 [/toggle]
 <a href="https://github.com/EverettWPPart1/file-path-exercise" target="_blank">Practice with File Paths</a>
 
 <hr />
 
-<h1>Homework Assignment</h1>
-<h2>Part 1</h2>
+# Homework Assignment
+## Part 1
 Login to your Codecademy account and go to the HTML/CSS section. Complete the following sections:
 
 CSS Positioning
@@ -275,7 +275,7 @@ Now you are on your profile page. The link needed will be in your URL bar (this 
 <img class="alignnone size-full wp-image-3478" src="http://labs.everettprogram.org/wp-content/uploads/2013/01/HW_Img_5.png" alt="HW_Img_5" width="1140" height="223" />
 
 Copy and paste this link into the body of your submission email.
-<h2>Part 2</h2>
+## Part 2
 Create a new folder on your computer.
 
 Create a new HTML document with the following code:
@@ -288,7 +288,7 @@ Create a new HTML document with the following code:
 [/css]
 
 
-Whatever text goes between /<em> and </em>/ will become a comment. Make sure to change the text to your first and last name. With your new style.css, use CSS to do the following: <strong>Each numbered section will need a new CSS style rule to be created. Make sure to have index.html open in your web browser while doing this. After each change you make in your stylesheet, you can save and refresh the web page to see if the changes you made worked.</strong> 
+Whatever text goes between /* and */ will become a comment. Make sure to change the text to your first and last name. With your new style.css, use CSS to do the following: **Each numbered section will need a new CSS style rule to be created. Make sure to have index.html open in your web browser while doing this. After each change you make in your stylesheet, you can save and refresh the web page to see if the changes you made worked.** 
 
 1. Let's start off by giving the whole page a default background and make all text have the font family of Arial. Select the body tag:
 
@@ -384,16 +384,16 @@ Now that you have your completed index.html file and style.css file, let’s put
 Via FTP, connect to your personal UCSC website storage. After you connect:
 <ul>
 	<li>Navigate inside the public_html file.</li>
-	<li>Create a new folder inside public_html named <strong>webdesignlab</strong>.</li>
+	<li>Create a new folder inside public_html named **webdesignlab**.</li>
 	<li>Navigate inside of the webdesignlab folder.</li>
-	<li>Upload your index.html and style.css files inside the <em>webdesignlab</em> folder. You can drag the files into this folder to upload them.</li>
+	<li>Upload your index.html and style.css files inside the *webdesignlab* folder. You can drag the files into this folder to upload them.</li>
 	<li>When we go to check homework, we will visit people.ucsc.edu/~[your cruzid]/webdesignlab. The website files you just uploaded need to be the website that is displayed when visiting the URL you provide us.</li>
 </ul>
 Now you can submit your HW.
-<h1>Submission</h1>
+# Submission
 Email <a href="mailto:wordpress@labs.everettprogram.org">wordpress@labs.everettprogram.org</a> the following:
 <ul>
-	<li>Email subject line in the following format:<em> HW #3 Firstname Lastname</em></li>
+	<li>Email subject line in the following format:* HW #3 Firstname Lastname*</li>
 	<li>The web address of your Codecademy profile (put this in the body of the email)</li>
 	<li>The web address of your index.html and style.css files for Part 2 on your UCSC web storage (in the format: people.ucsc.edu/~[your cruzid]/webdesignlab)</li>
 </ul>

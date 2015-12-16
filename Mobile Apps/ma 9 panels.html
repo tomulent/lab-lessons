@@ -5,14 +5,14 @@ This lesson will be going over "Panels". First we'll talk about what they are, h
 [/two_third]
 
 [one_third last="yes"]
-<h3>Resources</h3>
+### Resources
 <ul>
 	<li><a href="http://demos.jquerymobile.com/1.4.2/panel/" target="_blank">Panels</a></li>
 </ul>
 [/one_third]
-<h1>What Are Panels?</h1>
+# What Are Panels?
 A panel is when you hit a link or a button and the window slides over to reveal content underneath.
-<h1>How Do You Use Panels?</h1>
+# How Do You Use Panels?
 You code panels in a similar way to using making popups, but the div containing the panel content needs to be a "Sibling" of the header/content/footer divs rather than a child of any of them. Check out this code to see what I mean:
 <pre>&lt;div data-role="page" id="executive-summary"&gt;
             
@@ -34,38 +34,38 @@ You code panels in a similar way to using making popups, but the div containing 
 See how the panel div is put above the header?
 
 So I created a div with data-role="panel", put it next to the header div, and then created a link to it. When you click the link, the main page content is overlayed by the panel.
-<h1>Panel Options</h1>
+# Panel Options
 What ways can we easily control how panels work? Here are the important data attributes to use on the panel div.
-<h2>Position</h2>
-Use <strong>data-position="right"</strong> to have the panel come up on the right side instead of the left which is default.
-<h2>Display Mode</h2>
+## Position
+Use **data-position="right"** to have the panel come up on the right side instead of the left which is default.
+## Display Mode
 Use the attribute data-display to alter how the panel reveals itself. Here are the three values you can use
 <ul>
-	<li><strong>reveal (default)</strong>: Panel sits underneath the page, so the page slides away to reveal it</li>
-	<li><strong>overlay</strong>: Panel shoots onto the page without the page moving</li>
-	<li><strong>push</strong>: Panel pushes its way onto the page</li>
+	<li>**reveal (default)**: Panel sits underneath the page, so the page slides away to reveal it</li>
+	<li>**overlay**: Panel shoots onto the page without the page moving</li>
+	<li>**push**: Panel pushes its way onto the page</li>
 </ul>
-<h1>External Panels</h1>
+# External Panels
 This is I believe a new feature in recent jQuery Mobile releases. If you played around with popups and panels then you may have come across a particular problem: your popup or panel div has to be on the same page as the link to it. I had the clever idea back when I first did the popup lesson to put a button in the header that would bring up a popup of the navigation menu. That's a brilliant and very handsome idea, but since you have to have your popup content in the same page div that you will be viewing it, I had to put the markup in every single page div. That's repeating yourself and that's not good policy. What we need is for there to be a single place to put the panel content, and then link to it on multiple pages. That is now possible.
-<h2>Wait, What Are We Doing?</h2>
+## Wait, What Are We Doing?
 We're making a panel that can be accessed on multiple pages. In my case, I'm making a panel containing the navigation menu and putting a link to it in a persistent footer.
-<h2>How Do We Do This?</h2>
+## How Do We Do This?
 We need to do two things in order for this to work:
 <ul>
 	<li>Include a custom JavaScript Function</li>
 	<li>Put the panel div in the correct place</li>
 </ul>
-<h3>JavaScript</h3>
+### JavaScript
 I'm going to state outright that I don't know JS. Consequently, this is a hacked out solution. I went to their example and then looked at the source code and copied what looked like it might be the thing that would accomplish what I wanted it to. It seems to work, but I can't guarantee that it always will. With that said, here's what to do.
 
 Place the following code into your "custom-scripts.js" file.
 <pre id="line1">$(function() {
-    <span id="line16"></span>$( "body&gt;[data-role='panel']" ).panel();
-<span id="line17"></span>});</pre>
+    $( "body&gt;[data-role='panel']" ).panel();
+});</pre>
 This will give instructions to the tiny men inside your computer to do the things we want.
-<h3>Markup</h3>
+### Markup
 We have to put the panel div outside the pages. The most logical place to put it exactly would probably be all the way at the top of our HTML like so,
 
 <img class="aligncenter size-full wp-image-3087" src="http://labs.everettprogram.org/wp-content/uploads/2014/05/Screen-Shot-2014-05-20-at-1.18.04-PM.png" alt="Screen Shot 2014-05-20 at 1.18.04 PM" width="553" height="310" />
-<h2>Drawbacks</h2>
+## Drawbacks
 At the moment, I can't get list views to render properly. I'm still working on that, but everything else works fine.

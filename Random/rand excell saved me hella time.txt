@@ -29,23 +29,23 @@ For our purposes, the URL is http://www.nigerianstat.gov.ng/pages/download/1. We
 ## Build The Link on Row 1
 Understand that http://www.nigerianstat.gov.ng/pages/download/1 needs to have its own cell in order for the drag feature to work. The number has to be at the end, so we'll have to build the rest of the link around it. We'll go through what to put in each cell and then combine them at the end.
 ## A1
-<pre>&lt;a href="</pre>
+&lt;a href="</pre>
 The opening tag and first part of the hyper reference attribute
 ## B1
-<pre>http://www.nigerianstat.gov.ng/pages/download/1</pre>
+http://www.nigerianstat.gov.ng/pages/download/1</pre>
 Our destination gets its very own cell
 ## C1
-<pre>"&gt;</pre>
+"&gt;</pre>
 Finishes up the hyper reference and opening tag
 ## D1
-<pre>=B1</pre>
+=B1</pre>
 This just repeats the URL from cell B1
 ## E1
-<pre>&lt;/a&gt;</pre>
+&lt;/a&gt;</pre>
 The closing tag
 ## F1
 Now comes the time to put them all together. We'll use the &amp; symbol to combine multiple cells to occupy the same cell
-<pre>=A1&amp;B1&amp;C1&amp;D1&amp;E1</pre>
+=A1&amp;B1&amp;C1&amp;D1&amp;E1</pre>
 We end up with
 
 a href="http://www.nigerianstat.gov.ng/pages/download/1"&gt;http://www.nigerianstat.gov.ng/pages/download/1&lt;/a&gt;

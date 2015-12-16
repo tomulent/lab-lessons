@@ -30,14 +30,14 @@ That was a listview. Listviews allow us to make lists of links. There are other 
 Please download the <a href="https://github.com/YouthEmpowermentInstitute/lesson-3" target="_blank">lesson 3 zip</a>. It contains a zip file that will have a  file inside called <a id="136a4feafe263b11ec1e8f8d00bb6d67-528e2cd090c3b22c7054429479f2cb65ba79df46" class="js-directory-link" style="color: #4183c4;" title="lesson-3-app-template.html" href="https://github.com/YouthEmpowermentInstitute/lesson-3/blob/master/lesson-3-app-template.html">lesson-3-app-template.html</a>. Sorry it had to be like that, it's kinda weird linking html files for download. The app contains 5 pages in all. A home page, and 4 other pages. Each page links back to the home page.
 # Objective: On the Homepage, Create Links to the Other Four Pages
 Let's do it very simply and just create a bunch of bare-bone links to the other pages. As you recall, you do this like,
-<pre>&lt;a href="#page-1"&gt;Page One&lt;/a&gt;</pre>
+&lt;a href="#page-1"&gt;Page One&lt;/a&gt;</pre>
 Do that for all four pages, and look at what it looks like in the browser.
 
 <img class="aligncenter size-full wp-image-3027" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.00.58-PM.png" alt="Screen Shot 2014-05-16 at 3.00.58 PM" width="406" height="199" />
 
 Looks pretty bad. We want things to look more "app-y". Luckily, jQuery Mobile does that for us. Let's make those boring links into buttons. As with everything in this framework, we do it with a data-role attribute. Add **data-role="button"
 ** to each of your links' opening tags so that they look like this:
-<pre>&lt;a href="#page-2" data-role="button"&gt;Page Two&lt;/a&gt;</pre>
+&lt;a href="#page-2" data-role="button"&gt;Page Two&lt;/a&gt;</pre>
 The result looks like this:
 
 <img class="aligncenter  wp-image-3028" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.11.43-PM.png" alt="Screen Shot 2014-05-16 at 3.11.43 PM" width="221" height="208" />
@@ -59,7 +59,7 @@ Now that's snazzy. We have a listview that looks hella "app-y". We can further c
 <img class="aligncenter  wp-image-3032" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-3.19.55-PM.png" alt="Screen Shot 2014-05-16 at 3.19.55 PM" width="267" height="231" />
 
 Or you can add "data-icon="gear/info/delete/etc" to individual list items. Check <a href="http://view.jquerymobile.com/1.3.1/dist/demos/widgets/icons/">here</a> for full list of icon names.
-<pre>&lt;li data-icon="bars"&gt;&lt;a href="#page-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
+&lt;li data-icon="bars"&gt;&lt;a href="#page-1"&gt;Page 1&lt;/a&gt;&lt;/li&gt;
 &lt;li data-icon="plus"&gt;&lt;a href="#page-2"&gt;Page 2&lt;/a&gt;&lt;/li&gt;
 &lt;li data-icon="delete"&gt;&lt;a href="#page-3"&gt;Page 3&lt;/a&gt;&lt;/li&gt;
 &lt;li data-icon="gear"&gt;&lt;a href="#page-4"&gt;Page 4&lt;/a&gt;&lt;/li&gt;</pre>

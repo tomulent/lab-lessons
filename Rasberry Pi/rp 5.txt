@@ -1,5 +1,5 @@
 ## Objectives:
-<p style="padding-left: 30px;">-Students will download and install Raspberry Pi software onto their SD cards and boot up the system for the first time.</p>
+-Students will download and install Raspberry Pi software onto their SD cards and boot up the system for the first time.
 
 # Installation Day:
 The day has finally come! Today we are connecting our peripherals to our Raspberry Pi's. We will be working in pairs so everyone is going to have to split up the responsibilities in whatever way you and your partner thinks best. We will be refreshing the process by re-watching the video and then each of you will go off to your specific stations and begin the downloads. Our goal is to have our operating systems downloaded onto each of our SD cards by the end of the day.

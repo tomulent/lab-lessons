@@ -12,7 +12,7 @@ Make a new directory and call it something like, "pics" or "images". Here's what
 <img class="aligncenter size-full wp-image-3059" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.39.22-AM.png" alt="Screen Shot 2014-05-19 at 11.39.22 AM" width="298" height="140" />
 ## Add it in Code
 Go to the place in your app's code where you want the image to show up. I'm going to put mine on the first page right above the navigation list. Here is the syntax for adding images in HTML:
-<pre>&lt;img id="image-id" src="image-folder/image-name.png" /&gt;</pre>
+&lt;img id="image-id" src="image-folder/image-name.png" /&gt;</pre>
 It's important to give it an id. We'll talk about that soon.
 ## How Does That Look?
 <img class="aligncenter  wp-image-3060" src="http://labs.everettprogram.org/wp-content/uploads/2013/06/Screen-Shot-2014-05-19-at-11.44.11-AM.png" alt="Screen Shot 2014-05-19 at 11.44.11 AM" width="185" height="302" />
@@ -33,7 +33,7 @@ That doesn't look right. For one it's huge. For two it's cut off on the right si
 ## CSS Crash Course
 CSS stands for Cascading Style Sheets. Cascading refers to how styles trump and flow into one another. CSS is how we change the color, size, position, and various other things about the HTML elements that we put into our apps.
 ### Syntax
-<pre>#element-id {
+#element-id {
   property: value;
   property: value;
 }</pre>
@@ -48,7 +48,7 @@ Let's go over what all these parts mean:
 	<li>**}** Closes out the CSS</li>
 </ul>
 Let's pretend that we have a paragraph with the id of "rhubarb" and we want to make it have size 16 purple text that is center aligned. We would write the code as follows:
-<pre>#rhubarb {
+#rhubarb {
   color: purple;
   font-size: 16px;
   text-align: center;
@@ -65,7 +65,7 @@ That's plenty easy to do.
 Sizing is generally handled by the height and width properties. We'll be using **width**. The reason for this is that we have to make sure that nothing is wider than the width of the screen. It will also automatically scale the height for us.
 
 To alter the height of our image, we'll just follow the syntax as laid out above:
-<pre>#logo-img {
+#logo-img {
   width: 80%;
 }</pre>
 According to that, the image I put in that was so big will now be 80% of the size of the window. We could have used a different unit of measurement other than percent like, pixels(px). We use percent so that it will change size depending on the size of the screen that our users are viewing it on. Take note that in the following two example images, the image takes up less space, but always the same proportion of space no matter how big the window is.
@@ -89,7 +89,7 @@ At any rate, we need to get that thing centered. We're going to do that by setti
 There a couple ways you can do this: one is easy to remember but inefficient, the other is a little more complicated but will save you time and space if you learn it. They both have to do with how you specify which side of the element you are altering the margin for. Remember that every element has margins on the top, right, bottom, and left.
 ### Easy Way
 You can simply specify in the property which side you're altering like this:
-<pre>#logo-img {
+#logo-img {
   margin-left: 10%;
   margin-right: 10%;
 }</pre>
@@ -100,7 +100,7 @@ That would set the invisible space on the left side of our image to take of 10% 
 Imagine the blue area is our image and the purple areas are its left and right margins.
 ### The 'Hard' Way
 You don't need to learn this, so this will be brief. You can set the all the margins at once. Just write all 4 values you want starting with the top and working clockwise. To get the same result as above, you would write:
-<pre>#logo-img {
+#logo-img {
   margin: 0 10% 0 10%;
 }</pre>
 In this case, "**0**" is just a placeholder. It means "leave as is". If you put "**0%**" it would be a different story. Either way, here is the final result
@@ -116,7 +116,7 @@ The &lt;img&gt; tag can be dropped right into a paragraph like so,
 
 
 I added the id "logo-img2" and gave it the following style in my custom.css file to make sure it wasn't huge:
-<pre>#logo-img2 {
+#logo-img2 {
   width: 40%;
 }</pre>
 Here's how it looks
@@ -126,7 +126,7 @@ Here's how it looks
 That's sort of there, but not quite. The image just kinda jumps in there, shoving everything else out of the way. We want the text to wrap around the image. To do that we'll use the CSS property "**float**".
 ## Float
 As I rambled about earlier, elements are automatically aligned left, and take up their own line. Float makes it so that two elements can be next to each other. This property can do great things or cause headaches, but the name of the game here is simplicity so we'll just use it in simple ways. To get the desired effect, just add "**float: right;**" to your CSS. It will end up looking like this.
-<pre>#logo-img2 {
+#logo-img2 {
   width: 40%;
   float: right;
 }</pre>
@@ -143,8 +143,8 @@ We need to make sure that the images we're including in our app are not any bigg
 Here's an <a href="https://developers.google.com/speed/articles/optimizing-images">article</a> from Google on the issue.
 ## Tutorial Using Preview in Mac
 Here is a version of the YEI logo
-<p style="text-align: center;"></p>
-<p style="text-align: left;">It's pretty big; both in dimensions and file size. It's 640x328 pixels in size and the file is 245KB. What can we do to cut this down?</p>
+
+It's pretty big; both in dimensions and file size. It's 640x328 pixels in size and the file is 245KB. What can we do to cut this down?
 
 #### Cropping
 We can eliminate some of the empty whitespace by cropping it out. Use the Select Tool to outline the area you want to keep. I want to get rid of the white on the sides and a little bit of the wave on the left. Here's my selection

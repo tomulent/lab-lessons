@@ -50,13 +50,13 @@ That looks complicated doesn't it? Well not really actually. All you need to do 
 <img class="aligncenter size-full wp-image-3020" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/Screen-Shot-2014-05-16-at-12.58.00-PM.png" alt="Screen Shot 2014-05-16 at 12.58.00 PM" width="488" height="185" /></code> That was easier than you thought it would be I bet.
 ## Attributes
 This is a tremendously important concept to grasp. Attributes are little pieces of information placed inside an opening tag that define information about the element. An attribute you're probably familiar with is 'href'. You're used to putting that in an &lt;a&gt;, or 'anchor', tag to define the destination. There is also a 'title' attribute for the anchor tag which floats a little tooltip when you mouse over the link. What other attributes can you think of? Here's some examples:
-<pre> &lt;a href="http://google.com" title="Google"&gt;Link to Google&lt;/a&gt;</pre>
+ &lt;a href="http://google.com" title="Google"&gt;Link to Google&lt;/a&gt;</pre>
 Both "href" and "title" are attributes. They define where the link is going and what to display when you mouse over the link
-<pre>&lt;img src="giip.png" alt="GIIP Logo" /&gt;</pre>
+&lt;img src="giip.png" alt="GIIP Logo" /&gt;</pre>
 "src" and "alt" are attributes. They define where the image is coming from and what text to display if the image can't be found
 
 The important thing to take away from this is that attributes are pieces of information placed into an opening tag to define something about that element. Let me repeat that and put it in bold because that shows that it's important: **attributes are pieces of information placed into an opening tag to define something about that element**. The syntax looks like this:
-<pre>name="value"</pre>
+name="value"</pre>
 ## Selectors: id and class
 This concept overlaps with CSS, but we'll be using it in a slightly different way regarding mobile apps. Selectors are used to identify elements. When we use them in CSS, it's to identify the element we want to change.
 
@@ -73,11 +73,11 @@ Mainly, you'll be using the id attribute. This is used to identify pages. Below 
 So how many attributes do you see there? There are 5 in total. 4 of them are the "data-role" attributes that are part of jQuery Mobile and 1 of them is id="page-1". We'll explain what all these divs are a little later and more fully in lesson 2. For now, just know that you'll be making a lot of those 'pages' you see above. Most importantly, note that the div with the data-role="page" also has the id="page-1". This is how navigations will happen throughout the app.
 ## &lt;a&gt;: Making Links
 We've covered how to make links pretty thoroughly in the previous sections, so there's no need to review the basic mechanics other than saying:
-<pre> &lt;a href="URL"&gt;Link Text&lt;/a&gt;</pre>
+ &lt;a href="URL"&gt;Link Text&lt;/a&gt;</pre>
 What you may not know how to do is link to locations within a page rather than between pages. It's extremely simple. Typically, you would put an internet or file address as the href value. To link to a location on a page, you put an element id as the href value.
 
 Still confused? If you click <a href="#attributes">here</a>, you will jump to the attributes section of this page. This was accomplished with the code you see below.
-<pre> &lt;p&gt;Still confused? If you click &lt;a href="#attributes"&gt;here&lt;/a&gt;,
+ &lt;p&gt;Still confused? If you click &lt;a href="#attributes"&gt;here&lt;/a&gt;,
  you will jump to the attributes section of this page. This was accomplished with the code you see below.&lt;/p&gt;
 
 </pre>
@@ -92,17 +92,17 @@ This is important to jQuery Mobile because it's the crux of how you get around t
 As you may have guessed, each item is a link to a different &lt;div data-role="page" id="meet-x"&gt;.
 ### &lt;div&gt;
 This one is important. You're used to HTML elements that have a visible result. &lt;p&gt; produces a paragraph. &lt;ul&gt; creates a list. But what about &lt;div&gt;? Put &lt;div&gt;...&lt;/div&gt; then you'll get nothing. That's because &lt;div&gt; is for structuring content. It does nothing on its own. You can throw &lt;div&gt;'s all over the place and it won't affect anything. &lt;div&gt; is there to wrap around other elements and act as a container. Copy the page below and see what it does.
-<pre> &lt;html&gt;
+ &lt;html&gt;
  &lt;head&gt;
 
  &lt;style type="text/css"&gt;
  #header {
    background-color: #e27c7c;
  }</pre>
-<pre>#content {
+#content {
    background-color: #8656c9;
  }</pre>
-<pre>#footer {
+#footer {
    background-color: #55c675;
  }
  &lt;/style&gt;
@@ -112,14 +112,14 @@ This one is important. You're used to HTML elements that have a visible result. 
    &lt;h1&gt;Site Title&lt;/h1&gt;
    &lt;h3&gt;Site Description&lt;/h3&gt;
  &lt;/div&gt;</pre>
-<pre>&lt;div id="content"&gt;
+&lt;div id="content"&gt;
  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliqudecima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.&lt;/p&gt;
  &lt;/div&gt;</pre>
-<pre>&lt;div id="footer"&gt;
+&lt;div id="footer"&gt;
   &lt;p&gt;Powered by &lt;a href="http://giip.org"&gt;GIIP&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</pre>
-<pre>&lt;/body&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 
 </pre>

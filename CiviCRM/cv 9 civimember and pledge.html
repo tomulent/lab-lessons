@@ -8,20 +8,20 @@
 </ul>
 ### CiviMember
 ### What it is
-<p style="padding-left: 60px;">CiviMember is the CiviCRM component that allows you develop and manage a membership system. CiviMember allows you to define and create your own membership types and membership fees, setup online signup and renewal page, schedule automated emails that are triggered by events, and grant website privileges to members. And of course, like other Civi components, CiviMember integrates with CiviMail and CiviContribution for functions that involves mailings and monetary transaction. Memberships can be applied to individual contacts as well as organization and household contacts; and one contact may have one or more memberships.</p>
+CiviMember is the CiviCRM component that allows you develop and manage a membership system. CiviMember allows you to define and create your own membership types and membership fees, setup online signup and renewal page, schedule automated emails that are triggered by events, and grant website privileges to members. And of course, like other Civi components, CiviMember integrates with CiviMail and CiviContribution for functions that involves mailings and monetary transaction. Memberships can be applied to individual contacts as well as organization and household contacts; and one contact may have one or more memberships.
 
 ### Member Type
-<p style="padding-left: 60px;">Member type is the very foundamental component of your membership system. It can be very simple with just one type of membership, or it could be complex and have different types of membership types. Before you start adding member types, please talk to the organization you're working with, and design the member types according to their needs.</p>
-<p style="padding-left: 60px;">To set up a member type, go to "Administer&gt; CiviMember &gt;Membership Types". Most of the fields are pretty self-explanatory; however, there are two things that might be confusing to you: Membership organization, and Relationship type</p>
+Member type is the very foundamental component of your membership system. It can be very simple with just one type of membership, or it could be complex and have different types of membership types. Before you start adding member types, please talk to the organization you're working with, and design the member types according to their needs.
+To set up a member type, go to "Administer&gt; CiviMember &gt;Membership Types". Most of the fields are pretty self-explanatory; however, there are two things that might be confusing to you: Membership organization, and Relationship type
 
 ### Membership organization
-<p style="padding-left: 60px;">CiviCRM allows managing memberships for multiple organizations, and the organization you choose for this field indicates that this membership belongs to that organization. If you don't understand this concept and your organization doesn't have such needs, just select your organization here (you should have your organization as a contact when you set up the organization information. If you don't, just add the contact manually for administration purposes.)</p>
+CiviCRM allows managing memberships for multiple organizations, and the organization you choose for this field indicates that this membership belongs to that organization. If you don't understand this concept and your organization doesn't have such needs, just select your organization here (you should have your organization as a contact when you set up the organization information. If you don't, just add the contact manually for administration purposes.)
 
 ### Relationship type
-<p style="padding-left: 60px;">According to the <a href="http://book.civicrm.org/user/current/membership/defining-memberships/">CiviCRM Users Book</a>, "Memberships can be **inherited** from one contact to another.  An example of this would be a professional trade organisation that signs up a company as the (primary) member and wants employees of the company receive the benefits of membership." If you think the options are a bit confusing, click on the question mark icon, and the pop up window will explain it to you. Also, this function is only optional, which means you don't have to use it if your organization doesn't need it.</p>
+According to the <a href="http://book.civicrm.org/user/current/membership/defining-memberships/">CiviCRM Users Book</a>, "Memberships can be **inherited** from one contact to another.  An example of this would be a professional trade organisation that signs up a company as the (primary) member and wants employees of the company receive the benefits of membership." If you think the options are a bit confusing, click on the question mark icon, and the pop up window will explain it to you. Also, this function is only optional, which means you don't have to use it if your organization doesn't need it.
 
 ### Membership Status
-<p style="padding-left: 60px;">According to the <a href="http://book.civicrm.org/user/current/membership/defining-memberships/">CiviCRM Users Book</a>, "Membership status rules allow you to define a journey that contacts take through their membership.  These rules are defined in terms of the join, start or end date of the membership." The join date is when the individual signs up for the membership; the start date is when the payment is made, and received, and the membership has officially started; and the end date is the expiration date of the membership. You may add more membership status or disable the default ones by going to "Administer&gt; CiviMember &gt; Membership Status Rules".  Down below is a list of CiviMember's default membership statuses and what they mean:</p>
+According to the <a href="http://book.civicrm.org/user/current/membership/defining-memberships/">CiviCRM Users Book</a>, "Membership status rules allow you to define a journey that contacts take through their membership.  These rules are defined in terms of the join, start or end date of the membership." The join date is when the individual signs up for the membership; the start date is when the payment is made, and received, and the membership has officially started; and the end date is the expiration date of the membership. You may add more membership status or disable the default ones by going to "Administer&gt; CiviMember &gt; Membership Status Rules".  Down below is a list of CiviMember's default membership statuses and what they mean:
 
 <ul style="padding-left: 60px;">
 	<li>Pending: When a person signs up for a membership, and hasn't made the payment yet, the membership status will be "Pending'</li>
@@ -31,17 +31,17 @@
 	<li>Expired: When the Grace period ends, the membership is officially expired and the ex-member no longer holds the membership.</li>
 </ul>
 ### Setting Up a Membership Sign Up Page
-<p style="padding-left: 60px;">To set up a contribution page for online membership signups, please read this section of the <a href="http://book.civicrm.org/user/current/membership/online-membership-sign-up/">Civi Book</a>.</p>
+To set up a contribution page for online membership signups, please read this section of the <a href="http://book.civicrm.org/user/current/membership/online-membership-sign-up/">Civi Book</a>.
 
 ### Managing Your Members
 <h3 style="padding-left: 60px;"> <a href="http://book.civicrm.org/user/current/membership/renewals/">Renewal</a></h3>
 <h3 style="padding-left: 60px;"><a href="http://book.civicrm.org/user/current/membership/cancelling-and-expiring-memberships-/">Cancelling and expiring memberships</a></h3>
 ### CiviPledge
-<p style="padding-left: 30px;">CiviPledge allows your supporters to commit in making a certain amount of contributions on a regular basis. Pledge is different from membership because memberships may be exclusive, or require some qualification, based on the organization's membership system, but pledge is open for anyone who is willing to make the regular contribution. Also, membership pricing is defined by organization, not supporter; On the other hand, pledges allow supporters to choose the contribution frequency and amount.</p>
-<p style="padding-left: 30px;">If you'd like to know more about CiviPledge, please look at the <a href="http://book.civicrm.org/user/current/pledges/what-is-civipledge/">Civi Book</a>.</p>
+CiviPledge allows your supporters to commit in making a certain amount of contributions on a regular basis. Pledge is different from membership because memberships may be exclusive, or require some qualification, based on the organization's membership system, but pledge is open for anyone who is willing to make the regular contribution. Also, membership pricing is defined by organization, not supporter; On the other hand, pledges allow supporters to choose the contribution frequency and amount.
+If you'd like to know more about CiviPledge, please look at the <a href="http://book.civicrm.org/user/current/pledges/what-is-civipledge/">Civi Book</a>.
 
 ### Homework
-<p style="padding-left: 30px;">There are three things you need to do to complete the assignment:</p>
+There are three things you need to do to complete the assignment:
 
 <ol style="padding-left: 30px;">
 	<li>Create a membership type that will be used for online signup page</li>
@@ -49,6 +49,6 @@
 	<li>Create a membership signup page with the previous two component</li>
 </ol>
 ### Submission: Email
-<p style="padding-left: 30px;">Subject: Firstname Lastname HW9</p>
-<p style="padding-left: 30px;">Content: Please copy and paste the link to your membership signup page in here</p>
-<p style="padding-left: 30px;">Email your assignment to civicrm@labs.everettprogram.org</p>
+Subject: Firstname Lastname HW9
+Content: Please copy and paste the link to your membership signup page in here
+Email your assignment to civicrm@labs.everettprogram.org

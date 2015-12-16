@@ -21,7 +21,7 @@ After everything. You should have something that looks like this:
 You can have your RSS subscribe button in the top bar, or you can have it in the sidebar which is slightly more advanced. But let's say you want to be super professional and do something off the beaten path. What if you wanted to have your subscribe button inside a post? Like after the title, or after the content? Well, you're in luck because that's actually not too difficult
 
 First, you need to realize something. That button you created in the last example using code? You can put that anywhere. It's simple code.
-<pre> &lt;a href="FEED-URL"&gt; &lt;img src="IMAGE-URL" /&gt; &lt;/a&gt;</pre>
+ &lt;a href="FEED-URL"&gt; &lt;img src="IMAGE-URL" /&gt; &lt;/a&gt;</pre>
 is just a way of representing, "A button that, when pressed, will subscribe you to an RSS feed". If you copy and pasted it into a post, then you would have a button that, when pressed, will subscribe you to an RSS feed in the post. If you pasted it ten times, then you would have  ten buttons that, when pressed, will subscribe you to an RSS feed. Knowing this, all you really need to know is how to put the button where you want it.
 ### Special Widget Areas
 Graphene has a feature called "Action Hooks Widget Areas". You may find these under Appearance&gt;Graphene Options&gt;Advanced.  Essentially, these create new widget areas in various parts of the page. This can be tricky, as you're probably not very well acquainted with the WordPress page hierarchy or PHP in general. So, here is a pitifully small explanation:
@@ -57,7 +57,7 @@ Don't worry if you only understood 1% of all that talk about PHP. All you really
 By checking these areas, you activate that widget area. All you need to do is save options and switch over to your widgets tab. You'll see that the corresponding area is now available to have widgets put into it!
 
 I particularly like "graphene_after_post_content". It makes the widget area right after all your post content, but before the part with the tags. Put a "Text" widget in there and add your RSS button code. If you don't want that big button, then you could get a smaller one. Search for 16x16 RSS icons. Or just put in text that links to your feed. Here's a favorite of mine,
-<pre>&lt;br&gt;
+&lt;br&gt;
 &lt;hr /&gt;
 &lt;h3 style="margin-top:0px;margin-bottom:0px;"&gt;Like this post? &lt;a href="http://class.giip.org/feed"&gt;Subscribe!&lt;/a&gt;&lt;/h3&gt;</pre>
 This clearly demarcates where the post stops.
@@ -72,7 +72,7 @@ I'm not sure if there's a material benefit to the following method other than in
 	<li>Success!</li>
 </ol>
 Actually that wasn't that hard. Here's a picture of what we did:
-<p style="text-align: center;"></p>
+
 &nbsp;
 
 &nbsp;

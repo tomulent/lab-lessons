@@ -14,7 +14,7 @@ This lesson will be going over "Panels". First we'll talk about what they are, h
 A panel is when you hit a link or a button and the window slides over to reveal content underneath.
 # How Do You Use Panels?
 You code panels in a similar way to using making popups, but the div containing the panel content needs to be a "Sibling" of the header/content/footer divs rather than a child of any of them. Check out this code to see what I mean:
-<pre>&lt;div data-role="page" id="executive-summary"&gt;
+&lt;div data-role="page" id="executive-summary"&gt;
             
             &lt;div data-role="panel" id="exec-panel"&gt;
               &lt;p&gt;Bottomline is that Watsonville needs more kids getting technical degrees and then building 
@@ -59,7 +59,7 @@ We need to do two things in order for this to work:
 I'm going to state outright that I don't know JS. Consequently, this is a hacked out solution. I went to their example and then looked at the source code and copied what looked like it might be the thing that would accomplish what I wanted it to. It seems to work, but I can't guarantee that it always will. With that said, here's what to do.
 
 Place the following code into your "custom-scripts.js" file.
-<pre id="line1">$(function() {
+$(function() {
     $( "body&gt;[data-role='panel']" ).panel();
 });</pre>
 This will give instructions to the tiny men inside your computer to do the things we want.

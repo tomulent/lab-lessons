@@ -94,15 +94,15 @@ That’s straight forward enough. That’s something you could do. It’s the op
 <a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp1.png"><img class="alignnone size-full wp-image-2199" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp1.png" alt="temp1" width="657" height="114" /></a>
 
 Well that’s weird. What does it all mean? Let’s think about what the site title is and does. In another window, hold the mouse over your site title for a few seconds and you’ll see that a little tool tip comes up. Click on it, and it takes you back to the homepage. So it sounds like what we have is an h1 that is a link with the title that’s the same as the text it displays. Would it make more sense if we wrote it like this?
-<p id="highlighter_357037">&lt;h1&gt;&lt;a href="http://brendinye.me/wplesson4" title="Lesson4" rel="home"&gt;Lesson4&lt;/h1&gt;
-&lt;</p>
+&lt;h1&gt;&lt;a href="http://brendinye.me/wplesson4" title="Lesson4" rel="home"&gt;Lesson4&lt;/h1&gt;
+&lt;
 That’s what we’re left with when we load the actual page. What happened was all that funny looking PHP code called up the URL for our homepage, and the title of our site for the title attribute (what get’s displayed when you hover over a link). It also generated the actual text for the link.
-<p id="highlighter_146736">href="&lt;?php echo esc_url( home_url( '/' ) ); ?&gt;"</p>
+href="&lt;?php echo esc_url( home_url( '/' ) ); ?&gt;"
 Calls up the website’s home address URL
-<p id="highlighter_269719">title="&lt;?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?&gt;"</p>
+title="&lt;?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?&gt;"
 Calls up the site’s URL
-<p id="highlighter_531340"><code>&lt;?php bloginfo( 'name' ); ?&gt;
-</code></p>
+<code>&lt;?php bloginfo( 'name' ); ?&gt;
+</code>
 Calls up the website’s title.
 
 That’s how it’s done. Basically the same thing happens on the next line with the site description, and the same thing a few lines down with the navigation menu, and a few lines below that for the header image if you have one.
@@ -120,7 +120,7 @@ Starting from the top, it says 1) if we’re dealing with a single post then 2) 
 Translation: It checked if we were looking at a post on the front page or one on a single page. Since we were on a single page, it made the title of the post that was NOT a link. What’s next?
 
 On line 33, we have our next important block:
-<pre><code><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png"><img class="alignnone size-full wp-image-2202" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png" alt="temp3" width="710" height="234" /></a></code></pre>
+<code><a href="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png"><img class="alignnone size-full wp-image-2202" src="http://labs.everettprogram.org/wp-content/uploads/2013/04/temp3.png" alt="temp3" width="710" height="234" /></a></code></pre>
 This block is saying, 1) Is this a search page? 2-4) if so, create a &lt;div&gt; called “entry-summary” and display the post excerpt. 5) Otherwise, 6) create a &lt;div&gt; called “entry-content” and 7) put in the post content.
 
 Translation:”If we’re on a search page, then display all the excerpts of posts. If it’s anything else, display the content of the post.” Then it calls some post metadata like tags, categories, and date. At any rate, it’s done. Back to single.php

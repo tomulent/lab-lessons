@@ -1,85 +1,85 @@
 
 # Activities in CiviCRM
 
-<p>Your organization is going to be doing a lot of stuff in relation to its constituents. Sending mailings, signing people up for events, tracking their donations, etc. Each of these things is recorded as an "Activity". Simply put, any kind of interaction between your org and an individual that occured at a definite point in time is an <code>Activity</code>.</p>
+Your organization is going to be doing a lot of stuff in relation to its constituents. Sending mailings, signing people up for events, tracking their donations, etc. Each of these things is recorded as an "Activity". Simply put, any kind of interaction between your org and an individual that occured at a definite point in time is an <code>Activity</code>.
 
-<p>As always, please read the complete <a href="http://book.civicrm.org/user/current/organising-your-data/activities/">Civi Book entry</a> on this topic before delving into one of Thomas's weird, overlong lessons.</p>
+As always, please read the complete <a href="http://book.civicrm.org/user/current/organising-your-data/activities/">Civi Book entry</a> on this topic before delving into one of Thomas's weird, overlong lessons.
 
-<p>This lesson will focus on understanding how <code>Activities</code> play into the real world functioning of CiviCRM. When this lesson started, it was just supposed to be a brief explanation of what an <code>Activity</code> was. As I researched the topic, it became clear that the topic was huge. <code>Activities</code> cut across every aspect and component of CiviCRM. Consequently, this lesson is going to be long. Rather than simple tutorials and how-to's, we'll approach <code>Activities</code> in a narrative context. This is because you need to think of <code>Activities</code> as part of the narrative of your org.</p>
+This lesson will focus on understanding how <code>Activities</code> play into the real world functioning of CiviCRM. When this lesson started, it was just supposed to be a brief explanation of what an <code>Activity</code> was. As I researched the topic, it became clear that the topic was huge. <code>Activities</code> cut across every aspect and component of CiviCRM. Consequently, this lesson is going to be long. Rather than simple tutorials and how-to's, we'll approach <code>Activities</code> in a narrative context. This is because you need to think of <code>Activities</code> as part of the narrative of your org.
 
 # Intra-Organizational Example
 
-<p>Below is an example of how an org might use CiviCRM to manage some of their own internal processes. After we run through this, we'll take a look at an org-to-constituent example.</p>
+Below is an example of how an org might use CiviCRM to manage some of their own internal processes. After we run through this, we'll take a look at an org-to-constituent example.
 
 ## Mailing
 
-<p>Things in the Milky Way Galaxy are getting desparate. The Reapers have awakened in dark space to once again begin the cycle of purging the galaxy of all spacefaring civilization. The crew of the Normandy SR-2 must be made aware of this so we sent out a mailing to everyone in that group. Let's see if Garrus Vakarian, our resident combat engineer, got the mailing.</p>
+Things in the Milky Way Galaxy are getting desparate. The Reapers have awakened in dark space to once again begin the cycle of purging the galaxy of all spacefaring civilization. The crew of the Normandy SR-2 must be made aware of this so we sent out a mailing to everyone in that group. Let's see if Garrus Vakarian, our resident combat engineer, got the mailing.
 
-<p>We go to his contact summary and click over to the <code>Activities</code> tab.</p>
+We go to his contact summary and click over to the <code>Activities</code> tab.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/activities1-activitiestab.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/activities1-activitiestab.png" alt="image" />
 
-<p>Remember that <code>Activities</code> are interactions between our org and an individual. So this tab shows all those interactions. Lo and behold, the bulk email "Reapers Are Coming!" is there. We can even see the content of the mailing by clicking "View".</p>
+Remember that <code>Activities</code> are interactions between our org and an individual. So this tab shows all those interactions. Lo and behold, the bulk email "Reapers Are Coming!" is there. We can even see the content of the mailing by clicking "View".
 
 ### Send Him An Email
 
-<p>Sometimes, a mass mailing to a big group is just the beginning of a conversation. We have more specific instructions to give to each crew member. Civi is perfectly capable of sending emails, and indeed in this case it is desirable because we want to keep a record of these official correspondences. Other members of the adminstration team need to know that vital communications happened and when they happened.</p>
+Sometimes, a mass mailing to a big group is just the beginning of a conversation. We have more specific instructions to give to each crew member. Civi is perfectly capable of sending emails, and indeed in this case it is desirable because we want to keep a record of these official correspondences. Other members of the adminstration team need to know that vital communications happened and when they happened.
 
-<p>While on Garrus's contact summary page, we hit "Actions" and then "Send an Email".</p>
+While on Garrus's contact summary page, we hit "Actions" and then "Send an Email".
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/activities2Sendanemail.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/activities2Sendanemail.png" alt="image" />
 
-<p>If someone wanted to check that the email was sent and what it said, they could hop on over to the <code>Activities</code> tab and click "View" next to the record of the email.</p>
+If someone wanted to check that the email was sent and what it said, they could hop on over to the <code>Activities</code> tab and click "View" next to the record of the email.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/activities3-showemailisthere.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/activities3-showemailisthere.png" alt="image" />
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/activities4-viewtheemail.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/activities4-viewtheemail.png" alt="image" />
 
 ### Check on His Event Registraion
 
-<p>To make doubly sure that he knew that he needed to calibrate the weapons system, we created an "Event" using CiviEvent and sent him an invite. Let's see if he registered by going back to the Activities tab.</p>
+To make doubly sure that he knew that he needed to calibrate the weapons system, we created an "Event" using CiviEvent and sent him an invite. Let's see if he registered by going back to the Activities tab.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/activities5-eventregistration.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/activities5-eventregistration.png" alt="image" />
 
-<p>Wonderful!</p>
+Wonderful!
 
 ### Schedule a Meeting With Him
 
-<p>It's performance review time! Let's schedule a meeting with him. We're not going to contact him ourselves, but instead assign it to someone else on the team, Commander Sheppard. She'll then send him an email telling him about it. In the <code>Activities</code> tab, we hit <code>New Activity</code> and select <code>Meeting</code>. The we title the meeting and assign it to Commander Sheppard.</p>
+It's performance review time! Let's schedule a meeting with him. We're not going to contact him ourselves, but instead assign it to someone else on the team, Commander Sheppard. She'll then send him an email telling him about it. In the <code>Activities</code> tab, we hit <code>New Activity</code> and select <code>Meeting</code>. The we title the meeting and assign it to Commander Sheppard.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/ScheduleMeeting1a.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/ScheduleMeeting1a.png" alt="image" />
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/ScheduleMeeting2.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/ScheduleMeeting2.png" alt="image" />
 
-<p>Once we've done that, we can see that the meeting <code>Activity</code> was scheduled. If we look at Commander Sheppard's email, we see that she got the message that she was assigned this task.</p>
+Once we've done that, we can see that the meeting <code>Activity</code> was scheduled. If we look at Commander Sheppard's email, we see that she got the message that she was assigned this task.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/MeetingisScheduled.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/MeetingisScheduled.png" alt="image" />
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/sheppardsconfirmation.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/sheppardsconfirmation.png" alt="image" />
 
-<p>Sheppard knows what to do. She signs into her CiviCRM account and sends Garrus an email about it. They meet at the determined time. After that's done, she goes back to the <code>Activities</code> tab to edit the Performance Review meeting <code>Activity</code> and changes it to "Completed".</p>
+Sheppard knows what to do. She signs into her CiviCRM account and sends Garrus an email about it. They meet at the determined time. After that's done, she goes back to the <code>Activities</code> tab to edit the Performance Review meeting <code>Activity</code> and changes it to "Completed".
 
 #### Scheduled
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/meetingscheduled.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/meetingscheduled.png" alt="image" />
 
 #### Completed
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/meetingcompleted.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/meetingcompleted.png" alt="image" />
 
 ## The Power of Activites
 
-<p>Having a comprehensive record of activites means that your organization knows what's going on. When you have a team of people, even if it's small, there's a problem with not knowing who is doing what. "Did you send that email?" "How many times has person X donated to us? And how much?" "Who talked on the phone to household Y?" Having a centralized system keeps your team organized and makes sure everyone is accountable.</p>
+Having a comprehensive record of activites means that your organization knows what's going on. When you have a team of people, even if it's small, there's a problem with not knowing who is doing what. "Did you send that email?" "How many times has person X donated to us? And how much?" "Who talked on the phone to household Y?" Having a centralized system keeps your team organized and makes sure everyone is accountable.
 
 # A More "Nonprofity" Example
 
-<p>The above example was more internally focused, although you can probably already imagine applying the same principles to a org-to-constituent situation. Remember, <code>Activities</code> are just an interactions between your org and an individual, and CiviCRM allows you to to keep track of these interactions.</p>
+The above example was more internally focused, although you can probably already imagine applying the same principles to a org-to-constituent situation. Remember, <code>Activities</code> are just an interactions between your org and an individual, and CiviCRM allows you to to keep track of these interactions.
 
 ## The Scenario
 
-<p>You are a team member at "Ice Cream for Peace!" a hot new org that aims to cool down global violence with the power of dairy free and conventional ice cream, frogurt, and sorbet. ICP! is a smart org. They've worked out some very effective best practices for getting their message out, interacting with constituents, and converting them into action-takers. One of their core outreach programs is called "Ice Cream Social For World Peace!".</p>
+You are a team member at "Ice Cream for Peace!" a hot new org that aims to cool down global violence with the power of dairy free and conventional ice cream, frogurt, and sorbet. ICP! is a smart org. They've worked out some very effective best practices for getting their message out, interacting with constituents, and converting them into action-takers. One of their core outreach programs is called "Ice Cream Social For World Peace!".
 
-<p>Ice Cream Social For World Peace! is a flash ice cream party held in train stations, parks, bonus plazas, and other public spaces. Socials are open to everyone (kinda the point), but people on their mailing list are always clued in ahead of time to where the social will be. While enjoying ice cream, partiers learn about world peace. ICP! staff and volunteers talke with people, gather emails for the mailing list, take in donations, and hand out action packets to individuals who seem like they're serious. People who get these packets need to be tracked because of two reaons:</p>
+Ice Cream Social For World Peace! is a flash ice cream party held in train stations, parks, bonus plazas, and other public spaces. Socials are open to everyone (kinda the point), but people on their mailing list are always clued in ahead of time to where the social will be. While enjoying ice cream, partiers learn about world peace. ICP! staff and volunteers talke with people, gather emails for the mailing list, take in donations, and hand out action packets to individuals who seem like they're serious. People who get these packets need to be tracked because of two reaons:
 
 <ol>
 <li>This person, in the staff member's judgement, demonstrated a serious interest in world peace and would be a great ally in the future</li>
@@ -87,25 +87,25 @@
 </ol>
 
 
-<p>Let's explore how we can make this type of specific tracking possible and why it's useful.</p>
+Let's explore how we can make this type of specific tracking possible and why it's useful.
 
 ## Creating a New Activity Type
 
-<p>CiviCRM is made to be customized, so of course you are allowed to create your own activities. Mosey on over to <code>Administer &gt; Customize Data and Screens &gt; Activity Types</code>. Here you can see every type of <code>Activity</code>. Take a minute to look through these. Try and think about what they mean based on their label. Remember that an <code>Activity</code> is an action that happens between your org and an individual.</p>
+CiviCRM is made to be customized, so of course you are allowed to create your own activities. Mosey on over to <code>Administer &gt; Customize Data and Screens &gt; Activity Types</code>. Here you can see every type of <code>Activity</code>. Take a minute to look through these. Try and think about what they mean based on their label. Remember that an <code>Activity</code> is an action that happens between your org and an individual.
 
-<p>Once you're done marveling at all the <code>Activities</code> on this page, go ahead and hit the <code>Add Activity Type</code> button. Give your new activity a name or as Civi calls it a "Label". While not required, it's smart to include a description for your new <code>Activity</code>. Just like how it's best practice to document and comment your code, it's best practice to use descriptions for your customizations so that people who are not you might actually know what it's about. Once you save your new <code>Activity</code>, you can see it in the list with all the others.</p>
+Once you're done marveling at all the <code>Activities</code> on this page, go ahead and hit the <code>Add Activity Type</code> button. Give your new activity a name or as Civi calls it a "Label". While not required, it's smart to include a description for your new <code>Activity</code>. Just like how it's best practice to document and comment your code, it's best practice to use descriptions for your customizations so that people who are not you might actually know what it's about. Once you save your new <code>Activity</code>, you can see it in the list with all the others.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/CreatingNewActivity1.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/CreatingNewActivity1.png" alt="image" />
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/ShowingNewActivityIsThere.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/ShowingNewActivityIsThere.png" alt="image" />
 
 # Importing Activities
 
-<p>After their socials, ICP! collects all the sign up sheets from their volunteers as well as the action packet recipient lists. It's then time for the data entry intern to create some spreadsheets. Please take note that this is a *very* common thing for orgs. Gathering names and emails on paper and then putting them into your CRM is a near universal thing. So pay attention!</p>
+After their socials, ICP! collects all the sign up sheets from their volunteers as well as the action packet recipient lists. It's then time for the data entry intern to create some spreadsheets. Please take note that this is a *very* common thing for orgs. Gathering names and emails on paper and then putting them into your CRM is a near universal thing. So pay attention!
 
 ## Procedure is Important
 
-<p>In a perfect world we'd be able to just upload a single CSV and call it a day, but we need to do a bit more. We have to be intentional with how we put these nice people into our database. Let's breakdown what we have to do.</p>
+In a perfect world we'd be able to just upload a single CSV and call it a day, but we need to do a bit more. We have to be intentional with how we put these nice people into our database. Let's breakdown what we have to do.
 
 <ol>
 <li>Import the contacts into the existing "Mailing List" group</li>
@@ -114,20 +114,20 @@
 </ol>
 
 
-<p>Each of these is a **separate**, as in "no you can't combine any steps", import and each of them has its own unique required fields. Let's do each import in sequence, adding new columns to our import sheet as we go.</p>
+Each of these is a **separate**, as in "no you can't combine any steps", import and each of them has its own unique required fields. Let's do each import in sequence, adding new columns to our import sheet as we go.
 
 ## Import 1: The Contact Info
 
-<p>This is straight forward and no different from how you've done imports before. You must have:</p>
+This is straight forward and no different from how you've done imports before. You must have:
 
 <ul>
 <li>**Email**</li>
 </ul>
 
 
-<p>Only email is required, but it's best to try and get names as well. We've got them in as contacts. What else do we want to know?</p>
+Only email is required, but it's best to try and get names as well. We've got them in as contacts. What else do we want to know?
 
-<p>It's useful to know where we gathered these people's contacts. We got them at the most recent "Ice Cream Social For World Peace!" so let's figure out a way to attach that information to the contacts we just added?. There are two ways of doing this:</p>
+It's useful to know where we gathered these people's contacts. We got them at the most recent "Ice Cream Social For World Peace!" so let's figure out a way to attach that information to the contacts we just added?. There are two ways of doing this:
 
 <ol>
 <li>The way that is fast in the short term but unmanageable in the long run</li>
@@ -135,21 +135,21 @@
 </ol>
 
 
-<p>Guess which one we're doing?</p>
+Guess which one we're doing?
 
 ### Wrong Way
 
-<p>The goal is to make it clear that these people were collected at the May 2nd Ice Cream Social For World Peace! event. You may be tempted to do what you know already and create a group called something like, "May 2nd Ice Cream Social Contacts" and call it a day. Technically you've accomplished that goal, but you did so in a shortsighted manner. Your org does these like once a week, so you'll have 52 new contact groups every year! Is that really the best way to organize things? How do you expect to search through those? Is it really useful to have a group of 8 people? We want something more elegant.</p>
+The goal is to make it clear that these people were collected at the May 2nd Ice Cream Social For World Peace! event. You may be tempted to do what you know already and create a group called something like, "May 2nd Ice Cream Social Contacts" and call it a day. Technically you've accomplished that goal, but you did so in a shortsighted manner. Your org does these like once a week, so you'll have 52 new contact groups every year! Is that really the best way to organize things? How do you expect to search through those? Is it really useful to have a group of 8 people? We want something more elegant.
 
 ### Right Way
 
-<p>We want to use Civi <code>Activities</code> to keep track of our constituents, so we should add an activity to their "timeline" of <code>Activities</code>. Being an event attendee is an <code>Activity</code> isn't it? Let's add that information to the contacts we just created. By doing it this way, we have data on our contacts that can be searched and pulled up as we need it.</p>
+We want to use Civi <code>Activities</code> to keep track of our constituents, so we should add an activity to their "timeline" of <code>Activities</code>. Being an event attendee is an <code>Activity</code> isn't it? Let's add that information to the contacts we just created. By doing it this way, we have data on our contacts that can be searched and pulled up as we need it.
 
 ## Import 2: The Participant Info
 
-<p>Importing participants is a lot like importing contacts, except that importing prarticipants requires you to have pre-existing contacts. That is, we're importing *information about contacts* so we obviously need to have those contacts already in the system. Hence this is step two and not step one.</p>
+Importing participants is a lot like importing contacts, except that importing prarticipants requires you to have pre-existing contacts. That is, we're importing *information about contacts* so we obviously need to have those contacts already in the system. Hence this is step two and not step one.
 
-<p>Rather than make a new spreadhseet, we're just going to add new information to the same one we used for importing contacts. We need to add two columns to the sheet:</p>
+Rather than make a new spreadhseet, we're just going to add new information to the same one we used for importing contacts. We need to add two columns to the sheet:
 
 <ol>
 <li>Event ID</li>
@@ -157,27 +157,27 @@
 </ol>
 
 
-<p>In other words, we need to specify what the event in question is and how the person participated in the event. <code>Event ID</code> is simple —just go to <code>Manage Events</code> and look at the ID column for the event in question. <code>Participant Status</code> is different though.</p>
+In other words, we need to specify what the event in question is and how the person participated in the event. <code>Event ID</code> is simple —just go to <code>Manage Events</code> and look at the ID column for the event in question. <code>Participant Status</code> is different though.
 
-<p>When importing the <code>Participant Status</code> CiviCRM doesn't accept strings like "Attended" or "No Show". It wants you to give it a number corresponding to the <code>Status ID</code>. You can find these in <code>Administer &gt; CiviEvent &gt; Participant Statuses</code>. As you can see, each each <code>Participant Status</code> has an ID associated with it. We want to show that our people <code>Attended</code> the event so we go with 2.</p>
+When importing the <code>Participant Status</code> CiviCRM doesn't accept strings like "Attended" or "No Show". It wants you to give it a number corresponding to the <code>Status ID</code>. You can find these in <code>Administer &gt; CiviEvent &gt; Participant Statuses</code>. As you can see, each each <code>Participant Status</code> has an ID associated with it. We want to show that our people <code>Attended</code> the event so we go with 2.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/participantstatuses.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/participantstatuses.png" alt="image" />
 
-<p>We add these two columns to our existing spreadsheet because there's no point in creating a new sheet. We'll only select event-related information and not import the rest.</p>
+We add these two columns to our existing spreadsheet because there's no point in creating a new sheet. We'll only select event-related information and not import the rest.
 
-<p>The option to <code>Import Participants</code> is found under the <code>Events</code> tab rather than the <code>Contacts</code> tab. Once there, all we have to do is upload the file and check the box about how the first row is column headers. For the options regarding <code>On Duplicate Entries</code> leave it set to <code>Skip</code>.</p>
+The option to <code>Import Participants</code> is found under the <code>Events</code> tab rather than the <code>Contacts</code> tab. Once there, all we have to do is upload the file and check the box about how the first row is column headers. For the options regarding <code>On Duplicate Entries</code> leave it set to <code>Skip</code>.
 
-<p>Make sure to map your columns correctly. You need to include some identifying information in order to pick the status of the correct person. First name and last name should be sufficient, but if you want to be exact, use their unique CiviCRM ID. If you want their uique ID, then you'll need to export the contacts and copy it from there. That's not really necessary though.</p>
+Make sure to map your columns correctly. You need to include some identifying information in order to pick the status of the correct person. First name and last name should be sufficient, but if you want to be exact, use their unique CiviCRM ID. If you want their uique ID, then you'll need to export the contacts and copy it from there. That's not really necessary though.
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/importparticipatnsoptions.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/importparticipatnsoptions.png" alt="image" />
 
-<p><img src="http://labs.everettprogram.org/wp-content/uploads/ImportingParticipantsMapping.png" alt="image" /></p>
+<img src="http://labs.everettprogram.org/wp-content/uploads/ImportingParticipantsMapping.png" alt="image" />
 
-<p>OK so we've imported all the people who signed up for the email list and we've added participant info to them so that we can see where exactly we met these people. Now we just need to specify who was given an Action Packet.</p>
+OK so we've imported all the people who signed up for the email list and we've added participant info to them so that we can see where exactly we met these people. Now we just need to specify who was given an Action Packet.
 
 ## Import 3: The Action Packet Activity
 
-<p>Now for the importing! The <code>Import Activities</code> utility (located in the <code>Contacts</code> tab) requires the following fields:</p>
+Now for the importing! The <code>Import Activities</code> utility (located in the <code>Contacts</code> tab) requires the following fields:
 
 <ul>
 <li>Activity Date</li>
@@ -189,17 +189,17 @@
 
 ### Knowledge Check
 
-<p>Here's a deep understanding question: Why does this require the <code>Activity Date</code> when we didn't have to include that when we imported the <code>Participant Info</code> in the last step?</p>
+Here's a deep understanding question: Why does this require the <code>Activity Date</code> when we didn't have to include that when we imported the <code>Participant Info</code> in the last step?
 
-<p>The answer is found by looking back at the basic definition of what an <code>Activity</code> is in CiviCRM. <code>Activities</code> are any kind of interaction between your org and an individual that occured at a definite point in time. When we imported the <code>Participant Info</code> we specified the particular event they had attended. All events take place at a definite point in time, so there's no need to include that information again. In our current case, Civi has no way of knowing when these people were given packets so we have to specify that. Got it? Good let's move on.</p>
+The answer is found by looking back at the basic definition of what an <code>Activity</code> is in CiviCRM. <code>Activities</code> are any kind of interaction between your org and an individual that occured at a definite point in time. When we imported the <code>Participant Info</code> we specified the particular event they had attended. All events take place at a definite point in time, so there's no need to include that information again. In our current case, Civi has no way of knowing when these people were given packets so we have to specify that. Got it? Good let's move on.
 
 ### Back to the Import
 
-<p>We go back to our spreadsheet and add in the required columns using the <code>Activity</code> information we noted when we created the new <code>Activity</code>. The date needs to be in a particular format. You can see the date format options on the import screen. For <code>Subject</code>, I really couldn't figure out anything that would add any substance to this entry, so I just put a space into each of the records in that column. After that it's time to import. Just like with the <code>Participant Import</code>, you'll need to select your field mappings, especially the name fields. But not the email for some reason. Still don't know why.</p>
+We go back to our spreadsheet and add in the required columns using the <code>Activity</code> information we noted when we created the new <code>Activity</code>. The date needs to be in a particular format. You can see the date format options on the import screen. For <code>Subject</code>, I really couldn't figure out anything that would add any substance to this entry, so I just put a space into each of the records in that column. After that it's time to import. Just like with the <code>Participant Import</code>, you'll need to select your field mappings, especially the name fields. But not the email for some reason. Still don't know why.
 
-<p><img src="" alt="image" />
-<img src="" alt="image" /></p>
+<img src="" alt="image" />
+<img src="" alt="image" />
 
 ## Rejoice!
 
-<p>We've now completed a typcical workflow! ICP! did one its main outreach events, collected contacts from people, and entered their information into the CRM. ICP! can now use this information to further their org's mission. They have more people to send their mailings to, more people who will have foreknowledge of future Ice Cream Social events making them bigger and funner. They've also got a list of people who have shown enough promise to give action packets to. Speaking of whom...shouldn't we follow up with them in some way?</p>
+We've now completed a typcical workflow! ICP! did one its main outreach events, collected contacts from people, and entered their information into the CRM. ICP! can now use this information to further their org's mission. They have more people to send their mailings to, more people who will have foreknowledge of future Ice Cream Social events making them bigger and funner. They've also got a list of people who have shown enough promise to give action packets to. Speaking of whom...shouldn't we follow up with them in some way?

@@ -74,11 +74,11 @@ The "&amp;" sign means "And". The comma and space in between double quotes means
 <img class="aligncenter size-full wp-image-3629" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-3.png" alt="names 3" width="401" height="95" />
 
 That's the format we want, for sure, but there's something else. Remember that we need to have each folder name in between double quotes. So we just need to update the function to put double quotes on either end. To do that you change the function to this,
-<p class="p1">=CHAR(34) &amp; B2 &amp; ", " &amp; A2 &amp; CHAR(34)</p>
-<p class="p1">You might ask, "What's with the CHAR(34) thing? You said anything in between double quotes will show up in the cell." Well, that's what I thought too. But apparently, Excel get's confused by this, so you need to CHAR(34) to represent a double quote character. Anyway, here's what it ends up looking like,</p>
-<p class="p1"><img class="aligncenter size-full wp-image-3630" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-4.png" alt="names 4" width="636" height="178" /></p>
-<p class="p1"><img class="aligncenter size-full wp-image-3631" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-5.png" alt="names 5" width="522" height="189" /></p>
-<p class="p1">Sweet! We've got it how we need it! Now just grab the little square and drag down for the rest and we've got ourselves our formatted list.</p>
+=CHAR(34) &amp; B2 &amp; ", " &amp; A2 &amp; CHAR(34)
+You might ask, "What's with the CHAR(34) thing? You said anything in between double quotes will show up in the cell." Well, that's what I thought too. But apparently, Excel get's confused by this, so you need to CHAR(34) to represent a double quote character. Anyway, here's what it ends up looking like,
+<img class="aligncenter size-full wp-image-3630" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-4.png" alt="names 4" width="636" height="178" />
+<img class="aligncenter size-full wp-image-3631" src="http://labs.everettprogram.org/wp-content/uploads/2014/10/names-5.png" alt="names 5" width="522" height="189" />
+Sweet! We've got it how we need it! Now just grab the little square and drag down for the rest and we've got ourselves our formatted list.
 
 ## One Last Bit of Formatting Left
 We can't just paste this into the Terminal quite yet. Each name is on a different line, which Terminal will read as you actually hitting the return key and consequently will only make the first name and then give you a bunch of errors. So we need to clear the line breaks so that all the names are on one line and separated by a single space.

@@ -38,7 +38,7 @@ We are going to write a script that will override the current global page transi
 Open up your text editor of choice and create a new document named **"custom-scritps.js"**. Just as we create a .css file and fill it full of CSS style rules, we create a .js file and fill it with jQuery scripts. jQuery is really just a shorthand way of calling up javascript scripts.
 
 Inside this file, enter the following:
-<pre>$(document).bind("mobileinit", function () {
+$(document).bind("mobileinit", function () {
  $.mobile.defaultPageTransition = 'slide';
  });</pre>
 That probably means nothing to you. That there is a jQuery function. If you would like to learn how to use jQuery, you should check out the jQuery track on <a href="http://www.codecademy.com/tracks/jquery">Codecademy</a>. It's surprisingly easy to pick up and fun to use. You'll feel like a magician with all the cool stuff you learn to do. Anyway, back to the lesson.
@@ -46,7 +46,7 @@ That probably means nothing to you. That there is a jQuery function. If you woul
 Here is where we start getting a little bit more sophisticated. If you haven't already been doing so, put the html file for this project into a folder called "project-5". In the same folder, put the newly created "**custom-scripts.js**" file. In your index.html, go to the head section where we will be linking our custom script.
 
 You'll notice that there are two js files linked in the head. The first one calls up the jQuery API and the second calls up the jQuery Mobile API. We are going to put our custom script **in between** these two. Very important that they be in between.
-<pre>&lt;head&gt;
+&lt;head&gt;
 &lt;meta charset="utf-8"&gt;
 &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 &lt;title&gt;jQuery Mobile Demos&lt;/title&gt;
